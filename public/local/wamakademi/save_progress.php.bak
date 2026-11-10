@@ -1,0 +1,209 @@
+<?php
+
+require_once('../../config.php');
+
+require_login();
+
+header('Content-Type: application/json; charset=utf-8');
+
+if (!confirm_sesskey()) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Geçersiz oturum anahtarı.'
+    ]);
+    exit;
+}
+
+$cmid = required_param('cmid', PARAM_INT);
+$currenttime = required_param('currenttime', PARAM_FLOAT);
+$duration = required_param('duration', PARAM_FLOAT);
+$rangesjson = optional_param('watchedranges', '[]', PARAM_RAW);
+
+if ($cmid <= 0 || $duration <= 0) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Geçersiz video bilgisi.'
+    ]);
+    exit;
+}
+
+$currenttime = max(0, min($currenttime, $duration));
+
+/**
+ * Gelen range verisini doğrula.
+ * Format:
+ * [
+ *   [0, 12.4],
+ *   [20.1, 35.8]
+ * ]
+ */
+$incomingranges = json_decode($rangesjson, true);
+
+if (!is_array($incomingranges)) {
+    $incomingranges = [];
+}
+
+function local_wamakademi_normalise_ranges(array $ranges, float $duration): array {
+
+    $clean = [];
+
+    foreach ($ranges as $range) {
+
+        if (
+            !is_array($range) ||
+            count($range) !== 2 ||
+            !is_numeric($range[0]) ||
+            !is_numeric($range[1])
+        ) {
+            continue;
+        }
+
+        $start = (float)$range[0];
+        $end = (float)$range[1];
+
+        $start = max(0, min($start, $duration));
+        $end = max(0, min($end, $duration));
+
+        if ($end <= $start) {
+            continue;
+        }
+
+        $clean[] = [$start, $end];
+    }
+
+    usort($clean, function ($a, $b) {
+        return $a[0] <=> $b[0];
+    });
+
+    $merged = [];
+
+    foreach ($clean as $range) {
+
+        if (empty($merged)) {
+            $merged[] = $range;
+            continue;
+        }
+
+        $lastindex = count($merged) - 1;
+
+        if ($range[0] <= $merged[$lastindex][1] + 0.5) {
+
+            $merged[$lastindex][1] = max(
+                $merged[$lastindex][1],
+                $range[1]
+            );
+
+        } else {
+
+            $merged[] = $range;
+        }
+    }
+
+    return $merged;
+}
+
+function local_wamakademi_count_watched_seconds(array $ranges): float {
+
+    $seconds = 0;
+
+    foreach ($ranges as $range) {
+        $seconds += ($range[1] - $range[0]);
+    }
+
+    return $seconds;
+}
+
+$record = $DB->get_record(
+    'local_wamakademi_progress',
+    [
+        'userid' => $USER->id,
+        'cmid' => $cmid
+    ]
+);
+
+$existingranges = [];
+
+if ($record && !empty($record->watchedranges)) {
+
+    $decoded = json_decode($record->watchedranges, true);
+
+    if (is_array($decoded)) {
+        $existingranges = $decoded;
+    }
+}
+
+$allranges = array_merge(
+    $existingranges,
+    $incomingranges
+);
+
+$mergedranges = local_wamakademi_normalise_ranges(
+    $allranges,
+    $duration
+);
+
+$watchedseconds = local_wamakademi_count_watched_seconds(
+    $mergedranges
+);
+
+$watchedseconds = min(
+    $watchedseconds,
+    $duration
+);
+
+$progress = (int) round(
+    ($watchedseconds / $duration) * 100
+);
+
+$progress = max(
+    0,
+    min(100, $progress)
+);
+
+$completed = ($progress >= 95) ? 1 : 0;
+
+if ($record) {
+
+    $record->currenttime = $currenttime;
+    $record->duration = $duration;
+    $record->watchedseconds = $watchedseconds;
+    $record->watchedranges = json_encode($mergedranges);
+    $record->progress = $progress;
+    $record->completed = $completed;
+    $record->timemodified = time();
+
+    $DB->update_record(
+        'local_wamakademi_progress',
+        $record
+    );
+
+} else {
+
+    $record = new stdClass();
+
+    $record->userid = $USER->id;
+    $record->cmid = $cmid;
+    $record->currenttime = $currenttime;
+    $record->duration = $duration;
+    $record->watchedseconds = $watchedseconds;
+    $record->watchedranges = json_encode($mergedranges);
+    $record->progress = $progress;
+    $record->completed = $completed;
+    $record->timemodified = time();
+
+    $record->id = $DB->insert_record(
+        'local_wamakademi_progress',
+        $record
+    );
+}
+
+echo json_encode([
+    'success' => true,
+    'cmid' => $cmid,
+    'currenttime' => (float)$record->currenttime,
+    'duration' => (float)$record->duration,
+    'watchedseconds' => (float)$record->watchedseconds,
+    'watchedranges' => $mergedranges,
+    'progress' => (int)$record->progress,
+    'completed' => (bool)$record->completed
+]);

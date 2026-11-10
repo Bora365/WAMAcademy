@@ -1,0 +1,385 @@
+(function () {
+    'use strict';
+
+async function createLessonLayout() {
+        if (document.body.dataset.wamLessonReady === '1') {
+            return;
+        }
+
+        const page = document.querySelector('#page');
+        const main = document.querySelector('#region-main');
+        const video = document.querySelector('.mediaplugin_videojs');
+	const resource = document.querySelector('#resourceobject');
+        const heading = document.querySelector('.page-header-headings h1');
+
+	if (!page || !main || !heading || (!video && !resource)) {
+    setTimeout(createLessonLayout, 300);
+    return;
+}
+
+        document.body.dataset.wamLessonReady = '1';
+        document.body.classList.add('wam-lesson-page');
+
+const lessonName = heading.textContent.trim();
+
+const params = new URLSearchParams(window.location.search);
+const cmid = parseInt(params.get('id'), 10);
+
+let courseData = null;
+
+try {
+    const response = await fetch(
+        M.cfg.wwwroot +
+        '/local/wamakademi/get_course_lessons.php?cmid=' +
+        encodeURIComponent(cmid),
+        {
+            method: 'GET',
+            credentials: 'same-origin'
+        }
+    );
+
+    courseData = await response.json();
+
+} catch (error) {
+    console.error(
+        'WAM Akademi: Ders listesi alınamadı.',
+        error
+    );
+}
+
+if (!courseData || !courseData.success) {
+    console.error('WAM Akademi: Geçerli ders verisi bulunamadı.');
+    return;
+}
+
+const courseName = courseData.course.name;
+const totalLessons = courseData.total;
+const completedLessons = courseData.completed;
+const courseProgress = courseData.progress;
+
+function formatDuration(seconds) {
+    seconds = Number(seconds || 0);
+
+    if (seconds <= 0) {
+        return '--:--';
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return (
+        String(minutes).padStart(2, '0') +
+        ':' +
+        String(remainingSeconds).padStart(2, '0')
+    );
+}
+
+const lessonsHtml = courseData.lessons.map(function (lesson, index) {
+
+    let stateClass = '';
+
+    if (lesson.active) {
+        stateClass = 'active';
+    } else if (lesson.completed) {
+        stateClass = 'completed';
+    } else if (lesson.locked) {
+        stateClass = 'locked';
+    }
+
+    let icon = '▶';
+
+    if (lesson.completed) {
+        icon = '✓';
+    }
+
+    if (lesson.locked) {
+        icon = '🔒';
+    }
+
+    const urlAttribute = lesson.locked
+        ? ''
+        : ' data-url="' + lesson.url + '"';
+
+    return `
+        <div class="wam-lesson-item ${stateClass}"${urlAttribute}>
+            <span>${icon}</span>
+            <div>
+                <strong>${index + 1}. ${lesson.name}</strong>
+            </div>
+            <em>${formatDuration(lesson.duration)}</em>
+        </div>
+    `;
+}).join('');
+
+        const shell = document.createElement('div');
+        shell.className = 'wam-lesson-shell';
+
+        shell.innerHTML = `
+            <aside class="wam-lesson-sidebar">
+                <div class="wam-side-logo">
+                    <div class="wam-side-logo-main">WAM</div>
+                    <div class="wam-side-logo-sub">WAM AKADEMİ</div>
+                </div>
+
+                <nav class="wam-side-nav">
+                    <a href="${M.cfg.wwwroot}/local/wamakademi/index.php">⌂ <span>Ana Sayfa</span></a>
+                    <a class="active" href="${M.cfg.wwwroot}/my/courses.php">◈ <span>Eğitimlerim</span></a>
+                    <a href="${M.cfg.wwwroot}/course/">▣ <span>Katalog</span></a>
+                    <a href="${M.cfg.wwwroot}/calendar/view.php">▢ <span>Takvim</span></a>
+                    <a href="#">♕ <span>Başarılarım</span></a>
+                    <a href="#">✺ <span>Sertifikalarım</span></a>
+                    <a href="#">◖ <span>Duyurular</span></a>
+                </nav>
+
+                <div class="wam-side-bottom">
+                    <a href="${M.cfg.wwwroot}/user/profile.php">◉ <span>Profil</span></a>
+                    <a href="${M.cfg.wwwroot}/user/preferences.php">⚙ <span>Ayarlar</span></a>
+                </div>
+            </aside>
+
+            <main class="wam-lesson-main">
+                <header class="wam-lesson-topbar">
+                    <div class="wam-breadcrumb">
+                        Eğitimlerim <span>/</span> ${courseName} <span>/</span> ${lessonName}
+                    </div>
+
+                    <div class="wam-top-actions">
+                        <input type="text" placeholder="Eğitimlerde ara...">
+                        <span class="wam-notification">🔔</span>
+                    </div>
+                </header>
+
+                <div class="wam-lesson-content">
+                    <section class="wam-lesson-left">
+
+                        <div class="wam-lesson-heading">
+                            <div class="wam-file-icon">▶</div>
+                            <div>
+                                <div class="wam-course-label">${courseName}</div>
+                                <h1>${lessonName}</h1>
+                                <p>Excel'e giriş ve çalışma ekranını tanıma</p>
+                            </div>
+                        </div>
+
+                        <div class="wam-video-card">
+                            <div class="wam-video-title">
+                                <span>▰ VIDEO DERS</span>
+                            </div>
+
+				<div class="wam-video-slot">
+    ${video ? '' : '<div id="wam-pptx-content"></div>'}
+</div>
+                        </div>
+
+                        <div class="wam-lesson-tabs">
+                            <div class="wam-tab-menu">
+                                <button class="active">Ders Hakkında</button>
+                                <button>Kaynaklar</button>
+                                <button>Notlarım</button>
+                            </div>
+
+                            <div class="wam-tab-content">
+                                <div>
+                                    <h3>Bu derste neler öğreneceksiniz?</h3>
+                                    <ul>
+                                        <li>Excel çalışma alanını tanıma</li>
+                                        <li>Şerit menü ve temel sekmeler</li>
+                                        <li>Hücre, satır ve sütun yapısı</li>
+                                    </ul>
+                                </div>
+
+                                <div class="wam-instructor">
+                                    <span>Eğitmen</span>
+                                    <strong>WAM Akademi Eğitim Ekibi</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wam-bottom-nav">
+                            <button class="wam-prev-btn">← Önceki Ders</button>
+                            <button class="wam-next-btn">Dersi Tamamla ve Devam Et →</button>
+                        </div>
+
+                    </section>
+
+                    <aside class="wam-lesson-right">
+
+                        <div class="wam-progress-card">
+                            <div class="wam-card-title">Eğitim İlerlemesi</div>
+
+                            <div class="wam-card-subtitle">
+                                ${completedLessons} / ${totalLessons} ders
+                                <strong>${courseProgress}%</strong>
+                            </div>
+
+                            <div class="wam-side-progress">
+                                <div style="width:${courseProgress}%"></div>
+                            </div>
+                        </div>
+
+                        <div class="wam-course-content-card">
+                            <div class="wam-card-title">Eğitim İçeriği</div>
+
+                            <div class="wam-card-subtitle">
+                                ${completedLessons} / ${totalLessons} tamamlandı
+                            </div>
+
+                            <div class="wam-content-progress">
+                                <div style="width:${courseProgress}%"></div>
+                            </div>
+
+                            ${lessonsHtml}
+
+                            <button class="wam-all-lessons">
+                                ☷ Tüm dersleri görüntüle
+                            </button>
+			</div>
+                    </aside>
+                </div>
+            </main>
+        `;
+	 const videoSlot = shell.querySelector('.wam-video-slot');
+videoSlot.appendChild(video);
+
+/*
+ * Moodle'ın eski sayfa alanını tamamen devre dışı bırak.
+ */
+page.style.display = 'none';
+page.style.height = '0';
+page.style.minHeight = '0';
+page.style.margin = '0';
+page.style.padding = '0';
+
+/*
+ * Yeni WAM ekranını body'nin en başına yerleştir.
+ */
+document.body.insertBefore(shell, document.body.firstChild);
+
+/*
+ * Body ve html üst boşluklarını sıfırla.
+ */
+document.documentElement.style.margin = '0';
+document.documentElement.style.padding = '0';
+
+document.body.style.margin = '0';
+document.body.style.padding = '0';
+document.body.style.minHeight = '100vh';
+
+/*
+ * Ders listesi tıklama davranışı.
+ * Kilitli dersler açılmaz.
+ * Açık dersler kendi Moodle resource sayfasına gider.
+ */
+const lessonItems = shell.querySelectorAll('.wam-lesson-item');
+
+lessonItems.forEach(function (item) {
+
+    if (item.classList.contains('locked')) {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            alert(
+                'Bu derse geçebilmek için önce bir önceki dersi tamamlamalısınız.'
+            );
+        });
+
+        return;
+    }
+
+    const targetUrl = item.dataset.url;
+
+    if (!targetUrl) {
+        return;
+    }
+
+    item.style.cursor = 'pointer';
+
+    item.addEventListener('click', function () {
+        window.location.href = targetUrl;
+    });
+});
+
+/*
+ * Aktif dersin listedeki sırasını bul.
+ */
+const currentLessonIndex = courseData.lessons.findIndex(function (lesson) {
+    return lesson.active;
+});
+
+const prevButton = shell.querySelector('.wam-prev-btn');
+const nextButton = shell.querySelector('.wam-next-btn');
+
+/*
+ * Önceki Ders.
+ */
+if (prevButton) {
+
+    if (currentLessonIndex <= 0) {
+        prevButton.disabled = true;
+    } else {
+        prevButton.addEventListener('click', function () {
+
+            const previousLesson =
+                courseData.lessons[currentLessonIndex - 1];
+
+            if (previousLesson && previousLesson.url) {
+                window.location.href = previousLesson.url;
+            }
+        });
+    }
+}
+
+/*
+ * Sonraki Ders / Tamamlama.
+ */
+if (nextButton) {
+
+    const currentLesson =
+        courseData.lessons[currentLessonIndex];
+
+    const nextLesson =
+        courseData.lessons[currentLessonIndex + 1];
+
+    /*
+     * Son ders ise buton yazısını değiştir.
+     */
+    if (!nextLesson) {
+
+        nextButton.textContent = 'Eğitimi Tamamla';
+
+        nextButton.addEventListener('click', function () {
+
+            if (!currentLesson.completed) {
+                alert(
+                    'Bu dersi tamamlamak için videonun en az %95\'ini izlemeniz gerekiyor.'
+                );
+                return;
+            }
+
+            alert('Tebrikler! Eğitimi tamamladınız.');
+        });
+
+    } else {
+
+        nextButton.addEventListener('click', function () {
+
+            if (!currentLesson.completed) {
+                alert(
+                    'Sonraki derse geçebilmek için bu videonun en az %95\'ini izlemeniz gerekiyor.'
+                );
+                return;
+            }
+
+            if (nextLesson.locked) {
+                alert('Sonraki ders henüz kilitli.');
+                return;
+            }
+
+            window.location.href = nextLesson.url;
+        });
+    }
+}
+    }
+
+    createLessonLayout();
+})();

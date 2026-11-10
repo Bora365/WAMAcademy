@@ -1,0 +1,301 @@
+<?php
+
+require_once(__DIR__ . '/../../config.php');
+
+require_login();
+
+global $DB, $USER, $PAGE, $OUTPUT;
+
+$PAGE->set_url(new moodle_url('/local/wamakademi/mycourses.php'));
+$PAGE->set_context(context_system::instance());
+$PAGE->set_title('Eğitimlerim');
+$PAGE->set_heading('');
+$PAGE->add_body_class('wam-my-courses-body');
+
+$PAGE->requires->css('/local/wamakademi/styles.css');
+
+$courses = enrol_get_users_courses(
+    $USER->id,
+    true,
+    'id,fullname,shortname,category'
+);
+
+$startedcourses = [];
+
+foreach ($courses as $course) {
+
+    $modinfo = get_fast_modinfo($course->id, $USER->id);
+
+    $resources = [];
+
+    foreach ($modinfo->get_cms() as $coursecm) {
+
+        if ($coursecm->modname !== 'resource') {
+            continue;
+        }
+
+        if (!$coursecm->uservisible) {
+            continue;
+        }
+
+        $resources[] = $coursecm;
+    }
+
+    if (empty($resources)) {
+        continue;
+    }
+
+    $hasstarted = false;
+    $totalprogress = 0;
+    $completedlessons = 0;
+
+    $continuecmid = null;
+    $continuecurrenttime = 0;
+
+    foreach ($resources as $resource) {
+
+        $record = $DB->get_record(
+            'local_wamakademi_progress',
+            [
+                'userid' => $USER->id,
+                'cmid' => $resource->id,
+            ]
+        );
+
+        $lessonprogress = 0;
+
+        if ($record) {
+
+            $lessonprogress = (float)$record->progress;
+
+            if (
+                (float)$record->watchedseconds > 0 ||
+                (float)$record->progress > 0 ||
+                (float)$record->currenttime > 0
+            ) {
+                $hasstarted = true;
+            }
+
+            if (!empty($record->completed)) {
+                $completedlessons++;
+            }
+        }
+
+        $totalprogress += $lessonprogress;
+
+        if ($continuecmid === null) {
+
+            if (!$record || empty($record->completed)) {
+
+                $continuecmid = $resource->id;
+
+                if ($record) {
+                    $continuecurrenttime = (float)$record->currenttime;
+                }
+            }
+        }
+    }
+
+    /*
+     * Hiçbir video izlenmeye başlanmamışsa
+     * Eğitimlerim sayfasında gösterme.
+     */
+    if (!$hasstarted) {
+        continue;
+    }
+
+    $lessoncount = count($resources);
+
+    $courseprogress = $lessoncount > 0
+        ? round($totalprogress / $lessoncount)
+        : 0;
+
+    /*
+     * Bütün dersler tamamlandıysa son derse yönlendir.
+     */
+    if ($continuecmid === null && !empty($resources)) {
+        $lastresource = end($resources);
+        $continuecmid = $lastresource->id;
+    }
+
+    $continueurl = new moodle_url(
+        '/mod/resource/view.php',
+        ['id' => $continuecmid]
+    );
+
+    /*
+     * Kurs görseli.
+     */
+    $courseimage = null;
+
+    $courseinlist = new core_course_list_element($course);
+
+    foreach ($courseinlist->get_course_overviewfiles() as $file) {
+
+        if ($file->is_valid_image()) {
+
+            $courseimage = moodle_url::make_pluginfile_url(
+                $file->get_contextid(),
+                $file->get_component(),
+                $file->get_filearea(),
+                null,
+                $file->get_filepath(),
+                $file->get_filename()
+            )->out();
+
+            break;
+        }
+    }
+
+    $categoryname = '';
+
+    if (!empty($course->category)) {
+        $category = core_course_category::get($course->category);
+        $categoryname = $category->name;
+    }
+
+    $startedcourses[] = [
+        'fullname' => format_string($course->fullname),
+        'shortname' => format_string($course->shortname),
+        'category' => format_string($categoryname),
+        'progress' => $courseprogress,
+        'completedlessons' => $completedlessons,
+        'lessoncount' => $lessoncount,
+        'continueurl' => $continueurl->out(false),
+        'courseimage' => $courseimage,
+        'iscompleted' => ($completedlessons === $lessoncount),
+    ];
+}
+
+echo $OUTPUT->header();
+?>
+
+<div class="wam-my-courses-page">
+
+    <div class="wam-my-courses-heading">
+        <div>
+            <span class="wam-page-badge">WAM AKADEMİ</span>
+            <h1>Eğitimlerim</h1>
+            <p>
+                Başladığın eğitimlere kaldığın yerden devam et.
+            </p>
+        </div>
+
+        <a href="<?php echo $CFG->wwwroot; ?>/course/"
+           class="wam-catalog-button">
+            Tüm Eğitimleri Keşfet →
+        </a>
+    </div>
+
+    <?php if (!empty($startedcourses)): ?>
+
+        <div class="wam-my-courses-grid">
+
+            <?php foreach ($startedcourses as $course): ?>
+
+                <article class="wam-course-card">
+
+                    <div class="wam-course-cover">
+
+                        <?php if (!empty($course['courseimage'])): ?>
+
+                            <img
+                                src="<?php echo s($course['courseimage']); ?>"
+                                alt="<?php echo s($course['fullname']); ?>"
+                                class="wam-course-image"
+                            >
+
+                        <?php else: ?>
+
+                            <div class="wam-course-fallback">
+                                <?php echo s($course['shortname']); ?>
+                            </div>
+
+                        <?php endif; ?>
+
+                    </div>
+
+                    <div class="wam-course-info">
+
+                        <?php if (!empty($course['category'])): ?>
+                            <span class="wam-course-category">
+                                <?php echo s($course['category']); ?>
+                            </span>
+                        <?php endif; ?>
+
+                        <h4>
+                            <?php echo s($course['fullname']); ?>
+                        </h4>
+
+                        <div class="wam-progress-header">
+                            <span>
+                                <?php
+                                echo $course['completedlessons']
+                                    . ' / '
+                                    . $course['lessoncount']
+                                    . ' ders';
+                                ?>
+                            </span>
+
+                            <strong>
+                                <?php echo (int)$course['progress']; ?>%
+                            </strong>
+                        </div>
+
+                        <div class="wam-progress">
+                            <div
+                                class="wam-progress-value"
+                                style="width: <?php echo (int)$course['progress']; ?>%;">
+                            </div>
+                        </div>
+
+                        <?php if ($course['iscompleted']): ?>
+
+                            <span class="wam-course-button">
+                                Tamamlandı ✓
+                            </span>
+
+                        <?php else: ?>
+
+                            <a
+                                href="<?php echo s($course['continueurl']); ?>"
+                                class="wam-course-button">
+                                Kaldığın Yerden Devam Et →
+                            </a>
+
+                        <?php endif; ?>
+
+                    </div>
+
+                </article>
+
+            <?php endforeach; ?>
+
+        </div>
+
+    <?php else: ?>
+
+        <div class="wam-my-courses-empty">
+
+            <div class="wam-empty-icon">▶</div>
+
+            <h2>Henüz başladığın bir eğitim yok.</h2>
+
+            <p>
+                Eğitim kataloğundan bir eğitime başlayınca burada görünecek.
+            </p>
+
+            <a href="<?php echo $CFG->wwwroot; ?>/course/"
+               class="wam-catalog-button">
+                Eğitimleri Keşfet →
+            </a>
+
+        </div>
+
+    <?php endif; ?>
+
+</div>
+
+<?php
+
+echo $OUTPUT->footer();

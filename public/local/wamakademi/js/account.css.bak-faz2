@@ -1,0 +1,692 @@
+/* =========================================================
+   WAM Akademi — Hesap ekranları ortak stil (Faz 1)
+   Profil / Profili düzenle / Tercihler + çark / rozet
+   ========================================================= */
+
+:root {
+    --wam-acc-bg: #ffffff;
+    --wam-acc-surface: #f0f6ff;
+    --wam-acc-ink: #0f2747;
+    --wam-acc-ink-muted: #4a6280;
+    --wam-acc-border: #dbe5f1;
+    --wam-acc-primary: #2563eb;
+    --wam-acc-primary-soft: #eff6ff;
+    --wam-acc-danger: #dc2626;
+    --wam-acc-shadow: 0 4px 14px rgba(15, 39, 71, 0.06);
+    --wam-acc-radius: 12px;
+    --wam-acc-space-1: 8px;
+    --wam-acc-space-2: 16px;
+    --wam-acc-space-3: 24px;
+    --wam-acc-space-4: 32px;
+    --wam-acc-title: 30px;
+    --wam-acc-section-title: 19px;
+    --wam-acc-control-h: 44px;
+    --wam-acc-icon: 20px;
+    --wam-acc-focus: 0 0 0 2px #ffffff, 0 0 0 4px var(--wam-acc-primary);
+}
+
+/* ---------- Ortak sınıflar (sonraki fazlar için) ---------- */
+
+.wam-acc-page {
+    color: var(--wam-acc-ink);
+    max-width: 920px;
+    margin: 0 auto;
+    padding: var(--wam-acc-space-2) var(--wam-acc-space-2) var(--wam-acc-space-4);
+    min-width: 0;
+}
+
+.wam-acc-page *,
+.wam-acc-page *::before,
+.wam-acc-page *::after {
+    box-sizing: border-box;
+}
+
+.wam-acc-section {
+    margin: 0 0 var(--wam-acc-space-3);
+    padding: var(--wam-acc-space-2) 0 0;
+    border-top: 1px solid var(--wam-acc-border);
+    background: transparent;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.wam-acc-section:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.wam-acc-section__title {
+    margin: 0 0 var(--wam-acc-space-2);
+    font-size: var(--wam-acc-section-title);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--wam-acc-ink);
+}
+
+.wam-acc-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--wam-acc-space-2);
+    min-width: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--wam-acc-border);
+}
+
+.wam-acc-row:last-child {
+    border-bottom: 0;
+}
+
+.wam-acc-icon {
+    flex: 0 0 auto;
+    width: var(--wam-acc-icon);
+    height: var(--wam-acc-icon);
+    stroke: currentColor;
+    stroke-width: 1.8;
+    fill: none;
+    color: var(--wam-acc-ink-muted);
+}
+
+.wam-acc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: var(--wam-acc-control-h);
+    padding: 0 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.wam-acc-btn--primary {
+    background: var(--wam-acc-primary);
+    color: #fff;
+}
+
+.wam-acc-btn--primary:hover {
+    background: #1d4ed8;
+    color: #fff;
+    text-decoration: none;
+}
+
+.wam-acc-btn--ghost {
+    background: var(--wam-acc-surface);
+    color: var(--wam-acc-ink);
+    border-color: var(--wam-acc-border);
+}
+
+.wam-acc-btn--ghost:hover {
+    background: #e4eefc;
+    text-decoration: none;
+    color: var(--wam-acc-ink);
+}
+
+/* Odak: farede kalın kutu yok, klavyede görünür odak */
+#page-user-profile a:focus:not(:focus-visible),
+#page-user-profile button:focus:not(:focus-visible),
+#page-user-edit a:focus:not(:focus-visible),
+#page-user-edit button:focus:not(:focus-visible),
+#page-user-edit input:focus:not(:focus-visible),
+#page-user-edit select:focus:not(:focus-visible),
+#page-user-edit textarea:focus:not(:focus-visible),
+#page-user-preferences a:focus:not(:focus-visible),
+#page-user-preferences button:focus:not(:focus-visible),
+.navbar .wam-gear__btn:focus:not(:focus-visible),
+.navbar .wam-gear__menu a:focus:not(:focus-visible),
+.navbar .wam-gear__menu button:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#page-user-profile a:focus-visible,
+#page-user-profile button:focus-visible,
+#page-user-edit a:focus-visible,
+#page-user-edit button:focus-visible,
+#page-user-edit input:focus-visible,
+#page-user-edit select:focus-visible,
+#page-user-edit textarea:focus-visible,
+#page-user-preferences a:focus-visible,
+#page-user-preferences button:focus-visible,
+.navbar .wam-gear__btn:focus-visible,
+.navbar .wam-gear__menu a:focus-visible,
+.navbar .wam-gear__menu button:focus-visible {
+    outline: none;
+    box-shadow: var(--wam-acc-focus);
+}
+
+/* ---------- Bildirim / mesaj rozeti ---------- */
+
+.navbar .popover-region .count-container {
+    top: 8px;
+    right: 2px;
+    box-sizing: border-box;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 9px;
+    background-color: var(--wam-acc-danger);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    overflow: visible;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+/* ---------- Ayarlar çarkı (gruplu) ---------- */
+
+.wam-gear {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+}
+
+.wam-gear__btn {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #334155;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wam-gear__btn:hover,
+.wam-gear__btn[aria-expanded="true"] {
+    background: #f1f5f9;
+}
+
+.wam-gear__menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(300px, calc(100vw - 24px));
+    max-height: min(80vh, 560px);
+    overflow: auto;
+    background: #fff;
+    border: 1px solid var(--wam-acc-border);
+    border-radius: var(--wam-acc-radius);
+    box-shadow: 0 12px 28px rgba(15, 39, 71, 0.14);
+    padding: 6px;
+    z-index: 1060;
+}
+
+.wam-gear__menu[hidden] {
+    display: none !important;
+}
+
+.wam-gear__banner {
+    margin: 4px 6px 8px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.wam-gear__group {
+    margin: 0 0 4px;
+}
+
+.wam-gear__group-title {
+    margin: 6px 8px 2px;
+    padding: 4px 4px;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--wam-acc-ink-muted);
+}
+
+.wam-gear__menu a,
+.wam-gear__menu button.wam-gear__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--wam-acc-ink);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.wam-gear__menu a:hover,
+.wam-gear__menu button.wam-gear__item:hover,
+.wam-gear__menu a[aria-current="true"] {
+    background: var(--wam-acc-surface);
+}
+
+.wam-gear__item--action {
+    color: var(--wam-acc-danger) !important;
+}
+
+.wam-gear__divider {
+    height: 1px;
+    margin: 6px 8px;
+    background: var(--wam-acc-border);
+    border: 0;
+}
+
+.wam-gear__langs {
+    margin: 0 4px 6px;
+    padding: 0;
+    list-style: none;
+}
+
+.wam-gear__langs a {
+    font-weight: 550;
+    min-height: 36px;
+    padding-left: 28px;
+}
+
+.wam-gear__langs a.is-active {
+    background: var(--wam-acc-primary-soft);
+    color: var(--wam-acc-primary);
+}
+
+body.wam-usermenu-redirected #user-action-menu {
+    display: none !important;
+}
+
+/* ---------- Profil sayfası ---------- */
+
+#page-user-profile.wam-acc-ready #region-main,
+#page-user-profile.wam-acc-ready .userprofile {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#page-user-profile.wam-acc-ready .page-context-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wam-acc-space-2);
+    margin-bottom: var(--wam-acc-space-3);
+    padding: var(--wam-acc-space-2);
+    background: var(--wam-acc-bg);
+    border: 1px solid var(--wam-acc-border);
+    border-radius: var(--wam-acc-radius);
+    box-shadow: var(--wam-acc-shadow);
+}
+
+#page-user-profile.wam-acc-ready .page-header-image img,
+#page-user-profile.wam-acc-ready .page-header-image .userpicture {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+#page-user-profile.wam-acc-ready .page-header-headings h1,
+#page-user-profile.wam-acc-ready .page-header-headings h2 {
+    margin: 0;
+    font-size: var(--wam-acc-title);
+    font-weight: 750;
+    line-height: 1.2;
+    color: var(--wam-acc-ink);
+    overflow-wrap: anywhere;
+}
+
+#page-user-profile.wam-acc-ready .wam-acc-dept {
+    margin-top: 4px;
+    color: var(--wam-acc-ink-muted);
+    font-size: 14px;
+}
+
+#page-user-profile.wam-acc-ready .wam-acc-header-actions {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree {
+    column-count: 1 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category {
+    display: block !important;
+    width: 100%;
+    margin: 0 0 var(--wam-acc-space-3) !important;
+    padding: var(--wam-acc-space-2) 0 0;
+    border: 0;
+    border-top: 1px solid var(--wam-acc-border);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category .card-body {
+    padding: 0;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category h3.lead {
+    margin: 0 0 var(--wam-acc-space-2);
+    font-size: var(--wam-acc-section-title);
+    font-weight: 700;
+    color: var(--wam-acc-ink);
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--wam-acc-border);
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li:last-child {
+    border-bottom: 0;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li.editprofile,
+#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li.wam-acc-hidden,
+#page-user-profile.wam-acc-ready .userprofile .profile_tree [data-wam-marker] {
+    display: none !important;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree dl {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+    gap: 4px 16px;
+    margin: 0;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree dt {
+    margin: 0;
+    color: var(--wam-acc-ink-muted);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+#page-user-profile.wam-acc-ready .userprofile .profile_tree dd {
+    margin: 0;
+    color: var(--wam-acc-ink);
+    font-size: 14px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#page-user-profile.wam-acc-ready .wam-acc-reltime {
+    color: var(--wam-acc-ink-muted);
+    font-weight: 500;
+}
+
+/* Kategori sırası */
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="contact"]) { order: 1; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="coursedetails"]) { order: 2; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="badges"]) { order: 3; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="reports"]) { order: 4; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="miscellaneous"]) { order: 5; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="privacyandpolicies"]) { order: 6; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="loginactivity"]) { order: 7; }
+#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="administration"]) { order: 8; }
+
+/* ---------- Tercihler ---------- */
+
+#page-user-preferences.wam-acc-ready #region-main > h2,
+#page-user-preferences.wam-acc-ready #region-main h2:first-of-type {
+    font-size: var(--wam-acc-title);
+    font-weight: 750;
+    color: var(--wam-acc-ink);
+    margin-bottom: var(--wam-acc-space-3);
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wam-acc-space-3);
+    max-width: 720px;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__section {
+    border: 1px solid var(--wam-acc-border);
+    border-radius: var(--wam-acc-radius);
+    background: var(--wam-acc-bg);
+    box-shadow: var(--wam-acc-shadow);
+    padding: var(--wam-acc-space-2);
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__title {
+    margin: 0 0 8px;
+    font-size: var(--wam-acc-section-title);
+    font-weight: 700;
+    color: var(--wam-acc-ink);
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: var(--wam-acc-control-h);
+    padding: 8px 4px;
+    border-bottom: 1px solid var(--wam-acc-border);
+    color: var(--wam-acc-ink);
+    text-decoration: none;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__link:last-child {
+    border-bottom: 0;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__link:hover {
+    background: var(--wam-acc-surface);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--wam-acc-ink);
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__label {
+    display: block;
+    font-size: 15px;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__desc {
+    display: block;
+    margin-top: 2px;
+    font-size: 12.5px;
+    color: var(--wam-acc-ink-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#page-user-preferences.wam-acc-ready .wam-acc-prefs__chev {
+    flex: 0 0 auto;
+    color: var(--wam-acc-ink-muted);
+}
+
+#page-user-preferences.wam-acc-ready .container-fluid.p-sm-0.wam-acc-prefs-source {
+    display: none !important;
+}
+
+/* ---------- Profili düzenle ---------- */
+
+#page-user-edit.wam-acc-ready #region-main,
+#page-user-edit.wam-acc-ready form.mform {
+    max-width: 760px;
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-edit-group {
+    margin: 0 0 var(--wam-acc-space-3);
+    padding: var(--wam-acc-space-2);
+    border: 1px solid var(--wam-acc-border);
+    border-radius: var(--wam-acc-radius);
+    background: var(--wam-acc-bg);
+    box-shadow: var(--wam-acc-shadow);
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-edit-group > legend,
+#page-user-edit.wam-acc-ready .wam-acc-edit-group__title {
+    display: block;
+    width: 100%;
+    margin: 0 0 var(--wam-acc-space-2);
+    padding: 0;
+    border: 0;
+    font-size: var(--wam-acc-section-title);
+    font-weight: 700;
+    color: var(--wam-acc-ink);
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-edit-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--wam-acc-space-2);
+}
+
+@media (min-width: 768px) {
+    #page-user-edit.wam-acc-ready .wam-acc-edit-row--2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#page-user-edit.wam-acc-ready .fitem {
+    margin-bottom: var(--wam-acc-space-2);
+}
+
+#page-user-edit.wam-acc-ready .fitem .col-form-label,
+#page-user-edit.wam-acc-ready .fitem label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13.5px;
+    font-weight: 650;
+    color: var(--wam-acc-ink);
+}
+
+#page-user-edit.wam-acc-ready .fitem .form-control,
+#page-user-edit.wam-acc-ready .fitem .form-select,
+#page-user-edit.wam-acc-ready .fitem select,
+#page-user-edit.wam-acc-ready .fitem input[type="text"],
+#page-user-edit.wam-acc-ready .fitem input[type="email"],
+#page-user-edit.wam-acc-ready .fitem textarea {
+    min-height: var(--wam-acc-control-h);
+    border-color: var(--wam-acc-border);
+    border-radius: 10px;
+}
+
+#page-user-edit.wam-acc-ready .fitem .form-text,
+#page-user-edit.wam-acc-ready .fitem .invalid-feedback,
+#page-user-edit.wam-acc-ready .fitem .error,
+#page-user-edit.wam-acc-ready .fitem .felement .text-danger {
+    display: block;
+    margin-top: 6px;
+    font-size: 12.5px;
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-advanced {
+    margin: 0 0 var(--wam-acc-space-3);
+    border: 1px solid var(--wam-acc-border);
+    border-radius: var(--wam-acc-radius);
+    background: var(--wam-acc-surface);
+    overflow: hidden;
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-advanced > summary {
+    list-style: none;
+    cursor: pointer;
+    min-height: var(--wam-acc-control-h);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--wam-acc-space-2);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--wam-acc-ink);
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-advanced > summary::-webkit-details-marker {
+    display: none;
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-advanced[open] > summary {
+    border-bottom: 1px solid var(--wam-acc-border);
+    background: #e8f0fe;
+}
+
+#page-user-edit.wam-acc-ready .wam-acc-advanced__body {
+    padding: var(--wam-acc-space-2);
+    background: var(--wam-acc-bg);
+}
+
+#page-user-edit.wam-acc-ready #fgroup_id_buttonar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding-top: var(--wam-acc-space-2);
+    border-top: 1px solid var(--wam-acc-border);
+}
+
+#page-user-edit.wam-acc-ready #fgroup_id_buttonar .btn,
+#page-user-edit.wam-acc-ready #fgroup_id_buttonar input[type="submit"],
+#page-user-edit.wam-acc-ready #fgroup_id_buttonar button {
+    min-height: var(--wam-acc-control-h);
+    min-width: 120px;
+}
+
+/* Orijinal fieldset kabuklarını sadeleştir */
+#page-user-edit.wam-acc-ready form.mform > fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#page-user-edit.wam-acc-ready form.mform > fieldset > legend {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    #page-user-profile.wam-acc-ready .wam-acc-header-actions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #page-user-profile.wam-acc-ready .userprofile .profile_tree dl {
+        grid-template-columns: 1fr;
+    }
+
+    #page-user-preferences.wam-acc-ready .wam-acc-prefs__desc {
+        white-space: normal;
+    }
+}
