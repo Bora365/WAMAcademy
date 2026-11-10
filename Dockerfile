@@ -38,8 +38,8 @@ COPY --chown=www-data:www-data . /var/www/html
 COPY --chown=www-data:www-data docker/moodle-config.php /var/www/html/config.php
 
 RUN composer dump-autoload --no-dev --optimize --no-interaction \
-    && mkdir -p /var/moodledata \
-    && chown www-data:www-data /var/moodledata
+    && mkdir -p /var/moodledata /var/cache/moodle-local \
+    && chown www-data:www-data /var/moodledata /var/cache/moodle-local
 
 EXPOSE 80
 ENTRYPOINT ["moodle-entrypoint"]

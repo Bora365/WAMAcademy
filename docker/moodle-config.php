@@ -35,6 +35,10 @@ $CFG->dboptions = [
 
 $CFG->wwwroot  = $moodleenv('MOODLE_WWWROOT');
 $CFG->dataroot = $moodleenv('MOODLE_DATAROOT', '/var/moodledata');
+// Compiled theme CSS and JS live here. Keep it inside the container so the
+// live host Apache (different code) and this image never serve each other's
+// cached assets from the shared dataroot.
+$CFG->localcachedir = $moodleenv('MOODLE_LOCALCACHEDIR', '/var/cache/moodle-local');
 $CFG->admin    = 'admin';
 $CFG->routerconfigured = true;
 $CFG->directorypermissions = 02777;
