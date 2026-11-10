@@ -17,7 +17,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Extensions marked "required" for Moodle 5.2 in public/admin/environment.xml.
-RUN php -r '$missing = array_filter(["iconv","mbstring","curl","openssl","ctype","zip","zlib","gd","simplexml","spl","pcre","dom","xml","xmlreader","intl","json","hash","fileinfo","sodium","filter","mysqli"], fn($e) => !extension_loaded($e)); if ($missing) { fwrite(STDERR, "Missing PHP extensions: " . implode(", ", $missing) . "\n"); exit(1); }'
+RUN php -r '$missing = array_filter(["iconv","mbstring","curl","openssl","ctype","zip","zlib","gd","simplexml","spl","pcre","dom","xml","xmlreader","intl","json","hash","fileinfo","sodium","filter","mysqli"], fn($e) => !extension_loaded($e)); if ($missing) { fwrite(STDERR, "Missing PHP extensions: " . implode(", ", $missing) . "\n"); exit(1); }' \
+    && command -v setpriv \
+    && command -v curl
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -33,6 +35,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-interaction --no-progress --prefer-dist --no-autoloader --no-scripts
 
 COPY --chown=www-data:www-data . /var/www/html
+COPY --chown=www-data:www-data docker/moodle-config.php /var/www/html/config.php
 
 RUN composer dump-autoload --no-dev --optimize --no-interaction \
     && mkdir -p /var/moodledata \

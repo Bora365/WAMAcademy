@@ -1,6 +1,8 @@
-config.php
+/config.php
 /vendor/
 node_modules/
 .DS_Store
 /.grunt/
 /.esbuild/
+.env
+.env.*

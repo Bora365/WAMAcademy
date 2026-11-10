@@ -1,7 +1,7 @@
 /* WAM Akademi — login page only (body#page-login-index). */
 
 body#page-login-index.pagelayout-login {
-    background: linear-gradient(180deg, #8EB8EE 0%, #4A8FE0 50%, #2F6FC4 100%);
+    background: linear-gradient(180deg, #1E3A6B 0%, #142B52 50%, #0B1A36 100%);
     background-attachment: fixed;
     /* Allow scrolling when the mobile keyboard shrinks the viewport. */
     overflow-x: hidden !important;

@@ -30,14 +30,16 @@
 
                 <FIELD NAME="currenttime"
                        TYPE="number"
-                       LENGTH="10,2"
+                       LENGTH="10"
+                       DECIMALS="2"
                        NOTNULL="true"
                        DEFAULT="0"
                        SEQUENCE="false"/>
 
                 <FIELD NAME="duration"
                        TYPE="number"
-                       LENGTH="10,2"
+                       LENGTH="10"
+                       DECIMALS="2"
                        NOTNULL="true"
                        DEFAULT="0"
                        SEQUENCE="false"/>
