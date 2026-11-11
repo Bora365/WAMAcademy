@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="WAM">
+  <defs>
+    <linearGradient id="wamMark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="8" width="80" height="80" rx="18" fill="url(#wamMark)"/>
+  <path fill="#FFFFFF" d="M18 66V30h12.2l9.8 28.6L49.8 30H62v36h-9.2V42.2L43.2 66h-8.4L25.2 42.2V66H18z"/>
+  <text x="100" y="48" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#0F172A" letter-spacing="1">WAM</text>
+  <text x="100" y="72" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="2.2">WORLDWIDE ASSET MANAGEMENT</text>
+</svg>

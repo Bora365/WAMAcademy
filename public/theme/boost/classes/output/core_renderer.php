@@ -267,6 +267,9 @@ class core_renderer extends \core_renderer {
         $url = $this->get_logo_url();
         if ($url) {
             $url = $url->out(false);
+        } else {
+            // Local/dev sites may not have a site logo uploaded yet.
+            $url = (new \moodle_url('/local/wamakademi/pix/wam-logo.svg'))->out(false);
         }
         $context->logourl = $url;
         $context->sitename = format_string(
