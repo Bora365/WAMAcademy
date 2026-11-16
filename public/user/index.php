@@ -116,6 +116,11 @@ echo $OUTPUT->render_participants_tertiary_nav($course, html_writer::div($enrolb
     'data-table-uniqueid' => $participanttable->uniqueid,
 ]));
 
+// WAM: one paragraph that names the scope of this list (course enrolments or all site accounts).
+if (function_exists('local_wamakademi_users_scope_html')) {
+    echo local_wamakademi_users_scope_html('participants');
+}
+
 $filterset = new \core_user\table\participants_filterset();
 $filterset->add_filter(new integer_filter('courseid', filter::JOINTYPE_DEFAULT, [(int)$course->id]));
 

@@ -62,17 +62,24 @@
         {{< theme_boost/drawer }}
             {{$id}}theme_boost-drawers-courseindex{{/id}}
             {{$drawerheadercontent}}
-                {{> theme_boost/courseindexdrawercontrols}}
+                {{^wamadminnav}}{{> theme_boost/courseindexdrawercontrols}}{{/wamadminnav}}
             {{/drawerheadercontent}}
-            {{$drawerheading}}{{> theme_boost/courseindexdrawerheading}}{{/drawerheading}}
-            {{$drawerclasses}}drawer drawer-left {{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}}
+            {{$drawerheading}}
+                {{#wamadminnav}}
+                    <div id="courseindexdrawerheading" class="wam-adm-drawer-heading">
+                        <a class="text-truncate fw-bold" href="{{{wamadminhomeurl}}}">{{wamadminnavtitle}}</a>
+                    </div>
+                {{/wamadminnav}}
+                {{^wamadminnav}}{{> theme_boost/courseindexdrawerheading}}{{/wamadminnav}}
+            {{/drawerheading}}
+            {{$drawerclasses}}drawer drawer-left {{#wamadminnav}}wam-adm-drawer {{/wamadminnav}}{{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}}
             {{$drawercontent}}
                 {{{courseindex}}}
             {{/drawercontent}}
             {{$drawerpreferencename}}drawer-open-index{{/drawerpreferencename}}
             {{$drawerstate}}show-drawer-left{{/drawerstate}}
             {{$tooltipplacement}}right{{/tooltipplacement}}
-            {{$closebuttontext}}{{#str}}closecourseindex, core{{/str}}{{/closebuttontext}}
+            {{$closebuttontext}}{{#wamadminnav}}{{wamadminclosetext}}{{/wamadminnav}}{{^wamadminnav}}{{#str}}closecourseindex, core{{/str}}{{/wamadminnav}}{{/closebuttontext}}
             {{$closebuttonicon}}
                 <span class="dir-rtl-hide">{{#pix}} e/sidebar_left, core {{/pix}}</span>
                 <span class="dir-ltr-hide">{{#pix}} e/sidebar_right, core {{/pix}}</span>
@@ -113,9 +120,9 @@
                             data-target="theme_boost-drawers-courseindex"
                             data-bs-toggle="tooltip"
                             data-bs-placement="right"
-                            title="{{#str}}opendrawerindex, core{{/str}}"
+                            title="{{#wamadminnav}}{{wamadminopentext}}{{/wamadminnav}}{{^wamadminnav}}{{#str}}opendrawerindex, core{{/str}}{{/wamadminnav}}"
                         >
-                            <span class="visually-hidden">{{#str}}opendrawerindex, core{{/str}}</span>
+                            <span class="{{^wamadminnav}}visually-hidden{{/wamadminnav}}{{#wamadminnav}}wam-adm-toggle__label{{/wamadminnav}}">{{#wamadminnav}}{{wamadminopentext}}{{/wamadminnav}}{{^wamadminnav}}{{#str}}opendrawerindex, core{{/str}}{{/wamadminnav}}</span>
                             <span class="dir-rtl-hide">{{#pix}} e/sidebar_left, core {{/pix}}</span>
                             <span class="dir-ltr-hide">{{#pix}} e/sidebar_right, core {{/pix}}</span>
                         </button>
@@ -140,11 +147,13 @@
                 {{/hasblocks}}
             </div>
             {{{ output.full_header }}}
-            {{#secondarymoremenu}}
-                <div class="secondary-navigation d-print-none">
-                    {{> core/moremenu}}
-                </div>
-            {{/secondarymoremenu}}
+            {{^wamadminnav}}
+                {{#secondarymoremenu}}
+                    <div class="secondary-navigation d-print-none">
+                        {{> core/moremenu}}
+                    </div>
+                {{/secondarymoremenu}}
+            {{/wamadminnav}}
             <div id="page-content" class="pb-3 d-print-block">
                 <div id="region-main-box">
                     {{#hasregionmainsettingsmenu}}

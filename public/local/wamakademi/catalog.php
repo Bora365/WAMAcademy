@@ -12,7 +12,7 @@ $PAGE->set_title('Eğitimler');
 $PAGE->set_heading('');
 $PAGE->add_body_class('wam-catalog-body');
 
-$PAGE->requires->css('/local/wamakademi/styles.css');
+$searchquery = optional_param('q', '', PARAM_TEXT);
 
 $courses = get_courses();
 
@@ -154,8 +154,10 @@ echo $OUTPUT->header();
             <span>⌕</span>
 
             <input
-                type="text"
+                type="search"
                 id="wamCatalogSearch"
+                name="q"
+                value="<?php echo s($searchquery); ?>"
                 placeholder="Eğitimlerde ara..."
                 autocomplete="off"
             >
@@ -405,6 +407,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     searchInput.addEventListener('input', applyFilters);
+
+    if (searchInput.value) {
+        applyFilters();
+    }
 
     filterButtons.forEach(function(button) {
 

@@ -10,8 +10,6 @@ $PAGE->set_pagelayout('standard');
 $PAGE->set_title('WAM Akademi');
 $PAGE->set_heading('');
 
-$PAGE->requires->css(new moodle_url('/local/wamakademi/styles.css'));
-
 /*
  * Giriş yapan kullanıcının kayıtlı olduğu kursları getir.
  */
@@ -272,9 +270,6 @@ $templatecontext = [
 
     'ongoingcount' => $ongoingcount,
     'completedcount' => $completedcount,
-
-    'certificatecount' => 0,
-    'learninghours' => 0,
 
     'herocontinueurl' => $herocontinueurl,
 ];

@@ -234,5 +234,49 @@ if ($oldversion < 2026082606) {
     );
 }
 
+    // Content Workflow R1: eksik ilerleme sütunlarını garanti et + managevideos capability.
+    if ($oldversion < 2026082607) {
+
+        $table = new xmldb_table('local_wamakademi_progress');
+
+        $watchedseconds = new xmldb_field(
+            'watchedseconds',
+            XMLDB_TYPE_NUMBER,
+            '10,2',
+            null,
+            XMLDB_NOTNULL,
+            null,
+            '0',
+            'duration'
+        );
+        if (!$dbman->field_exists($table, $watchedseconds)) {
+            $dbman->add_field($table, $watchedseconds);
+        }
+
+        $watchedranges = new xmldb_field(
+            'watchedranges',
+            XMLDB_TYPE_TEXT,
+            null,
+            null,
+            null,
+            null,
+            null,
+            'watchedseconds'
+        );
+        if (!$dbman->field_exists($table, $watchedranges)) {
+            $dbman->add_field($table, $watchedranges);
+        }
+
+        // Yeni capability tanımlarını yükle (db/access.php).
+        update_capabilities('local_wamakademi');
+
+        upgrade_plugin_savepoint(
+            true,
+            2026082607,
+            'local',
+            'wamakademi'
+        );
+    }
+
     return true;
 }

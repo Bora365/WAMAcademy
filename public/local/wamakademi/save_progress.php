@@ -2,6 +2,7 @@
 // This file is part of Moodle - http://moodle.org/
 //
 // WAM Akademi - Video ilerleme kaydı (eğitmen önizlemesinde yazma yok).
+// Content Workflow R1: süre tutarlılığı, geriye gitmeyen ilerleme, görünürlük kontrolü.
 
 require_once('../../config.php');
 
@@ -25,10 +26,19 @@ $currenttime = required_param('currenttime', PARAM_FLOAT);
 $duration = required_param('duration', PARAM_FLOAT);
 $rangesjson = optional_param('watchedranges', '[]', PARAM_RAW);
 
-if ($cmid <= 0 || $duration <= 0) {
+if ($cmid <= 0 || $duration <= 0 || !is_finite($duration) || !is_finite($currenttime)) {
     echo json_encode([
         'success' => false,
         'message' => 'Geçersiz video bilgisi.',
+    ]);
+    exit;
+}
+
+// Makul üst sınır (24 saat); anormal istemci değerlerini reddet.
+if ($duration > 86400) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Geçersiz video süresi.',
     ]);
     exit;
 }
@@ -46,6 +56,24 @@ if (!has_capability('mod/resource:view', $modcontext)) {
         'message' => 'Bu dersi görüntüleme yetkiniz yok.',
     ]);
     exit;
+}
+
+// Gizli taslak / öğrencinin göremediği etkinlikte ilerleme yazma.
+try {
+    $modinfo = get_fast_modinfo($course, $USER->id);
+    if (!isset($modinfo->cms[$cmid]) || !$modinfo->cms[$cmid]->uservisible) {
+        // Önizleme yetkisi olanlar aşağıda zaten early-return alır.
+        if (!(int)$cm->visible) {
+            http_response_code(403);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Bu ders öğrenciye kapalı; ilerleme kaydedilmez.',
+            ]);
+            exit;
+        }
+    }
+} catch (Throwable $e) {
+    // modinfo yoksa devam; require_course_login zaten erişimi doğruladı.
 }
 
 // Yetkili eğitmen / gizli aktivite görüntüleyici önizlemesinde ilerleme yazma.
@@ -67,13 +95,6 @@ if ($canpreview) {
         'completed' => false,
     ]);
     exit;
-}
-
-$currenttime = max(0, min($currenttime, $duration));
-
-$incomingranges = json_decode($rangesjson, true);
-if (!is_array($incomingranges)) {
-    $incomingranges = [];
 }
 
 /**
@@ -158,6 +179,21 @@ $record = $DB->get_record(
     ]
 );
 
+// Süre tutarlılığı: kayıtlı süre varsa %5'ten fazla sapmayı reddetme; ilk değeri koru.
+if ($record && (float)$record->duration > 0) {
+    $storeduration = (float)$record->duration;
+    if (abs($duration - $storeduration) / $storeduration > 0.05) {
+        $duration = $storeduration;
+    }
+}
+
+$currenttime = max(0, min($currenttime, $duration));
+
+$incomingranges = json_decode($rangesjson, true);
+if (!is_array($incomingranges)) {
+    $incomingranges = [];
+}
+
 $existingranges = [];
 if ($record && !empty($record->watchedranges)) {
     $decoded = json_decode($record->watchedranges, true);
@@ -171,9 +207,25 @@ $mergedranges = local_wamakademi_normalise_ranges($allranges, $duration);
 $watchedseconds = local_wamakademi_count_watched_seconds($mergedranges);
 $watchedseconds = min($watchedseconds, $duration);
 
-$progress = (int)round(($watchedseconds / $duration) * 100);
+// Geriye gitmeyen ilerleme: önceki watchedseconds / progress korunur.
+if ($record) {
+    $prevwatched = (float)($record->watchedseconds ?? 0);
+    if ($watchedseconds < $prevwatched) {
+        $watchedseconds = $prevwatched;
+        $mergedranges = $existingranges;
+    }
+}
+
+$progress = $duration > 0 ? (int)round(($watchedseconds / $duration) * 100) : 0;
 $progress = max(0, min(100, $progress));
+if ($record && (int)$record->progress > $progress) {
+    $progress = (int)$record->progress;
+}
+
 $completed = ($progress >= 95) ? 1 : 0;
+if ($record && (int)$record->completed === 1) {
+    $completed = 1;
+}
 $fullywatched = ($progress >= 100);
 $now = time();
 
@@ -185,6 +237,7 @@ if ($record) {
         $record->timecompleted = $now;
     }
 
+    // currenttime her zaman en son konum; watchedseconds / progress asla düşmez.
     $record->currenttime = $currenttime;
     $record->duration = $duration;
     $record->watchedseconds = $watchedseconds;

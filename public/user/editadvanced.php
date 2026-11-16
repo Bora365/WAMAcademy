@@ -328,6 +328,10 @@ if ($userform->is_cancelled()) {
 if ($user->id == -1 or ($user->id != $USER->id)) {
     if ($user->id == -1) {
         echo $OUTPUT->header();
+        // WAM: one paragraph that says this creates a system account, not a course enrolment.
+        if (function_exists('local_wamakademi_users_scope_html')) {
+            echo local_wamakademi_users_scope_html('new');
+        }
     } else {
         $streditmyprofile = get_string('editmyprofile');
         $userfullname = fullname($user, true);
@@ -335,7 +339,12 @@ if ($user->id == -1 or ($user->id != $USER->id)) {
         $coursename = $course->id !== SITEID ? "$course->shortname" : '';
         $PAGE->set_title("$streditmyprofile: $userfullname" . moodle_page::TITLE_SEPARATOR . $coursename);
         echo $OUTPUT->header();
-        echo $OUTPUT->heading($userfullname);
+        if (function_exists('local_wamakademi_users_scope_html')) {
+            // WAM: the page heading already names the user; describe what this form edits instead.
+            echo local_wamakademi_users_scope_html('edit');
+        } else {
+            echo $OUTPUT->heading($userfullname);
+        }
     }
 } else if (!empty($USER->newadminuser)) {
     $strinstallation = get_string('installation', 'install');

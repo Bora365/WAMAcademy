@@ -187,7 +187,8 @@ function theme_boost_get_precompiled_css() {
 function theme_boost_get_pre_scss($theme) {
     global $CFG;
 
-    $scss = '';
+    // WAM: shared header height (64px) so that drawers, sticky offsets and anchor scroll margins follow it.
+    $scss = '$navbar-height: 64px;' . "\n";
     $configurable = [
         // Config key => [variableName, ...].
         'brandcolor' => ['primary'],

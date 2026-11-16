@@ -82,6 +82,11 @@ class participants_filter extends \core\output\datafilter {
             return null;
         }
 
+        // WAM: the site front page has no enrolments; participants_search ignores this filter there, so do not offer it.
+        if ($this->course->id == SITEID) {
+            return null;
+        }
+
         return $this->get_filter_object(
             'status',
             get_string('participationstatus', 'core_enrol'),

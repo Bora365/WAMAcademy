@@ -1,0 +1,57 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_wamakademi/admin_nav
+
+    Site administration category navigation, rendered inside the Boost left drawer.
+    On /admin/search.php the entries are Bootstrap tabs that switch the category panes;
+    everywhere else they are plain links back to the matching category.
+
+    Example context (json):
+    {
+        "label": "Site administration categories",
+        "istabs": true,
+        "items": [
+            {"text": "General", "key": "siteadminnode", "href": "#linksiteadminnode", "istab": true,
+             "paneid": "linksiteadminnode", "active": true, "ariacurrent": false, "tabindex": 0},
+            {"text": "Users", "key": "users", "href": "#linkusers", "istab": true,
+             "paneid": "linkusers", "active": false, "ariacurrent": false, "tabindex": -1}
+        ]
+    }
+}}
+<nav class="wam-adm-nav" aria-label="{{label}}">
+    <ul class="wam-adm-nav__list" {{#istabs}}role="tablist" aria-orientation="vertical"{{/istabs}}>
+        {{#items}}
+            <li class="wam-adm-nav__item" {{#istabs}}role="presentation"{{/istabs}}>
+                <a class="wam-adm-nav__link{{#active}} active{{/active}}"
+                   href="{{{href}}}"
+                   data-key="{{key}}"
+                   {{#istab}}
+                       id="wam-adm-tab-{{paneid}}"
+                       role="tab"
+                       data-bs-toggle="tab"
+                       aria-controls="{{paneid}}"
+                       aria-selected="{{#active}}true{{/active}}{{^active}}false{{/active}}"
+                       tabindex="{{tabindex}}"
+                   {{/istab}}
+                   {{#ariacurrent}}aria-current="page"{{/ariacurrent}}>
+                    <span class="wam-adm-nav__text">{{text}}</span>
+                </a>
+            </li>
+        {{/items}}
+    </ul>
+</nav>

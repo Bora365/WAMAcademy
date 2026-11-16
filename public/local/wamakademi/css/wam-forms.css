@@ -1,0 +1,400 @@
+/* =========================================================
+   WAM Akademi — ortak form katmanı (Form R1)
+   Tüm oturum açılmış WAM sayfalarında, sayfa katmanlarından (admin, kurs, hesap) sonra yüklenir.
+   Yalnızca Moodle form bileşenlerinin kendi sınıflarını hedefler; token kaynağı css/wam-base.css.
+   Bootstrap yardımcıları !important kullandığında renk değişkenleri (--bs-*-rgb) yerel olarak değiştirilir.
+   ========================================================= */
+
+/* ---------- 1. Form yüzeyi ve bölümler (eğitim/kategori kabuğu) ----------
+   Site yönetimi formları aynı yüzeyi wam-admin.css §8'den alır; hesap ekranları kendi kartlarını kullanır. */
+
+body.wam-ui.wam-course #region-main [role="main"] form.mform:not(.unresponsive):has(> fieldset, > .fitem) {
+    max-width: 800px;
+    margin: 0 0 var(--wam-space-5);
+    padding: var(--wam-form-surface-pad);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+}
+
+/* Editör veya çok dosyalı alan içeren formlar daha geniş yerleşebilir. */
+body.wam-ui.wam-course #region-main [role="main"] form.mform:not(.unresponsive):has(.felement[data-fieldtype="editor"], .felement[data-fieldtype="filemanager"]) {
+    max-width: 960px;
+}
+
+body.wam-ui:not(.wam-account) #region-main form.mform > fieldset.collapsible {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+body.wam-ui:not(.wam-account) #region-main form.mform > fieldset.collapsible ~ fieldset.collapsible {
+    margin-top: var(--wam-space-4);
+    padding-top: var(--wam-space-4);
+    border-top: 1px solid var(--wam-line);
+}
+
+/* Bölüm başlığı + açma/kapama oku tek satırda */
+body.wam-ui .mform .ftoggler h3 {
+    margin: 0;
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-admin #region-main form.mform legend.ftoggler,
+body.wam-ui.wam-admin #region-main form.mform .fheader {
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+}
+
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand {
+    width: 32px;
+    height: 32px;
+    margin-right: var(--wam-space-2);
+    border-radius: var(--wam-field-radius);
+    background: transparent;
+    color: var(--wam-muted);
+    transition: background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .mform .ftoggler:hover .btn-icon.icons-collapse-expand {
+    background: var(--wam-field-disabled-bg);
+    color: var(--wam-ink);
+}
+
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+body.wam-ui .mform .collapsible-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 var(--wam-space-2);
+}
+
+body.wam-ui .mform .collapsible-actions .btn-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--wam-touch);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body.wam-ui .mform .collapsible-actions .btn-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- 2. Etiket/alan ızgarası ---------- */
+
+@media (min-width: 768px) {
+    body.wam-ui:not(.wam-account) #region-main form.mform .fitem.row {
+        display: flex;
+    }
+
+    body.wam-ui:not(.wam-account) #region-main form.mform .fitem.row > .col-md-3 {
+        flex: 0 0 var(--wam-form-label-w);
+        width: var(--wam-form-label-w);
+        max-width: var(--wam-form-label-w);
+        padding-bottom: 0;
+    }
+
+    body.wam-ui:not(.wam-account) #region-main form.mform .fitem.row > .col-md-9 {
+        flex: 1 1 0;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+    }
+
+    body.wam-ui.wam-admin #region-main form.mform .fitem.femptylabel > .col-md-3 {
+        display: block;
+    }
+}
+
+body.wam-ui .mform .fitem > .col-form-label {
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: var(--wam-space-2);
+    row-gap: 2px;
+}
+
+body.wam-ui .mform .fitem > .col-form-label > :is(label, p, .d-inline) {
+    margin: 0;
+    font-size: var(--wam-body);
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--wam-ink);
+}
+
+/* Ek alan (Zorunlu + yardım) etiketin hemen ardından gelir; sütunun öbür ucuna itilmez. */
+body.wam-ui .mform .fitem > .col-form-label > .form-label-addon {
+    align-self: center;
+    gap: var(--wam-space-1);
+    margin-left: 0;
+}
+
+body.wam-ui .mform :is(.form-text, .fdescription, .form-control-static.text-muted),
+body.wam-ui .mform .felement > .text-muted {
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    color: var(--wam-muted);
+}
+
+/* ---------- 3. Zorunlu alan gösterimi ----------
+   Moodle işareti (.text-danger + exclamation ikonu) aria-hidden; alanın kendisi aria-required taşır.
+   İkon yerine "Zorunlu" metni gösterilir; ekran okuyucuya tekrar okunmaz. */
+
+body.wam-ui .mform .form-label-addon > .text-danger[aria-hidden="true"]:has(> .icon:is(.fa-circle-exclamation, .fa-exclamation-circle)) {
+    --bs-danger-rgb: 74, 98, 128;
+    display: inline-flex;
+    align-items: center;
+    margin-right: var(--wam-space-1);
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+body.wam-ui .mform .form-label-addon > .text-danger[aria-hidden="true"] > .icon:is(.fa-circle-exclamation, .fa-exclamation-circle) {
+    display: none;
+}
+
+body.wam-ui .mform .form-label-addon > .text-danger[aria-hidden="true"]:has(> .icon:is(.fa-circle-exclamation, .fa-exclamation-circle))::before {
+    content: var(--wam-req-text, "Zorunlu");
+}
+
+/* Formun altındaki "Gerekli" açıklaması (aria-hidden; her alan kendi işaretini taşır). */
+body.wam-ui .mform .fdescription.required[aria-hidden="true"] {
+    display: none;
+}
+
+/* ---------- 4. Yardım düğmesi ---------- */
+
+body.wam-ui .mform .form-label-addon .help-icon,
+body.wam-ui .mform .fitem .help-icon {
+    --bs-info-rgb: 74, 98, 128;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border-radius: 50%;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .mform .fitem .help-icon .icon {
+    margin: 0;
+    font-size: 15px;
+}
+
+body.wam-ui .mform .fitem .help-icon:hover {
+    --bs-info-rgb: 37, 99, 235;
+    background: var(--wam-primary-soft);
+}
+
+body.wam-ui .mform .fitem .help-icon:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 1px;
+    box-shadow: none;
+}
+
+/* ---------- 5. Metin alanları ve seçim listeleri ----------
+   Görsel chrome: css/wam-controls.css. Burada yalnızca form yerleşimi kalır. */
+
+/* Hesap formları kendi (daha özgül) kurallarında bu token'ları okur. */
+body.wam-ui.wam-account form.mform {
+    --wam-control-h: var(--wam-field-h);
+    --wam-acc-control-h: var(--wam-field-h);
+}
+
+body.wam-ui .mform .invalid-feedback {
+    margin-top: var(--wam-space-1);
+    color: var(--wam-danger);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 600;
+}
+
+/* Tarih/saat grupları: ayrı kutu yok, seçimler satır içinde sarar */
+body.wam-ui .mform fieldset:is([data-fieldtype="date_time"], [data-fieldtype="date"]) > .d-flex {
+    flex-wrap: wrap;
+    row-gap: var(--wam-space-2);
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+/* Form düğmeleri */
+body.wam-ui .mform .btn:not(.btn-icon):not(.btn-link):not(.help-icon),
+body.wam-ui #sticky-footer .btn:not(.btn-icon):not(.btn-link) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--wam-field-h);
+    padding: 0 var(--wam-space-4);
+    border-radius: var(--wam-field-radius);
+    font-weight: 600;
+}
+
+/* ---------- 6. Otomatik tamamlama ----------
+   Görsel chrome: css/wam-controls.css. */
+
+/* ---------- 7. Dosya seçici (tek dosya) ----------
+   Seçme düğmesi ve sürükle-bırak alanı tek kesikli yüzeyde; Moodle'ın iç çerçeveleri kaldırılır. */
+
+body.wam-ui .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--wam-space-3);
+    max-width: 560px;
+    padding: var(--wam-space-5) var(--wam-space-4);
+    border: 1px dashed var(--wam-control-border);
+    border-radius: var(--wam-field-radius);
+    background: var(--wam-field-soft);
+    text-align: center;
+    transition: border-color var(--wam-dur-fast) var(--wam-ease), background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"] > .filepicker-filelist {
+    order: -1;
+}
+
+body.wam-ui .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"]:has(.dndupload-over) {
+    border-color: var(--wam-primary);
+    background: var(--wam-primary-soft);
+}
+
+body.wam-ui .fitem.has-danger .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"] {
+    border-color: var(--wam-danger);
+}
+
+body.wam-ui .felement[data-fieldtype="filepicker"] .filepicker-filelist,
+body.wam-ui .felement[data-fieldtype="filepicker"] .filepicker-filelist .filepicker-container {
+    position: static;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+body.wam-ui .felement[data-fieldtype="filepicker"] .filepicker-filename {
+    font-size: var(--wam-body);
+    line-height: 22px;
+    color: var(--wam-ink);
+}
+
+/* ---------- 8. Dosya yöneticisi (çok dosya) ---------- */
+
+body.wam-ui .felement[data-fieldtype="filemanager"] .filemanager .fp-navbar {
+    border: 1px solid var(--wam-control-border);
+    border-bottom: 0;
+    border-radius: var(--wam-field-radius) var(--wam-field-radius) 0 0;
+    background: var(--wam-surface);
+}
+
+body.wam-ui .felement[data-fieldtype="filemanager"] .filemanager .filemanager-container {
+    border: 1px dashed var(--wam-control-border);
+    border-radius: 0 0 var(--wam-field-radius) var(--wam-field-radius);
+    background: var(--wam-field-soft);
+}
+
+body.wam-ui .felement[data-fieldtype="filemanager"] .filemanager.fm-noitems .fm-empty-container {
+    border: 0;
+}
+
+body.wam-ui .felement[data-fieldtype="filemanager"] .filemanager.fm-maxfiles .filemanager-container,
+body.wam-ui .felement[data-fieldtype="filemanager"] .filemanager .filemanager-container:has(.dndupload-over) {
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui .fitem.has-danger .felement[data-fieldtype="filemanager"] .filemanager .filemanager-container {
+    border-color: var(--wam-danger);
+}
+
+/* ---------- 9. Sürükle-bırak yönlendirmesi (ortak) ---------- */
+
+/* .dndupload-target yalnızca sürükleme sırasında görünür (Moodle .dndupload-over); görünürlüğüne dokunulmaz. */
+body.wam-ui .mform .dndupload-message,
+body.wam-ui .mform .dndupload-over .dndupload-target {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--wam-space-2);
+    margin: 0;
+    font-size: var(--wam-body);
+    line-height: 22px;
+    color: var(--wam-ink);
+}
+
+body.wam-ui .mform .dndupload-target {
+    color: var(--wam-primary);
+    font-weight: 600;
+}
+
+body.wam-ui .mform .dndupload-message > br,
+body.wam-ui .mform .dndupload-target > br {
+    display: none;
+}
+
+body.wam-ui .mform .dndupload-arrow {
+    position: static;
+    order: -1;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    background-color: var(--wam-primary);
+    -webkit-mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 16V4m0 0-5 5m5-5 5 5M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2'/%3e%3c/svg%3e") center / 24px 24px no-repeat;
+    mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 16V4m0 0-5 5m5-5 5 5M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2'/%3e%3c/svg%3e") center / 24px 24px no-repeat;
+}
+
+body.wam-ui .mform .dndupload-arrow > .fa {
+    display: none;
+}
+
+/* ---------- 10. Metin editörü (TinyMCE) ---------- */
+
+body.wam-ui .tox.tox-tinymce:not(.tox-tinymce-inline) {
+    border: 1px solid var(--wam-control-border);
+    border-radius: var(--wam-field-radius);
+    transition: border-color var(--wam-dur-fast) var(--wam-ease), box-shadow var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .tox.tox-tinymce:not(.tox-tinymce-inline):focus-within {
+    border-color: var(--wam-primary);
+    box-shadow: var(--wam-focus);
+}
+
+body.wam-ui .tox.tox-tinymce:not(.tox-tinymce-inline) .tox-editor-header {
+    padding: var(--wam-space-1) 0;
+    border-bottom: 1px solid var(--wam-line);
+    box-shadow: none;
+}
+
+body.wam-ui .tox.tox-tinymce.tox-fullscreen {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+body.wam-ui .fitem.has-danger .tox.tox-tinymce {
+    border-color: var(--wam-danger);
+}
+
+/* ---------- 11. Hareket azaltma ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand,
+    body.wam-ui .mform .fitem .help-icon,
+    body.wam-ui .mform :is(input.form-control, select.form-select, select.custom-select, textarea.form-control),
+    body.wam-ui .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"],
+    body.wam-ui .tox.tox-tinymce:not(.tox-tinymce-inline) {
+        transition: none;
+    }
+}

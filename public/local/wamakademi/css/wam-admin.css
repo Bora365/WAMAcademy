@@ -1,0 +1,1312 @@
+/* =========================================================
+   WAM Akademi — Site yönetimi (Admin R1)
+   Ortak tokenları (wam-base.css :root) kullanır; ikinci bir tema değildir.
+   Her kural body.wam-admin altındadır: yalnızca sistem bağlamındaki "admin" sayfa yerleşiminde
+   (local_wamakademi_is_admin_page) yüklenir ve uygulamanın geri kalanına dokunmaz.
+   ========================================================= */
+
+body.wam-admin {
+    --wam-control-border: #7F93AE; /* beyaz üstünde ≥ 3:1 (form alanı kenarlığı) */
+    --wam-link: #1D4ED8; /* beyaz üstünde ≈ 6.7:1 */
+    --wam-link-hover: #1E3A8A;
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+}
+
+/* ---------- 1. Sayfa iskeleti ---------- */
+
+@media (min-width: 992px) {
+    body.wam-admin #page.drawers.show-drawer-left {
+        margin-left: var(--wam-admin-nav-w);
+    }
+
+    body.wam-admin #page.drawers.hasstickyfooter.show-drawer-left .sticky-footer,
+    body.wam-admin .sticky-footer {
+        left: 0;
+    }
+}
+
+body.wam-admin #page.drawers {
+    padding-left: var(--wam-gutter);
+    padding-right: var(--wam-gutter);
+}
+
+body.wam-admin #page.drawers .main-inner {
+    /* Veri ekranları kullanılabilir genişliği değerlendirir; formlar kendi okunabilir sınırını taşır. */
+    max-width: 1320px;
+    margin-left: 0;
+    margin-right: auto;
+    padding: var(--wam-space-5) 0 var(--wam-space-7);
+}
+
+body.wam-admin #page.drawers .main-inner > * {
+    min-width: 0;
+}
+
+/* Başlık, açıklama, araç çubuğu ve içerik ortak sol hizada. */
+body.wam-admin .header-maxwidth,
+body.wam-admin #page-content,
+body.wam-admin #region-main-box,
+body.wam-admin #region-main {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-admin #page.drawers div[role="main"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-admin #region-main {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+/* ---------- 2. Sol yönetim gezinmesi (Boost sol çekmecesi) ---------- */
+
+body.wam-admin .drawer.wam-adm-drawer {
+    background: var(--wam-surface);
+    border-right: 1px solid var(--wam-border);
+    box-shadow: none;
+    color: var(--wam-ink);
+}
+
+@media (min-width: 992px) {
+    body.wam-admin .drawer.wam-adm-drawer {
+        width: var(--wam-admin-nav-w);
+    }
+}
+
+@media (max-width: 991.98px) {
+    body.wam-admin .drawer.wam-adm-drawer {
+        width: min(320px, 88vw);
+    }
+}
+
+body.wam-admin .wam-adm-drawer .drawerheader {
+    min-height: 56px;
+    padding: var(--wam-space-3) var(--wam-space-4);
+    border-bottom: 1px solid var(--wam-line);
+    background: var(--wam-surface);
+}
+
+body.wam-admin .wam-adm-drawer-heading a {
+    color: var(--wam-ink);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body.wam-admin .wam-adm-drawer-heading a:hover,
+body.wam-admin .wam-adm-drawer-heading a:focus-visible {
+    color: var(--wam-link);
+    text-decoration: underline;
+}
+
+body.wam-admin .wam-adm-drawer .drawercontent {
+    padding: var(--wam-space-3) 0 var(--wam-space-5);
+    background: var(--wam-surface);
+}
+
+body.wam-admin .wam-adm-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0 var(--wam-space-2);
+}
+
+body.wam-admin .wam-adm-nav__item {
+    margin: 0 0 var(--wam-space-1);
+}
+
+body.wam-admin .wam-adm-nav__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-3) 0 var(--wam-space-4);
+    border-radius: var(--wam-radius-sm);
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+/* Seçili gösterge: sol çizgi (konumsal; yerleşimi itmez). */
+body.wam-admin .wam-adm-nav__link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 2px;
+    background: transparent;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-admin .wam-adm-nav__link:hover {
+    background: var(--wam-primary-soft);
+    color: var(--wam-link-hover);
+    text-decoration: none;
+}
+
+body.wam-admin .wam-adm-nav__link.active,
+body.wam-admin .wam-adm-nav__link[aria-current="page"],
+body.wam-admin .wam-adm-nav__link[aria-selected="true"] {
+    background: var(--wam-primary-soft-2);
+    color: var(--wam-ink);
+    font-weight: 700;
+}
+
+body.wam-admin .wam-adm-nav__link.active::before,
+body.wam-admin .wam-adm-nav__link[aria-current="page"]::before,
+body.wam-admin .wam-adm-nav__link[aria-selected="true"]::before {
+    background: var(--wam-primary);
+}
+
+body.wam-admin .wam-adm-nav__link:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: -2px;
+    box-shadow: var(--wam-focus);
+}
+
+/* Açma düğmesi: dar ekranda ve çekmece kapalıyken açık etiketli. */
+body.wam-admin .drawer-toggles {
+    margin-bottom: var(--wam-space-3);
+}
+
+body.wam-admin .drawer-toggler.drawer-left-toggle {
+    position: static;
+}
+
+body.wam-admin .drawer-left-toggle .btn {
+    display: inline-flex;
+    flex-direction: row-reverse; /* simge etiketten önce */
+    align-items: center;
+    gap: var(--wam-space-2);
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-4);
+    border: 1px solid var(--wam-control-border);
+    border-radius: var(--wam-radius-sm);
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+body.wam-admin .drawer-left-toggle .btn:hover {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+    color: var(--wam-link-hover);
+}
+
+body.wam-admin .wam-adm-toggle__label {
+    font-size: var(--wam-body);
+}
+
+/* ---------- 3. Sayfa başlığı: breadcrumb + H1 + arama aynı gridde ---------- */
+
+body.wam-admin #page-header {
+    margin: 0 0 var(--wam-space-5);
+}
+
+body.wam-admin #page-header > .w-100 > .d-flex.align-items-center {
+    flex-wrap: wrap;
+    gap: var(--wam-space-4) var(--wam-space-5);
+}
+
+body.wam-admin #page-navbar {
+    margin: 0 0 var(--wam-space-2);
+}
+
+body.wam-admin #page-navbar .breadcrumb {
+    margin: 0;
+    padding: 0;
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    color: var(--wam-muted);
+}
+
+body.wam-admin #page-navbar .breadcrumb a {
+    color: var(--wam-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+body.wam-admin #page-navbar .breadcrumb a:hover {
+    color: var(--wam-link-hover);
+    text-decoration-thickness: 2px;
+}
+
+body.wam-admin #page-header .page-header-headings h1 {
+    margin: 0;
+}
+
+/* ---------- 4. Yönetim araması ---------- */
+
+body.wam-admin .header-actions-container {
+    margin-left: auto;
+}
+
+body.wam-admin .header-actions-container .header-action {
+    margin-left: 0;
+}
+
+.wam-adm-search {
+    width: clamp(360px, 36vw, 480px);
+    max-width: 100%;
+}
+
+.wam-adm-search__label {
+    display: block;
+    margin: 0 0 var(--wam-space-1);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 600;
+    color: var(--wam-ink);
+}
+
+.wam-adm-search__field {
+    display: flex;
+    align-items: stretch;
+}
+
+.wam-adm-search__input.form-control {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: var(--wam-touch);
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-3);
+    border: 1px solid var(--wam-control-border);
+    border-right: 0;
+    border-radius: var(--wam-radius-sm) 0 0 var(--wam-radius-sm);
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    box-shadow: none;
+}
+
+.wam-adm-search__input.form-control::placeholder {
+    color: var(--wam-muted);
+    opacity: 1;
+}
+
+.wam-adm-search__input.form-control:focus {
+    position: relative;
+    z-index: 1;
+    border-color: var(--wam-primary);
+    box-shadow: var(--wam-focus);
+}
+
+.wam-adm-search__submit.btn {
+    flex: 0 0 auto;
+    width: var(--wam-touch);
+    height: var(--wam-touch);
+    min-height: var(--wam-touch);
+    padding: 0;
+    border: 1px solid var(--wam-primary);
+    border-radius: 0 var(--wam-radius-sm) var(--wam-radius-sm) 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wam-adm-search__submit .icon {
+    margin: 0;
+}
+
+@media (max-width: 767.98px) {
+    .wam-adm-search {
+        width: 100%;
+    }
+
+    body.wam-admin .header-actions-container,
+    body.wam-admin .header-actions-container .header-action {
+        width: 100%;
+    }
+}
+
+/* ---------- 5. Yönetim ana ekranı: kategori panelleri ---------- */
+
+.wam-adm-lead {
+    max-width: 68ch;
+    margin: 0 0 var(--wam-space-5);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    color: var(--wam-muted);
+}
+
+.wam-adm-groups {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--wam-space-5);
+    align-items: start;
+}
+
+@media (min-width: 1200px) {
+    .wam-adm-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.wam-adm-group {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+    overflow: hidden;
+}
+
+/* Boş (bağlantısız) ilk grup görünmez. */
+.wam-adm-group--leaf:not(:has(li)) {
+    display: none;
+}
+
+.wam-adm-group__title {
+    margin: 0;
+    padding: var(--wam-space-4) var(--wam-space-5);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+.wam-adm-group__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    color: var(--wam-ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.wam-adm-group__link::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: currentColor;
+    -webkit-mask: var(--wam-chevron) center / 16px 16px no-repeat;
+    mask: var(--wam-chevron) center / 16px 16px no-repeat;
+    opacity: 0.7;
+    transition: transform var(--wam-dur-fast) var(--wam-ease);
+}
+
+.wam-adm-group__link:hover,
+.wam-adm-group__link:focus-visible {
+    color: var(--wam-link);
+    text-decoration: none;
+    border-bottom-color: currentColor;
+}
+
+.wam-adm-group__link:hover::after,
+.wam-adm-group__link:focus-visible::after {
+    transform: translateX(2px);
+}
+
+.wam-adm-links {
+    margin: 0;
+    padding: 0;
+}
+
+.wam-adm-links li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wam-adm-links > li,
+.wam-adm-links__item {
+    border-top: 1px solid var(--wam-line);
+}
+
+.wam-adm-links a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wam-space-3);
+    min-height: var(--wam-row-h);
+    padding: var(--wam-space-2) var(--wam-space-5);
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+.wam-adm-links a::after {
+    content: "";
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    background: currentColor;
+    -webkit-mask: var(--wam-chevron) center / 16px 16px no-repeat;
+    mask: var(--wam-chevron) center / 16px 16px no-repeat;
+    opacity: 0.45;
+    transition: transform var(--wam-dur-fast) var(--wam-ease), opacity var(--wam-dur-fast) var(--wam-ease);
+}
+
+.wam-adm-links a:hover {
+    background: var(--wam-primary-soft);
+    color: var(--wam-link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.wam-adm-links a:hover::after,
+.wam-adm-links a:focus-visible::after {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+.wam-adm-links a:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: -2px;
+    background: var(--wam-primary-soft);
+    color: var(--wam-link-hover);
+}
+
+/* Üçüncü düzey (iç içe) bağlantılar */
+.wam-adm-links li > ul {
+    margin: 0 0 var(--wam-space-2) var(--wam-space-5);
+    padding: 0 0 0 var(--wam-space-3);
+    border-left: 2px solid var(--wam-line);
+    list-style: none;
+}
+
+.wam-adm-links li > ul > li {
+    border-top: 0;
+}
+
+.wam-adm-links li > ul a {
+    padding-left: var(--wam-space-3);
+    padding-right: var(--wam-space-4);
+}
+
+.wam-adm-links li > strong {
+    display: block;
+    padding: var(--wam-space-3) var(--wam-space-5) var(--wam-space-1);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--wam-muted);
+}
+
+body.wam-admin .wam-adm-pane {
+    scroll-margin-top: calc(var(--wam-header-h) + var(--wam-space-4));
+}
+
+/* ---------- 6. Arama sonuçları ---------- */
+
+.wam-adm-results__head {
+    margin: 0 0 var(--wam-space-4);
+}
+
+.wam-adm-results__title {
+    margin: 0 0 var(--wam-space-1);
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+.wam-adm-results__summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wam-space-2) var(--wam-space-4);
+    margin: 0;
+    color: var(--wam-muted);
+}
+
+.wam-adm-results__query {
+    font-weight: 700;
+    color: var(--wam-ink);
+    overflow-wrap: anywhere;
+}
+
+.wam-adm-results__clear {
+    color: var(--wam-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.wam-adm-results__body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.wam-adm-result {
+    max-width: 880px;
+    margin: 0 0 var(--wam-space-5);
+    padding: var(--wam-space-5);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+.wam-adm-result .adminpagetitle {
+    margin: 0 0 var(--wam-space-1);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+}
+
+.wam-adm-result .adminpagetitle a {
+    color: var(--wam-ink);
+    text-decoration: none;
+}
+
+.wam-adm-result .adminpagetitle a:hover,
+.wam-adm-result .adminpagetitle a:focus-visible {
+    color: var(--wam-link);
+    text-decoration: underline;
+}
+
+.wam-adm-result .adminpagepath {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wam-space-1);
+    margin: 0 0 var(--wam-space-4);
+    padding: 0;
+    list-style: none;
+}
+
+.wam-adm-result .adminpagepath li {
+    margin: 0;
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    color: var(--wam-muted);
+}
+
+.wam-adm-result .adminpagepath li + li::before {
+    content: "›";
+    margin-right: var(--wam-space-1);
+}
+
+/* Boş durum */
+.wam-adm-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--wam-space-3);
+    max-width: 640px;
+    padding: var(--wam-space-5);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    color: var(--wam-muted);
+}
+
+.wam-adm-empty p {
+    margin: 0;
+}
+
+.wam-adm-empty__title {
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+/* ---------- 7. Ayar formları (admin_settingpage) ---------- */
+/* Şablon: başlık (H1) → bölüm başlığı → alan → yardım/hata → kaydetme alanı.
+   Okunabilir genişlik 800 px; etiket üstte, denetim altta (PatternFly dikey form düzeni). */
+
+body.wam-admin .settingsform,
+body.wam-admin #region-main form.mform:has(> fieldset),
+body.wam-admin fieldset.adminsettings {
+    max-width: 800px;
+}
+
+body.wam-admin .settingsform {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+    padding: 0;
+}
+
+body.wam-admin .settingsform > h2 {
+    margin: 0;
+    padding: var(--wam-space-5) var(--wam-space-5) var(--wam-space-2);
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+    font-weight: 700;
+}
+
+body.wam-admin .settingsform h3.main,
+body.wam-admin .adminsettings h3.main {
+    margin: 0;
+    padding: var(--wam-space-5) var(--wam-space-5) var(--wam-space-2);
+    border-top: 1px solid var(--wam-line);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-admin .formsettingheading {
+    margin: 0;
+    padding: 0 var(--wam-space-5) var(--wam-space-3);
+    border: 0;
+    background: transparent;
+    color: var(--wam-muted);
+    font-size: var(--wam-help);
+    line-height: 22px;
+}
+
+body.wam-admin .form-item.row {
+    display: block;
+    margin: 0;
+    padding: var(--wam-space-4) var(--wam-space-5);
+    border-top: 1px solid var(--wam-line);
+}
+
+body.wam-admin .form-item .form-label,
+body.wam-admin .form-item .form-setting {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+body.wam-admin .form-item .form-label {
+    margin-bottom: var(--wam-space-2);
+}
+
+body.wam-admin .form-item .form-label label,
+body.wam-admin .form-item .form-label > p {
+    margin: 0;
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    font-weight: 600;
+    color: var(--wam-ink);
+}
+
+body.wam-admin .form-item .form-shortname {
+    margin-top: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--wam-muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+body.wam-admin .form-item .form-text,
+body.wam-admin .form-item .form-defaultinfo,
+body.wam-admin .form-item .form-dependenton {
+    max-width: 68ch;
+    font-size: var(--wam-help);
+    line-height: 22px;
+    color: var(--wam-muted);
+}
+
+body.wam-admin .form-item .form-text {
+    margin-top: var(--wam-space-2);
+}
+
+body.wam-admin .form-item .form-text p:last-child {
+    margin-bottom: 0;
+}
+
+body.wam-admin .form-item .form-defaultinfo {
+    margin-top: var(--wam-space-1);
+}
+
+body.wam-admin .form-item .form-setting .error {
+    display: block;
+    margin-bottom: var(--wam-space-2);
+    padding: var(--wam-space-2) var(--wam-space-3);
+    border-left: 3px solid var(--wam-danger);
+    border-radius: 0 var(--wam-radius-sm) var(--wam-radius-sm) 0;
+    background: var(--wam-danger-soft);
+    color: var(--wam-danger);
+    font-weight: 600;
+}
+
+body.wam-admin .form-item .alert {
+    margin: var(--wam-space-2) 0 0;
+    font-size: var(--wam-help);
+    font-weight: 400;
+}
+
+/* Kaydetme alanı: kart içinde sabit (sticky) çubuk. */
+body.wam-admin .settingsform > .row,
+body.wam-admin .wam-adm-savebar,
+body.wam-admin .form-buttons {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    gap: var(--wam-space-3);
+    margin: 0;
+    padding: var(--wam-space-4) var(--wam-space-5);
+    border-top: 1px solid var(--wam-border);
+    border-radius: 0 0 var(--wam-radius) var(--wam-radius);
+    background: var(--wam-surface);
+    box-shadow: 0 -4px 12px rgba(15, 39, 71, 0.06);
+}
+
+body.wam-admin .settingsform > .row > *,
+body.wam-admin .wam-adm-savebar > * {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* Kategori sayfası (admin/category.php): her alt sayfa bir bölüm başlığı + ayar grubu. */
+body.wam-admin #region-main > h2 {
+    margin: 0 0 var(--wam-space-4);
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+    font-weight: 700;
+}
+
+body.wam-admin #adminsettings > fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body.wam-admin #adminsettings > fieldset > h3 {
+    max-width: 800px;
+    margin: var(--wam-space-6) 0 var(--wam-space-3);
+    padding: 0 0 var(--wam-space-2);
+    border-bottom: 1px solid var(--wam-border);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+}
+
+body.wam-admin #adminsettings > fieldset > h3:first-of-type {
+    margin-top: 0;
+}
+
+body.wam-admin #adminsettings > fieldset > h3 a {
+    color: var(--wam-ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+body.wam-admin #adminsettings > fieldset > h3 a:hover,
+body.wam-admin #adminsettings > fieldset > h3 a:focus-visible {
+    color: var(--wam-link);
+    border-bottom-color: currentColor;
+}
+
+body.wam-admin #adminsettings > fieldset > fieldset.adminsettings {
+    margin: 0 0 var(--wam-space-4);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+body.wam-admin #adminsettings > fieldset > fieldset.adminsettings > .form-item:first-of-type {
+    border-top: 0;
+}
+
+/* Arama sonucu içindeki ayar grubu kartın içinde kalır. */
+body.wam-admin .wam-adm-result fieldset.adminsettings {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body.wam-admin .wam-adm-result .form-item.row {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ---------- 8. Moodle formları (mform) ---------- */
+
+body.wam-admin #region-main form.mform:has(> fieldset) {
+    padding: var(--wam-space-5);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+body.wam-admin #region-main form.mform fieldset {
+    margin: 0 0 var(--wam-space-4);
+    padding: 0;
+    border: 0;
+}
+
+body.wam-admin #region-main form.mform .fcontainer > .fitem,
+body.wam-admin #region-main form.mform .fitem.row {
+    display: block;
+    margin: 0 0 var(--wam-space-4);
+}
+
+body.wam-admin #region-main form.mform .fitem > .col-md-3,
+body.wam-admin #region-main form.mform .fitem > .col-md-9 {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-admin #region-main form.mform .fitem > .col-md-3 {
+    padding-bottom: var(--wam-space-1);
+}
+
+body.wam-admin #region-main form.mform .fitem label {
+    margin: 0;
+    font-weight: 600;
+    color: var(--wam-ink);
+}
+
+body.wam-admin #region-main form.mform .form-text,
+body.wam-admin #region-main form.mform .text-muted,
+body.wam-admin #region-main form.mform .form-description {
+    font-size: var(--wam-help);
+    line-height: 22px;
+}
+
+body.wam-admin #region-main form.mform .invalid-feedback {
+    color: var(--wam-danger);
+    font-size: var(--wam-help);
+    font-weight: 600;
+}
+
+body.wam-admin #region-main form.mform legend.ftoggler,
+body.wam-admin #region-main form.mform .fheader {
+    margin: 0 0 var(--wam-space-3);
+    padding: 0 0 var(--wam-space-2);
+    border-bottom: 1px solid var(--wam-line);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-admin #region-main form.mform .fitem.femptylabel > .col-md-3 {
+    display: none;
+}
+
+/* Form alanları: ortak görünüm css/wam-controls.css (forms sonrası yüklenir). */
+
+body.wam-admin .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    border-color: var(--wam-control-border);
+}
+
+body.wam-admin .form-check-input:checked {
+    background-color: var(--wam-primary);
+    border-color: var(--wam-primary);
+}
+
+body.wam-admin .form-check-input:focus-visible {
+    box-shadow: var(--wam-focus);
+}
+
+/* ---------- 9. Tablolar, filtre çubuğu, sayfalama ---------- */
+
+body.wam-admin .no-overflow,
+body.wam-admin .table-responsive,
+body.wam-admin .reportbuilder-table-container,
+body.wam-admin [data-region="reportbuilder-table"] {
+    max-width: 100%;
+    overflow-x: auto;
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+body.wam-admin table.generaltable,
+body.wam-admin table.admintable,
+body.wam-admin table.table,
+body.wam-admin table.flexible {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: transparent;
+    --bs-table-hover-bg: transparent;
+    width: 100%;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+}
+
+body.wam-admin table.generaltable thead th,
+body.wam-admin table.admintable thead th,
+body.wam-admin table.table thead th,
+body.wam-admin table.flexible thead th,
+body.wam-admin table.generaltable > tbody > tr > th.header {
+    padding: var(--wam-space-3) var(--wam-space-4);
+    border: 0;
+    border-bottom: 1px solid var(--wam-border);
+    background: #EEF3FA;
+    color: var(--wam-ink);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 700;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+body.wam-admin table.generaltable thead th a,
+body.wam-admin table.flexible thead th a,
+body.wam-admin table.table thead th a {
+    color: var(--wam-ink);
+    text-decoration: none;
+}
+
+body.wam-admin table.generaltable thead th a:hover,
+body.wam-admin table.flexible thead th a:hover,
+body.wam-admin table.table thead th a:hover {
+    color: var(--wam-link);
+    text-decoration: underline;
+}
+
+body.wam-admin table.generaltable td,
+body.wam-admin table.admintable td,
+body.wam-admin table.table td,
+body.wam-admin table.flexible td,
+body.wam-admin table.generaltable tbody th {
+    padding: var(--wam-space-3) var(--wam-space-4);
+    border: 0;
+    border-top: 1px solid var(--wam-line);
+    background: transparent;
+    vertical-align: middle;
+}
+
+body.wam-admin table.generaltable tbody tr:first-child td,
+body.wam-admin table.flexible tbody tr:first-child td {
+    border-top: 0;
+}
+
+body.wam-admin table.generaltable tbody tr,
+body.wam-admin table.flexible tbody tr,
+body.wam-admin table.table tbody tr {
+    transition: background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-admin table.generaltable tbody tr:hover > *,
+body.wam-admin table.flexible tbody tr:hover > *,
+body.wam-admin table.table tbody tr:hover > * {
+    background: var(--wam-primary-soft);
+}
+
+body.wam-admin table.generaltable tr.emptyrow,
+body.wam-admin table.flexible tr.emptyrow {
+    display: none;
+}
+
+/* Tablo altı: indirme / toplu işlem / sayfalama */
+body.wam-admin .dataformatselector {
+    margin: var(--wam-space-4) 0 0;
+}
+
+body.wam-admin .dataformatselector label {
+    align-self: center;
+    margin: 0 var(--wam-space-2) 0 0;
+    font-weight: 600;
+}
+
+body.wam-admin .dataformatselector .form-select {
+    width: auto;
+    margin-right: var(--wam-space-2);
+}
+
+body.wam-admin .tablesearchresults,
+body.wam-admin .paging,
+body.wam-admin nav.pagination,
+body.wam-admin .singlebutton {
+    margin-top: var(--wam-space-4);
+}
+
+body.wam-admin .pagination {
+    gap: var(--wam-space-1);
+}
+
+body.wam-admin .pagination .page-link {
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    color: var(--wam-link);
+    font-weight: 600;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-admin .pagination .page-link:hover {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+}
+
+body.wam-admin .pagination .page-item.active .page-link {
+    background: var(--wam-primary);
+    border-color: var(--wam-primary);
+    color: #fff;
+}
+
+body.wam-admin .pagination .page-item.disabled .page-link {
+    background: transparent;
+    color: var(--wam-muted);
+}
+
+/* ---------- 10. Düğmeler: hover / focus / active / disabled / loading / danger ---------- */
+
+body.wam-admin .btn {
+    min-height: var(--wam-control-h);
+    padding: 0 var(--wam-space-4);
+    border-radius: var(--wam-radius-sm);
+    font-size: var(--wam-body);
+    font-weight: 600;
+    line-height: 1.2;
+    transition:
+        background-color var(--wam-dur) var(--wam-ease),
+        border-color var(--wam-dur) var(--wam-ease),
+        color var(--wam-dur) var(--wam-ease),
+        box-shadow var(--wam-dur) var(--wam-ease),
+        transform var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-admin .btn:not(.btn-sm):not(.btn-icon):not(.btn-link) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wam-space-2);
+}
+
+@media (pointer: coarse) {
+    body.wam-admin .btn:not(.btn-link) {
+        min-height: var(--wam-touch);
+    }
+}
+
+body.wam-admin .btn-primary {
+    background-color: var(--wam-primary);
+    border-color: var(--wam-primary);
+    color: #fff;
+}
+
+body.wam-admin .btn-primary:hover:not(:disabled):not(.disabled) {
+    background-color: var(--wam-primary-hover);
+    border-color: var(--wam-primary-hover);
+    box-shadow: var(--wam-shadow-hover);
+}
+
+@media (hover: hover) {
+    /* Yalnızca ana işlem düğmesi 1 px yükselir; dokunmatik cihazlarda hover'a bağımlılık yok. */
+    body.wam-admin .btn-primary:hover:not(:disabled):not(.disabled) {
+        transform: translateY(-1px);
+    }
+}
+
+body.wam-admin .btn-primary:active:not(:disabled):not(.disabled) {
+    background-color: #1E40AF;
+    border-color: #1E40AF;
+    box-shadow: none;
+    transform: none;
+}
+
+body.wam-admin .btn-secondary,
+body.wam-admin .btn-outline-secondary {
+    background-color: var(--wam-surface);
+    border-color: var(--wam-control-border);
+    color: var(--wam-ink);
+}
+
+body.wam-admin .btn-secondary:hover:not(:disabled):not(.disabled),
+body.wam-admin .btn-outline-secondary:hover:not(:disabled):not(.disabled) {
+    background-color: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+    color: var(--wam-link-hover);
+    box-shadow: var(--wam-shadow-hover);
+}
+
+body.wam-admin .btn-secondary:active:not(:disabled):not(.disabled),
+body.wam-admin .btn-outline-secondary:active:not(:disabled):not(.disabled) {
+    background-color: var(--wam-primary-soft-2);
+    box-shadow: none;
+}
+
+body.wam-admin .btn-danger,
+body.wam-admin .btn-outline-danger {
+    background-color: var(--wam-surface);
+    border-color: var(--wam-danger);
+    color: var(--wam-danger);
+}
+
+body.wam-admin .btn-danger:hover:not(:disabled):not(.disabled),
+body.wam-admin .btn-outline-danger:hover:not(:disabled):not(.disabled) {
+    background-color: var(--wam-danger);
+    border-color: var(--wam-danger);
+    color: #fff;
+    box-shadow: var(--wam-shadow-hover);
+}
+
+body.wam-admin .btn-link {
+    min-height: auto;
+    color: var(--wam-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+body.wam-admin .btn:focus-visible,
+body.wam-admin a:focus-visible,
+body.wam-admin button:focus-visible,
+body.wam-admin .form-check-input:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 2px;
+    box-shadow: var(--wam-focus);
+}
+
+body.wam-admin .btn:disabled,
+body.wam-admin .btn.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Yükleniyor: Moodle düğmeye .is-loading / aria-busy eklediğinde dönen gösterge. */
+body.wam-admin .btn.is-loading,
+body.wam-admin .btn[aria-busy="true"] {
+    position: relative;
+    pointer-events: none;
+    color: transparent;
+}
+
+body.wam-admin .btn.is-loading::after,
+body.wam-admin .btn[aria-busy="true"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: wam-adm-spin 0.7s linear infinite;
+}
+
+@keyframes wam-adm-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- 11. Uyarılar, sekmeler, kutular ---------- */
+
+body.wam-admin .alert {
+    border-radius: var(--wam-radius-sm);
+    border-width: 1px;
+    font-size: var(--wam-body);
+}
+
+body.wam-admin .nav-tabs {
+    gap: var(--wam-space-1);
+    border-bottom: 1px solid var(--wam-border);
+}
+
+body.wam-admin .nav-tabs .nav-link {
+    min-height: var(--wam-touch);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 var(--wam-space-4);
+    border: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: var(--wam-radius-sm) var(--wam-radius-sm) 0 0;
+    color: var(--wam-ink);
+    font-weight: 600;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-admin .nav-tabs .nav-link:hover {
+    background: var(--wam-primary-soft);
+    color: var(--wam-link-hover);
+}
+
+body.wam-admin .nav-tabs .nav-link.active {
+    background: transparent;
+    border-bottom-color: var(--wam-primary);
+    color: var(--wam-ink);
+}
+
+body.wam-admin .generalbox,
+body.wam-admin .box.generalbox {
+    border-radius: var(--wam-radius);
+}
+
+/* Büyük sürükle-bırak / dosya seçici / editör alanları kendi davranışını korur;
+   yalnızca taşmasın diye kapsayıcılar küçülebilir. */
+body.wam-admin .felement,
+body.wam-admin .form-setting {
+    min-width: 0;
+}
+
+/* Ayar alanları kapsayıcısından geniş olamaz (dar ekranda yatay taşmayı önler). */
+body.wam-admin #region-main .fitem {
+    min-width: 0;
+    max-width: 100%;
+}
+
+body.wam-admin #region-main select,
+body.wam-admin .form-setting select,
+body.wam-admin .form-setting textarea,
+body.wam-admin .form-setting input:not([type="checkbox"]):not([type="radio"]),
+body.wam-admin .form-setting .defaultsnext {
+    max-width: 100%;
+}
+
+/* ---------- 12. Ortak işaretçiler ---------- */
+
+body.wam-admin {
+    /* Sağ ok (maske); renk currentColor'dan gelir. */
+    --wam-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m6 3 5 5-5 5'/%3E%3C/svg%3E");
+}
+
+/* Hareket tercihi: küçük etkileşim animasyonları kapatılır. */
+@media (prefers-reduced-motion: reduce) {
+    body.wam-admin *,
+    body.wam-admin *::before,
+    body.wam-admin *::after {
+        transition-duration: 0.01ms;
+        animation-duration: 0.01ms;
+    }
+
+    .wam-adm-links a:hover::after,
+    .wam-adm-links a:focus-visible::after,
+    .wam-adm-group__link:hover::after,
+    .wam-adm-group__link:focus-visible::after {
+        transform: none;
+    }
+}

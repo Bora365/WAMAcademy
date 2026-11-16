@@ -20,7 +20,7 @@
             wwwroot: root,
             homeurl: root + '/local/wamakademi/index.php',
             profileurl: root + '/user/profile.php',
-            active: 'home',
+            active: '',
             links: [
                 {
                     id: 'home',
@@ -71,23 +71,39 @@
             .replace(/'/g, '&#39;');
     }
 
-    function redirectAvatarToProfile(cfg) {
-        var toggle = document.getElementById('user-menu-toggle');
-        if (!toggle) {
+    /**
+     * Profil ikonunun açılır menüsünü sadece Profil / Şu role geç / Çıkış yap öğeleriyle doldurur.
+     * Açma-kapama Moodle'un Bootstrap dropdown'ı tarafından yönetilmeye devam eder.
+     */
+    function buildUserMenu(cfg) {
+        // Moodle'un core/usermenu betiği karusel yapısını bekler; yalnızca ana öğenin içeriği değişir.
+        var main = document.getElementById('carousel-item-main');
+        var items = cfg.usermenu;
+        if (!main || !items || !items.length) {
             return;
         }
-        toggle.removeAttribute('data-bs-toggle');
-        toggle.removeAttribute('aria-expanded');
-        toggle.removeAttribute('aria-controls');
-        toggle.removeAttribute('aria-haspopup');
-        toggle.setAttribute('href', cfg.profileurl || '/user/profile.php');
-        toggle.setAttribute('aria-label', 'Profil');
-        toggle.setAttribute('title', 'Profil');
-        toggle.addEventListener('click', function (event) {
-            // Bootstrap dropdown açılmasın; normal gezinmeye izin ver.
-            event.stopPropagation();
+
+        var html = '<div class="wam-usermenu">';
+        if (cfg.userfullname) {
+            html += '<div class="wam-usermenu__name">' + escapeHtml(cfg.userfullname) + '</div>';
+        }
+        items.forEach(function (item) {
+            if (item.id === 'logout') {
+                html += '<div class="dropdown-divider" role="separator"></div>';
+            }
+            html += '<a class="dropdown-item wam-usermenu__item wam-usermenu__item--' +
+                escapeHtml(item.id) + '" role="menuitem" href="' + escapeHtml(item.url) + '">' +
+                escapeHtml(item.label) + '</a>';
         });
-        document.body.classList.add('wam-usermenu-redirected');
+        html += '</div>';
+
+        main.innerHTML = html;
+
+        // Alt menüleri (Dil, Tercihler vb.) kaldır; bunlar zaten çark menüsünde.
+        main.parentNode.querySelectorAll('.carousel-item.submenu').forEach(function (el) {
+            el.remove();
+        });
+        document.body.classList.add('wam-usermenu-custom');
     }
 
     function buildGearMenu(cfg, gearMenu) {
@@ -297,23 +313,24 @@
         document.body.classList.add('wam-menu-ready');
 
         var cfg = getConfig();
-        var brandHtml = brand.innerHTML;
 
+        // Hamburger düğmesi: WAM logosunun solunda, yan menüyü açar. Logo ana sayfa bağlantısı olarak kalır.
         var toggle = document.createElement('button');
         toggle.type = 'button';
-        toggle.className = 'navbar-brand wam-menu-toggle aabtn m-0 me-4 p-0';
+        toggle.className = 'wam-menu-toggle wam-hamburger aabtn';
         toggle.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-controls', 'wam-side-menu');
-        toggle.setAttribute('aria-label', 'Menüyü aç');
-        toggle.innerHTML = brandHtml;
+        toggle.setAttribute('aria-label', 'Ana menü');
+        toggle.setAttribute('aria-haspopup', 'dialog');
+        toggle.innerHTML =
+            '<span class="wam-hamburger__bars" aria-hidden="true">' +
+            '<span></span><span></span><span></span>' +
+            '</span>';
 
-        brand.replaceWith(toggle);
+        nav.insertBefore(toggle, nav.firstChild);
 
-        var toggler = document.querySelector('.navbar-toggler');
-        if (toggler) {
-            toggler.classList.add('wam-hide-bootstrap-toggler');
-            toggler.setAttribute('hidden', 'hidden');
-        }
+        // Mobildeki Moodle birincil çekmece düğmesi gizlenir; bağlantıları yan menüye de eklenir.
+        document.body.classList.add('wam-hide-bootstrap-toggler-active');
 
         var overlay = document.createElement('div');
         overlay.className = 'wam-menu-overlay';
@@ -330,7 +347,7 @@
         var linksHtml = (cfg.links || [])
             .map(function (link) {
                 var current =
-                    link.id === cfg.active
+                    cfg.active && link.id === cfg.active
                         ? ' aria-current="page" class="is-active"'
                         : '';
                 return (
@@ -345,12 +362,23 @@
             })
             .join('');
 
+        // Panel bağlantıları yalnızca sunucudaki gezinme verisinden gelir (Site yönetimi ve "Daha fazla" burada yer almaz;
+        // yönetim erişimi Ayarlar menüsünde ve üst çubuk gezinmesinde kalır).
+        var sitename = cfg.sitename || 'WAM';
+        var brandHtml = cfg.logourl
+            ? '<img class="wam-menu-panel__logo" src="' + escapeHtml(cfg.logourl) +
+                '" width="134" height="32" alt="' + escapeHtml(sitename) + '">'
+            : '<span class="wam-menu-panel__wordmark">' + escapeHtml(sitename) + '</span>';
+
         panel.innerHTML =
             '<div class="wam-menu-panel__head">' +
-            '<div class="wam-menu-panel__brand">WAM</div>' +
-            '<button type="button" class="wam-menu-close" aria-label="Menüyü kapat">×</button>' +
+            '<div class="wam-menu-panel__brand">' + brandHtml + '</div>' +
+            '<button type="button" class="wam-menu-close" aria-label="Menüyü kapat">' +
+            '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" ' +
+            'stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>' +
+            '</button>' +
             '</div>' +
-            '<nav class="wam-menu-panel__nav">' +
+            '<nav class="wam-menu-panel__nav" aria-label="Ana gezinme">' +
             linksHtml +
             '</nav>';
 
@@ -377,7 +405,7 @@
             nav.appendChild(gearWrap);
         }
 
-        redirectAvatarToProfile(cfg);
+        buildUserMenu(cfg);
         protectMessageCountA11y(cfg);
 
         var gearBtn = gearWrap.querySelector('.wam-gear__btn');
@@ -386,34 +414,86 @@
         var closeBtn = panel.querySelector('.wam-menu-close');
         var lastFocus = null;
 
-        function openMenu() {
-            lastFocus = document.activeElement;
-            panel.hidden = false;
-            overlay.hidden = false;
-            document.body.classList.add('wam-menu-open');
-            toggle.setAttribute('aria-expanded', 'true');
-            toggle.setAttribute('aria-label', 'Menüyü kapat');
-            closeBtn.focus();
+        function getFocusable() {
+            return Array.prototype.slice.call(
+                panel.querySelectorAll(
+                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(function (el) {
+                return !el.hasAttribute('disabled') && el.offsetParent !== null;
+            });
         }
 
-        function closeMenu() {
-            panel.hidden = true;
-            overlay.hidden = true;
-            document.body.classList.remove('wam-menu-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.setAttribute('aria-label', 'Menüyü aç');
-            if (lastFocus && typeof lastFocus.focus === 'function') {
-                lastFocus.focus();
+        var isOpen = false;
+        var hideTimer = null;
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        var CLOSE_MS = 220;
+        var inertedNodes = [];
+
+        // Panel açıkken arka içerik etkileşim dışı kalır (klavye, işaretçi ve ekran okuyucu).
+        function setBackgroundInert(on) {
+            if (on) {
+                Array.prototype.forEach.call(document.body.children, function (node) {
+                    if (node === panel || node === overlay || /^(SCRIPT|STYLE|LINK|TEMPLATE)$/.test(node.tagName)) {
+                        return;
+                    }
+                    if (!node.hasAttribute('inert')) {
+                        node.setAttribute('inert', '');
+                        inertedNodes.push(node);
+                    }
+                });
             } else {
-                toggle.focus();
+                inertedNodes.forEach(function (node) {
+                    node.removeAttribute('inert');
+                });
+                inertedNodes = [];
             }
         }
 
+        function openMenu() {
+            if (isOpen) {
+                return;
+            }
+            isOpen = true;
+            lastFocus = document.activeElement;
+            window.clearTimeout(hideTimer);
+            panel.hidden = false;
+            overlay.hidden = false;
+            // Başlangıç konumu çizilsin, sonra animasyon sınıfı eklensin.
+            void panel.offsetWidth;
+            document.body.classList.add('wam-menu-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            setBackgroundInert(true);
+            closeBtn.focus({preventScroll: true});
+        }
+
+        function closeMenu() {
+            if (!isOpen) {
+                return;
+            }
+            isOpen = false;
+            document.body.classList.remove('wam-menu-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            setBackgroundInert(false);
+            // Animasyon bitince panel tamamen gizlenir (klavye/okuyucu erişimi dışı kalır).
+            hideTimer = window.setTimeout(function () {
+                panel.hidden = true;
+                overlay.hidden = true;
+            }, reducedMotion.matches ? 0 : CLOSE_MS);
+            // Odak, menüyü açan düğmeye döner.
+            // Fare ile tıklanan düğme bazı tarayıcılarda odak almaz (activeElement body olur); bu durumda hamburger düğmesi odaklanır.
+            var returnTo = lastFocus && lastFocus !== document.body && document.contains(lastFocus) &&
+                typeof lastFocus.focus === 'function' ? lastFocus : toggle;
+            // Üst çubuk kaydırma nedeniyle gizliyse (görünmez öğe odak alamaz) önce görünür yapılır.
+            document.dispatchEvent(new CustomEvent('wam:header-show'));
+            returnTo.focus({preventScroll: true});
+        }
+
         function toggleMenu() {
-            if (panel.hidden) {
-                openMenu();
-            } else {
+            if (isOpen) {
                 closeMenu();
+            } else {
+                openMenu();
             }
         }
 
@@ -441,19 +521,38 @@
 
         panel.addEventListener('click', function (event) {
             var link = event.target.closest('a');
-            if (link) {
+            // Yeni sekmede açma (Ctrl/Cmd/Shift/orta tuş) paneli kapatmaz; gerçek URL'ler olduğu gibi çalışır.
+            if (link && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) {
                 closeMenu();
             }
         });
 
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
-                if (!panel.hidden) {
+                if (isOpen) {
+                    event.preventDefault();
                     closeMenu();
                 }
                 if (!gearMenu.hidden) {
                     closeGear();
                     gearBtn.focus();
+                }
+            }
+
+            // Yan menü odak kapanı.
+            if (event.key === 'Tab' && isOpen) {
+                var focusable = getFocusable();
+                if (!focusable.length) {
+                    return;
+                }
+                var first = focusable[0];
+                var last = focusable[focusable.length - 1];
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
                 }
             }
         });

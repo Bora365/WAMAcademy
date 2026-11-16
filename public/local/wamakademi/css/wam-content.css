@@ -1,0 +1,129 @@
+/* =========================================================
+   WAM Akademi — içerik iş akışı (Content Workflow R1)
+   Yalnızca body.wam-content (upload / önizleme).
+   Token kaynağı: css/wam-base.css
+   ========================================================= */
+
+body.wam-ui.wam-content .wam-content-shell {
+    max-width: 800px;
+    margin: 0 0 var(--wam-space-5);
+}
+
+body.wam-ui.wam-content .wam-scope {
+    max-width: 72ch;
+    margin: 0 0 var(--wam-space-4);
+    color: var(--wam-muted);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+}
+
+body.wam-ui.wam-content .wam-content-card {
+    margin: 0 0 var(--wam-space-5);
+    padding: var(--wam-form-surface-pad);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+}
+
+body.wam-ui.wam-content .wam-content-card__title {
+    margin: 0 0 var(--wam-space-2);
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-content .wam-content-card__meta {
+    margin: 0 0 var(--wam-space-3);
+    color: var(--wam-muted);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+}
+
+body.wam-ui.wam-content .wam-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 2px 10px;
+    border-radius: var(--wam-radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+body.wam-ui.wam-content .wam-status--draft {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+body.wam-ui.wam-content .wam-status--published {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+body.wam-ui.wam-content .wam-status--restricted {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+body.wam-ui.wam-content .wam-content-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wam-space-2);
+    margin-top: var(--wam-space-4);
+}
+
+body.wam-ui.wam-content .wam-content-actions form {
+    display: inline;
+    margin: 0;
+}
+
+body.wam-ui.wam-content .wam-preview-player {
+    margin: var(--wam-space-3) 0;
+    padding: var(--wam-space-3);
+    border-radius: var(--wam-radius);
+    background: #0F172A;
+}
+
+body.wam-ui.wam-content .wam-preview-player :is(video, .mediaplugin) {
+    max-width: 100%;
+}
+
+body.wam-ui.wam-content .wam-draft-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+}
+
+body.wam-ui.wam-content .wam-draft-table th,
+body.wam-ui.wam-content .wam-draft-table td {
+    padding: var(--wam-space-3);
+    border-bottom: 1px solid var(--wam-line);
+    text-align: left;
+    vertical-align: middle;
+}
+
+body.wam-ui.wam-content .wam-draft-table th {
+    background: var(--wam-course-soft, #EEF3FA);
+    font-weight: 700;
+    color: var(--wam-muted);
+    white-space: nowrap;
+}
+
+body.wam-ui.wam-content #region-main form.mform {
+    max-width: 800px;
+}
+
+body.wam-ui.wam-content .wam-upload-busy .btn[type="submit"] {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@media (max-width: 767.98px) {
+    body.wam-ui.wam-content .wam-draft-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

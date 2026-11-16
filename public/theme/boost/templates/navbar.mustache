@@ -55,20 +55,23 @@
         ]
     }
 }}
-<nav class="navbar fixed-top bg-body navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+<nav class="navbar fixed-top navbar-expand wam-navbar" aria-label="{{#str}}sitemenubar, admin{{/str}}">
     <div class="container-fluid">
         <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
             <span class="navbar-toggler-icon"></span>
             <span class="visually-hidden">{{#str}}sidepanel, core{{/str}}</span>
         </button>
 
-        <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-md-flex align-items-center m-0 me-4 p-0 aabtn">
+        <a href="{{{ config.homeurl }}}" class="navbar-brand d-flex align-items-center m-0 me-md-3 p-0 aabtn">
 
             {{# output.should_display_navbar_logo }}
                 <img src="{{output.get_compact_logo_url}}" class="logo me-1" alt="{{sitename}}">
             {{/ output.should_display_navbar_logo }}
             {{^ output.should_display_navbar_logo }}
-                {{{ sitename }}}
+                <picture class="wam-navbar-logo">
+                    <source media="(max-width: 767.98px)" srcset="{{config.wwwroot}}/local/wamakademi/pix/wam-logo-navbar-mark.png" width="75" height="24">
+                    <img src="{{config.wwwroot}}/local/wamakademi/pix/wam-logo-navbar.png" width="117" height="28" alt="{{sitename}}">
+                </picture>
             {{/ output.should_display_navbar_logo }}
         </a>
         {{#primarymoremenu}}
@@ -104,14 +107,20 @@
         {{/output.page_heading_menu}}
 
         <div id="usernavigation" class="navbar-nav ms-auto h-100">
-	<div class="wam-nav-search d-none d-lg-flex align-items-center">
-    <input
-        type="text"
-        id="wam-course-search"
-        placeholder="Ara..."
-        autocomplete="off"
-    >
-</div>
+        <form class="wam-nav-search d-none d-lg-flex align-items-center"
+              method="get"
+              action="{{config.wwwroot}}/local/wamakademi/catalog.php"
+              role="search">
+            <label class="visually-hidden" for="wam-course-search">Eğitimlerde ara</label>
+            <input
+                type="search"
+                id="wam-course-search"
+                name="q"
+                placeholder="Eğitimlerde ara..."
+                autocomplete="off"
+            >
+            <button type="submit" class="visually-hidden">Ara</button>
+        </form>
             {{# output.search_box }}
                 {{{ output.search_box }}}
                 <div class="divider border-start h-75 align-self-center mx-1"></div>

@@ -1,0 +1,538 @@
+/* =========================================================
+   WAM Akademi — ortak kontrol bileşenleri (Common Controls R1)
+   Select, açılır menü, autocomplete, accordion, liste.
+   Yerel <select> açık penceresi işletim sistemine aittir; stil uygulanmaz.
+   ========================================================= */
+
+/* ---------- 1. Alan / select (form içi ve dışı) ---------- */
+
+body.wam-ui :is(
+    input.form-control:not([type="file"]):not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]),
+    textarea.form-control
+) {
+    min-height: var(--wam-ctl-h);
+    max-width: 100%;
+    padding: 0 var(--wam-ctl-pad-x);
+    border: 1px solid var(--wam-control-border);
+    border-radius: var(--wam-ctl-radius);
+    background-color: var(--wam-surface);
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: 24px;
+    transition:
+        border-color var(--wam-dur-ctl) var(--wam-ease),
+        box-shadow var(--wam-dur-ctl) var(--wam-ease),
+        background-color var(--wam-dur-ctl) var(--wam-ease);
+}
+
+body.wam-ui textarea.form-control {
+    min-height: 96px;
+    padding-top: var(--wam-space-2);
+    padding-bottom: var(--wam-space-2);
+}
+
+/* Select ayrı blok: genel input kuralındaki padding shorthand chevron boşluğunu ezmesin */
+body.wam-ui select:is(.form-select, .custom-select, .form-control) {
+    min-height: var(--wam-ctl-h);
+    max-width: 100%;
+    padding: 0 40px 0 var(--wam-ctl-pad-x);
+    border: 1px solid var(--wam-control-border);
+    border-radius: var(--wam-ctl-radius);
+    background-color: var(--wam-surface);
+    background-image: var(--wam-select-arrow);
+    background-repeat: no-repeat;
+    background-position: right var(--wam-ctl-pad-x) center;
+    background-size: 16px 16px;
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: 24px;
+    text-overflow: ellipsis;
+    appearance: none;
+    transition:
+        border-color var(--wam-dur-ctl) var(--wam-ease),
+        box-shadow var(--wam-dur-ctl) var(--wam-ease),
+        background-color var(--wam-dur-ctl) var(--wam-ease);
+}
+
+/* Çoklu / listbox: chevron yok */
+body.wam-ui select:is(.form-select, .custom-select, .form-control)[multiple],
+body.wam-ui select:is(.form-select, .custom-select, .form-control)[size]:not([size="1"]) {
+    min-height: 120px;
+    padding: var(--wam-space-2) var(--wam-ctl-pad-x);
+    background-image: none;
+    appearance: auto;
+}
+
+body.wam-ui :is(
+    input.form-control:not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+    select.form-select,
+    select.custom-select,
+    select.form-control,
+    textarea.form-control
+):hover:not(:disabled):not(:focus):not([readonly]) {
+    border-color: var(--wam-muted);
+}
+
+body.wam-ui :is(
+    input.form-control:not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+    select.form-select,
+    select.custom-select,
+    select.form-control,
+    textarea.form-control
+):focus {
+    border-color: var(--wam-ctl-open-border);
+    box-shadow: var(--wam-focus);
+    outline: 0;
+    background-color: var(--wam-surface);
+}
+
+body.wam-ui :is(
+    input.form-control:not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+    select.form-select,
+    select.custom-select,
+    select.form-control,
+    textarea.form-control
+):disabled,
+body.wam-ui input.form-control[readonly] {
+    border-color: var(--wam-border);
+    background-color: var(--wam-field-disabled-bg);
+    color: var(--wam-muted);
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+body.wam-ui :is(.form-control, .form-select, .custom-select).is-invalid,
+body.wam-ui .was-validated :is(.form-control, .form-select):invalid {
+    border-color: var(--wam-danger);
+}
+
+body.wam-ui :is(
+    input.form-control,
+    select.form-select,
+    select.custom-select,
+    textarea.form-control
+).is-invalid:focus {
+    border-color: var(--wam-danger);
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.25);
+}
+
+/* ---------- 2. Açılır paneller (dropdown / action menu / özel menü) ---------- */
+
+body.wam-ui .dropdown-menu,
+body.wam-ui .wam-gear__menu,
+body.wam-ui .wam-row-actions__menu {
+    min-width: 220px;
+    max-width: min(360px, calc(100vw - 16px));
+    max-height: min(70vh, 480px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 6px;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-ctl-radius);
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    box-shadow: var(--wam-ctl-panel-shadow);
+    z-index: var(--wam-ctl-panel-z);
+}
+
+body.wam-ui .dropdown-menu .dropdown-item,
+body.wam-ui .wam-gear__menu .wam-gear__item,
+body.wam-ui .wam-gear__menu a[role="menuitem"],
+body.wam-ui .wam-row-actions__menu .wam-row-actions__item,
+body.wam-ui .wam-usermenu__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: var(--wam-ctl-h);
+    padding: 0 var(--wam-space-3);
+    border: 0;
+    border-radius: var(--wam-radius-sm);
+    background: transparent;
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    font-weight: 500;
+    line-height: var(--wam-body-lh);
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transition: background-color var(--wam-dur-ctl) var(--wam-ease), color var(--wam-dur-ctl) var(--wam-ease);
+}
+
+body.wam-ui .dropdown-menu .dropdown-item:hover,
+body.wam-ui .dropdown-menu .dropdown-item:focus,
+body.wam-ui .wam-gear__menu .wam-gear__item:hover,
+body.wam-ui .wam-gear__menu a[role="menuitem"]:hover,
+body.wam-ui .wam-row-actions__menu .wam-row-actions__item:hover,
+body.wam-ui .wam-usermenu__item:hover {
+    background: var(--wam-ctl-hover-bg);
+    color: var(--wam-ink);
+    text-decoration: none;
+}
+
+body.wam-ui .dropdown-menu .dropdown-item:focus-visible,
+body.wam-ui .wam-gear__menu .wam-gear__item:focus-visible,
+body.wam-ui .wam-gear__menu a[role="menuitem"]:focus-visible,
+body.wam-ui .wam-row-actions__menu .wam-row-actions__item:focus-visible,
+body.wam-ui .wam-usermenu__item:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: -2px;
+    background: var(--wam-primary-soft-2);
+    color: var(--wam-ink);
+}
+
+body.wam-ui .dropdown-menu .dropdown-item.active,
+body.wam-ui .dropdown-menu .dropdown-item[aria-current="true"],
+body.wam-ui .dropdown-menu .dropdown-item[aria-selected="true"],
+body.wam-ui .wam-gear__menu a.is-active {
+    background: var(--wam-ctl-selected-bg);
+    color: var(--wam-ink);
+    font-weight: 600;
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+body.wam-ui .dropdown-menu .dropdown-item.disabled,
+body.wam-ui .dropdown-menu .dropdown-item:disabled {
+    color: var(--wam-muted);
+    background: transparent;
+    pointer-events: none;
+}
+
+body.wam-ui .dropdown-divider,
+body.wam-ui .wam-gear__divider {
+    margin: var(--wam-space-1) 0;
+    border-top: 1px solid var(--wam-line);
+    opacity: 1;
+}
+
+/* Tablo / modal içinde Bootstrap menüleri kırpılmasın (Popper fixed tercih edilir; yedek) */
+body.wam-ui .table-responsive .dropdown-menu,
+body.wam-ui .modal .dropdown-menu {
+    z-index: calc(var(--wam-ctl-panel-z) + 10);
+}
+
+/* ---------- 3. Autocomplete / çoklu seçim ---------- */
+
+body.wam-ui .form-autocomplete-selection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wam-space-2);
+    min-height: 0;
+    margin: 0 0 var(--wam-space-2);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    color: var(--wam-muted);
+}
+
+body.wam-ui .form-autocomplete-selection:empty {
+    margin: 0;
+}
+
+/* Kompakt chip */
+body.wam-ui .form-autocomplete-selection [role="option"] {
+    --bs-secondary-rgb: 238, 242, 247;
+    --bs-dark-rgb: 15, 39, 71;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wam-space-1);
+    max-width: 100%;
+    min-height: 28px;
+    margin: 0;
+    padding: 2px var(--wam-space-2);
+    border: 1px solid var(--wam-border);
+    border-radius: 6px;
+    box-shadow: none;
+    background: var(--wam-field-soft);
+    color: var(--wam-ink);
+    font-weight: 600;
+    line-height: 20px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color var(--wam-dur-ctl) var(--wam-ease), background-color var(--wam-dur-ctl) var(--wam-ease);
+}
+
+body.wam-ui .form-autocomplete-selection [role="option"] > [aria-hidden="true"] {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    min-height: 20px;
+    color: var(--wam-muted);
+    font-weight: 400;
+}
+
+body.wam-ui .form-autocomplete-selection [role="option"]:hover {
+    border-color: var(--wam-control-border);
+    background: var(--wam-primary-soft);
+}
+
+body.wam-ui .form-autocomplete-selection [role="option"][data-active-selection="true"] {
+    box-shadow: none;
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui .form-autocomplete-selection:focus {
+    outline: 0;
+}
+
+body.wam-ui .form-autocomplete-selection:focus [role="option"][data-active-selection="true"] {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 1px;
+}
+
+body.wam-ui .form-autocomplete-selection:focus:not(:has([data-active-selection="true"])) {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+body.wam-ui .form-autocomplete-input {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+body.wam-ui .form-autocomplete-input > input.form-control {
+    width: 100%;
+    min-height: var(--wam-ctl-h);
+    padding: 0 40px 0 var(--wam-ctl-pad-x);
+    border: 1px solid var(--wam-control-border);
+    border-radius: var(--wam-ctl-radius);
+    font-size: var(--wam-body);
+}
+
+body.wam-ui .form-autocomplete-input > input.form-control:focus {
+    border-color: var(--wam-ctl-open-border);
+    box-shadow: var(--wam-focus);
+}
+
+body.wam-ui .form-autocomplete-downarrow {
+    top: 50%;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    background: var(--wam-select-arrow) center / 16px 16px no-repeat;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+/* Popper ile konumlanır; ekran kenarına sıkışır */
+body.wam-ui .form-autocomplete-suggestions {
+    min-width: min(320px, calc(100vw - 32px));
+    max-width: min(480px, calc(100vw - 32px));
+    max-height: 280px;
+    margin-top: var(--wam-space-1);
+    padding: 6px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-ctl-radius);
+    background: var(--wam-surface);
+    box-shadow: var(--wam-ctl-panel-shadow);
+    z-index: var(--wam-ctl-panel-z);
+}
+
+body.wam-ui .form-autocomplete-suggestions [role="option"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40px;
+    padding: var(--wam-space-2) var(--wam-space-3);
+    border-radius: var(--wam-radius-sm);
+    color: var(--wam-ink);
+    overflow-wrap: anywhere;
+}
+
+body.wam-ui .form-autocomplete-suggestions [role="option"]:hover,
+body.wam-ui .form-autocomplete-suggestions [role="option"]:focus {
+    background: var(--wam-ctl-hover-bg);
+    color: var(--wam-ink);
+}
+
+body.wam-ui .form-autocomplete-suggestions [role="option"][aria-selected="true"] {
+    background: var(--wam-ctl-selected-bg);
+    color: var(--wam-ink);
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+body.wam-ui .form-autocomplete-suggestions [role="option"].form-autocomplete-suggestion-muted,
+body.wam-ui .form-autocomplete-suggestions [role="option"][aria-disabled="true"] {
+    color: var(--wam-muted);
+    font-style: italic;
+    background: transparent;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Loading: Moodle ara sıra .loading / spinner ekler */
+body.wam-ui .form-autocomplete-input.is-loading > input.form-control,
+body.wam-ui .form-autocomplete-input[aria-busy="true"] > input.form-control {
+    background-color: var(--wam-field-soft);
+}
+
+/* ---------- 4. Accordion / form bölümleri ---------- */
+
+body.wam-ui .mform .ftoggler,
+body.wam-ui .mform legend.ftoggler,
+body.wam-ui .mform .fcontainer .ftoggler {
+    display: flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    min-height: 40px;
+    margin: 0;
+    padding: var(--wam-space-2) 0;
+    border: 0;
+    border-bottom: 1px solid var(--wam-line);
+    background: transparent;
+    color: var(--wam-ink);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--wam-radius-sm);
+    background: transparent;
+    color: var(--wam-muted);
+    box-shadow: none;
+}
+
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand .expanded-icon,
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand .collapsed-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+body.wam-ui .mform .ftoggler:hover .btn-icon.icons-collapse-expand {
+    background: var(--wam-field-soft);
+    color: var(--wam-ink);
+}
+
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 2px;
+}
+
+/* Büyük renkli kare arka planları kaldır */
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand.btn-secondary,
+body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand.btn-primary {
+    background: transparent;
+    border: 0;
+    color: var(--wam-muted);
+}
+
+/* ---------- 5. Veri listeleri (kart değil; ince ayırıcı) ---------- */
+
+body.wam-ui .list-group {
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-ctl-radius);
+    background: var(--wam-surface);
+    overflow: hidden;
+}
+
+body.wam-ui .list-group-item {
+    padding: var(--wam-space-3) var(--wam-space-4);
+    border-color: var(--wam-line);
+    color: var(--wam-ink);
+    background: transparent;
+}
+
+body.wam-ui .list-group-item + .list-group-item {
+    border-top-width: 1px;
+}
+
+body.wam-ui .list-group-item-action:hover,
+body.wam-ui .list-group-item-action:focus {
+    background: var(--wam-ctl-hover-bg);
+    color: var(--wam-ink);
+}
+
+body.wam-ui .list-group-item.active {
+    background: var(--wam-ctl-selected-bg);
+    border-color: var(--wam-line);
+    color: var(--wam-ink);
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+/* Katalog sıralama select'i ortak alan ailesini kullanır (kart ızgarası korunur). */
+body.wam-ui .wam-catalog-sort select {
+    min-height: var(--wam-ctl-h);
+    padding-right: 40px;
+    border: 1px solid var(--wam-control-border);
+    border-radius: var(--wam-ctl-radius);
+    background-color: var(--wam-surface);
+    background-image: var(--wam-select-arrow);
+    background-repeat: no-repeat;
+    background-position: right var(--wam-ctl-pad-x) center;
+    background-size: 16px 16px;
+    color: var(--wam-ink);
+    appearance: none;
+}
+
+/* Tercihler listesi (hesap): ince ayırıcı, büyük kart değil */
+body.wam-ui.wam-account .wam-acc-prefs__list {
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-ctl-radius);
+    background: var(--wam-surface);
+    overflow: hidden;
+}
+
+body.wam-ui.wam-account .wam-acc-prefs__list a,
+body.wam-ui.wam-account .wam-acc-prefs__item {
+    display: flex;
+    align-items: center;
+    min-height: var(--wam-ctl-h);
+    padding: 0 var(--wam-space-4);
+    border-bottom: 1px solid var(--wam-line);
+    color: var(--wam-ink);
+    text-decoration: none;
+}
+
+body.wam-ui.wam-account .wam-acc-prefs__list a:last-child,
+body.wam-ui.wam-account .wam-acc-prefs__item:last-child {
+    border-bottom: 0;
+}
+
+body.wam-ui.wam-account .wam-acc-prefs__list a:hover,
+body.wam-ui.wam-account .wam-acc-prefs__item:hover {
+    background: var(--wam-ctl-hover-bg);
+}
+
+/* ---------- 6. Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    body.wam-ui :is(
+        input.form-control,
+        select.form-select,
+        select.custom-select,
+        select.form-control,
+        textarea.form-control,
+        .dropdown-menu .dropdown-item,
+        .form-autocomplete-selection [role="option"],
+        .form-autocomplete-suggestions [role="option"],
+        .wam-row-actions__item,
+        .wam-gear__item,
+        .wam-usermenu__item
+    ) {
+        transition: none;
+    }
+}

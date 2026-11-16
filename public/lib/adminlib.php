@@ -9140,8 +9140,20 @@ function admin_search_settings_html($query) {
     global $CFG, $OUTPUT, $PAGE;
 
     if (core_text::strlen($query) < 2) {
-        return '';
+        if (trim((string)$query) === '') {
+            return '';
+        }
+        // Presentation only: explain why a one-character query shows nothing instead of a blank page.
+        return $OUTPUT->render_from_template('core_admin/settings_search_results', (object) [
+            'actionurl' => $PAGE->url->out(false),
+            'results' => [],
+            'sesskey' => sesskey(),
+            'query' => $query,
+            'clearurl' => (new moodle_url('/admin/search.php'))->out(false),
+            'tooshort' => true,
+        ]);
     }
+    $displayquery = $query;
     $query = core_text::strtolower($query);
 
     $adminroot = admin_get_root();
@@ -9152,6 +9164,9 @@ function admin_search_settings_html($query) {
         'actionurl' => $PAGE->url->out(false),
         'results' => [],
         'sesskey' => sesskey(),
+        // Presentation only: lets the results template show the query and a clear-search link.
+        'query' => $displayquery,
+        'clearurl' => (new moodle_url('/admin/search.php'))->out(false),
     ];
 
     $sortedresults = admin_search::sort_search_results($findings);
@@ -9210,6 +9225,7 @@ function admin_search_settings_html($query) {
 
     $tpldata->showsave = $savebutton;
     $tpldata->hasresults = !empty($tpldata->results);
+    $tpldata->resultcount = count($tpldata->results);
 
     return $OUTPUT->render_from_template('core_admin/settings_search_results', $tpldata);
 }

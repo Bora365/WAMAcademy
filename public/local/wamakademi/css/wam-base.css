@@ -1,0 +1,1300 @@
+/* =========================================================
+   WAM Akademi — ortak tasarım temeli (Faz 1)
+   Tek token kaynağı + sayfa düzeni + bileşenler
+   ========================================================= */
+
+:root {
+    --wam-primary: #2563EB;
+    --wam-primary-hover: #1D4ED8;
+    --wam-ink: #0F2747;
+    --wam-nav: #0B1F3A;
+    --wam-bg: #F4F7FB;
+    --wam-surface: #FFFFFF;
+    --wam-border: #DBE5F1;
+    --wam-muted: #4A6280;
+    --wam-danger: #B91C1C;
+    --wam-success: #15803D;
+    --wam-primary-soft: #EFF6FF;
+    --wam-danger-soft: #FEF2F2;
+
+    --wam-space-1: 4px;
+    --wam-space-2: 8px;
+    --wam-space-3: 12px;
+    --wam-space-4: 16px;
+    --wam-space-5: 24px;
+    --wam-space-6: 32px;
+    --wam-space-7: 48px;
+    --wam-space-8: 64px;
+
+    --wam-radius-sm: 8px;
+    --wam-radius: 12px;
+    --wam-shadow: 0 1px 2px rgba(15, 39, 71, 0.06);
+    --wam-focus: 0 0 0 3px rgba(37, 99, 235, 0.35);
+
+    --wam-title: 28px;
+    --wam-title-lh: 36px;
+    --wam-h2: 20px;
+    --wam-h2-lh: 28px;
+    --wam-body: 15px;
+    --wam-body-lh: 24px;
+    --wam-label: 13px;
+    --wam-label-lh: 20px;
+
+    --wam-control-h: 40px;
+    --wam-touch: 44px;
+    --wam-icon: 20px;
+
+    /* Form alanları (css/wam-forms.css) + ortak kontroller (css/wam-controls.css) */
+    --wam-field-h: 44px;
+    --wam-field-radius: 8px;
+    --wam-field-pad-x: 12px;
+    --wam-control-border: #7F93AE; /* beyaz üstünde ≥ 3:1 */
+    --wam-field-disabled-bg: #EEF2F7;
+    --wam-field-soft: #F8FAFD;
+    --wam-ctl-h: var(--wam-field-h);
+    --wam-ctl-pad-x: var(--wam-field-pad-x);
+    --wam-ctl-radius: var(--wam-field-radius);
+    --wam-ctl-hover-bg: var(--wam-primary-soft);
+    --wam-ctl-selected-bg: var(--wam-primary-soft);
+    --wam-ctl-open-border: var(--wam-primary);
+    --wam-ctl-panel-shadow: 0 8px 24px rgba(15, 39, 71, 0.14);
+    --wam-ctl-panel-z: 1060;
+    --wam-dur-ctl: 140ms;
+    --wam-subtitle: 22px;
+    --wam-subtitle-lh: 30px;
+    --wam-form-label-w: 220px;
+    --wam-form-surface-pad: 24px;
+    --wam-select-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%234A6280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+    --wam-header-h: 64px;
+    --wam-nav-ink: #E6EEF9;
+    --wam-nav-line: rgba(255, 255, 255, 0.08);
+    --wam-nav-hover: rgba(255, 255, 255, 0.1);
+    --wam-nav-active: #8FBBFF;
+    --wam-primary-soft-2: #DBEAFE;
+    --wam-line: #E3EAF3;
+    --wam-shadow-hover: 0 2px 6px rgba(15, 39, 71, 0.14);
+    --wam-h3: 18px;
+    --wam-h3-lh: 26px;
+    --wam-help: 14px;
+    --wam-help-lh: 20px;
+    --wam-row-h: 44px;
+    --wam-dur-fast: 120ms;
+    --wam-dur: 160ms;
+    --wam-dur-header: 450ms;
+    --wam-dur-panel: 200ms;
+    --wam-panel-w: 296px;
+    --wam-ease: cubic-bezier(0.2, 0, 0, 1);
+    --wam-admin-nav-w: 256px;
+
+    --wam-page-max: 1440px;
+    --wam-content-max: 1120px;
+    --wam-form-max: 760px;
+    --wam-gutter: 32px;
+
+    /* Geri uyumluluk alias'ları */
+    --wam-acc-bg: var(--wam-surface);
+    --wam-acc-surface: var(--wam-primary-soft);
+    --wam-acc-ink: var(--wam-ink);
+    --wam-acc-ink-muted: var(--wam-muted);
+    --wam-acc-border: var(--wam-border);
+    --wam-acc-primary: var(--wam-primary);
+    --wam-acc-primary-soft: var(--wam-primary-soft);
+    --wam-acc-danger: var(--wam-danger);
+    --wam-acc-shadow: var(--wam-shadow);
+    --wam-acc-radius: var(--wam-radius);
+    --wam-acc-space-1: var(--wam-space-2);
+    --wam-acc-space-2: var(--wam-space-4);
+    --wam-acc-space-3: var(--wam-space-5);
+    --wam-acc-space-4: var(--wam-space-6);
+    --wam-acc-title: var(--wam-title);
+    --wam-acc-section-title: var(--wam-h2);
+    --wam-acc-control-h: var(--wam-control-h);
+    --wam-acc-icon: var(--wam-icon);
+    --wam-acc-focus: var(--wam-focus);
+    --wam-secondary: var(--wam-primary);
+    --wam-secondary-ink: var(--wam-ink);
+    --wam-ok: var(--wam-success);
+    --wam-ok-soft: #E7F0EC;
+    --wam-warn-soft: #F6EBD7;
+    --wam-radius-sm: 8px;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --wam-gutter: 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --wam-gutter: 16px;
+        --wam-title: 24px;
+        --wam-title-lh: 32px;
+        --wam-subtitle: 20px;
+        --wam-subtitle-lh: 28px;
+        --wam-form-surface-pad: 16px;
+    }
+}
+
+/* ---------- Sayfa zemini ve genişlik ---------- */
+
+body.wam-ui {
+    background-color: var(--wam-bg);
+    color: var(--wam-ink);
+}
+
+body.wam-ui #page.drawers {
+    padding-left: var(--wam-gutter);
+    padding-right: var(--wam-gutter);
+}
+
+body.wam-ui #page.drawers .main-inner {
+    max-width: var(--wam-content-max);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: var(--wam-space-5) 0 var(--wam-space-7);
+}
+
+body.wam-ui .header-maxwidth {
+    max-width: var(--wam-content-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Dashboard / WAM / admin panel — geniş alan */
+body.wam-ui.path-local-wamakademi #page.drawers .main-inner,
+body.wam-ui.path-local-wamakademi .header-maxwidth,
+body.wam-ui#page-my-index #page.drawers .main-inner,
+body.wam-ui#page-my-index .header-maxwidth,
+body.wam-ui#page-my-index.limitedwidth #page.drawers .main-inner {
+    max-width: var(--wam-page-max);
+}
+
+body.wam-ui #page.drawers div[role="main"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-ui .page-header-headings h1,
+body.wam-ui .wam-page-header__title {
+    font-size: var(--wam-title);
+    line-height: var(--wam-title-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+    margin: 0 0 var(--wam-space-2);
+}
+
+body.wam-ui .page-header-headings h2,
+body.wam-ui h2.wam-section-title,
+body.wam-ui .wam-section-header h2 {
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+    font-weight: 650;
+    color: var(--wam-ink);
+}
+
+/* ---------- Ortak sayfa başlığı ---------- */
+
+.wam-page-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--wam-space-4);
+    margin: 0 0 var(--wam-space-5);
+}
+
+.wam-page-header__eyebrow {
+    margin: 0 0 var(--wam-space-2);
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--wam-muted);
+}
+
+.wam-page-header__desc {
+    margin: 0;
+    max-width: 52ch;
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    color: var(--wam-muted);
+}
+
+.wam-page-header__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wam-space-3);
+    align-items: center;
+}
+
+@media (max-width: 767.98px) {
+    .wam-page-header__actions {
+        width: 100%;
+    }
+
+    .wam-page-header__actions .wam-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}
+
+/* ---------- Butonlar ---------- */
+
+.wam-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wam-space-2);
+    min-height: var(--wam-control-h);
+    min-width: var(--wam-touch);
+    padding: 0 var(--wam-space-4);
+    border-radius: var(--wam-radius-sm);
+    border: 1px solid transparent;
+    font-size: var(--wam-body);
+    font-weight: 650;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.wam-btn--primary {
+    background: var(--wam-primary);
+    border-color: var(--wam-primary);
+    color: #fff;
+}
+
+.wam-btn--primary:hover,
+.wam-btn--primary:focus {
+    background: var(--wam-primary-hover);
+    border-color: var(--wam-primary-hover);
+    color: #fff;
+    text-decoration: none;
+}
+
+.wam-btn--secondary {
+    background: var(--wam-surface);
+    border-color: var(--wam-border);
+    color: var(--wam-ink);
+}
+
+.wam-btn--secondary:hover,
+.wam-btn--secondary:focus {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+    color: var(--wam-ink);
+    text-decoration: none;
+}
+
+.wam-btn--tertiary {
+    background: transparent;
+    border-color: transparent;
+    color: var(--wam-primary);
+    padding-left: var(--wam-space-2);
+    padding-right: var(--wam-space-2);
+}
+
+.wam-btn--danger {
+    background: var(--wam-surface);
+    border-color: var(--wam-danger);
+    color: var(--wam-danger);
+}
+
+.wam-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--wam-focus);
+}
+
+body.wam-ui .btn-primary {
+    background-color: var(--wam-primary);
+    border-color: var(--wam-primary);
+    min-height: var(--wam-control-h);
+    border-radius: var(--wam-radius-sm);
+}
+
+body.wam-ui .btn-primary:hover,
+body.wam-ui .btn-primary:focus {
+    background-color: var(--wam-primary-hover);
+    border-color: var(--wam-primary-hover);
+}
+
+body.wam-ui .btn-secondary {
+    min-height: var(--wam-control-h);
+    border-radius: var(--wam-radius-sm);
+    border-color: var(--wam-border);
+    color: var(--wam-ink);
+    background: var(--wam-surface);
+}
+
+/* .form-control / .form-select ortak görünümü: css/wam-controls.css */
+
+/* ---------- Kart / tablo ---------- */
+
+.wam-card {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+.wam-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    background: var(--wam-surface);
+    box-shadow: var(--wam-shadow);
+}
+
+/* ---------- Sade odak gösterimi (sekmeler, yan panel, düğmeler) ---------- */
+/* Moodle'un kalın mavi odak çerçevesi kaldırılır. Klavyeyle gezinenler için
+   çerçeve yerine hafif bir arka plan tonu kullanılır (odak yine görünür kalır). */
+
+body.wam-ui :is(#page, .drawer) :is(
+    .nav-link,
+    .aabtn,
+    .btn-link,
+    [role="button"],
+    .list-group-item-action,
+    .dropdown-item,
+    .drawer-toggler .btn,
+    .courseindex-link,
+    .courseindex-chevron,
+    .courseindex-item,
+    [role="treeitem"],
+    [tabindex="-1"]
+):focus,
+body.wam-ui .drawer-toggles .drawer-toggler .btn:focus,
+body.wam-ui :is(#page, .drawer) [role="treeitem"][aria-expanded]:focus > *:first-child,
+body.wam-ui :is(#page, .drawer) [role="treeitem"][aria-expanded].focus > *:first-child {
+    outline: 0;
+    box-shadow: none;
+}
+
+body.wam-ui :is(#page, .drawer) :is(
+    .nav-link,
+    .aabtn,
+    .btn-link,
+    [role="button"],
+    .list-group-item-action,
+    .drawer-toggler .btn,
+    .courseindex-link,
+    .courseindex-chevron
+):focus-visible {
+    outline: 0;
+    box-shadow: none;
+    background-color: rgba(15, 23, 42, 0.06);
+    border-radius: var(--wam-radius-sm);
+}
+
+/* ---------- Navbar (lacivert ortak üst çubuk) ---------- */
+/* Yükseklik değeri Boost'un $navbar-height değişkeniyle (theme_boost_get_pre_scss, 64px) eşleşir;
+   çekmeceler, sabit konumlar ve çapa kaydırma boşlukları aynı değeri kullanır. */
+
+body.wam-ui .navbar.wam-navbar {
+    --wam-nav-fg: var(--wam-nav-ink);
+    --bs-navbar-color: var(--wam-nav-fg);
+    --bs-navbar-hover-color: #fff;
+    --bs-navbar-active-color: #fff;
+    height: var(--wam-header-h);
+    background: var(--wam-nav);
+    color: var(--wam-nav-fg);
+    border-bottom: 1px solid var(--wam-nav-line);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--wam-dur-header) var(--wam-ease), visibility 0s linear 0s;
+}
+
+/* Aşağı kaydırınca yavaşça solarak gizlenir, yukarı kaydırınca tekrar belirir
+   (wam_header.js .wam-header-hidden sınıfını yönetir). Yer kaplamaya devam eder; içerik zıplamaz. */
+body.wam-ui.wam-header-hidden .navbar.wam-navbar {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: none;
+    transition: opacity var(--wam-dur-header) var(--wam-ease), visibility 0s linear var(--wam-dur-header);
+}
+
+/* Çekmeceler üst çubukla birlikte yukarı kayar; içerik zıplamaz (#page marjı sabit kalır). */
+@media (min-width: 992px) {
+    body.wam-ui .drawer-left,
+    body.wam-ui .drawer-right {
+        transition: top var(--wam-dur-header) var(--wam-ease), height var(--wam-dur-header) var(--wam-ease);
+    }
+
+    body.wam-ui.wam-header-hidden .drawer-left,
+    body.wam-ui.wam-header-hidden .drawer-right {
+        top: 0;
+        height: 100vh;
+    }
+}
+
+body.wam-ui .navbar.wam-navbar .container-fluid {
+    gap: var(--wam-space-2);
+    padding-left: var(--wam-space-4);
+    padding-right: var(--wam-space-4);
+}
+
+body.wam-ui .navbar.wam-navbar .navbar-brand,
+body.wam-ui .navbar.wam-navbar .navbar-brand:hover,
+body.wam-ui .navbar.wam-navbar .navbar-brand:focus,
+body.wam-ui .navbar.wam-navbar .wam-menu-toggle {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body.wam-ui .navbar.wam-navbar .navbar-brand .logo {
+    max-height: 40px;
+}
+
+body.wam-ui .navbar.wam-navbar .navbar-brand .wam-navbar-logo {
+    display: block;
+    flex: 0 0 auto;
+}
+
+body.wam-ui .navbar.wam-navbar .navbar-brand .wam-navbar-logo img {
+    display: block;
+    width: auto;
+    height: 28px;
+}
+
+body.wam-ui .navbar.wam-navbar .navbar-toggler {
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    border-radius: var(--wam-radius-sm);
+}
+
+body.wam-ui .navbar.wam-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Birincil gezinme (Kontrol paneli, Site yönetimi ...) */
+body.wam-ui .navbar.wam-navbar .primary-navigation .navigation .nav-link {
+    height: var(--wam-header-h);
+    padding: 0 var(--wam-space-3);
+    color: var(--wam-nav-fg);
+    font-size: var(--wam-body);
+    font-weight: 600;
+    border-top: 0;
+    border-bottom: 0;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .navbar.wam-navbar .primary-navigation .navigation .nav-link:hover,
+body.wam-ui .navbar.wam-navbar .primary-navigation .navigation .nav-link:focus {
+    background: var(--wam-nav-hover);
+    color: #fff;
+}
+
+body.wam-ui .navbar.wam-navbar .primary-navigation .navigation .nav-link.active,
+body.wam-ui .navbar.wam-navbar .primary-navigation .navigation .nav-link[aria-current="true"] {
+    color: #fff;
+    background: transparent;
+    box-shadow: inset 0 -3px 0 var(--wam-nav-active);
+}
+
+/* WAM bağlantıları */
+body.wam-ui .wam-top-nav {
+    gap: var(--wam-space-1);
+    margin-left: var(--wam-space-1);
+}
+
+body.wam-ui .wam-top-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--wam-header-h);
+    padding: 0 var(--wam-space-3);
+    color: var(--wam-nav-fg);
+    text-decoration: none;
+    font-size: var(--wam-body);
+    font-weight: 600;
+    border-radius: 0;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .wam-top-nav a:hover,
+body.wam-ui .wam-top-nav a:focus {
+    background: var(--wam-nav-hover);
+    color: #fff;
+}
+
+body.wam-ui .wam-top-nav a.is-active,
+body.wam-ui.path-local-wamakademi-catalog .wam-nav-catalog,
+body.wam-ui.path-local-wamakademi-mycourses .wam-nav-mycourses,
+body.wam-ui.path-local-wamakademi-calendar .wam-nav-calendar,
+body.wam-ui.path-local-wamakademi-index .navbar-brand {
+    color: #fff;
+    box-shadow: inset 0 -3px 0 var(--wam-nav-active);
+}
+
+/* Odak: üst çubukta fareyle aynı kadar belirgin (açık halka). */
+body.wam-ui .navbar.wam-navbar a:focus-visible,
+body.wam-ui .navbar.wam-navbar button:focus-visible,
+body.wam-ui .navbar.wam-navbar input:focus-visible {
+    outline: 2px solid var(--wam-nav-active);
+    outline-offset: -2px;
+    box-shadow: none;
+}
+
+/* Eğitim arama alanı */
+body.wam-ui .wam-nav-search {
+    margin-right: var(--wam-space-3);
+}
+
+body.wam-ui .wam-nav-search input {
+    min-height: var(--wam-control-h);
+    width: 220px;
+    max-width: 28vw;
+    padding: 0 var(--wam-space-3) 0 38px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: var(--wam-radius-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23C7D6EA' stroke-width='2' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+    color: #fff;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .wam-nav-search input::placeholder {
+    color: var(--wam-nav-fg);
+    opacity: 1;
+}
+
+body.wam-ui .wam-nav-search input:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+body.wam-ui .wam-nav-search input:focus {
+    outline: none;
+    border-color: var(--wam-nav-active);
+    box-shadow: 0 0 0 3px rgba(143, 187, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Kullanıcı işlemleri: düzenleme modu, bildirim, mesaj, kullanıcı menüsü, çark */
+body.wam-ui .navbar.wam-navbar #usernavigation {
+    align-items: center;
+    gap: var(--wam-space-1);
+}
+
+body.wam-ui .navbar.wam-navbar .divider {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.wam-ui .navbar.wam-navbar .nav-link,
+body.wam-ui .navbar.wam-navbar .editmode-switch-form label,
+body.wam-ui .navbar.wam-navbar .usermenu .dropdown-toggle,
+body.wam-ui .navbar.wam-navbar #usernavigation .popover-region-toggle,
+body.wam-ui .navbar.wam-navbar #usernavigation a.nav-link {
+    color: var(--wam-nav-fg);
+}
+
+body.wam-ui .navbar.wam-navbar #usernavigation .nav-link:hover,
+body.wam-ui .navbar.wam-navbar #usernavigation .nav-link:focus,
+body.wam-ui .navbar.wam-navbar .usermenu .dropdown-toggle:hover,
+body.wam-ui .navbar.wam-navbar .usermenu .dropdown-toggle:focus {
+    background: var(--wam-nav-hover);
+    color: #fff;
+}
+
+body.wam-ui .navbar.wam-navbar #usernavigation .nav-link {
+    min-width: var(--wam-touch);
+    justify-content: center;
+}
+
+body.wam-ui .navbar.wam-navbar .editmode-switch-form .form-check-input {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.wam-ui .navbar.wam-navbar .editmode-switch-form .form-check-input:checked {
+    background-color: var(--wam-primary);
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region .count-container {
+    box-shadow: 0 0 0 2px var(--wam-nav);
+}
+
+/* Arka plan yalnızca yuvarlak baş harf rozetine uygulanır; sarmalayıcıda kare görünmesin. */
+body.wam-ui .navbar.wam-navbar .usermenu .avatar,
+body.wam-ui .navbar.wam-navbar .usermenu .avatars {
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    border-radius: 50%;
+}
+
+body.wam-ui .navbar.wam-navbar .usermenu .userinitials {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #fff;
+    margin-right: 0;
+}
+
+/* Üst çubuk açılır menüleri açık yüzeyde kalır. */
+body.wam-ui .navbar.wam-navbar .dropdown-menu,
+body.wam-ui .navbar.wam-navbar .popover-region-container {
+    color: var(--wam-ink);
+}
+
+/* Bildirim/mesaj açılır panelinin simge üstündeki okunu kaldır; kart görünümü ver. */
+body.wam-ui .navbar.wam-navbar .popover-region-toggle::before,
+body.wam-ui .navbar.wam-navbar .popover-region-toggle::after {
+    display: none !important;
+    content: none !important;
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-container {
+    margin-top: 6px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: var(--wam-radius-sm, 8px);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18), 0 2px 6px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+    background: #fff;
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-header-container {
+    height: auto;
+    min-height: 44px;
+    line-height: 1.4;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-header-text,
+body.wam-ui .navbar.wam-navbar .popover-region-header-actions {
+    float: none;
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-header-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-content-container {
+    height: calc(100% - 44px - 40px);
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-content-container .empty-message {
+    padding: 32px 16px;
+    color: var(--wam-muted, #64748b);
+}
+
+body.wam-ui .navbar.wam-navbar .popover-region-footer-container {
+    height: auto;
+    min-height: 40px;
+    padding: 9px 16px;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+body.wam-ui .navbar.wam-navbar .dropdown-menu .dropdown-item {
+    color: var(--wam-ink);
+}
+
+body.wam-ui .wam-gear__btn {
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    border-radius: var(--wam-radius-sm);
+    color: var(--wam-nav-fg);
+}
+
+body.wam-ui .wam-gear__btn:hover,
+body.wam-ui .wam-gear__btn:focus-visible,
+body.wam-ui .wam-gear__btn[aria-expanded="true"] {
+    background: var(--wam-nav-hover);
+    color: #fff;
+}
+
+/* ---------- Ortak yan gezinme paneli (hamburger düğmesiyle açılır) ----------
+   Yalnızca ortak ana gezinme: Ana Sayfa, Eğitimler, Eğitimlerim, Takvim, Kontrol paneli.
+   Site yönetimi kategori paneli (.wam-admin-nav) ve eğitim içerik çekmecesi bu panelden bağımsızdır. */
+body.wam-ui .wam-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: rgba(11, 31, 58, 0.5);
+    opacity: 0;
+    transition: opacity var(--wam-dur-panel) var(--wam-ease);
+}
+
+body.wam-ui.wam-menu-open .wam-menu-overlay {
+    opacity: 1;
+}
+
+body.wam-ui .wam-menu-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1051;
+    display: flex;
+    flex-direction: column;
+    width: min(var(--wam-panel-w), calc(100vw - 24px));
+    height: 100vh;
+    height: 100dvh;
+    background: var(--wam-nav);
+    color: var(--wam-nav-ink);
+    border-right: 1px solid var(--wam-nav-line);
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform var(--wam-dur-panel) var(--wam-ease), visibility 0s linear var(--wam-dur-panel);
+}
+
+body.wam-ui.wam-menu-open .wam-menu-panel {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform var(--wam-dur-panel) var(--wam-ease), visibility 0s linear 0s;
+}
+
+body.wam-ui .wam-menu-panel[hidden],
+body.wam-ui .wam-menu-overlay[hidden] {
+    display: none;
+}
+
+/* Arka sayfa kaydırması kilitlenir; konum korunur. Panel kendi içinde kayar. */
+body.wam-ui.wam-menu-open {
+    overflow: hidden;
+}
+
+/* Başlık: logo solda, kapatma sağda; yatay boşluk 24px */
+body.wam-ui .wam-menu-panel__head {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wam-space-4);
+    min-height: 72px;
+    padding: var(--wam-space-3) var(--wam-space-5);
+}
+
+body.wam-ui .wam-menu-panel__brand {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+body.wam-ui .wam-menu-panel__logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 32px;
+}
+
+body.wam-ui .wam-menu-panel__wordmark {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+body.wam-ui .wam-menu-close {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--wam-touch);
+    height: var(--wam-touch);
+    padding: 0;
+    border: 0;
+    border-radius: var(--wam-radius-sm);
+    background: transparent;
+    color: var(--wam-nav-ink);
+    cursor: pointer;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui .wam-menu-close:hover {
+    background: var(--wam-nav-hover);
+    color: #fff;
+}
+
+body.wam-ui .wam-menu-close:focus-visible {
+    outline: 2px solid var(--wam-nav-active);
+    outline-offset: 2px;
+}
+
+/* Menü: başlıktan 24px sonra başlar; dış boşluk 16px, satırlar 48px yükseklikte, aralarında 8px */
+body.wam-ui .wam-menu-panel__nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--wam-space-2);
+    padding: var(--wam-space-5) var(--wam-space-4) var(--wam-space-4);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+body.wam-ui .wam-menu-panel__nav a {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-height: 48px;
+    padding: 0 var(--wam-space-4);
+    border-radius: var(--wam-radius-sm);
+    color: var(--wam-nav-ink);
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+/* Moodle'un genel a:not([class]):focus kuralı (açık mavi dolgu, koyu metin) bu koyu panelde kullanılmaz;
+   odak durumu yalnızca aşağıdaki :focus-visible çerçevesiyle gösterilir. */
+body.wam-ui .wam-menu-panel__nav a:focus {
+    background: transparent;
+    color: var(--wam-nav-ink);
+    box-shadow: none;
+    outline: none;
+}
+
+/* Hover: hafif yüzey; aktif: sakin açık yüzey + ince sol vurgu (hover'dan sonra gelir) */
+body.wam-ui .wam-menu-panel__nav a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    text-decoration: none;
+}
+
+body.wam-ui .wam-menu-panel__nav a.is-active,
+body.wam-ui .wam-menu-panel__nav a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    box-shadow: inset 3px 0 0 var(--wam-nav-active);
+}
+
+body.wam-ui .wam-menu-panel__nav a:focus-visible {
+    outline: 2px solid var(--wam-nav-active);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.wam-ui .wam-menu-panel,
+    body.wam-ui.wam-menu-open .wam-menu-panel,
+    body.wam-ui .wam-menu-overlay,
+    body.wam-ui .wam-menu-panel__nav a,
+    body.wam-ui .wam-menu-close {
+        transition: none;
+    }
+}
+
+/* Hamburger düğmesi (logonun solunda) */
+body.wam-ui .navbar.wam-navbar .wam-hamburger {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: var(--wam-touch);
+    height: var(--wam-touch);
+    min-width: var(--wam-touch);
+    margin: 0 var(--wam-space-2) 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: var(--wam-radius-sm);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+body.wam-ui .navbar.wam-navbar .wam-hamburger:hover,
+body.wam-ui .navbar.wam-navbar .wam-hamburger[aria-expanded="true"] {
+    background: var(--wam-nav-hover);
+}
+
+.wam-hamburger__bars {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 14px;
+}
+
+.wam-hamburger__bars span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform 250ms var(--wam-ease), opacity 200ms var(--wam-ease), top 250ms var(--wam-ease);
+}
+
+.wam-hamburger__bars span:nth-child(1) { top: 0; }
+.wam-hamburger__bars span:nth-child(2) { top: 6px; }
+.wam-hamburger__bars span:nth-child(3) { top: 12px; }
+
+/* Açıkken üç çizgi çarpıya dönüşür. */
+.wam-hamburger[aria-expanded="true"] .wam-hamburger__bars span:nth-child(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.wam-hamburger[aria-expanded="true"] .wam-hamburger__bars span:nth-child(2) {
+    opacity: 0;
+}
+
+.wam-hamburger[aria-expanded="true"] .wam-hamburger__bars span:nth-child(3) {
+    top: 6px;
+    transform: rotate(-45deg);
+}
+
+/* Moodle'un kendi mobil çekmece düğmesi yerine hamburger kullanılır. */
+body.wam-hide-bootstrap-toggler-active .navbar .navbar-toggler[data-toggler="drawers"] {
+    display: none !important;
+}
+
+/* Dar ekran: kullanıcı işlemleri taşmaz; marka adı gerekirse kısaltılır. */
+@media (max-width: 767.98px) {
+    body.wam-ui .navbar.wam-navbar .container-fluid {
+        flex-wrap: nowrap;
+        padding-left: var(--wam-space-2);
+        padding-right: var(--wam-space-2);
+        gap: var(--wam-space-1);
+    }
+
+    body.wam-ui .navbar.wam-navbar .navbar-brand {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 34vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    body.wam-ui .navbar.wam-navbar #usernavigation {
+        flex: 0 0 auto;
+        gap: 0;
+    }
+
+    /* Dokunma hedefi ≥ 40 px kalır; yatay boşluk ve ayırıcı küçülür ki 390 px'te taşma olmasın. */
+    body.wam-ui .navbar.wam-navbar #usernavigation .popover-region-toggle,
+    body.wam-ui .navbar.wam-navbar #usernavigation a.nav-link {
+        min-width: 40px;
+        padding-left: 4px;
+        padding-right: 4px;
+        justify-content: center;
+    }
+
+    body.wam-ui .navbar.wam-navbar #usernavigation .divider {
+        display: none;
+    }
+
+    body.wam-ui .navbar.wam-navbar .navbar-brand {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    body.wam-ui .navbar.wam-navbar .navbar-brand:has(.wam-navbar-logo) {
+        flex-shrink: 0;
+        max-width: none;
+    }
+
+    body.wam-ui .navbar.wam-navbar .navbar-brand .wam-navbar-logo img {
+        height: 24px;
+    }
+
+    body.wam-ui .navbar.wam-navbar .wam-hamburger {
+        margin-right: 0;
+    }
+
+    body.wam-ui .navbar.wam-navbar .navbar-toggler {
+        min-width: 40px;
+        width: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.wam-ui .navbar.wam-navbar #usernavigation .wam-gear {
+        margin-right: 0;
+    }
+}
+
+/* Reduced motion: üst çubuk sabit ve görünür kalır, kayma animasyonu yok. */
+@media (prefers-reduced-motion: reduce) {
+    body.wam-ui .navbar.wam-navbar,
+    body.wam-ui .drawer-left,
+    body.wam-ui .drawer-right {
+        transition: none;
+    }
+
+    body.wam-ui.wam-header-hidden .navbar.wam-navbar {
+        transform: none;
+    }
+
+    body.wam-ui.wam-header-hidden .drawer-left,
+    body.wam-ui.wam-header-hidden .drawer-right {
+        top: var(--wam-header-h);
+        height: calc(100vh - var(--wam-header-h));
+    }
+}
+
+/* ---------- Admin /my/ panel ---------- */
+
+body.wam-ui#page-my-index .block-region .block,
+body.wam-ui#page-my-index .block {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+body.wam-ui#page-my-index #region-main {
+    background: transparent;
+}
+
+body.wam-ui#page-my-index .page-header-headings h1 {
+    color: var(--wam-ink);
+}
+
+/* ---------- Form / hesap sayfa kuralları ---------- */
+/* Hesap bileşenleri Faz 4 ile account.css (body.wam-account) altına taşındı.
+   Ortak ihtiyaç (filepicker z-index vb.) IMPLEMENTATION-ACCOUNT-P4.md içinde raporlanır. */
+
+/* ---------- WAM dashboard boş durum ---------- */
+
+.wam-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--wam-space-4);
+    padding: var(--wam-space-5);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    color: var(--wam-muted);
+}
+
+.wam-empty-state--compact {
+    padding: var(--wam-space-4);
+}
+
+.wam-empty-state p {
+    margin: 0;
+}
+
+/* Aktif WAM üst menü bağlantıları: yukarıdaki Navbar bölümünde (lacivert üst çubuk) tanımlıdır. */
+
+/* Dashboard kompakt başlık ile uyum */
+body.wam-ui.path-local-wamakademi-index .wam-dashboard {
+    max-width: var(--wam-page-max);
+    margin: 0 auto;
+    padding: 0 0 var(--wam-space-6);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--wam-space-4);
+    margin-bottom: var(--wam-space-5);
+}
+
+@media (min-width: 768px) {
+    body.wam-ui.path-local-wamakademi-index .wam-stats {
+        grid-template-columns: repeat(2, minmax(180px, 240px));
+    }
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--wam-space-3);
+    padding: var(--wam-space-4);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stat-card span {
+    display: block;
+    font-size: var(--wam-label);
+    color: var(--wam-muted);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stat-card strong {
+    font-size: 22px;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: var(--wam-space-5);
+}
+
+@media (max-width: 991.98px) {
+    body.wam-ui.path-local-wamakademi-index .wam-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--wam-space-3);
+    margin-bottom: var(--wam-space-4);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-section-header a {
+    color: var(--wam-primary);
+    font-weight: 650;
+    text-decoration: none;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--wam-space-4);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-card {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+    overflow: hidden;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-cover {
+    aspect-ratio: 16 / 9;
+    background: var(--wam-primary-soft);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-fallback {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--wam-muted);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-info {
+    padding: var(--wam-space-4);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-category {
+    font-size: var(--wam-label);
+    color: var(--wam-muted);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-info h3 {
+    margin: var(--wam-space-2) 0 var(--wam-space-3);
+    font-size: 16px;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-progress {
+    height: 8px;
+    background: var(--wam-bg);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: var(--wam-space-2) 0 var(--wam-space-4);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-progress-value {
+    height: 100%;
+    background: var(--wam-primary);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--wam-control-h);
+    padding: 0 var(--wam-space-4);
+    border-radius: var(--wam-radius-sm);
+    background: var(--wam-primary);
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-sidebar {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: var(--wam-shadow);
+    padding: var(--wam-space-4);
+    align-self: start;
+}
+
+/* =========================================================
+   styles.css !important override — ortak düzeni geri yükle
+   ========================================================= */
+
+body.wam-ui.path-local-wamakademi #page.drawers {
+    padding-left: var(--wam-gutter) !important;
+    padding-right: var(--wam-gutter) !important;
+}
+
+body.wam-ui.path-local-wamakademi #page.drawers .main-inner {
+    max-width: var(--wam-page-max) !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: var(--wam-space-5) 0 var(--wam-space-7) !important;
+    background: transparent !important;
+}
+
+body.wam-ui.path-local-wamakademi #region-main {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+body.wam-ui.path-local-wamakademi .wam-dashboard {
+    width: 100% !important;
+    max-width: var(--wam-page-max) !important;
+    margin: 0 auto !important;
+    padding: 0 0 var(--wam-space-6) !important;
+    box-sizing: border-box !important;
+}
+
+body.wam-ui.path-local-wamakademi .wam-page-header,
+body.wam-ui.path-local-wamakademi .wam-stats,
+body.wam-ui.path-local-wamakademi .wam-content-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.wam-ui#page-my-index #page.drawers {
+    padding-left: var(--wam-gutter) !important;
+    padding-right: var(--wam-gutter) !important;
+}
+
+body.wam-ui#page-my-index #page.drawers .main-inner,
+body.wam-ui#page-my-index.limitedwidth #page.drawers .main-inner {
+    max-width: var(--wam-page-max) !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: var(--wam-space-5) 0 var(--wam-space-7) !important;
+}
+
+body.wam-ui#page-my-index .header-maxwidth {
+    max-width: var(--wam-page-max) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

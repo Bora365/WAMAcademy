@@ -1515,9 +1515,10 @@ body.path-local-wamakademi .container-fluid {
     padding: 0 !important;
 }
 
-/* Navbar altındaki gereksiz beyaz üst boşluğu kaldır */
+/* Üst çubuk sabit (fixed) olduğu için sayfa içeriği tam üst çubuk yüksekliği kadar aşağıdan başlar;
+   böylece header ile gövde iç içe geçmez. */
 body.path-local-wamakademi #page {
-    margin-top: 0 !important;
+    margin-top: var(--wam-header-h, 64px) !important;
 }
 
 body.path-local-wamakademi #page-content {
@@ -1667,14 +1668,7 @@ body.path-local-wamakademi .main-inner {
     }
 }
 
-/* =========================================================
-   WAM AKADEMİ - YATAY SCROLL FIX
-   ========================================================= */
-
-html,
-body {
-    overflow-x: hidden !important;
-}
+/* Yatay scroll: overflow-x hidden kaldırıldı; kaynak düzeltildi. */
 
 body.path-local-wamakademi .wam-dashboard {
     width: 100% !important;
@@ -1690,11 +1684,11 @@ body.path-local-wamakademi .wam-dashboard {
 }
 
 body.path-local-wamakademi .wam-hero {
-    width: calc(100% + 32px) !important;
+    width: 100%;
     max-width: none !important;
 
-    margin-left: -16px !important;
-    margin-right: -16px !important;
+    margin-left: 0;
+    margin-right: 0;
 
     box-sizing: border-box !important;
 }
@@ -2987,34 +2981,20 @@ body.wam-catalog-body .wam-catalog-hero {
 
 
 /* =========================================================
-   WAM DESIGN TOKENS
+   WAM DESIGN TOKENS — alias to wam-base.css
    ========================================================= */
 
 :root {
-    --wam-bg: #F5F3EE;
-    --wam-ink: #19221F;
-    --wam-ink-muted: #4A5551;
-    --wam-primary: #215B4A;
-    --wam-primary-soft: #E7F0EC;
-    --wam-secondary: #E1BC86;
-    --wam-secondary-ink: #19221F;
-    --wam-surface: #FFFFFF;
-    --wam-border: #D9D4C8;
-    --wam-ok: #215B4A;
-    --wam-ok-soft: #E7F0EC;
-    --wam-warn-soft: #F6EBD7;
-    --wam-radius: 14px;
-    --wam-radius-sm: 10px;
-    --wam-space-1: 0.25rem;
-    --wam-space-2: 0.5rem;
-    --wam-space-3: 0.75rem;
-    --wam-space-4: 1rem;
-    --wam-space-5: 1.5rem;
-    --wam-space-6: 2rem;
-    --wam-space-7: 3rem;
-    --wam-font: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    --wam-shadow: 0 8px 24px rgba(25, 34, 31, 0.08);
-    --wam-focus: 0 0 0 3px rgba(33, 91, 74, 0.28);
+    /* Canonical values live in css/wam-base.css. Keep aliases for older rules. */
+    --wam-bg: var(--wam-bg, #F4F7FB);
+    --wam-ink: var(--wam-ink, #0F2747);
+    --wam-ink-muted: var(--wam-muted, #4A6280);
+    --wam-primary: var(--wam-primary, #2563EB);
+    --wam-primary-soft: var(--wam-primary-soft, #EFF6FF);
+    --wam-surface: var(--wam-surface, #FFFFFF);
+    --wam-border: var(--wam-border, #DBE5F1);
+    --wam-radius: var(--wam-radius, 12px);
+    --wam-radius-sm: var(--wam-radius-sm, 8px);
 }
 
 /* =========================================================
@@ -3495,8 +3475,6 @@ body.wam-my-courses-body .main-inner {
 
 .wam-menu-toggle:focus:not(:focus-visible),
 .wam-gear__btn:focus:not(:focus-visible),
-.wam-menu-close:focus:not(:focus-visible),
-.wam-menu-panel__nav a:focus:not(:focus-visible),
 .wam-gear__menu a:focus:not(:focus-visible),
 .navbar a:focus:not(:focus-visible),
 .navbar button:focus:not(:focus-visible) {
@@ -3506,98 +3484,12 @@ body.wam-my-courses-body .main-inner {
 
 .wam-menu-toggle:focus-visible,
 .wam-gear__btn:focus-visible,
-.wam-menu-close:focus-visible,
-.wam-menu-panel__nav a:focus-visible,
 .wam-gear__menu a:focus-visible {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
 }
 
-.wam-menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.35);
-    z-index: 1050;
-}
-
-.wam-menu-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: min(300px, 88vw);
-    height: 100vh;
-    background: #ffffff;
-    border-right: 1px solid #e5e7eb;
-    z-index: 1051;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 8px 0 24px rgba(15, 23, 42, 0.08);
-    transform: translateX(0);
-}
-
-.wam-menu-panel[hidden],
-.wam-menu-overlay[hidden] {
-    display: none !important;
-}
-
-.wam-menu-panel__head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 18px 12px;
-    border-bottom: 1px solid #eef2f7;
-}
-
-.wam-menu-panel__brand {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    color: #111827;
-}
-
-.wam-menu-close {
-    width: 36px;
-    height: 36px;
-    border: 0;
-    border-radius: 8px;
-    background: #f3f4f6;
-    color: #111827;
-    font-size: 22px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.wam-menu-panel__nav {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 2px;
-}
-
-.wam-menu-panel__nav a {
-    display: block;
-    padding: 12px 14px;
-    border-radius: 10px;
-    color: #111827;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.wam-menu-panel__nav a:hover {
-    background: #f3f4f6;
-}
-
-.wam-menu-panel__nav a.is-active,
-.wam-menu-panel__nav a[aria-current="page"] {
-    background: #eff6ff;
-    color: #2563eb;
-}
-
-/* Menü off-canvas: açıkken içerik genişliği değişmez */
-body.wam-menu-open {
-    overflow: hidden;
-}
+/* Yan panel (.wam-menu-panel*, .wam-menu-overlay, .wam-menu-close) stilleri css/wam-base.css içindedir. */
 
 .wam-gear {
     position: relative;
@@ -3654,14 +3546,7 @@ body.wam-menu-open {
     background: #f3f4f6;
 }
 
-/* Kurs detayı sadeleştirme */
-body[id^="page-course-view-"] #page-header .page-header-headings h1,
-body.wam-course-view #page-header .page-header-headings h1 {
-    font-size: 1.55rem !important;
-    line-height: 1.25 !important;
-    font-weight: 700 !important;
-}
-
+/* Kurs detayı sadeleştirme (kurs başlığı ölçüsü: css/wam-course.css) */
 body[id^="page-course-view-"] .sectionname,
 body.wam-course-view .sectionname {
     font-size: 1rem !important;

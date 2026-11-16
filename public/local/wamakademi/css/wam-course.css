@@ -1,0 +1,1008 @@
+/* =========================================================
+   WAM Akademi — eğitim detay ve yönetim ekranları (Kurs R1)
+   Kapsam: body.wam-ui.wam-course (lib.php: local_wamakademi_course_page_kind,
+   Moodle kurs/etkinlik bağlamı). Token kaynağı: css/wam-base.css.
+   ========================================================= */
+
+body.wam-ui.wam-course {
+    --wam-course-tab-h: 48px;
+    --wam-course-soft: #F8FAFD;
+    --wam-course-danger-ink: #A61B1B;
+}
+
+/* ---------- 1. Ortak sütun: başlık, sekmeler, araç çubuğu ve içerik aynı sol çizgide ---------- */
+
+body.wam-ui.wam-course-wide #page.drawers .main-inner,
+body.wam-ui.wam-course-wide .header-maxwidth {
+    max-width: var(--wam-page-max);
+}
+
+body.wam-ui.wam-course #page-header {
+    margin: 0 0 var(--wam-space-4);
+}
+
+body.wam-ui.wam-course #page-header .page-header-headings h1 {
+    margin: 0;
+    font-size: var(--wam-title);
+    line-height: var(--wam-title-lh);
+    overflow-wrap: anywhere;
+}
+
+body.wam-ui.wam-course #region-main {
+    background: transparent;
+}
+
+/* İç sayfa başlığı (H2) 22/30: H1'den (28) küçük, bölüm başlıklarından (18) büyük; kullanıcı içeriğine dokunulmaz. */
+body.wam-ui.wam-course #region-main [role="main"] > h2,
+body.wam-ui.wam-course #region-main [role="main"] > .box > h2:first-child,
+body.wam-ui.wam-course-course #region-main [role="main"] h2:not(.no-overflow *, .activity-altcontent *, .summarytext *, .course-description-item *),
+body.wam-ui.wam-coursecat #region-main [role="main"] h2:not(.no-overflow *, .summarytext *) {
+    margin: 0 0 var(--wam-space-4);
+    font-size: var(--wam-subtitle);
+    line-height: var(--wam-subtitle-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-course #region-main [role="main"] h3:not(.no-overflow *, .activity-altcontent *, .summarytext *, .course-description-item *) {
+    font-size: var(--wam-h3);
+    line-height: var(--wam-h3-lh);
+}
+
+/* ---------- 2. Kurs sekmeleri (gerçek bağlantılar + Daha fazla) ---------- */
+/* moremenu.js taşmayı satır yüksekliğiyle ölçer: liste sarmalı kalır, yükseklik sabittir. */
+
+body.wam-ui.wam-course .secondary-navigation {
+    padding-bottom: 0;
+    margin: 0 0 var(--wam-space-5);
+}
+
+body.wam-ui.wam-course .secondary-navigation .navigation {
+    height: var(--wam-course-tab-h);
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-bottom: 1px solid var(--wam-border);
+}
+
+body.wam-ui.wam-course .secondary-navigation .navigation .nav-tabs {
+    max-width: none;
+    margin: 0;
+    background: transparent;
+    column-gap: var(--wam-space-5);
+}
+
+body.wam-ui.wam-course .secondary-navigation .nav-tabs > .nav-item > .nav-link {
+    height: var(--wam-course-tab-h);
+    min-width: var(--wam-touch);
+    padding: 0;
+    margin-bottom: -1px;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: var(--wam-muted);
+    font-size: var(--wam-body);
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color var(--wam-dur-fast) var(--wam-ease), border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui.wam-course .secondary-navigation .nav-tabs > .nav-item > .nav-link:hover {
+    color: var(--wam-ink);
+    border-bottom-color: var(--wam-border);
+    background: transparent;
+}
+
+body.wam-ui.wam-course .secondary-navigation .nav-tabs > .nav-item > .nav-link.active,
+body.wam-ui.wam-course .secondary-navigation .nav-tabs > .nav-item > .nav-link.active:hover,
+body.wam-ui.wam-course .secondary-navigation .nav-tabs > .nav-item > .nav-link[aria-current="true"] {
+    color: var(--wam-ink);
+    border-bottom-color: var(--wam-primary);
+    background: transparent;
+    font-weight: 700;
+}
+
+body.wam-ui.wam-course #page .secondary-navigation .nav-tabs .nav-link:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: -2px;
+    border-radius: 4px;
+    background: transparent;
+}
+
+body.wam-ui.wam-course .secondary-navigation .dropdownmoremenu > .dropdown-menu {
+    min-width: 240px;
+    max-width: min(320px, calc(100vw - 2 * var(--wam-gutter)));
+    max-height: min(70vh, 480px);
+    overflow-y: auto;
+    padding: var(--wam-space-2) 0;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    box-shadow: var(--wam-shadow-hover);
+}
+
+body.wam-ui.wam-course .secondary-navigation .dropdownmoremenu .dropdown-item {
+    display: flex;
+    align-items: center;
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-4);
+    color: var(--wam-ink);
+    white-space: normal;
+}
+
+body.wam-ui.wam-course .secondary-navigation .dropdownmoremenu .dropdown-item:hover,
+body.wam-ui.wam-course .secondary-navigation .dropdownmoremenu .dropdown-item:focus {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-course .secondary-navigation .dropdownmoremenu .dropdown-item.active,
+body.wam-ui.wam-course .secondary-navigation .dropdownmoremenu .dropdown-item[aria-current="true"] {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+/* Etkinlik başlığı (modules.scss: 830px + margin auto !important) sekmelerle aynı sol çizgiye gelir. */
+body.wam-ui.wam-course-mod.path-mod .activity-header {
+    max-width: none;
+}
+
+/* ---------- 3. Sayfa araç çubuğu (Moodle üçüncül gezinme) ---------- */
+
+body.wam-ui.wam-course .tertiary-navigation,
+body.wam-ui.wam-course .tertiary-navigation.full-width-bottom-border {
+    width: auto;
+    margin: 0 0 var(--wam-space-5);
+    padding: 0;
+}
+
+body.wam-ui.wam-course .tertiary-navigation.full-width-bottom-border {
+    padding-bottom: var(--wam-space-4);
+    border-bottom: 1px solid var(--wam-border);
+}
+
+body.wam-ui.wam-course .tertiary-navigation > .d-flex,
+body.wam-ui.wam-course .tertiary-navigation > .row {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wam-space-3);
+    margin: 0;
+    padding: 0;
+}
+
+body.wam-ui.wam-course .tertiary-navigation .navitem,
+body.wam-ui.wam-course .tertiary-navigation .navitem:not(:last-child) {
+    margin: 0;
+    align-items: center;
+}
+
+body.wam-ui.wam-course .tertiary-navigation .navitem-divider {
+    align-self: stretch;
+    margin: 0;
+    background-color: var(--wam-border);
+}
+
+body.wam-ui.wam-course .tertiary-navigation > a.btn,
+body.wam-ui.wam-course .tertiary-navigation > div.urlselect {
+    margin-bottom: 0;
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-1);
+    margin-left: calc(-1 * var(--wam-space-1));
+    border-radius: var(--wam-radius-sm);
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+    white-space: normal;
+    text-align: left;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-toggle:hover {
+    background: var(--wam-primary-soft);
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-toggle:focus-visible {
+    outline: 2px solid var(--wam-primary);
+    outline-offset: 2px;
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-menu {
+    max-width: min(360px, calc(100vw - 2 * var(--wam-gutter)));
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    box-shadow: var(--wam-shadow-hover);
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-menu [role="presentation"] {
+    padding: var(--wam-space-3) var(--wam-space-4) var(--wam-space-1);
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+    color: var(--wam-muted);
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    min-height: var(--wam-touch);
+    white-space: normal;
+}
+
+body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-menu .dropdown-item[aria-selected="true"] {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+body.wam-ui.wam-course .tertiary-navigation h2 {
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+}
+
+body.wam-ui.wam-course .tertiary-navigation .btn {
+    min-height: var(--wam-control-h);
+}
+
+/* ---------- 4. Ortak içerik yüzeyleri ---------- */
+
+body.wam-ui.wam-course #region-main .table-responsive,
+body.wam-ui.wam-course #region-main .no-overflow:has(> table.generaltable) {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+}
+
+body.wam-ui.wam-course #region-main .table-responsive > table,
+body.wam-ui.wam-course #region-main .no-overflow > table.generaltable {
+    margin-bottom: 0;
+}
+
+body.wam-ui.wam-course #region-main table.generaltable > thead > tr > th,
+body.wam-ui.wam-course #region-main table.flexible > thead > tr > th {
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+    color: var(--wam-muted);
+    vertical-align: bottom;
+}
+
+body.wam-ui.wam-course #region-main table.generaltable > tbody > tr > td,
+body.wam-ui.wam-course #region-main table.flexible > tbody > tr > td {
+    vertical-align: middle;
+}
+
+body.wam-ui.wam-course-course #region-main .box.generalbox:not(.gradetreebox) {
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+}
+
+body.wam-ui.wam-course #region-main .gradetreebox .gradetree-wrapper {
+    padding: 0;
+    background: transparent;
+}
+
+/* Form alanları, bölümler, zorunlu/hata/pasif durumları: css/wam-forms.css (ortak katman). */
+
+/* Yapışkan kaydet/iptal çubuğu: içerik sütunuyla aynı hizada; son alanları ve odak hedeflerini örtmez. */
+body.wam-ui.wam-course {
+    --wam-course-sticky-h: 80px;
+}
+
+body.wam-ui.wam-course.hasstickyfooter #page.drawers .main-inner {
+    padding-bottom: calc(var(--wam-course-sticky-h) + var(--wam-space-6));
+}
+
+body.wam-ui.wam-course.hasstickyfooter #page.drawers {
+    scroll-padding-bottom: calc(var(--wam-course-sticky-h) + var(--wam-space-4));
+}
+
+body.wam-ui.wam-course #sticky-footer.stickyfooter {
+    border-top-color: var(--wam-border);
+    box-shadow: 0 -1px 4px rgba(15, 39, 71, 0.06);
+}
+
+/* İç kutu Bootstrap .px-3 (16px, !important) taşıyor: dış dolgu ve genişlik bu 16px'i hesaba katar. */
+body.wam-ui.wam-course #sticky-footer .sticky-footer-content-wrapper {
+    padding-left: calc(var(--wam-gutter) - var(--wam-space-4));
+    padding-right: calc(var(--wam-gutter) - var(--wam-space-4));
+}
+
+body.wam-ui.wam-course #sticky-footer .sticky-footer-content {
+    max-width: calc(var(--wam-content-max) + 2 * var(--wam-space-4));
+}
+
+body.wam-ui.wam-course-wide #sticky-footer .sticky-footer-content {
+    max-width: calc(var(--wam-page-max) + 2 * var(--wam-space-4));
+}
+
+body.wam-ui.wam-course #sticky-footer .sticky-footer-content .fitem,
+body.wam-ui.wam-course #sticky-footer .sticky-footer-content .mb-3 {
+    margin-bottom: 0;
+}
+
+body.wam-ui.wam-course #sticky-footer .sticky-footer-content [data-groupname="buttonar"] > span > .d-flex {
+    gap: var(--wam-space-3);
+}
+
+/* ---------- 5. Mobil kurs dizini düğmesi (etiketli) ---------- */
+
+body.wam-ui.wam-course .wam-course-toggle__label {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    body.wam-ui.wam-course .drawer-toggler.drawer-left-toggle {
+        position: static;
+        margin: 0 0 var(--wam-space-3);
+    }
+
+    body.wam-ui.wam-course .drawer-left-toggle .btn {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: var(--wam-space-2);
+        width: auto;
+        height: auto;
+        min-height: var(--wam-touch);
+        margin: 0;
+        padding: 0 var(--wam-space-4);
+        border: 1px solid var(--wam-border);
+        border-radius: var(--wam-radius-sm);
+        background: var(--wam-surface);
+        color: var(--wam-ink);
+        font-weight: 600;
+        white-space: nowrap;
+        box-shadow: none;
+    }
+
+    body.wam-ui.wam-course .drawer-left-toggle .btn:hover {
+        background: var(--wam-primary-soft);
+        border-color: var(--wam-primary);
+    }
+
+    body.wam-ui.wam-course .wam-course-toggle__label {
+        display: inline;
+        font-size: var(--wam-body);
+    }
+}
+
+/* ---------- 6. Katılımcılar ---------- */
+
+body.wam-ui.wam-course-participants #action_bar > .d-flex {
+    justify-content: space-between;
+}
+
+body.wam-ui.wam-course-participants #action_bar .navitem:has(.enrolusersbutton) {
+    margin-left: auto;
+}
+
+body.wam-ui.wam-course-participants .enrolusersbutton .btn {
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-5);
+    font-weight: 650;
+}
+
+body.wam-ui.wam-course-participants .wam-cp-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--wam-space-3);
+    margin: 0 0 var(--wam-space-3);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-search {
+    display: flex;
+    flex: 1 1 360px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--wam-space-2);
+    max-width: 560px;
+    margin: 0;
+}
+
+body.wam-ui.wam-course-participants .wam-cp-search__field {
+    display: flex;
+    flex: 1 1 220px;
+    flex-direction: column;
+    gap: var(--wam-space-1);
+    min-width: 0;
+}
+
+body.wam-ui.wam-course-participants .wam-cp-search__field label {
+    margin: 0;
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-search__field input {
+    min-height: var(--wam-touch);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-search .btn,
+body.wam-ui.wam-course-participants .wam-cp-toggle {
+    min-height: var(--wam-touch);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    padding: 0 var(--wam-space-4);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    font-weight: 600;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle:hover {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle:focus-visible,
+body.wam-ui.wam-course-participants .wam-cp-search .btn:focus-visible {
+    outline: none;
+    box-shadow: var(--wam-focus);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle[aria-expanded="true"] {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle__icon {
+    transition: transform var(--wam-dur) var(--wam-ease);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle[aria-expanded="true"] .wam-cp-toggle__icon {
+    transform: rotate(180deg);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 11px;
+    background: var(--wam-primary);
+    color: #fff;
+    font-size: var(--wam-label);
+    font-weight: 700;
+}
+
+body.wam-ui.wam-course-participants .wam-cp-toggle__count[hidden] {
+    display: none;
+}
+
+body.wam-ui.wam-course-participants .wam-cp-advanced[hidden] {
+    display: none;
+}
+
+body.wam-ui.wam-course-participants .wam-cp-advanced .filter-group {
+    margin: 0 0 var(--wam-space-4);
+    padding: var(--wam-space-4);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+}
+
+body.wam-ui.wam-course-participants .wam-cp-advanced .filter-group .btn {
+    min-height: var(--wam-control-h);
+}
+
+/* Baş harf çubukları: ikincil alan (Baş harfe göre düğmesiyle açılır) */
+/* Moodle çubuğu Bootstrap .d-flex (!important) ile çiziyor; kapalı durum yalnızca bu yardımcı sınıfı aşar. */
+body.wam-ui.wam-course-participants:not(.wam-cp-initials-open) .userlist .initialbar.d-flex {
+    display: none !important;
+}
+
+body.wam-ui.wam-course-participants .userlist .initialbar {
+    flex-wrap: wrap;
+    gap: var(--wam-space-1);
+    margin: 0 0 var(--wam-space-2);
+}
+
+body.wam-ui.wam-course-participants .userlist .initialbar .page-link {
+    min-width: 32px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.wam-ui.wam-course-participants .userlist [data-region="participant-count"],
+body.wam-ui.wam-course-participants .userlist form > div > p:first-child {
+    margin: var(--wam-space-2) 0 var(--wam-space-3);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 600;
+    color: var(--wam-muted);
+}
+
+/* ---------- Katılımcılar tablosu (sütun sınıfları: user/classes/table/participants.php) ---------- */
+/* Tek satır başlıklar, sade satırlar, satır sonunda tek "İşlemler" menüsü. Kaydırma yalnızca .table-responsive içinde. */
+
+body.wam-ui.wam-course-participants #participants {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+body.wam-ui.wam-course-participants .table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.wam-ui.wam-course-participants .table-responsive:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--wam-primary);
+}
+
+/* Başlıklar: aynı yazı boyutu, tek satır, aynı hizada */
+body.wam-ui.wam-course-participants #participants > thead > tr > th {
+    padding: var(--wam-space-3);
+    background: var(--wam-course-soft);
+    border-bottom: 1px solid var(--wam-border);
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+    color: var(--wam-muted);
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+body.wam-ui.wam-course-participants #participants > thead > tr > th a[data-sortable] {
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+}
+
+body.wam-ui.wam-course-participants #participants > thead > tr > th a[data-sortable]:hover {
+    color: var(--wam-primary-hover);
+    text-decoration: none;
+}
+
+body.wam-ui.wam-course-participants #participants > thead > tr > th a[data-sortable]:focus-visible {
+    border-radius: 4px;
+    background: rgba(15, 23, 42, 0.06);
+}
+
+/* Tek sıralama göstergesi, sıralanan bağlantının hemen yanında */
+body.wam-ui.wam-course-participants #participants > thead > tr > th .icon {
+    width: 12px;
+    height: 12px;
+    margin: 0 0 0 2px;
+    font-size: 12px;
+    vertical-align: baseline;
+    color: var(--wam-primary);
+}
+
+/* Satırlar */
+body.wam-ui.wam-course-participants #participants > tbody > tr > td,
+body.wam-ui.wam-course-participants #participants > tbody > tr > th {
+    padding: var(--wam-space-3);
+    border-color: var(--wam-line);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    vertical-align: middle;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr.emptyrow {
+    display: none;
+}
+
+body.wam-ui.wam-course-participants #participants .c0 {
+    width: 48px;
+    padding-right: var(--wam-space-1);
+}
+
+body.wam-ui.wam-course-participants #participants .c0 .form-check,
+body.wam-ui.wam-course-participants #participants .c0 input {
+    margin: 0;
+}
+
+/* Ad Soyad: avatar + ad yan yana; uzun ad ikinci satırda ad başlangıç hizasından devam eder */
+body.wam-ui.wam-course-participants #participants .wam-pc-name {
+    min-width: 200px;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > th.wam-pc-name {
+    font-weight: 600;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > th.wam-pc-name > a {
+    display: flex !important; /* Bootstrap .d-inline-block (!important) bağlantıya sınıf olarak eklenir */
+    align-items: center;
+    gap: var(--wam-space-3);
+    min-width: 0;
+    color: var(--wam-ink);
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > th.wam-pc-name > a:hover {
+    color: var(--wam-primary-hover);
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > th.wam-pc-name > a > .userinitials,
+body.wam-ui.wam-course-participants #participants > tbody > tr > th.wam-pc-name > a > img {
+    flex: 0 0 35px;
+    margin: 0;
+}
+
+/* E-posta: yeterli genişlik, gerekirse yalnızca kendi hücresinde kırılır */
+body.wam-ui.wam-course-participants #participants .wam-pc-email {
+    min-width: 250px;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > td.wam-pc-email {
+    overflow-wrap: anywhere;
+}
+
+/* Rol, son erişim ve durum tek satır; grup adları okunur biçimde sarılır */
+body.wam-ui.wam-course-participants #participants .wam-pc-role {
+    min-width: 110px;
+}
+
+body.wam-ui.wam-course-participants #participants .wam-pc-group {
+    min-width: 140px;
+}
+
+body.wam-ui.wam-course-participants #participants .wam-pc-lastaccess {
+    min-width: 120px;
+}
+
+body.wam-ui.wam-course-participants #participants .wam-pc-status {
+    min-width: 90px;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > td.wam-pc-role,
+body.wam-ui.wam-course-participants #participants > tbody > tr > td.wam-pc-lastaccess,
+body.wam-ui.wam-course-participants #participants > tbody > tr > td.wam-pc-status {
+    white-space: nowrap;
+}
+
+body.wam-ui.wam-course-participants #participants > tbody > tr > td.wam-pc-group {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/* Satır içi düzenleme açıkken hücre sarılabilir ve genişler */
+body.wam-ui.wam-course-participants #participants > tbody > tr > td:has(.inplaceeditingon) {
+    min-width: 260px;
+    white-space: normal;
+}
+
+body.wam-ui.wam-course-participants #participants .badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+/* Rol/grup metni düz metin: kalem simgesi yok; düzenleme "İşlemler" menüsünden */
+body.wam-ui.wam-course-participants #participants .inplaceeditable .quickediticon {
+    display: none;
+}
+
+body.wam-ui.wam-course-participants #participants .inplaceeditable a[data-inplaceeditablelink] {
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* İşlemler sütunu */
+body.wam-ui.wam-course-participants #participants .wam-pc-actions {
+    width: 1%;
+    text-align: right;
+    white-space: nowrap;
+}
+
+body.wam-ui.wam-course-participants #participants > thead > tr > th.wam-pc-actions {
+    text-align: right;
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions {
+    display: inline-block;
+    /* 44px'lik hedef satır yüksekliğini artırmasın: dikey boşluğa taşar */
+    margin: -4px 0;
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-3);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    font-size: var(--wam-label);
+    font-weight: 600;
+    line-height: var(--wam-label-lh);
+    cursor: pointer;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__trigger::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform var(--wam-dur) var(--wam-ease);
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__trigger[aria-expanded="true"]::after {
+    transform: translateY(1px) rotate(225deg);
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__trigger:hover,
+body.wam-ui.wam-course-participants .wam-row-actions__trigger[aria-expanded="true"] {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui.wam-course-participants #participants .wam-row-actions__trigger:focus-visible {
+    outline: none;
+    box-shadow: var(--wam-focus);
+}
+
+/* Menü: konumu betik hesaplar (fixed); tablonun kaydırma alanı tarafından kırpılmaz */
+body.wam-ui.wam-course-participants .wam-row-actions__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    min-width: 220px;
+    max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+    overflow-y: auto;
+    padding: 6px;
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-ctl-radius);
+    box-shadow: var(--wam-ctl-panel-shadow);
+    text-align: left;
+    white-space: nowrap;
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__menu[hidden] {
+    display: none !important;
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-3);
+    border: 0;
+    border-radius: var(--wam-radius-sm);
+    background: transparent;
+    color: var(--wam-ink);
+    font-size: var(--wam-help);
+    font-weight: 500;
+    line-height: var(--wam-help-lh);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__item:hover {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+    text-decoration: none;
+}
+
+body.wam-ui.wam-course-participants #participants .wam-row-actions__item:focus,
+body.wam-ui.wam-course-participants #participants .wam-row-actions__item:focus-visible {
+    outline: none;
+    background: var(--wam-primary-soft-2);
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__item.unenrollink {
+    color: var(--wam-course-danger-ink);
+}
+
+body.wam-ui.wam-course-participants #participants .wam-row-actions__item.unenrollink:hover,
+body.wam-ui.wam-course-participants #participants .wam-row-actions__item.unenrollink:focus-visible {
+    background: var(--wam-danger-soft);
+    box-shadow: inset 3px 0 0 var(--wam-danger);
+    color: var(--wam-course-danger-ink);
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__group {
+    margin: 0;
+    padding: 0;
+}
+
+body.wam-ui.wam-course-participants .wam-row-actions__item + .wam-row-actions__group,
+body.wam-ui.wam-course-participants .wam-row-actions__group + .wam-row-actions__group {
+    margin-top: var(--wam-space-1);
+    padding-top: var(--wam-space-1);
+    border-top: 1px solid var(--wam-line);
+}
+
+body.wam-ui.wam-course-participants .userlist .buttons {
+    margin-top: var(--wam-space-4);
+}
+
+/* Katılımcı ekleme penceresi (enrol_manual): yalnızca bu formu taşıyan pencere */
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) {
+    --wam-enrol-pad: var(--wam-space-5);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-content {
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: 0 12px 32px rgba(15, 39, 71, 0.18);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-header,
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-body,
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-footer {
+    padding-left: var(--wam-enrol-pad);
+    padding-right: var(--wam-enrol-pad);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-title {
+    font-size: var(--wam-h2);
+    line-height: var(--wam-h2-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .btn-close {
+    width: var(--wam-touch);
+    height: var(--wam-touch);
+    padding: 0;
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) #id_main > .d-flex h3 {
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--wam-muted);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .fitem.row {
+    align-items: flex-start;
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .col-form-label {
+    font-weight: 600;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-input {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 420px;
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-input input,
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-select {
+    width: 100%;
+    min-height: var(--wam-touch);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wam-space-2);
+    min-height: 32px;
+    margin: 0 0 var(--wam-space-2);
+    font-size: var(--wam-help);
+    color: var(--wam-muted);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-suggestions {
+    max-height: 280px;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    box-shadow: var(--wam-shadow-hover);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-suggestions [role="option"] {
+    display: flex;
+    align-items: center;
+    min-height: var(--wam-touch);
+    padding: var(--wam-space-2) var(--wam-space-3);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-suggestions [role="option"] small {
+    margin-left: var(--wam-space-2);
+    color: var(--wam-muted);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .form-autocomplete-suggestions [aria-selected="true"] {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-footer {
+    gap: var(--wam-space-3);
+    border-top-color: var(--wam-border);
+}
+
+body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-footer .btn {
+    min-height: var(--wam-touch);
+    margin: 0;
+    padding: 0 var(--wam-space-5);
+}
+
+@media (max-width: 575.98px) {
+    body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) {
+        --wam-enrol-pad: var(--wam-space-4);
+        margin: var(--wam-space-2);
+    }
+
+    body.wam-ui.wam-course-participants .modal-dialog:has(input[name="_qf__enrol_manual_enrol_users_form"]) .modal-footer .btn {
+        flex: 1 1 auto;
+    }
+}
+
+/* ---------- 7. Kurs ayarları formu: ortak form katmanı (css/wam-forms.css) ---------- */
+
+/* ---------- 8. Notlar ---------- */
+
+body.wam-ui.wam-course-grades .tertiary-navigation .search-widget .dropdown-toggle,
+body.wam-ui.wam-course-grades .tertiary-navigation .initialswidget .dropdown-toggle {
+    min-height: var(--wam-control-h);
+}
+
+body.wam-ui.wam-course-grades .tertiary-navigation .navitem.flex-column > .dropdown > .btn,
+body.wam-ui.wam-course-grades .tertiary-navigation .navitem .btn.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--wam-control-h);
+}
+
+/* Değerlendirici raporu: başlık satırı, ilk sütun ve ortalama satırı görünüm alanına göre yapışkandır
+   (grade.scss). İç kaydırma alanı bunları bozacağından tablo Moodle'ın sayfa düzeyi kaydırmasını kullanır;
+   içerik genişliği .wam-course-wide ile açılır. */
+body.wam-ui.wam-course-grades .user-grade {
+    background: var(--wam-surface);
+}
+
+/* ---------- 9. Hareket ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    body.wam-ui.wam-course .secondary-navigation .nav-tabs > .nav-item > .nav-link,
+    body.wam-ui.wam-course .tertiary-navigation-selector .dropdown-toggle,
+    body.wam-ui.wam-course-participants .wam-cp-toggle,
+    body.wam-ui.wam-course-participants .wam-cp-toggle__icon,
+    body.wam-ui.wam-course-participants #participants td:last-child > div > a {
+        transition: none;
+    }
+}

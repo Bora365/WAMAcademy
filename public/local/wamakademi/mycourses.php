@@ -15,7 +15,6 @@ $PAGE->set_title('Eğitimlerim');
 $PAGE->set_heading('');
 $PAGE->add_body_class('wam-my-courses-body');
 
-$PAGE->requires->css('/local/wamakademi/styles.css');
 $PAGE->requires->js(new moodle_url('/local/wamakademi/js/mycourses.js'));
 
 /**

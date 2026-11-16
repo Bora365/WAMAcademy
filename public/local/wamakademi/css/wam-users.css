@@ -1,0 +1,353 @@
+/* =========================================================
+   WAM Akademi — kullanıcı ve katılımcı ekranları (User R1)
+   Kapsam (gövde sınıfları lib.php: local_wamakademi_users_page_kind):
+     wam-users-list  : /admin/user.php (sistem kullanıcıları, reportbuilder sistem raporu)
+     wam-users-new   : /user/editadvanced.php?id=-1 (yeni sistem hesabı)
+     wam-users-edit  : /user/editadvanced.php?id=N (başka kullanıcıyı düzenle)
+     wam-users-form  : new + edit
+     wam-users-participants / wam-site-participants : /user/index.php (tablo kuralları css/wam-course.css içinde)
+   Token kaynağı css/wam-base.css; ortak form bileşenleri css/wam-forms.css (bu dosya ondan sonra yüklenir).
+   ========================================================= */
+
+/* ---------- 1. Kapsam açıklaması (başlığın altında tek cümle; tüm kullanıcı ekranları) ---------- */
+
+body.wam-ui .wam-scope {
+    max-width: 85ch;
+    margin: 0 0 var(--wam-space-4);
+    color: var(--wam-muted);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+}
+
+body.wam-ui .wam-scope a {
+    font-weight: 600;
+}
+
+/* ---------- 2. Sistem kullanıcıları listesi ---------- */
+
+/* Ad sütunu: avatar sabit, ad metni kendi başlangıç hizasında kalır (uzun ad avatarın altına inmez) */
+body.wam-ui.wam-users-list .reportbuilder-table td.c1 > a {
+    display: flex;
+    align-items: center;
+    gap: var(--wam-space-3);
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table td.c1 > a > :is(.userinitials, img.userpicture) {
+    flex: 0 0 35px;
+    margin: 0;
+}
+
+/* E-posta yeterince geniş; gerekirse yalnızca kendi hücresinde kırılır */
+body.wam-ui.wam-users-list .reportbuilder-table th.c1 {
+    min-width: 240px;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table th.c2 {
+    min-width: 260px;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table td.c2 {
+    overflow-wrap: anywhere;
+}
+
+/* Kısa hücreler ("Hiçbir zaman") tek satır */
+body.wam-ui.wam-users-list .reportbuilder-table th.c3,
+body.wam-ui.wam-users-list .reportbuilder-table td.c3 {
+    min-width: 140px;
+    white-space: nowrap;
+}
+
+/* İşlemler sütunu: satır sonunda sağa dayalı, dar */
+body.wam-ui.wam-users-list .reportbuilder-table :is(th, td).c4 {
+    width: 1%;
+    text-align: right;
+    white-space: nowrap;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table td.c4 .action-menu {
+    display: inline-block;
+}
+
+/* İşlemler düğmesi: katılımcı tablosundaki .wam-row-actions__trigger ile aynı görünüm (aynı token'lar) */
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu-trigger > .dropdown > a.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    width: auto;
+    height: auto;
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    margin: -4px 0;
+    padding: 0 var(--wam-space-3);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius-sm);
+    background: var(--wam-surface);
+    color: var(--wam-ink);
+    font-size: var(--wam-label);
+    font-weight: 600;
+    line-height: var(--wam-label-lh);
+    text-decoration: none;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+/* Moodle'ın kendi caret'i yerine tek, ortak ok */
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu-trigger > .dropdown > a.dropdown-toggle::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    border: 0;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform var(--wam-dur) var(--wam-ease);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu-trigger > .dropdown > a.dropdown-toggle[aria-expanded="true"]::after {
+    transform: translateY(1px) rotate(225deg);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu-trigger > .dropdown > a.dropdown-toggle:hover,
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu-trigger > .dropdown > a.dropdown-toggle[aria-expanded="true"] {
+    background: var(--wam-primary-soft);
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu-trigger > .dropdown > a.dropdown-toggle:focus-visible {
+    outline: none;
+    box-shadow: var(--wam-focus);
+}
+
+/* Betik etiketi ekler; ekran okuyucu metni .visually-hidden olarak kalır */
+body.wam-ui.wam-users-list .wam-actions-label {
+    white-space: nowrap;
+}
+
+/* Menü öğeleri */
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-menu {
+    min-width: 220px;
+    padding: 6px;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-ctl-radius);
+    box-shadow: var(--wam-ctl-panel-shadow);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: var(--wam-space-2);
+    min-height: var(--wam-touch);
+    padding: 0 var(--wam-space-3);
+    border-radius: var(--wam-radius-sm);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    white-space: nowrap;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item:hover,
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item:focus {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item:focus-visible {
+    outline: none;
+    background: var(--wam-primary-soft-2);
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}
+
+/* Hesabı silme: eğitim kaydını kaldırmadan görsel olarak ayrılır (tehlike rengi) */
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item[data-modal="confirmation"] {
+    color: var(--wam-danger);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item[data-modal="confirmation"]:hover,
+body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item[data-modal="confirmation"]:focus-visible {
+    background: var(--wam-danger-soft);
+    box-shadow: inset 3px 0 0 var(--wam-danger);
+    color: var(--wam-danger);
+}
+
+/* Filtre paneli: geniş, her filtre için etiket üstte, işleç ve değer alt alta/satır içinde */
+body.wam-ui.wam-users-list .filters-dropdown {
+    width: min(400px, calc(100vw - 32px));
+    max-width: none;
+    padding: 0;
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-shadow: 0 12px 28px rgba(15, 39, 71, 0.18);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-filters-sidebar .filter {
+    margin-bottom: var(--wam-space-3);
+    padding-bottom: var(--wam-space-3);
+    border-bottom: 1px solid var(--wam-line);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-filters-sidebar .filter-name {
+    margin-bottom: var(--wam-space-2);
+    color: var(--wam-ink);
+    font-size: var(--wam-label);
+    line-height: var(--wam-label-lh);
+    font-weight: 700;
+}
+
+/* Etiket sütunu boş (başlık .filter-name'de): alan tam genişlik. Yalnızca .filter blokları; alttaki "Uygula" çubuğu (Moodle'ın mutlak konumlu satırı) etkilenmez.
+   #region-main: wam-forms.css etiket/alan ızgarası aynı kimlikle yazıldığından bu panelde onu geçersiz kılmak için gerekir. */
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform .filter .fitem.row {
+    display: block;
+    margin: 0;
+}
+
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform .filter .fitem.row > .col-md-3 {
+    display: none;
+}
+
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform .filter .fitem.row > .col-md-9 {
+    display: block;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform .filter .felement > fieldset > .d-flex {
+    flex-wrap: wrap;
+    gap: var(--wam-space-2);
+}
+
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform .filter .fitem {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+}
+
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform .filter :is(select.form-select, input.form-control) {
+    width: 100%;
+    min-width: 0;
+}
+
+/* "Uygula / Hepsini sıfırla" satırı Moodle'da panelin altına mutlak yerleşir; dolgu ve zemin vererek alanları örtmesini önle */
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar form.mform > .fitem.row:last-child {
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: var(--wam-space-3) var(--wam-space-4);
+    border-top: 1px solid var(--wam-line);
+    background: var(--wam-surface);
+}
+
+body.wam-ui.wam-users-list #region-main .reportbuilder-filters-sidebar .reportbuilder-filters-wrapper {
+    padding-bottom: 72px;
+}
+
+/* ---------- 3. Yeni / düzenle kullanıcı formu ---------- */
+
+/* Etiket sütunu: uzun Moodle etiketleri ("Bir kimlik denetimi metodu seçin") iki satıra inmeden sığar */
+body.wam-ui.wam-users-form {
+    --wam-form-label-w: 240px;
+}
+
+body.wam-ui.wam-users-form #region-main form.mform {
+    max-width: 800px;
+}
+
+/* Kapsam açıklaması ile form yüzeyi arasında nefes payı (düzenleme ekranında form yüzeyi başlıkla bitişik) */
+body.wam-ui.wam-users-form #region-main .wam-scope {
+    margin-bottom: var(--wam-space-4);
+}
+
+/* Gerekli alan: sakin, kısa metin; hata durumunda güçlü kırmızı ileti (wam-forms.css) */
+body.wam-ui.wam-users-form .form-label-addon .text-danger {
+    font-weight: 600;
+}
+
+/* Şifre: düzenleme adımı betikle açılır; alan düz metin kutusu gibi görünür */
+body.wam-ui.wam-users-form [data-passwordunmask="wrapper"] .d-flex {
+    flex-wrap: nowrap;
+    gap: var(--wam-space-2);
+}
+
+body.wam-ui.wam-users-form [data-passwordunmask="editor"] {
+    flex: 1 1 auto;
+    max-width: 360px;
+}
+
+body.wam-ui.wam-users-form [data-passwordunmask="editor"] input {
+    width: 100%;
+}
+
+/* Düzenleme öncesi yer tutucu: tam alan yüksekliğinde, kalem simgesi sağda (tıklayınca gerçek alan açılır) */
+body.wam-ui.wam-users-form [data-passwordunmask="edit"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wam-space-3);
+    width: 280px;
+    max-width: 100%;
+    color: var(--wam-muted);
+    text-decoration: none;
+}
+
+/* Kullanıcı resmi: kompakt yükleme alanı */
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] {
+    max-width: 560px;
+}
+
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .fp-restrictions {
+    margin: 0 0 var(--wam-space-2);
+    color: var(--wam-muted);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    text-align: left;
+}
+
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .filemanager .fm-empty-container {
+    height: 100%;
+    min-height: 0;
+    padding: var(--wam-space-3);
+}
+
+/* Moodle boş kapsayıcıyı kapsayıcı yüksekliğine mutlak yerleştirir; 100 px'lik yükseklik yerine 96 px yeter */
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .filemanager .filemanager-container {
+    min-height: 96px;
+}
+
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .filemanager .fm-empty-container .dndupload-message {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .filemanager .dndupload-arrow {
+    position: static;
+    height: auto;
+}
+
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .fp-fileexplorer-hint,
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .fp-accepted-types,
+body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .fp-filetypes {
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    color: var(--wam-muted);
+}
+
+/* Kaydet/İptal çubuğu: form yüzeyinin sol kenarıyla hizalı; içeriği örtmez (sayfa alt boşluğu Moodle'dan) */
+body.wam-ui.wam-users-form #sticky-footer .sticky-footer-content {
+    justify-content: flex-start !important; /* Bootstrap .justify-content-end (!important) */
+    max-width: none;
+    margin: 0 auto 0 var(--wam-users-footer-left, var(--wam-space-5));
+    padding-left: var(--wam-form-surface-pad) !important; /* Bootstrap .px-3 (!important) */
+}
+
+body.wam-ui.wam-users-form #sticky-footer .sticky-footer-content .fitem {
+    margin-bottom: 0 !important; /* Bootstrap .mb-3 (!important) çubukta dikey ortalamayı bozar */
+}
+
+@media (max-width: 767.98px) {
+    body.wam-ui.wam-users-form #sticky-footer .sticky-footer-content {
+        margin-left: 0;
+        padding-left: var(--wam-space-3) !important; /* Bootstrap .px-3 (!important) */
+    }
+}

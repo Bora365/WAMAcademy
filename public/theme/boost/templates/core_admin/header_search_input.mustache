@@ -1,0 +1,52 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template core_admin/header_search_input
+
+    Admin settings search for the page header (WAM override of the Moodle core template).
+    The form, its method (GET), the "query" parameter name and the target page are unchanged;
+    only the label, hint and markup used for styling differ.
+
+    Example context (json):
+    {
+        "action": "http://moodle.local/admin/search.php",
+        "query": "themedesigner"
+    }
+}}
+<div class="wam-adm-search">
+    <form autocomplete="off" action="{{action}}" method="get" accept-charset="utf-8" role="search"
+          aria-label="{{#str}} adminsearchlabel, local_wamakademi {{/str}}" class="wam-adm-search__form">
+        <label class="wam-adm-search__label" for="searchinput-{{uniqid}}">{{#str}} adminsearchlabel, local_wamakademi {{/str}}</label>
+        <div class="wam-adm-search__field">
+            <input type="search"
+                   id="searchinput-{{uniqid}}"
+                   class="form-control wam-adm-search__input"
+                   placeholder="{{#str}} adminsearchplaceholder, local_wamakademi {{/str}}"
+                   name="query"
+                   data-region="input"
+                   autocomplete="off"
+                   aria-describedby="searchhint-{{uniqid}}"
+                   {{#query}}value="{{.}}"{{/query}}
+            >
+            <button type="submit" class="btn btn-primary wam-adm-search__submit">
+                {{#pix}} a/search, core {{/pix}}
+                <span class="visually-hidden">{{#str}} adminsearchsubmit, local_wamakademi {{/str}}</span>
+            </button>
+        </div>
+        <span id="searchhint-{{uniqid}}" class="visually-hidden">{{#str}} adminsearchhint, local_wamakademi {{/str}}</span>
+    </form>
+</div>

@@ -25,15 +25,260 @@
         return Array.prototype.slice.call((root || document).querySelectorAll(sel));
     }
 
+    function pathName() {
+        return ((cfg().path) || (window.location && window.location.pathname) || '').replace(/\\/g, '/');
+    }
+
+    function pageKind() {
+        var bodyId = document.body.id || '';
+        var pagetype = (cfg().pagetype || bodyId.replace(/^page-/, '') || '');
+        var path = pathName();
+
+        if (bodyId === 'page-user-profile' || pagetype === 'user-profile' || /\/user\/profile\.php$/.test(path)) {
+            return 'profile';
+        }
+        if (
+            bodyId === 'page-user-edit' || pagetype === 'user-edit' || /\/user\/edit\.php$/.test(path) ||
+            bodyId === 'page-user-editadvanced' || pagetype === 'user-editadvanced' || /\/user\/editadvanced\.php$/.test(path)
+        ) {
+            return 'edit';
+        }
+        if (bodyId === 'page-user-preferences' || pagetype === 'user-preferences' || /\/user\/preferences\.php$/.test(path)) {
+            return 'preferences';
+        }
+        if (bodyId === 'page-grade-report-overview-index' || pagetype === 'grade-report-overview-index' ||
+                /\/grade\/report\/overview\//.test(path)) {
+            return 'grades';
+        }
+        if (bodyId === 'page-report-usersessions-user' || pagetype === 'report-usersessions-user' ||
+                /\/report\/usersessions\/user\.php$/.test(path)) {
+            return 'sessions';
+        }
+        if (bodyId === 'page-user-files' || pagetype === 'user-files' || /\/user\/files\.php$/.test(path)) {
+            return 'files';
+        }
+        if (
+            bodyId === 'page-message-notificationpreferences' ||
+            pagetype === 'message-notificationpreferences' ||
+            /\/message\/notificationpreferences\.php$/.test(path) ||
+            bodyId === 'page-message-edit' ||
+            pagetype === 'message-edit' ||
+            /\/message\/edit\.php$/.test(path)
+        ) {
+            return 'notifications';
+        }
+        if (
+            /\/login\/change_password\.php$/.test(path) ||
+            /\/user\/(?:language|forum|editor|calendar|managetoken|contentbank|defaulthomepage|contactsitesupport|policy|portfolio|portfoliologs)\.php$/.test(path) ||
+            /\/calendar\/(?:managesubscriptions|export)\.php$/.test(path) ||
+            /\/admin\/tool\/mfa\/user_preferences\.php$/.test(path) ||
+            /\/auth\/oauth2\/linkedlogins\.php$/.test(path) ||
+            /\/admin\/tool\/dataprivacy\/(?:mydatarequests|createdatarequest)\.php$/.test(path) ||
+            pagetype === 'login-change_password' ||
+            pagetype === 'admin-tool-mfa-user_preferences' ||
+            pagetype === 'auth-oauth2-linkedlogins' ||
+            pagetype === 'admin-tool-dataprivacy-mydatarequests' ||
+            pagetype === 'admin-tool-dataprivacy-createdatarequest' ||
+            pagetype === 'user-language' ||
+            pagetype === 'user-forum' ||
+            pagetype === 'user-editor' ||
+            pagetype === 'user-calendar' ||
+            pagetype === 'user-managetoken' ||
+            pagetype === 'calendar-managesubscriptions' ||
+            pagetype === 'calendar-export'
+        ) {
+            return 'form';
+        }
+        if (
+            /\/badges\/(?:preferences|mybackpack)\.php$/.test(path) ||
+            pagetype === 'badges-preferences' ||
+            pagetype === 'badges-mybackpack'
+        ) {
+            return 'form';
+        }
+        if (
+            /\/badges\/(?:mybadges|badge)\.php$/.test(path) ||
+            pagetype === 'badges-mybadges' ||
+            pagetype === 'badges-badge'
+        ) {
+            return 'table';
+        }
+        return 'generic';
+    }
+
+    function markReady() {
+        document.documentElement.classList.add('wam-acc-ready');
+        document.body.classList.add('wam-acc-ready', 'wam-acc-shell');
+        if (document.body.id) {
+            document.body.classList.add('wam-acc-ready');
+        }
+    }
+
+    function ensureBackLink(href, label) {
+        if (!href) {
+            return;
+        }
+        var region = document.getElementById('region-main');
+        if (!region || qs(region, '.wam-acc-back')) {
+            return;
+        }
+        var back = document.createElement('a');
+        back.className = 'wam-acc-back';
+        back.href = href;
+        back.innerHTML =
+            '<svg class="wam-acc-icon" viewBox="0 0 24 24" aria-hidden="true">' +
+            '<path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" ' +
+            'stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            '<span></span>';
+        back.querySelector('span').textContent = label || str('backtopreferences', 'Tercihlere dön');
+        region.insertBefore(back, region.firstChild);
+    }
+
+    function wrapOverflowTables(root) {
+        var region = root || document.getElementById('region-main') || document;
+        qsa(region, 'table.generaltable, table.table, table#overview-grade, .generalbox table').forEach(function (table) {
+            if (table.closest('.wam-acc-table-wrap') || table.closest('.filemanager, .fp-content, .file-picker')) {
+                return;
+            }
+            var wrap = document.createElement('div');
+            wrap.className = 'wam-acc-table-wrap';
+            table.parentNode.insertBefore(wrap, table);
+            wrap.appendChild(table);
+            table.classList.add('wam-acc-table');
+            var headers = qsa(table, 'thead th, thead td');
+            if (!headers.length) {
+                return;
+            }
+            var headerTexts = headers.map(function (th) {
+                return (th.textContent || '').replace(/\s+/g, ' ').trim();
+            });
+            qsa(table, 'tbody tr').forEach(function (row) {
+                qsa(row, 'td').forEach(function (cell, idx) {
+                    if (headerTexts[idx] && !cell.getAttribute('data-label')) {
+                        cell.setAttribute('data-label', headerTexts[idx]);
+                    }
+                });
+            });
+        });
+    }
+
+    function stylePrimaryHeading() {
+        var region = document.getElementById('region-main');
+        if (!region) {
+            return;
+        }
+        var heading = qs(region, ':scope > h2, :scope > .page-header-headings h1, :scope > .page-header-headings h2, h2:first-of-type');
+        if (heading) {
+            heading.classList.add('wam-acc-page-title');
+        }
+    }
+
+    function enhanceShell(options) {
+        options = options || {};
+        markReady();
+        var region = document.getElementById('region-main');
+        if (region) {
+            region.classList.add('wam-acc-region');
+        }
+        stylePrimaryHeading();
+        if (options.backHref) {
+            ensureBackLink(options.backHref, options.backLabel);
+        }
+        wrapOverflowTables(region);
+    }
+
+    function enhanceFormPage() {
+        enhanceShell({
+            backHref: cfg().preferencesUrl || '',
+            backLabel: str('backtopreferences', 'Tercihlere dön'),
+        });
+
+        var form = qs(document, 'form.mform');
+        if (!form) {
+            return;
+        }
+        form.classList.add('wam-acc-form');
+
+        qsa(form, 'fieldset').forEach(function (fs) {
+            if (fs.id === 'fgroup_id_buttonar' || fs.classList.contains('hidden')) {
+                return;
+            }
+            fs.classList.add('wam-acc-form-card', 'wam-acc-fieldset');
+        });
+
+        var buttons = document.getElementById('fgroup_id_buttonar') || qs(form, '.fitem_actionbuttons, .form-group.fitem_actionbuttons');
+        if (buttons) {
+            buttons.classList.add('wam-acc-form-actions');
+            qsa(buttons, 'button, input[type="submit"], .btn').forEach(function (btn, idx) {
+                if (btn.classList.contains('btn-primary') || btn.getAttribute('type') === 'submit' || idx === 0) {
+                    btn.classList.add('wam-acc-btn', 'wam-acc-btn--primary');
+                } else {
+                    btn.classList.add('wam-acc-btn', 'wam-acc-btn--ghost');
+                }
+            });
+        }
+
+        openInvalidFieldsets(form);
+        openHashTarget(form);
+    }
+
+    function enhanceFilesPage() {
+        enhanceShell({
+            backHref: cfg().profileUrl || cfg().preferencesUrl || '',
+            backLabel: str('backtoprofile', 'Profile dön'),
+        });
+        var region = document.getElementById('region-main');
+        if (!region) {
+            return;
+        }
+        var fm = qs(region, '.filemanager, .fp-navbar, form.mform');
+        if (fm) {
+            var card = qs(region, '.wam-acc-form-card');
+            if (!card) {
+                card = document.createElement('section');
+                card.className = 'wam-acc-form-card wam-acc-files-card';
+                var host = fm.closest('form') || fm.parentNode;
+                if (host && host.parentNode) {
+                    host.parentNode.insertBefore(card, host);
+                    card.appendChild(host);
+                }
+            }
+        }
+    }
+
+    function enhanceTablePage() {
+        var backHref = cfg().preferencesUrl || '';
+        var backLabel = str('backtopreferences', 'Tercihlere dön');
+        var path = pathName();
+        if (/\/grade\//.test(path) || /\/badges\//.test(path)) {
+            backHref = cfg().profileUrl || backHref;
+            backLabel = str('backtoprofile', 'Profile dön');
+        }
+        enhanceShell({
+            backHref: backHref,
+            backLabel: backLabel,
+        });
+    }
+
+    function enhanceGenericPage() {
+        enhanceShell({
+            backHref: cfg().preferencesUrl || cfg().profileUrl || '',
+            backLabel: str('backtopreferences', 'Tercihlere dön'),
+        });
+        if (qs(document, 'form.mform')) {
+            enhanceFormPage();
+        }
+    }
+
     /* ---------------- Profil ---------------- */
 
     function enhanceProfile() {
-        document.documentElement.classList.add('wam-acc-ready');
-        document.body.classList.add('wam-acc-ready');
+        markReady();
         var page = document.getElementById('page-user-profile');
         if (page) {
             page.classList.add('wam-acc-ready');
         }
+        wrapOverflowTables(document.getElementById('region-main'));
 
         var header = qs(document, '.page-context-header');
         if (header) {
@@ -111,44 +356,103 @@
 
     function prefsBucket(href) {
         var h = String(href || '').toLowerCase();
+        // Hesap ve profil
         if (
             h.indexOf('/user/edit.php') !== -1 ||
             h.indexOf('/user/editadvanced.php') !== -1 ||
-            h.indexOf('/login/change_password.php') !== -1 ||
-            h.indexOf('/user/language.php') !== -1 ||
-            h.indexOf('/auth/oauth2/linkedlogins.php') !== -1 ||
-            h.indexOf('/admin/tool/mfa/') !== -1
+            h.indexOf('/user/profile.php') !== -1 ||
+            h.indexOf('/user/defaulthomepage.php') !== -1
         ) {
             return 'account';
         }
+        // Güvenlik ve oturumlar (kişisel MFA dahil; genel /admin/ değil)
+        if (
+            h.indexOf('/login/change_password.php') !== -1 ||
+            h.indexOf('/report/usersessions/') !== -1 ||
+            h.indexOf('/auth/oauth2/') !== -1 ||
+            h.indexOf('/admin/tool/mfa/') !== -1 ||
+            h.indexOf('/user/managetoken.php') !== -1
+        ) {
+            return 'security';
+        }
+        // Dil ve editör
+        if (
+            h.indexOf('/user/language.php') !== -1 ||
+            h.indexOf('/user/editor.php') !== -1
+        ) {
+            return 'locale';
+        }
+        // İletişim ve bildirimler
         if (
             h.indexOf('/message/notificationpreferences.php') !== -1 ||
-            h.indexOf('/message/edit.php') !== -1
+            h.indexOf('/message/edit.php') !== -1 ||
+            h.indexOf('/user/forum.php') !== -1 ||
+            h.indexOf('/user/contactsitesupport.php') !== -1
         ) {
-            return 'notifications';
+            return 'comms';
         }
-        return 'advanced';
+        // Dosyalar ve diğer (kişisel rozet / veri talepleri)
+        if (
+            h.indexOf('/user/files.php') !== -1 ||
+            h.indexOf('/user/calendar.php') !== -1 ||
+            h.indexOf('/calendar/') !== -1 ||
+            h.indexOf('/badges/mybadges.php') !== -1 ||
+            h.indexOf('/badges/badge.php') !== -1 ||
+            h.indexOf('/badges/preferences.php') !== -1 ||
+            h.indexOf('/badges/backpack') !== -1 ||
+            h.indexOf('/user/contentbank.php') !== -1 ||
+            h.indexOf('/user/portfolio') !== -1 ||
+            h.indexOf('/admin/tool/dataprivacy/') !== -1 ||
+            h.indexOf('/user/policy.php') !== -1
+        ) {
+            return 'files';
+        }
+        // Yönetim kısayolları (hesap dışı sınır)
+        if (
+            h.indexOf('/admin/') !== -1 ||
+            h.indexOf('/badges/index.php') !== -1 ||
+            h.indexOf('/badges/new_badge.php') !== -1 ||
+            h.indexOf('/badges/edit.php') !== -1 ||
+            h.indexOf('/badges/action.php') !== -1 ||
+            h.indexOf('/badges/award.php') !== -1 ||
+            h.indexOf('/badges/manage_backpacks.php') !== -1 ||
+            h.indexOf('loginas.php') !== -1 ||
+            (h.indexOf('assign.php') !== -1 && h.indexOf('role') !== -1) ||
+            h.indexOf('permissions.php') !== -1 ||
+            h.indexOf('checkpermissions') !== -1
+        ) {
+            return 'admin';
+        }
+        return 'files';
     }
 
     function prefsIcon(bucket) {
         var paths = {
-            account: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
-            notifications: '<path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>',
-            advanced: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9c.1.7.7 1.2 1.5 1.2H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>'
+            account: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>',
+            security: '<rect x="3" y="11" width="18" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2"/>',
+            locale: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="2"/>',
+            comms: '<path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="currentColor" stroke-width="2"/>',
+            files: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 2v6h6M8 13h8M8 17h8" fill="none" stroke="currentColor" stroke-width="2"/>',
+            admin: '<path d="M12 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="none" stroke="currentColor" stroke-width="2"/>'
         };
         return (
             '<svg class="wam-acc-icon" viewBox="0 0 24 24" aria-hidden="true">' +
-            (paths[bucket] || paths.advanced) +
+            (paths[bucket] || paths.files) +
             '</svg>'
         );
     }
 
     function enhancePreferences() {
+        markReady();
         var page = document.getElementById('page-user-preferences');
         if (page) {
             page.classList.add('wam-acc-ready');
         }
-        document.body.classList.add('wam-acc-ready');
+        var region = document.getElementById('region-main');
+        if (region) {
+            region.classList.add('wam-acc-region');
+        }
+        stylePrimaryHeading();
 
         var source = qs(document, '.container-fluid.p-sm-0');
         if (!source || source.classList.contains('wam-acc-prefs-built')) {
@@ -174,9 +478,12 @@
         }
 
         var order = [
-            { id: 'account', title: str('account', 'Kullanıcı hesabı') },
-            { id: 'notifications', title: str('notifications', 'Bildirimler ve mesajlar') },
-            { id: 'advanced', title: str('advanced', 'Gelişmiş ayarlar') },
+            { id: 'account', title: 'Hesap ve profil' },
+            { id: 'security', title: 'Güvenlik ve oturumlar' },
+            { id: 'locale', title: 'Dil ve editör' },
+            { id: 'comms', title: 'İletişim ve bildirimler' },
+            { id: 'files', title: 'Dosyalar ve diğer' },
+            { id: 'admin', title: 'Yönetim kısayolları', boundary: true },
         ];
 
         var wrap = document.createElement('div');
@@ -189,8 +496,11 @@
                 return;
             }
             var section = document.createElement('section');
-            section.className = 'wam-acc-prefs__section';
+            section.className = 'wam-acc-prefs__section' + (group.boundary ? ' wam-acc-prefs__section--admin' : '');
             section.setAttribute('aria-labelledby', 'wam-pref-' + group.id);
+            if (group.boundary) {
+                section.setAttribute('data-wam-boundary', 'admin');
+            }
 
             var h = document.createElement('h3');
             h.className = 'wam-acc-prefs__title';
@@ -235,174 +545,135 @@
         source.parentNode.insertBefore(wrap, source);
     }
 
-    /* ---------------- Profili düzenle ---------------- */
+    /* ---------------- Profili düzenle (native Moodle fieldset) ---------------- */
 
-    function findFitemById(id) {
-        var el = document.getElementById(id);
-        if (!el) {
-            return null;
+    function expandMoodleFieldset(fs) {
+        if (!fs) {
+            return;
         }
-        return el.closest('.fitem') || el.closest('[data-groupname]') || el;
+        fs.classList.remove('collapsed');
+        var container = qs(fs, '.fcontainer');
+        if (container) {
+            container.classList.add('show');
+            container.classList.remove('collapse');
+            container.style.height = '';
+            container.style.display = '';
+            container.setAttribute('aria-expanded', 'true');
+        }
+        var toggler = qs(fs, 'a[data-bs-toggle="collapse"], a[data-toggle="collapse"], legend a.fheader, .ftoggler a');
+        if (toggler) {
+            toggler.setAttribute('aria-expanded', 'true');
+            toggler.classList.remove('collapsed');
+            var target = toggler.getAttribute('href') || toggler.getAttribute('data-bs-target') || toggler.getAttribute('data-target');
+            if (target && target.charAt(0) === '#') {
+                var el = document.querySelector(target);
+                if (el) {
+                    el.classList.add('show');
+                    el.classList.remove('collapse');
+                    el.style.height = '';
+                }
+            }
+        }
     }
 
-    function moveInto(container, node) {
-        if (node && container && node.parentNode !== container) {
-            container.appendChild(node);
+    function openInvalidFieldsets(form) {
+        if (!form) {
+            return;
+        }
+        var seen = [];
+        qsa(form, '.is-invalid, .invalid-feedback:not(:empty), .error, .text-danger, [aria-invalid="true"]').forEach(function (el) {
+            var fs = el.closest('fieldset');
+            if (!fs || seen.indexOf(fs) !== -1) {
+                return;
+            }
+            seen.push(fs);
+            expandMoodleFieldset(fs);
+            try {
+                el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            } catch (e) {
+                /* ignore */
+            }
+        });
+    }
+
+    function openHashTarget(form) {
+        var hash = (window.location.hash || '').replace(/^#/, '');
+        if (!hash || !form) {
+            return;
+        }
+        var target = document.getElementById(hash) || qs(form, '[name="' + hash.replace(/"/g, '') + '"]');
+        if (!target) {
+            return;
+        }
+        var fs = target.closest('fieldset');
+        expandMoodleFieldset(fs);
+        try {
+            target.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } catch (e) {
+            /* ignore */
         }
     }
 
     function enhanceEdit() {
-        var page = document.getElementById('page-user-edit');
+        document.body.classList.add('wam-acc-edit');
+        markReady();
+        var page = document.getElementById('page-user-edit') || document.getElementById('page-user-editadvanced');
         if (page) {
             page.classList.add('wam-acc-ready');
         }
-        document.body.classList.add('wam-acc-ready');
+        enhanceShell({
+            backHref: cfg().preferencesUrl || cfg().profileUrl || '',
+            backLabel: str('backtopreferences', 'Tercihlere dön'),
+        });
 
         var form = qs(document, 'form.mform');
-        if (!form || form.dataset.wamEditReady === '1') {
+        if (!form) {
+            return;
+        }
+        form.classList.add('wam-acc-form');
+        if (form.dataset.wamEditReady === '1') {
+            openInvalidFieldsets(form);
+            openHashTarget(form);
             return;
         }
         form.dataset.wamEditReady = '1';
 
-        function groupBox(title) {
-            var box = document.createElement('section');
-            box.className = 'wam-acc-edit-group';
-            var t = document.createElement('h3');
-            t.className = 'wam-acc-edit-group__title';
-            t.textContent = title;
-            box.appendChild(t);
-            return box;
-        }
+        // Alan taşıma yok — Moodle fieldset'lerini kart + mevcut açılır mekanizma olarak stille.
+        qsa(form, 'fieldset').forEach(function (fs) {
+            if (fs.id === 'fgroup_id_buttonar' || fs.classList.contains('hidden')) {
+                return;
+            }
+            fs.classList.add('wam-acc-form-card', 'wam-acc-fieldset');
+        });
 
-        var pictureBox = groupBox(str('picture', 'Kullanıcı resmi'));
-        var basicBox = groupBox(str('basic', 'Temel bilgiler'));
-        var locationBox = groupBox(str('location', 'Konum'));
-        var descBox = groupBox(str('description', 'Açıklama'));
-
-        var advanced = document.createElement('details');
-        advanced.className = 'wam-acc-advanced';
-        var summary = document.createElement('summary');
-        summary.textContent = str('advanced', 'Gelişmiş ayarlar');
-        advanced.appendChild(summary);
-        var advBody = document.createElement('div');
-        advBody.className = 'wam-acc-advanced__body';
-        advanced.appendChild(advBody);
-
-        var rowNames = document.createElement('div');
-        rowNames.className = 'wam-acc-edit-row wam-acc-edit-row--2';
-        basicBox.appendChild(rowNames);
-
-        var rowOrg = document.createElement('div');
-        rowOrg.className = 'wam-acc-edit-row wam-acc-edit-row--2';
-        basicBox.appendChild(rowOrg);
-
-        var rowLoc = document.createElement('div');
-        rowLoc.className = 'wam-acc-edit-row wam-acc-edit-row--2';
-        locationBox.appendChild(rowLoc);
-
-        // Fotoğraf alanı (filemanager) — imagealt gelişmişe.
-        var pictureFs = document.getElementById('id_moodle_picture');
-        if (pictureFs) {
-            qsa(pictureFs, '.fitem').forEach(function (item) {
-                if (item.id === 'fitem_id_imagealt' || qs(item, '#id_imagealt')) {
-                    moveInto(advBody, item);
+        var buttons = document.getElementById('fgroup_id_buttonar') || qs(form, '.fitem_actionbuttons, .form-group.fitem_actionbuttons');
+        if (buttons) {
+            buttons.classList.add('wam-acc-form-actions');
+            qsa(buttons, 'button, input[type="submit"], .btn').forEach(function (btn, idx) {
+                if (btn.classList.contains('btn-primary') || btn.getAttribute('type') === 'submit' || idx === 0) {
+                    btn.classList.add('wam-acc-btn', 'wam-acc-btn--primary');
                 } else {
-                    moveInto(pictureBox, item);
+                    btn.classList.add('wam-acc-btn', 'wam-acc-btn--ghost');
                 }
             });
         }
 
-        moveInto(rowNames, findFitemById('fitem_id_firstname') || findFitemById('id_firstname'));
-        moveInto(rowNames, findFitemById('fitem_id_lastname') || findFitemById('id_lastname'));
-        moveInto(basicBox, findFitemById('fitem_id_email') || findFitemById('id_email'));
-        moveInto(rowOrg, findFitemById('fitem_id_institution') || findFitemById('id_institution'));
-        moveInto(rowOrg, findFitemById('fitem_id_department') || findFitemById('id_department'));
-
-        moveInto(rowLoc, findFitemById('fitem_id_city') || findFitemById('id_city'));
-        moveInto(rowLoc, findFitemById('fitem_id_country') || findFitemById('id_country'));
-
-        var descItem = findFitemById('fitem_id_description_editor') || findFitemById('id_description_editor');
-        moveInto(descBox, descItem);
-
-        // Gelişmiş alanlar.
-        [
-            'fitem_id_maildisplay',
-            'fitem_id_timezone',
-            'fitem_id_lang',
-            'fitem_id_imagealt',
-            'id_moodle_additional_names',
-            'id_moodle_interests',
-            'fitem_id_idnumber',
-            'fitem_id_phone1',
-            'fitem_id_phone2',
-            'fitem_id_address',
-        ].forEach(function (id) {
-            var node = document.getElementById(id);
-            if (!node) {
-                return;
-            }
-            if (node.tagName === 'FIELDSET') {
-                qsa(node, '.fitem').forEach(function (item) {
-                    moveInto(advBody, item);
-                });
-            } else {
-                moveInto(advBody, node.closest('.fitem') || node);
-            }
-        });
-
-        // Genel fieldset içindeki kalan öğeleri temel/gelişmiş olarak dağıt.
-        var generalFs = document.getElementById('id_moodle');
-        if (generalFs) {
-            qsa(generalFs, '.fitem').forEach(function (item) {
-                if (pictureBox.contains(item) || basicBox.contains(item) || locationBox.contains(item)
-                        || descBox.contains(item) || advBody.contains(item)) {
-                    return;
-                }
-                var id = item.id || '';
-                if (
-                    id.indexOf('maildisplay') !== -1 ||
-                    id.indexOf('timezone') !== -1 ||
-                    id.indexOf('lang') !== -1 ||
-                    id.indexOf('theme') !== -1
-                ) {
-                    moveInto(advBody, item);
-                }
-            });
-        }
-
-        var buttonar = document.getElementById('fgroup_id_buttonar');
-        var insertBefore = buttonar || null;
-
-        [pictureBox, basicBox, locationBox, descBox, advanced].forEach(function (box) {
-            var hasContent = box.querySelector('.fitem, .felement, .form-group, .wam-acc-edit-row .fitem');
-            if (box === advanced) {
-                hasContent = advBody.querySelector('.fitem, .felement, .form-group');
-            }
-            if (!hasContent) {
-                return;
-            }
-            if (insertBefore) {
-                form.insertBefore(box, insertBefore);
-            } else {
-                form.appendChild(box);
-            }
-        });
-
-        // Hata varsa gelişmiş bölümü aç.
-        if (advBody.querySelector('.is-invalid, .invalid-feedback:not(:empty), .error, .text-danger')) {
-            advanced.open = true;
-        }
+        openInvalidFieldsets(form);
+        openHashTarget(form);
     }
 
     /* ---------------- Başarı notları ---------------- */
 
     function enhanceGrades() {
-        document.documentElement.classList.add('wam-acc-ready');
-        document.body.classList.add('wam-acc-ready');
+        markReady();
         var page = document.getElementById('page-grade-report-overview-index');
         if (page) {
             page.classList.add('wam-acc-ready');
         }
+        enhanceShell({
+            backHref: cfg().profileUrl || '',
+            backLabel: str('backtoprofile', 'Profile dön'),
+        });
 
         var region = document.getElementById('region-main') || document;
         var tables = qsa(region, 'table#overview-grade, table.generaltable');
@@ -498,12 +769,15 @@
     /* ---------------- Tarayıcı oturumları ---------------- */
 
     function enhanceSessions() {
-        document.documentElement.classList.add('wam-acc-ready');
-        document.body.classList.add('wam-acc-ready');
+        markReady();
         var page = document.getElementById('page-report-usersessions-user');
         if (page) {
             page.classList.add('wam-acc-ready');
         }
+        enhanceShell({
+            backHref: cfg().preferencesUrl || cfg().profileUrl || '',
+            backLabel: str('backtopreferences', 'Tercihlere dön'),
+        });
 
         var region = document.getElementById('region-main') || document;
         var table = qs(region, 'table.generaltable, table');
@@ -513,7 +787,7 @@
         table.classList.add('wam-acc-sessions-table');
 
         var thisSession = str('thissession', 'Bu oturum');
-        var thisDevice = str('thisdevice', 'Bu cihaz');
+        var currentLabel = 'Bu oturum';
         var headers = qsa(table, 'thead th, thead td');
         var headerTexts = headers.map(function (th) {
             return (th.textContent || '').replace(/\s+/g, ' ').trim();
@@ -522,6 +796,15 @@
         var tbody = qs(table, 'tbody') || table;
         var rows = qsa(tbody, 'tr');
         var currentRow = null;
+
+        function isCurrentSessionText(txt) {
+            var t = String(txt || '').toLowerCase();
+            return t === String(thisSession).toLowerCase() ||
+                t === 'bu oturum' ||
+                t.indexOf('mevcut oturum') !== -1 ||
+                t.indexOf('mectu oturum') !== -1 ||
+                t.indexOf('this session') !== -1;
+        }
 
         rows.forEach(function (row) {
             var cells = qsa(row, 'td');
@@ -534,19 +817,18 @@
             var lastAccess = cells[1];
             if (lastAccess) {
                 var txt = (lastAccess.textContent || '').replace(/\s+/g, ' ').trim();
-                if (txt === thisSession || txt.toLowerCase() === thisSession.toLowerCase()) {
+                if (isCurrentSessionText(txt) || qs(lastAccess, '.wam-acc-session-badge')) {
                     currentRow = row;
                     row.classList.add('wam-acc-session-current');
-                    if (!qs(lastAccess, '.wam-acc-session-badge')) {
+                    var existing = qs(lastAccess, '.wam-acc-session-badge');
+                    if (!existing) {
                         lastAccess.textContent = '';
                         var badge = document.createElement('span');
-                        badge.className = 'wam-acc-session-badge';
-                        badge.textContent = thisDevice;
+                        badge.className = 'wam-acc-session-badge wam-acc-badge-current';
+                        badge.textContent = currentLabel;
                         lastAccess.appendChild(badge);
-                        var sr = document.createElement('span');
-                        sr.className = 'visually-hidden';
-                        sr.textContent = ' ' + thisSession;
-                        lastAccess.appendChild(sr);
+                    } else if (existing.textContent !== currentLabel) {
+                        existing.textContent = currentLabel;
                     }
                 }
             }
@@ -582,51 +864,77 @@
         }
     }
 
-    function init() {
-        var pagetype = (cfg().pagetype || document.body.id || '').replace(/^page-/, '');
-        var bodyId = document.body.id || '';
-        var path = (window.location && window.location.pathname) || '';
-
-        if (
-            bodyId === 'page-user-profile' ||
-            pagetype === 'user-profile' ||
-            /\/user\/profile\.php$/.test(path)
-        ) {
-            enhanceProfile();
-        } else if (
-            bodyId === 'page-user-edit' ||
-            pagetype === 'user-edit' ||
-            /\/user\/edit\.php$/.test(path)
-        ) {
-            enhanceEdit();
-        } else if (
-            bodyId === 'page-user-preferences' ||
-            pagetype === 'user-preferences' ||
-            /\/user\/preferences\.php$/.test(path)
-        ) {
-            enhancePreferences();
-        } else if (
-            bodyId === 'page-grade-report-overview-index' ||
-            pagetype === 'grade-report-overview-index' ||
-            /\/grade\/report\/overview\/index\.php$/.test(path)
-        ) {
-            enhanceGrades();
-        } else if (
-            bodyId === 'page-report-usersessions-user' ||
-            pagetype === 'report-usersessions-user' ||
-            /\/report\/usersessions\/user\.php$/.test(path)
-        ) {
-            enhanceSessions();
-        } else if (
-            bodyId === 'page-local-wamakademi-calendar' ||
-            pagetype === 'local-wamakademi-calendar' ||
-            /\/local\/wamakademi\/calendar\.php$/.test(path)
-        ) {
-            document.documentElement.classList.add('wam-acc-ready');
-            document.body.classList.add('wam-acc-ready');
-            if (document.getElementById('page-local-wamakademi-calendar')) {
-                document.getElementById('page-local-wamakademi-calendar').classList.add('wam-acc-ready');
+    function decorateNotificationsRegion(region) {
+        if (!region) {
+            return;
+        }
+        region.classList.add('wam-acc-region', 'wam-acc-notifications');
+        wrapOverflowTables(region);
+        qsa(region, 'table').forEach(function (table) {
+            if (!table.closest('.wam-acc-table-wrap')) {
+                return;
             }
+            table.classList.add('wam-acc-table');
+        });
+        // Kanal başlıklarını mobil için görünür tut.
+        qsa(region, '.preference-table thead th, table thead th').forEach(function (th) {
+            th.classList.add('wam-acc-notif-channel');
+        });
+    }
+
+    function enhanceNotifications() {
+        markReady();
+        enhanceShell({
+            backHref: cfg().preferencesUrl || '',
+            backLabel: str('backtopreferences', 'Tercihlere dön'),
+        });
+        var region = document.getElementById('region-main');
+        decorateNotificationsRegion(region);
+        stylePrimaryHeading();
+
+        if (region && region.getAttribute('data-wam-notif-obs') !== '1') {
+            region.setAttribute('data-wam-notif-obs', '1');
+            var timer = null;
+            var obs = new MutationObserver(function () {
+                if (timer) {
+                    window.clearTimeout(timer);
+                }
+                timer = window.setTimeout(function () {
+                    decorateNotificationsRegion(region);
+                }, 80);
+            });
+            obs.observe(region, { childList: true, subtree: true });
+        }
+    }
+
+    function init() {
+        if (document.body.getAttribute('data-wam-acc-init') === '1') {
+            return;
+        }
+        document.body.setAttribute('data-wam-acc-init', '1');
+
+        var kind = pageKind();
+
+        if (kind === 'profile') {
+            enhanceProfile();
+        } else if (kind === 'edit') {
+            enhanceEdit();
+        } else if (kind === 'preferences') {
+            enhancePreferences();
+        } else if (kind === 'grades') {
+            enhanceGrades();
+        } else if (kind === 'sessions') {
+            enhanceSessions();
+        } else if (kind === 'files') {
+            enhanceFilesPage();
+        } else if (kind === 'notifications') {
+            enhanceNotifications();
+        } else if (kind === 'form') {
+            enhanceFormPage();
+        } else if (kind === 'table') {
+            enhanceTablePage();
+        } else {
+            enhanceGenericPage();
         }
     }
 

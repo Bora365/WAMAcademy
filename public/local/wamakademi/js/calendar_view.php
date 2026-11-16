@@ -17,8 +17,6 @@ $PAGE->set_pagetype('local-wamakademi-calendar');
 $PAGE->set_title('Takvim');
 $PAGE->set_heading('');
 $PAGE->add_body_class('wam-calendar-body');
-$PAGE->requires->css('/local/wamakademi/styles.css');
-
 /*
  * ---------------------------------------------------------
  * AY BİLGİSİ (kullanıcı saat dilimi)

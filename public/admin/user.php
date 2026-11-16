@@ -161,6 +161,11 @@
 
     echo html_writer::start_div('', ['data-region' => 'report-user-list-wrapper']);
 
+    // WAM: one paragraph that names the scope of this list (system accounts, not course enrolments).
+    if (function_exists('local_wamakademi_users_scope_html')) {
+        echo local_wamakademi_users_scope_html('list');
+    }
+
     $bulkactions = new user_bulk_action_form(new moodle_url('/admin/user/user_bulk.php'),
         ['excludeactions' => ['displayonpage', 'download'], 'passuserids' => true, 'hidesubmit' => true],
         'post', '',
