@@ -1,0 +1,25 @@
+X before ADM-USER-NEW phone320 status=ok pageOv=50
+. before ADM-USER-NEW phone390 status=ok pageOv=0
+. before ADM-USER-NEW phoneLand status=ok pageOv=0
+. before ADM-USER-NEW ipadPort status=ok pageOv=0
+. before ADM-USER-NEW ipadLand status=ok pageOv=0
+. before ADM-USER-NEW desk1440 status=ok pageOv=0
+. before ADM-UPLOADUSER phone320 status=ok pageOv=0
+. before ADM-UPLOADUSER phone390 status=ok pageOv=0
+. before ADM-UPLOADUSER phoneLand status=ok pageOv=0
+. before ADM-UPLOADUSER ipadPort status=ok pageOv=0
+. before ADM-UPLOADUSER ipadLand status=ok pageOv=0
+. before ADM-UPLOADUSER desk1440 status=ok pageOv=0
+. before ADM-UPLOADCOURSE phone320 status=ok pageOv=0
+. before ADM-UPLOADCOURSE phone390 status=ok pageOv=0
+. before ADM-UPLOADCOURSE phoneLand status=ok pageOv=0
+. before ADM-UPLOADCOURSE ipadPort status=ok pageOv=0
+. before ADM-UPLOADCOURSE ipadLand status=ok pageOv=0
+. before ADM-UPLOADCOURSE desk1440 status=ok pageOv=0
+. before ADM-REPORTBUILDER phone320 status=ok pageOv=0
+. before ADM-REPORTBUILDER phone390 status=ok pageOv=0
+. before ADM-REPORTBUILDER phoneLand status=ok pageOv=0
+. before ADM-REPORTBUILDER ipadPort status=ok pageOv=0
+. before ADM-REPORTBUILDER ipadLand status=ok pageOv=0
+. before ADM-REPORTBUILDER desk1440 status=ok pageOv=0
+Wrote /Users/boravarol01gmail.com/Desktop/WAMAcademy/docs/ui-audit/responsive/RF13/measure-before-chromium.json (24)

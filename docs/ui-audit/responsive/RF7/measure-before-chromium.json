@@ -1,0 +1,7563 @@
+{
+  "phase": "before",
+  "engine": "chromium",
+  "count": 72,
+  "results": [
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 828,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 828,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_student_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 0,
+            "left": 70,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_student_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 485,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 524,
+            "w": 320,
+            "h": 326
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 390
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 485,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_student_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 500,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_student_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 860,
+            "w": 320,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 820
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_student_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 1120,
+            "w": 320,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 900
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_student_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1665,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1665,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 1196
+      },
+      "screenshot": "ACC-CAL-PREFS_student_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1461,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1461,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 1040
+      },
+      "screenshot": "ACC-CAL-PREFS_student_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1027,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 1027,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 886
+      },
+      "screenshot": "ACC-CAL-PREFS_student_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 906
+      },
+      "screenshot": "ACC-CAL-PREFS_student_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 953,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 953,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 812
+      },
+      "screenshot": "ACC-CAL-PREFS_student_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 953,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 953,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 812
+      },
+      "screenshot": "ACC-CAL-PREFS_student_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1187,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1187,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 718
+      },
+      "screenshot": "ACC-CONTENTBANK_student_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1029,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1029,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 608
+      },
+      "screenshot": "ACC-CONTENTBANK_student_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 709,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 709,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 568
+      },
+      "screenshot": "ACC-CONTENTBANK_student_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 568
+      },
+      "screenshot": "ACC-CONTENTBANK_student_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 548
+      },
+      "screenshot": "ACC-CONTENTBANK_student_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 548
+      },
+      "screenshot": "ACC-CONTENTBANK_student_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1691,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1691,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 694
+      },
+      "screenshot": "ACC-BADGES_student_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1432,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1432,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 630
+      },
+      "screenshot": "ACC-BADGES_student_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 899,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 899,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_student_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 489
+      },
+      "screenshot": "ACC-BADGES_student_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 902,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 902,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_student_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 903,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 903,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_student_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 828,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 828,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_teacher_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 0,
+            "left": 70,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_teacher_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 485,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 524,
+            "w": 320,
+            "h": 326
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 390
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 485,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_teacher_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 500,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_teacher_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 860,
+            "w": 320,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 820
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_teacher_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 1120,
+            "w": 320,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 900
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_teacher_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1665,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1665,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 1196
+      },
+      "screenshot": "ACC-CAL-PREFS_teacher_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1461,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1461,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 1040
+      },
+      "screenshot": "ACC-CAL-PREFS_teacher_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1027,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 1027,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 886
+      },
+      "screenshot": "ACC-CAL-PREFS_teacher_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 906
+      },
+      "screenshot": "ACC-CAL-PREFS_teacher_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 953,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 953,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 812
+      },
+      "screenshot": "ACC-CAL-PREFS_teacher_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 953,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 953,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 812
+      },
+      "screenshot": "ACC-CAL-PREFS_teacher_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1187,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1187,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 718
+      },
+      "screenshot": "ACC-CONTENTBANK_teacher_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1029,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1029,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 608
+      },
+      "screenshot": "ACC-CONTENTBANK_teacher_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 709,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 709,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 568
+      },
+      "screenshot": "ACC-CONTENTBANK_teacher_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 568
+      },
+      "screenshot": "ACC-CONTENTBANK_teacher_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 548
+      },
+      "screenshot": "ACC-CONTENTBANK_teacher_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 548
+      },
+      "screenshot": "ACC-CONTENTBANK_teacher_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1691,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1691,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 694
+      },
+      "screenshot": "ACC-BADGES_teacher_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1432,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1432,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 630
+      },
+      "screenshot": "ACC-BADGES_teacher_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 899,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 899,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_teacher_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 489
+      },
+      "screenshot": "ACC-BADGES_teacher_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 902,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 902,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_teacher_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 903,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 903,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_teacher_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 928,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 928,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 0,
+            "left": 70,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 485,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 524,
+            "w": 320,
+            "h": 326
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 390
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 485,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 500,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 860,
+            "w": 320,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 820
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-MESSAGE-PREFS",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer bg-white",
+            "top": 64,
+            "left": 1120,
+            "w": 320,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "modal-backdrop in show",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 900
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "hasMform": false,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": null,
+        "saveBottom": null
+      },
+      "screenshot": "ACC-MESSAGE-PREFS_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/message/edit.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1766,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1766,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 1196
+      },
+      "screenshot": "ACC-CAL-PREFS_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1538,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1538,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 1040
+      },
+      "screenshot": "ACC-CAL-PREFS_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1027,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 1027,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 886
+      },
+      "screenshot": "ACC-CAL-PREFS_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 906
+      },
+      "screenshot": "ACC-CAL-PREFS_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 953,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 953,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 812
+      },
+      "screenshot": "ACC-CAL-PREFS_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CAL-PREFS",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 953,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 953,
+        "hasMform": true,
+        "selectCount": 5,
+        "selectInfo": [
+          {
+            "id": "id_timeformat",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_startwday",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_maxevents",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_lookahead",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          },
+          {
+            "id": "id_persistflt",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 812
+      },
+      "screenshot": "ACC-CAL-PREFS_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/calendar.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1288,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1288,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 170,
+            "sw": 168,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 718
+      },
+      "screenshot": "ACC-CONTENTBANK_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1106,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1106,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 240,
+            "sw": 238,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 608
+      },
+      "screenshot": "ACC-CONTENTBANK_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 709,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 709,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 501,
+            "sw": 499,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 568
+      },
+      "screenshot": "ACC-CONTENTBANK_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 483,
+            "sw": 481,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 568
+      },
+      "screenshot": "ACC-CONTENTBANK_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 548
+      },
+      "screenshot": "ACC-CONTENTBANK_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-CONTENTBANK",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "hasMform": true,
+        "selectCount": 1,
+        "selectInfo": [
+          {
+            "id": "id_contentvisibility",
+            "w": 618,
+            "sw": 616,
+            "maxW": "100%",
+            "overflow": false
+          }
+        ],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 548
+      },
+      "screenshot": "ACC-CONTENTBANK_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/user/contentbank.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1792,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1792,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 694
+      },
+      "screenshot": "ACC-BADGES_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1509,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1509,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 630
+      },
+      "screenshot": "ACC-BADGES_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 899,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 899,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": false,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 489
+      },
+      "screenshot": "ACC-BADGES_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 902,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 902,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    },
+    {
+      "id": "ACC-BADGES",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 903,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-account",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-acc-ready",
+          "wam-acc-shell"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 903,
+        "hasMform": true,
+        "selectCount": 0,
+        "selectInfo": [],
+        "hasTable": false,
+        "tableOv": null,
+        "badgeCount": 0,
+        "hasBadgeList": false,
+        "saveInView": true,
+        "saveBottom": 453
+      },
+      "screenshot": "ACC-BADGES_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/badges/mybadges.php"
+    }
+  ]
+}

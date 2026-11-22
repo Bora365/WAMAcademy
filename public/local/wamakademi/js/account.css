@@ -393,7 +393,7 @@ body.wam-acc-edit textarea:focus-visible,
 
 #page-user-profile.wam-acc-ready #region-main,
 #page-user-profile.wam-acc-ready .userprofile {
-    max-width: 920px;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
 }
@@ -481,8 +481,8 @@ body.wam-acc-edit textarea:focus-visible,
 
 #page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li {
     margin: 0;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--wam-acc-border);
+    padding: 0;
+    border-bottom: 0;
 }
 
 #page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li:last-child {
@@ -638,7 +638,7 @@ body.wam-acc-edit textarea:focus-visible,
 
 body.wam-acc-edit.wam-acc-ready #region-main,
 body.wam-acc-edit.wam-acc-ready form.mform{
-    max-width: 760px;
+    max-width: none;
 }
 
 body.wam-acc-edit.wam-acc-ready .wam-acc-edit-group{
@@ -1094,6 +1094,9 @@ body.wam-acc-edit.wam-acc-ready form.mform > fieldset > legend{
     justify-content: space-between;
     margin-bottom: var(--wam-acc-space-3);
     padding: var(--wam-acc-space-2);
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
     background: #fff;
     border: 1px solid var(--wam-acc-border);
     border-radius: var(--wam-acc-radius);
@@ -1102,13 +1105,16 @@ body.wam-acc-edit.wam-acc-ready form.mform > fieldset > legend{
 #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-navigation {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
+    min-width: 0;
+    flex: 1 1 auto;
 }
 
 #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-navigation strong {
     font-size: 18px;
-    min-width: 140px;
+    min-width: 0;
+    flex: 1 1 auto;
     text-align: center;
 }
 
@@ -1120,8 +1126,9 @@ body.wam-acc-edit.wam-acc-ready form.mform > fieldset > legend{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex: 0 1 auto;
     min-height: 40px;
-    padding: 0 14px;
+    padding: 0 12px;
     border-radius: 10px;
     border: 1px solid var(--wam-acc-border);
     background: var(--wam-acc-surface);
@@ -1129,11 +1136,14 @@ body.wam-acc-edit.wam-acc-ready form.mform > fieldset > legend{
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-view-switch {
     display: inline-flex;
+    flex-wrap: wrap;
     gap: 6px;
+    min-width: 0;
 }
 
 #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-view-switch button.active {
@@ -1385,6 +1395,26 @@ body.wam-acc-edit.wam-acc-ready form.mform > fieldset > legend{
 }
 
 @media (max-width: 767.98px) {
+    #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-v2-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-month-card {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-day-panel {
+        max-height: min(50vh, 360px);
+        overflow-y: auto;
+    }
+
+    #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-list-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
     #page-local-wamakademi-calendar.wam-acc-ready .wam-calendar-day {
         min-height: 56px;
         padding: 6px;
@@ -1664,29 +1694,30 @@ body.wam-acc-shell.wam-acc-ready .card {
         font-size: 24px;
     }
 
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table thead {
+    /* RF6: .preference-table hariç — kanal matrisi card-stack ile bozulmasın */
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) thead {
         display: none;
     }
 
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table,
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table tbody,
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table tr,
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table td {
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table),
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) tbody,
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) tr,
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) td {
         display: block;
         width: 100%;
     }
 
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table tr {
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) tr {
         padding: 12px 14px;
         border-bottom: 1px solid var(--wam-acc-border);
     }
 
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table td {
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) td {
         padding: 6px 0;
         border: 0;
     }
 
-    body.wam-acc-shell.wam-acc-ready table.wam-acc-table td::before {
+    body.wam-acc-shell.wam-acc-ready table.wam-acc-table:not(.preference-table) td::before {
         content: attr(data-label);
         display: block;
         font-size: 12px;
@@ -1768,6 +1799,30 @@ body.wam-ui.wam-account.wam-acc-edit #region-main {
 body.wam-ui.wam-account form.mform.wam-acc-form .fitem .col-form-label,
 body.wam-ui.wam-account form.mform.wam-acc-form .fitem label {
     overflow-wrap: anywhere;
+}
+
+/* RF4: WebKit select option scrollWidth belgeye sızmasın (timezone vb.; RF10/RF13 deseni). */
+body.wam-ui.wam-account #region-main form.mform,
+body.wam-ui.wam-account #region-main form.mform .fitem,
+body.wam-ui.wam-account #region-main form.mform .felement {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+body.wam-ui.wam-account #region-main form.mform :is(select, .form-select, select.custom-select) {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account #region-main form.mform .tox.tox-tinymce:not(.tox-tinymce-inline),
+body.wam-ui.wam-account #region-main form.mform .felement[data-fieldtype="filemanager"],
+body.wam-ui.wam-account #region-main form.mform .felement[data-fieldtype="filepicker"] {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 /* Hesap form alan görünümü: ortak css/wam-controls.css + --wam-field-h köprüsü (wam-forms). */
@@ -2156,7 +2211,959 @@ body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-advanced {
     display: none;
 }
 
+/* Faz 4: profil düzenleme kabuğu; alan kartları kendi beyaz yüzeyini korur. */
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #region-main {
+    background: transparent;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .page-context-header {
+    display: none;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform.wam-acc-form {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Boost'un sabit işlem çubuğu son alanı ve hata/odak durumunu örtmesin.
+   .bg-white !important'ı geçmek için background-color kullanılıyor. */
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer.stickyfooter,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer.stickyfooter.bg-white,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer.wam-acc-form-actions-bar {
+    position: static;
+    inset: auto;
+    width: 100%;
+    max-width: var(--wam-form-max, 760px);
+    min-height: 0;
+    margin-top: var(--wam-space-5, 24px);
+    border: 0;
+    border-top: 1px solid var(--wam-border, #dbe5f1);
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .sticky-footer-content {
+    min-height: 0;
+    padding: var(--wam-space-4, 16px) 0;
+    justify-content: flex-start;
+}
+
+@media (max-width: 767.98px) {
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .sticky-footer-content > .fitem,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .sticky-footer-content > .fitem > span,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .sticky-footer-content .d-flex,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .btn,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer input[type="submit"] {
+        width: 100%;
+    }
+}
+
 /* Tercihler kaynak listesi — dar !important */
 #page-user-preferences.wam-acc-ready .container-fluid.p-sm-0.wam-acc-prefs-source.wam-acc-prefs-built {
     display: none !important;
+}
+
+/* =========================================================
+   Profil ve profil düzenleme — yerleşim
+   Yalnız bu iki ekran. Çizgi: .node_category li border-bottom.
+   Dar form: --wam-form-max / 760px. Başlık hizası: page-header
+   .me-auto içeriğe göre büzülüyordu.
+   ========================================================= */
+
+body.wam-ui.wam-account#page-user-profile,
+body.wam-ui.wam-account.wam-acc-edit {
+    --wam-profile-max: 1280px;
+    --wam-profile-gutter: 28px;
+    background: var(--wam-bg, #f4f7fb);
+}
+
+body.wam-ui.wam-account#page-user-profile #topofscroll,
+body.wam-ui.wam-account#page-user-profile #page-content,
+body.wam-ui.wam-account#page-user-profile #region-main,
+body.wam-ui.wam-account.wam-acc-edit #topofscroll,
+body.wam-ui.wam-account.wam-acc-edit #page-content,
+body.wam-ui.wam-account.wam-acc-edit #region-main {
+    background: transparent;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready #page.drawers .main-inner,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #page.drawers .main-inner {
+    max-width: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .header-maxwidth,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready #region-main,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .header-maxwidth,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #region-main,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform.wam-acc-form {
+    width: 100%;
+    max-width: var(--wam-profile-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--wam-profile-gutter);
+    padding-right: var(--wam-profile-gutter);
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform.wam-acc-form {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ----- Profil başlığı ----- */
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready #page-header .w-100 > .d-flex {
+    width: 100%;
+    align-items: center;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready #page-header .me-auto {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0 !important;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready #page-header .me-auto > .d-flex,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready #page-header .me-auto .w-100 {
+    width: 100%;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .page-context-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 16px;
+    width: 100%;
+    margin: 0 0 24px;
+    padding: 16px 20px;
+    background: #fff;
+    border: 1px solid var(--wam-border, #dbe5f1);
+    border-radius: 12px;
+    box-shadow: none;
+    overflow: visible;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .page-header-image .userinitials,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .page-header-image img,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .page-header-image .userpicture {
+    width: 64px !important;
+    height: 64px !important;
+    font-size: 22px;
+    line-height: 64px;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .page-header-headings {
+    flex: 1 1 12rem;
+    min-width: 0;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .singlebutton,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .singlebutton form,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .header-button-group,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .btn {
+    margin: 0 !important;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .header-button-group:not(:has(a:not([hidden]), button:not([hidden]))) {
+    display: none !important;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .btn-secondary,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions .singlebutton .btn {
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid var(--wam-border, #dbe5f1);
+    background: #fff;
+    color: var(--wam-ink, #0f2747);
+    font-weight: 650;
+}
+
+/* ----- Profil ızgarası ----- */
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: 18px;
+    align-items: start;
+    width: 100%;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree.wam-acc-cols-1 {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category {
+    display: block !important;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 18px;
+    order: 0 !important;
+    align-self: start;
+    background: #fff;
+    border: 1px solid var(--wam-border, #dbe5f1);
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="contact"]) {
+    order: 1;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .profile_tree .node_category:has([data-wam-cat="coursedetails"]) {
+    order: 2;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category.wam-acc-cat--compact {
+    padding: 18px;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category .card-body {
+    padding: 0;
+    background: transparent;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category h3.lead {
+    margin: 0 0 12px;
+    color: var(--wam-ink, #0f2747);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category ul,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category dd ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category li li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 0;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree dl {
+    display: grid;
+    grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr);
+    gap: 10px 16px;
+    margin: 0;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree dd,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category a:not(.wam-acc-btn) {
+    color: var(--wam-primary, #2563eb);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category a:not(.wam-acc-btn):hover,
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree .node_category a:not(.wam-acc-btn):focus-visible {
+    text-decoration-thickness: 2px;
+}
+
+body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-mailnote {
+    display: block;
+    margin-top: 4px;
+    color: var(--wam-muted, #4a6280);
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* ----- Profili düzenle ----- */
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-back {
+    display: none;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform > fieldset.wam-acc-fieldset {
+    margin: 0 0 8px;
+    padding: 20px 24px 24px;
+    border: 1px solid var(--wam-border, #dbe5f1);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: none;
+    overflow: visible;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform > fieldset.wam-acc-fieldset > legend,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform > fieldset.wam-acc-fieldset > legend .ftoggler {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform > fieldset.wam-acc-fieldset > legend a.fheader,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform > fieldset.wam-acc-fieldset > legend .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--wam-ink, #0f2747);
+    text-decoration: none;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid {
+    display: block;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem.row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    --bs-gutter-x: 0px;
+    --bs-gutter-y: 0px;
+    margin: 0 0 18px !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem.row > .col-md-3,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem.row > .col-md-9,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem.row > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform .fitem > .col-form-label,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform .fitem > .col-form-label label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 0 !important;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .felement {
+    margin: 0;
+    padding-top: 0;
+    width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .col-form-label label {
+    margin: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .form-control,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .form-select,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem select,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem input[type="text"],
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem input[type="email"],
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+    min-height: 42px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .invalid-feedback,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .form-control-feedback {
+    display: none !important;
+    margin: 0 !important;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem:is(.has-danger, .is-invalid, :has(.is-invalid)) .invalid-feedback,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem:is(.has-danger, .is-invalid, :has(.is-invalid)) .form-control-feedback,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .fitem .error {
+    display: block !important;
+    width: 100%;
+    margin-top: 6px !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready [data-passwordunmask="wrapper"],
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .felement[data-fieldtype="passwordunmask"] .d-flex {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 769px) {
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 24px;
+        row-gap: 18px;
+        align-items: start;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .fitem,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid > .fitem {
+        margin: 0 !important;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .wam-acc-span {
+        grid-column: 1 / -1;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .wam-acc-pair-a {
+        grid-column: 1;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .wam-acc-pair-b {
+        grid-column: 2;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid > .fitem {
+        grid-column: 1;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid > .fitem.wam-acc-picture-file {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+    }
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready form.mform > fieldset.collapsible:not(:has(.fcontainer.show)) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .felement[data-fieldtype="editor"],
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .felement[data-fieldtype="filemanager"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager-toolbar,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager-container,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager .fp-restrictions {
+    max-width: 100%;
+    overflow: visible;
+    text-align: left;
+    white-space: normal;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager.fm-noitems .filemanager-container {
+    position: relative;
+    height: auto;
+    min-height: 0;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager.fm-noitems .fm-empty-container {
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    height: auto;
+    min-height: 0;
+    padding: 16px;
+    overflow: visible;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager .dndupload-message,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager .fp-filetypes,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .filemanager .fp-accepted-types {
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .tox .tox-editor-header,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .tox .tox-toolbar-overlord,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .tox .tox-toolbar,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .tox .tox-toolbar__primary {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    flex-wrap: wrap;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer.stickyfooter,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer.wam-acc-form-actions-bar {
+    width: 100%;
+    max-width: var(--wam-profile-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--wam-profile-gutter);
+    padding-right: var(--wam-profile-gutter);
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .btn,
+body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #fgroup_id_buttonar .btn {
+    width: auto;
+    flex: 0 1 auto;
+}
+
+@media (max-width: 768px) {
+    body.wam-ui.wam-account#page-user-profile,
+    body.wam-ui.wam-account.wam-acc-edit {
+        --wam-profile-gutter: 16px;
+    }
+
+    body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        grid-template-columns: none;
+    }
+
+    body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-col {
+        display: contents;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-file,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .wam-acc-span,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .wam-acc-pair-a,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #id_moodlecontainer > .wam-acc-pair-b,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready .wam-acc-picture-grid > .fitem {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    body.wam-ui.wam-account#page-user-profile.wam-acc-ready .wam-acc-header-actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    body.wam-ui.wam-account#page-user-profile.wam-acc-ready .userprofile .profile_tree dl {
+        grid-template-columns: 1fr;
+        gap: 2px 0;
+    }
+
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer .btn,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #fgroup_id_buttonar .btn,
+    body.wam-ui.wam-account.wam-acc-edit.wam-acc-ready #sticky-footer input[type="submit"] {
+        width: auto;
+        flex: 1 1 140px;
+    }
+}
+
+/* =========================================================
+   RF5 — Kişisel dosyalar: iç içe padding filemanager'ı ezmesin
+   ========================================================= */
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready #page.drawers .main-inner {
+    max-width: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .header-maxwidth,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready #region-main {
+    width: 100%;
+    max-width: var(--wam-content-max, 1120px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--wam-gutter, 24px);
+    padding-right: var(--wam-gutter, 24px);
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready #region-main .box.generalbox,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready #region-main .box.py-3 {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .wam-acc-files-card {
+    padding: var(--wam-space-4, 16px);
+    margin: 0 0 var(--wam-space-4, 16px);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready form.mform {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: visible;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready form.mform .fitem,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready form.mform .felement {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: visible;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager-toolbar,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .fp-navbar,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager-container,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager .fp-restrictions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager-toolbar,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .fp-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager .dndupload-message,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager .fp-restrictions,
+body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager .fp-pathbar {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+@media (max-width: 767.98px) {
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .header-maxwidth,
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready #region-main {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .wam-acc-files-card {
+        padding: 12px;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready form.mform .fitem {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready form.mform .fitem > .col-form-label,
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready form.mform .fitem > .felement {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager.fm-noitems .filemanager-container {
+        position: relative;
+        height: auto;
+        min-height: 140px;
+        overflow: visible;
+        display: block;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager.fm-noitems .fm-empty-container {
+        position: relative;
+        inset: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        height: auto;
+        min-height: 120px;
+        padding: 16px 12px 20px;
+        overflow: visible;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager .dndupload-message,
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .filemanager .dndupload-arrow {
+        position: relative;
+        height: auto;
+        padding-top: 36px;
+        text-align: center;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready #fgroup_id_buttonar,
+    body.wam-ui.wam-account#page-user-files.wam-acc-ready .wam-acc-form-actions {
+        position: relative;
+        z-index: 2;
+        margin-top: 16px;
+        background: var(--wam-surface, #fff);
+    }
+}
+
+/* RF5 — not özeti / oturum tablosu: hücre metni taşmasın */
+body.wam-ui.wam-account#page-grade-report-overview-index.wam-acc-ready #region-main table,
+body.wam-ui.wam-account#page-report-usersessions-user.wam-acc-ready #region-main table {
+    max-width: 100%;
+}
+
+body.wam-ui.wam-account#page-grade-report-overview-index.wam-acc-ready #region-main table td,
+body.wam-ui.wam-account#page-grade-report-overview-index.wam-acc-ready #region-main table th,
+body.wam-ui.wam-account#page-report-usersessions-user.wam-acc-ready #region-main table td,
+body.wam-ui.wam-account#page-report-usersessions-user.wam-acc-ready #region-main table th {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* =========================================================
+   RF6 — Tercih select + bildirim matrisi
+   ========================================================= */
+
+body.wam-ui.wam-account#page-user-language.wam-acc-ready form.mform,
+body.wam-ui.wam-account#page-user-editor.wam-acc-ready form.mform,
+body.wam-ui.wam-account#page-user-forum.wam-acc-ready form.mform {
+    max-width: 100%;
+}
+
+body.wam-ui.wam-account#page-user-language.wam-acc-ready form.mform select,
+body.wam-ui.wam-account#page-user-editor.wam-acc-ready form.mform select,
+body.wam-ui.wam-account#page-user-forum.wam-acc-ready form.mform select {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    text-overflow: ellipsis;
+}
+
+/* Bildirim tercihleri: mobil kart satırları (kanal etiketli toggle) */
+@media (max-width: 767.98px) {
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications .wam-acc-table-wrap {
+        overflow-x: visible;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table {
+        display: block;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100%;
+        border: 0;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 0 10px;
+        padding: 12px;
+        border: 1px solid var(--wam-border, #dbe5f1);
+        border-radius: var(--wam-radius-sm, 8px);
+        background: var(--wam-surface, #fff);
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr:not(.preference-row) {
+        background: var(--wam-primary-soft, #eff6ff);
+        border-color: #dbeafe;
+        padding: 10px 12px;
+        margin-top: 14px;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr:not(.preference-row) th {
+        display: block;
+        width: 100%;
+        border: 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--wam-ink, #0f2747);
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr.preference-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 8px 12px;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr.preference-row > .preference-name,
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr.preference-row > th {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        border: 0;
+        padding: 0 0 4px;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr.preference-row > td {
+        flex: 1 1 auto;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        width: auto !important;
+        max-width: 100%;
+        min-width: 0;
+        border: 0;
+        padding: 4px 0;
+        vertical-align: top;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table tr.preference-row > td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        color: var(--wam-muted, #4a6280);
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications .wam-acc-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body.wam-ui.wam-account.wam-acc-ready .wam-acc-notifications table.preference-table {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* =========================================================
+   RF7 — İleti ayarları drawer / takvim+contentbank select / rozet listesi
+   ========================================================= */
+
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready #region-main {
+    max-width: 100%;
+}
+
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready [data-region="right-hand-drawer"],
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready .drawer.drawer-right,
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready .message-app {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready [data-region="view-settings"],
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready [data-region="settings-content"] {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+}
+
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready [data-region="view-settings"] label,
+body.wam-ui.wam-account#page-message-edit.wam-acc-ready [data-region="view-settings"] .custom-control-label {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+body.wam-ui.wam-account#page-user-calendar.wam-acc-ready form.mform select,
+body.wam-ui.wam-account#page-user-contentbank.wam-acc-ready form.mform select {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    text-overflow: ellipsis;
+}
+
+body.wam-ui.wam-account#page-badges-mybadges.wam-acc-ready #region-main,
+body.wam-ui.wam-account.path-badges.wam-acc-ready #region-main {
+    max-width: 100%;
+}
+
+body.wam-ui.wam-account#page-badges-mybadges.wam-acc-ready .badge-item,
+body.wam-ui.wam-account#page-badges-mybadges.wam-acc-ready .badge-list,
+body.wam-ui.wam-account.path-badges.wam-acc-ready .badge-item {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 767.98px) {
+    body.wam-ui.wam-account#page-message-edit.wam-acc-ready [data-region="right-hand-drawer"],
+    body.wam-ui.wam-account#page-message-edit.wam-acc-ready .drawer.drawer-right {
+        width: 100% !important;
+        max-width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
+    body.wam-ui.wam-account#page-badges-mybadges.wam-acc-ready form .fitem,
+    body.wam-ui.wam-account.path-badges.wam-acc-ready form .fitem {
+        max-width: 100%;
+    }
+
+    body.wam-ui.wam-account#page-badges-mybadges.wam-acc-ready form .felement,
+    body.wam-ui.wam-account.path-badges.wam-acc-ready form .felement {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    body.wam-ui.wam-account#page-badges-mybadges.wam-acc-ready form .felement .btn,
+    body.wam-ui.wam-account.path-badges.wam-acc-ready form .felement .btn {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
 }

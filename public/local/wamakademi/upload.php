@@ -12,6 +12,7 @@ require_once($CFG->dirroot . '/mod/resource/lib.php');
 require_once($CFG->dirroot . '/mod/resource/locallib.php');
 require_once($CFG->libdir . '/formslib.php');
 require_once($CFG->libdir . '/filelib.php');
+require_once($CFG->dirroot . '/repository/lib.php');
 require_once($CFG->libdir . '/resourcelib.php');
 
 require_login();
@@ -68,7 +69,7 @@ function local_wamakademi_upload_get_course_sections(stdClass $course): array {
 }
 
 /**
- * Gizli MP4 taslakları.
+ * Gizli video taslakları (MP4 / MOV).
  *
  * @param stdClass $course
  * @return array
@@ -94,7 +95,7 @@ function local_wamakademi_upload_get_hidden_drafts(stdClass $course): array {
             continue;
         }
         $mainfile = reset($files);
-        if ($mainfile->get_mimetype() !== 'video/mp4') {
+        if (!\local_wamakademi\course_videos::is_allowed_video_file($mainfile)) {
             continue;
         }
         $drafts[] = [
@@ -213,7 +214,7 @@ class local_wamakademi_draft_upload_form extends moodleform {
             'subdirs' => 0,
             'maxbytes' => $maxbytes,
             'maxfiles' => 1,
-            'accepted_types' => ['.mp4', 'video/mp4'],
+            'accepted_types' => \local_wamakademi\course_videos::filepicker_accepted_types(),
             'return_types' => FILE_INTERNAL,
         ];
         $mform->addElement('filemanager', 'videofile', get_string('uploadfile', 'local_wamakademi'), null, $fileoptions);
@@ -271,14 +272,12 @@ class local_wamakademi_draft_upload_form extends moodleform {
             return $errors;
         }
         if (count($draftfiles) > 1) {
-            $errors['videofile'] = 'Tek seferde yalnızca 1 adet MP4 video dosyası yüklenebilir.';
+            $errors['videofile'] = get_string('uploadonevideo', 'local_wamakademi');
             return $errors;
         }
         $file = reset($draftfiles);
-        $mimetype = $file->get_mimetype();
-        $ext = strtolower(pathinfo($file->get_filename(), PATHINFO_EXTENSION));
-        if ($ext !== 'mp4' || $mimetype !== 'video/mp4') {
-            $errors['videofile'] = 'Yalnızca geçerli MP4 (video/mp4) dosyaları kabul edilir.';
+        if (!\local_wamakademi\course_videos::is_allowed_video_file($file)) {
+            $errors['videofile'] = get_string('uploadvideotype', 'local_wamakademi');
         }
         $maxbytes = (int)$this->_customdata['maxbytes'];
         if ($maxbytes > 0 && $file->get_filesize() > $maxbytes) {
@@ -348,7 +347,7 @@ $PAGE->requires->css(new moodle_url('/local/wamakademi/css/wam-content.css', [
 ]));
 
 $maxbytes = get_user_max_upload_file_size($coursecontext, $CFG->maxbytes, $selectedcourse->maxbytes);
-$cancelurl = new moodle_url('/course/view.php', ['id' => (int)$selectedcourse->id]);
+$cancelurl = new moodle_url('/local/wamakademi/videos.php', ['courseid' => (int)$selectedcourse->id]);
 $submissiontoken = local_wamakademi_upload_issue_token();
 
 $mform = new local_wamakademi_draft_upload_form($pageurl->out(false), [
@@ -377,16 +376,10 @@ if ($formdata = $mform->get_data()) {
         throw new moodle_exception('invalidrequest', 'error');
     }
     if ($tokenresult['duplicate']) {
-        $dupcmid = (int)$tokenresult['cmid'];
-        $redirectparams = [
-            'courseid' => (int)$selectedcourse->id,
-            'sectionnum' => (int)$requestedsection,
-        ];
-        if ($dupcmid > 0) {
-            $redirectparams['previewcmid'] = $dupcmid;
-        }
         redirect(
-            new moodle_url('/local/wamakademi/upload.php', $redirectparams),
+            new moodle_url('/local/wamakademi/videos.php', [
+                'courseid' => (int)$selectedcourse->id,
+            ]),
             get_string('uploadduplicate', 'local_wamakademi'),
             null,
             \core\output\notification::NOTIFY_INFO
@@ -466,7 +459,7 @@ if ($formdata = $mform->get_data()) {
             throw new moodle_exception('filenotfound', 'resource');
         }
         $mainfile = reset($storedfiles);
-        if ($mainfile->get_mimetype() !== 'video/mp4') {
+        if (!\local_wamakademi\course_videos::is_allowed_video_file($mainfile)) {
             throw new moodle_exception('invalidfile', 'error');
         }
 
@@ -478,10 +471,8 @@ if ($formdata = $mform->get_data()) {
         local_wamakademi_upload_bind_token($token, $newcmid);
 
         redirect(
-            new moodle_url('/local/wamakademi/upload.php', [
+            new moodle_url('/local/wamakademi/videos.php', [
                 'courseid' => (int)$targetcourse->id,
-                'sectionnum' => $targetsectionnum,
-                'previewcmid' => $newcmid,
             ]),
             get_string('uploaddraftsaved', 'local_wamakademi'),
             null,

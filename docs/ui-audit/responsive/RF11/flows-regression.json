@@ -1,0 +1,1430 @@
+{
+  "chromium": {
+    "engine": "chromium",
+    "flows": [
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 2756,
+          "secOv": 522,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": {
+          "ok": false,
+          "reason": "no-visible-admin-search-input"
+        }
+      },
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 2403,
+          "secOv": 138,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 2403,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 2403,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 14948,
+          "secOv": 522,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 12369,
+          "secOv": 138,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 12369,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 12369,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 1952,
+          "secOv": 522,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 1599,
+          "secOv": 138,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 1599,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 1599,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 17153,
+          "secOv": 522,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 13752,
+          "secOv": 138,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 13752,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 13752,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      }
+    ],
+    "regression": [
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      },
+      {
+        "id": "ADM-SETTINGS",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "ADM-SETTINGS",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      }
+    ]
+  },
+  "webkit": {
+    "engine": "webkit",
+    "flows": [
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 2756,
+          "secOv": 514,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": {
+          "ok": false,
+          "reason": "no-visible-admin-search-input"
+        }
+      },
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 2403,
+          "secOv": 115,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 2403,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-PLUGINS",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 2403,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Etkinlik modülleri",
+          "href": "http://localhost:8081/admin/category.php?category=modsettings",
+          "url": "http://localhost:8081/admin/category.php?category=modsettings",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 14948,
+          "secOv": 514,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 12391,
+          "secOv": 115,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 12391,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SERVER",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 12391,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Sistem yolu",
+          "href": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "url": "http://localhost:8081/admin/settings.php?section=systempaths",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 1952,
+          "secOv": 514,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 1599,
+          "secOv": 115,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 1599,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-REPORTS",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 1599,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "Kategori: Yapay zeka raporları",
+          "href": "http://localhost:8081/admin/category.php?category=aireports",
+          "url": "http://localhost:8081/admin/category.php?category=aireports",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "iw": 390,
+          "scrollH": 17153,
+          "secOv": 514,
+          "headerW": 390,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "iw": 820,
+          "scrollH": 13840,
+          "secOv": 115,
+          "headerW": 820,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "iw": 1180,
+          "scrollH": 13840,
+          "secOv": 0,
+          "headerW": 1180,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      },
+      {
+        "id": "ADM-SECURITY",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "iw": 1440,
+          "scrollH": 13840,
+          "secOv": 0,
+          "headerW": 1440,
+          "headerClipped": false,
+          "body": [
+            "wam-ui",
+            "wam-admin",
+            "wam-admin-titled",
+            "wam-menu-ready",
+            "wam-hide-bootstrap-toggler-active",
+            "wam-usermenu-custom"
+          ]
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel",
+          "inView": true
+        },
+        "more": null,
+        "navFlow": {
+          "clicked": true,
+          "text": "IP engelleyicisi",
+          "href": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "url": "http://localhost:8081/admin/settings.php?section=ipblocker",
+          "pageOv": 0
+        },
+        "search": null
+      }
+    ],
+    "regression": [
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      },
+      {
+        "id": "ADM-SETTINGS",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "ADM-SETTINGS",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 844
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false,
+        "ih": 1180
+      }
+    ]
+  }
+}

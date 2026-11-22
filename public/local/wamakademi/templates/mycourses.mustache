@@ -111,7 +111,7 @@
                     data-status="{{status}}"
                     data-search="{{searchtext}}"
                 >
-                    <div class="wam-ed__cover">
+                    <a href="{{courseurl}}" class="wam-ed__cover wam-ed__cover--link">
                         {{#hascourseimage}}
                             <img
                                 class="wam-ed__cover-img"
@@ -124,7 +124,7 @@
                                 {{initials}}
                             </div>
                         {{/hascourseimage}}
-                    </div>
+                    </a>
 
                     <div class="wam-ed__card-body">
                         <div class="wam-ed__card-meta">
@@ -136,7 +136,9 @@
                             </span>
                         </div>
 
-                        <h3 class="wam-ed__card-title">{{fullname}}</h3>
+                        <h3 class="wam-ed__card-title">
+                            <a href="{{courseurl}}" class="wam-ed__card-title-link">{{fullname}}</a>
+                        </h3>
 
                         <p class="wam-ed__card-stats">
                             {{lessoncount}} ders

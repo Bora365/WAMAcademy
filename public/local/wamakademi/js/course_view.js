@@ -113,6 +113,30 @@
         setVisibleText(node, titleCaseTr(text));
     }
 
+    /**
+     * Düzenleme modunda değilken etkinlik içermeyen bölümleri gizle.
+     * Böylece boş "Yeni Bölüm" kabukları eğitim sayfasında görünmez.
+     */
+    function hideEmptySections() {
+        if (document.body.classList.contains('editing')) {
+            document.querySelectorAll('li.section.course-section.wam-section-empty').forEach(function (section) {
+                section.classList.remove('wam-section-empty');
+                section.hidden = false;
+            });
+            return;
+        }
+        document.querySelectorAll('li.section.course-section').forEach(function (section) {
+            var hasActivity = section.querySelector('.activity-item, li.activity');
+            if (hasActivity) {
+                section.classList.remove('wam-section-empty');
+                section.hidden = false;
+                return;
+            }
+            section.classList.add('wam-section-empty');
+            section.hidden = true;
+        });
+    }
+
     function run() {
         document.body.dataset.wamCourseViewReady = '1';
         document.body.classList.add('wam-course-view');
@@ -128,6 +152,7 @@
         selectors.forEach(function (selector) {
             document.querySelectorAll(selector).forEach(softenName);
         });
+        hideEmptySections();
     }
 
     if (document.readyState === 'loading') {

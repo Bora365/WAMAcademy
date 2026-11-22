@@ -14,10 +14,137 @@ header('Content-Type: application/json; charset=utf-8');
 $currentuserid = (int)$USER->id;
 
 /**
- * Kullanıcı için temel JSON verisi.
+ * Birebir konuşmalarda, karşı kullanıcıya göre okunmamış mesaj sayıları.
+ *
+ * @param int $userid Oturumdaki kullanıcı.
+ * @return array<int, int> otheruserid => unreadcount
  */
+function wam_message_unread_counts_by_user(int $userid): array {
+    global $DB;
 
-function wam_message_user_data(stdClass $user): array {
+    $sql = "
+        SELECT mcm_other.userid AS otheruserid,
+               COUNT(m.id) AS unreadcount
+          FROM {messages} m
+          JOIN {message_conversations} mc
+            ON mc.id = m.conversationid
+           AND mc.type = :individual
+           AND mc.enabled = 1
+          JOIN {message_conversation_members} mcm_me
+            ON mcm_me.conversationid = m.conversationid
+           AND mcm_me.userid = :me
+          JOIN {message_conversation_members} mcm_other
+            ON mcm_other.conversationid = m.conversationid
+           AND mcm_other.userid <> :me2
+     LEFT JOIN {message_user_actions} mua
+            ON mua.messageid = m.id
+           AND mua.userid = :me3
+           AND (mua.action = :readaction OR mua.action = :deleteaction)
+         WHERE m.useridfrom = mcm_other.userid
+           AND mua.id IS NULL
+      GROUP BY mcm_other.userid
+    ";
+
+    $rows = $DB->get_records_sql($sql, [
+        'individual' => \core_message\api::MESSAGE_CONVERSATION_TYPE_INDIVIDUAL,
+        'me' => $userid,
+        'me2' => $userid,
+        'me3' => $userid,
+        'readaction' => \core_message\api::MESSAGE_ACTION_READ,
+        'deleteaction' => \core_message\api::MESSAGE_ACTION_DELETED,
+    ]);
+
+    $map = [];
+    foreach ($rows as $row) {
+        $count = (int)$row->unreadcount;
+        if ($count > 0) {
+            $map[(int)$row->otheruserid] = $count;
+        }
+    }
+    return $map;
+}
+
+/**
+ * Birebir konuşmalarda son mesaj özeti (karşı kullanıcıya göre).
+ *
+ * @param int $userid
+ * @return array<int, array{text:string, timecreated:int, fromme:bool}>
+ */
+function wam_message_last_by_user(int $userid): array {
+    global $DB;
+
+    $sql = "
+        SELECT mcm_other.userid AS otheruserid,
+               m.fullmessage AS fullmessage,
+               m.smallmessage AS smallmessage,
+               m.fullmessageformat AS fullmessageformat,
+               m.timecreated AS timecreated,
+               m.useridfrom AS useridfrom
+          FROM {messages} m
+          JOIN {message_conversations} mc
+            ON mc.id = m.conversationid
+           AND mc.type = :individual
+           AND mc.enabled = 1
+          JOIN {message_conversation_members} mcm_me
+            ON mcm_me.conversationid = m.conversationid
+           AND mcm_me.userid = :me
+          JOIN {message_conversation_members} mcm_other
+            ON mcm_other.conversationid = m.conversationid
+           AND mcm_other.userid <> :me2
+     LEFT JOIN {message_user_actions} mua_del
+            ON mua_del.messageid = m.id
+           AND mua_del.userid = :me3
+           AND mua_del.action = :deleteaction
+         WHERE mua_del.id IS NULL
+           AND m.timecreated = (
+                SELECT MAX(m2.timecreated)
+                  FROM {messages} m2
+                  JOIN {message_conversation_members} mcm2
+                    ON mcm2.conversationid = m2.conversationid
+                   AND mcm2.userid = mcm_other.userid
+             LEFT JOIN {message_user_actions} mua2
+                    ON mua2.messageid = m2.id
+                   AND mua2.userid = :me4
+                   AND mua2.action = :deleteaction2
+                 WHERE m2.conversationid = m.conversationid
+                   AND mua2.id IS NULL
+           )
+    ";
+
+    $rows = $DB->get_records_sql($sql, [
+        'individual' => \core_message\api::MESSAGE_CONVERSATION_TYPE_INDIVIDUAL,
+        'me' => $userid,
+        'me2' => $userid,
+        'me3' => $userid,
+        'me4' => $userid,
+        'deleteaction' => \core_message\api::MESSAGE_ACTION_DELETED,
+        'deleteaction2' => \core_message\api::MESSAGE_ACTION_DELETED,
+    ]);
+
+    $map = [];
+    foreach ($rows as $row) {
+        $raw = trim((string)($row->smallmessage !== '' ? $row->smallmessage : $row->fullmessage));
+        $text = format_string($raw, true);
+        if (\core_text::strlen($text) > 80) {
+            $text = \core_text::substr($text, 0, 80) . '…';
+        }
+        $map[(int)$row->otheruserid] = [
+            'text' => $text,
+            'timecreated' => (int)$row->timecreated,
+            'fromme' => ((int)$row->useridfrom === $userid),
+        ];
+    }
+    return $map;
+}
+
+/**
+ * Kullanıcı için temel JSON verisi.
+ *
+ * @param stdClass $user
+ * @param array<int, int> $unreadmap
+ * @param array<int, array{text:string, timecreated:int, fromme:bool}> $lastmap
+ */
+function wam_message_user_data(stdClass $user, array $unreadmap = [], array $lastmap = []): array {
 
     // Moodle'ın kendi online/offline durumunu kullan.
     $isonline = \core_message\helper::show_online_status($user)
@@ -25,10 +152,14 @@ function wam_message_user_data(stdClass $user): array {
         : null;
 
     $showonlinestatus = !is_null($isonline);
+    $userid = (int)$user->id;
+    $unread = $unreadmap[$userid] ?? 0;
+    $last = $lastmap[$userid] ?? null;
+    $lastts = $last['timecreated'] ?? null;
 
     return [
-        'id' => (int)$user->id,
-        'userid' => (int)$user->id,
+        'id' => $userid,
+        'userid' => $userid,
         'name' => fullname($user),
         'fullname' => fullname($user),
         'username' => $user->username,
@@ -44,10 +175,10 @@ function wam_message_user_data(stdClass $user): array {
         ))->out(false),
 
         'subname' => '',
-        'lastmessage' => '',
-        'lastmessagedate' => null,
-        'unreadcount' => 0,
-        'sentfromcurrentuser' => false,
+        'lastmessage' => $last['text'] ?? '',
+        'lastmessagedate' => $lastts ?: null,
+        'unreadcount' => $unread > 0 ? $unread : null,
+        'sentfromcurrentuser' => !empty($last['fromme']),
         'ismuted' => false,
         'isblocked' => false,
 
@@ -55,6 +186,24 @@ function wam_message_user_data(stdClass $user): array {
         'showonlinestatus' => $showonlinestatus,
         'isonline' => (bool)$isonline,
     ];
+}
+
+/**
+ * Okunmamışlar önce, sonra ada göre.
+ *
+ * @param array $users
+ * @return array
+ */
+function wam_message_sort_users(array $users): array {
+    usort($users, static function (array $a, array $b): int {
+        $ua = (int)($a['unreadcount'] ?? 0);
+        $ub = (int)($b['unreadcount'] ?? 0);
+        if ($ua !== $ub) {
+            return $ub <=> $ua;
+        }
+        return strcasecmp((string)$a['name'], (string)$b['name']);
+    });
+    return $users;
 }
 
 /**
@@ -201,6 +350,9 @@ $admins = [];
 $teachers = [];
 $friends = [];
 
+$unreadmap = wam_message_unread_counts_by_user($currentuserid);
+$lastmap = wam_message_last_by_user($currentuserid);
+
 foreach ($users as $user) {
 
     $userid = (int)$user->id;
@@ -210,7 +362,7 @@ foreach ($users as $user) {
         continue;
     }
 
-    $data = wam_message_user_data($user);
+    $data = wam_message_user_data($user, $unreadmap, $lastmap);
     $data['role'] = $role;
 
     /*
@@ -294,6 +446,10 @@ $self = $DB->get_record(
     'id,username,firstname,lastname,email,picture,imagealt',
     MUST_EXIST
 );
+
+$admins = wam_message_sort_users($admins);
+$teachers = wam_message_sort_users($teachers);
+$friends = wam_message_sort_users($friends);
 
 $response = [
     'success' => true,

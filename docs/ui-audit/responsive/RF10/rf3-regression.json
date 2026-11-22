@@ -1,0 +1,23 @@
+{
+  "reg": [
+    {
+      "id": "COURSE-GRADES",
+      "viewport": "phone390",
+      "ov": 0
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "viewport": "phone390",
+      "ov": 0
+    },
+    {
+      "id": "ACC-EDIT",
+      "viewport": "phone390",
+      "ov": 0
+    },
+    {
+      "id": "STUDENT-COURSE",
+      "editForms": 0
+    }
+  ]
+}

@@ -54,21 +54,12 @@ if (!$hasblocks) {
 }
 $courseindex = core_course_drawer();
 
-// WAM: site administration pages reuse the left drawer for the administration category navigation.
+// Tek sidebar: giriş yapmış her ekranda yalnızca WAM ana menüsü.
+// Kurs dizini ve site yönetimi sol çekmece olarak açılmaz.
 $wamadminnav = [];
-if (empty($courseindex) && file_exists($CFG->dirroot . '/local/wamakademi/lib.php')) {
-    require_once($CFG->dirroot . '/local/wamakademi/lib.php');
-    $wamadminnavcontext = local_wamakademi_admin_nav_context();
-    if ($wamadminnavcontext) {
-        $courseindex = $OUTPUT->render_from_template('local_wamakademi/admin_nav', $wamadminnavcontext);
-        $wamadminnav = [
-            'wamadminnav' => true,
-            'wamadminnavtitle' => $wamadminnavcontext['title'],
-            'wamadminhomeurl' => $wamadminnavcontext['homeurl'],
-            'wamadminopentext' => $wamadminnavcontext['opentext'],
-            'wamadminclosetext' => $wamadminnavcontext['closetext'],
-        ];
-    }
+if (isloggedin() && !isguestuser()) {
+    $courseindex = '';
+    $courseindexopen = false;
 }
 
 if (!$courseindex) {

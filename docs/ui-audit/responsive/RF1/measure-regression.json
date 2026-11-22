@@ -1,0 +1,40 @@
+[
+  {
+    "type": "catalog-empty",
+    "ov": 0,
+    "url": "http://localhost:8081/local/wamakademi/catalog.php?q=xyznoresult"
+  },
+  {
+    "type": "catalog-search",
+    "ov": 0,
+    "url": "http://localhost:8081/local/wamakademi/catalog.php"
+  },
+  {
+    "type": "catalog-clear",
+    "ov": 0
+  },
+  {
+    "type": "menu-resize",
+    "menuOpen": true,
+    "bodyOverflow": "hidden"
+  },
+  {
+    "type": "menu-after-close",
+    "menuOpen": false,
+    "overflowHidden": "ok"
+  },
+  {
+    "type": "regress-admin",
+    "path": "/admin/search.php",
+    "vp": "phone390",
+    "ov": 0,
+    "navOv": 0
+  },
+  {
+    "type": "regress-admin",
+    "path": "/admin/search.php",
+    "vp": "desk1440",
+    "ov": 0,
+    "navOv": 0
+  }
+]

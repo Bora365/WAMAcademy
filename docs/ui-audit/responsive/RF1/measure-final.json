@@ -1,0 +1,264 @@
+[
+  {
+    "eng": "chromium",
+    "role": "student",
+    "vp": "phone320",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "264px",
+      "dayPanelR": 292
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "student",
+    "vp": "phone360",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "304px",
+      "dayPanelR": 332
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "student",
+    "vp": "phone390",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "334px",
+      "dayPanelR": 362
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "student",
+    "vp": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "716px",
+      "dayPanelR": 768
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "admin",
+    "vp": "phone320",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "264px",
+      "dayPanelR": 292
+    },
+    "hdr": {
+      "navOv": 43,
+      "compact": true
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "admin",
+    "vp": "phone360",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "304px",
+      "dayPanelR": 332
+    },
+    "hdr": {
+      "navOv": 3,
+      "compact": true
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "admin",
+    "vp": "phone390",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "334px",
+      "dayPanelR": 362
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "admin",
+    "vp": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "716px",
+      "dayPanelR": 768
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "chromium",
+    "role": "admin",
+    "vp": "ipadPort",
+    "id": "HOME",
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgRight": 694
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "student",
+    "vp": "phone320",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "264px",
+      "dayPanelR": 292
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "student",
+    "vp": "phone360",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "304px",
+      "dayPanelR": 332
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "student",
+    "vp": "phone390",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "334px",
+      "dayPanelR": 362
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "student",
+    "vp": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "716px",
+      "dayPanelR": 768
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "admin",
+    "vp": "phone320",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "264px",
+      "dayPanelR": 292
+    },
+    "hdr": {
+      "navOv": 43,
+      "compact": true
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "admin",
+    "vp": "phone360",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "304px",
+      "dayPanelR": 332
+    },
+    "hdr": {
+      "navOv": 3,
+      "compact": true
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "admin",
+    "vp": "phone390",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "334px",
+      "dayPanelR": 362
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "admin",
+    "vp": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "clipped": false,
+      "layout": "716px",
+      "dayPanelR": 768
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false
+    }
+  },
+  {
+    "eng": "webkit",
+    "role": "admin",
+    "vp": "ipadPort",
+    "id": "HOME",
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgRight": 694
+    }
+  }
+]

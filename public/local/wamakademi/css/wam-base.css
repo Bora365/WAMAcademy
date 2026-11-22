@@ -160,6 +160,13 @@ body.wam-ui #page.drawers .main-inner {
     padding: var(--wam-space-5) 0 var(--wam-space-7);
 }
 
+/* Moodle-safe soft nav: çapraz belge view-transition (AJAX yok).
+   Önceki soft-leaving opacity düşüşü reload flaşı gibi durduğu için kaldırıldı;
+   kabuk wam-course.css’te isimli VT ile sabitlenir. */
+@view-transition {
+    navigation: auto;
+}
+
 body.wam-ui .header-maxwidth {
     max-width: var(--wam-content-max);
     margin-left: auto;
@@ -426,6 +433,16 @@ body.wam-ui.wam-header-hidden .navbar.wam-navbar {
     transition: opacity var(--wam-dur-header) var(--wam-ease), visibility 0s linear var(--wam-dur-header);
 }
 
+/* Tek sidebar: kurs dizini sol çekmecesi ve açma düğmesi yok. Ana menü hamburger ile açılır. */
+body.wam-ui #theme_boost-drawers-courseindex,
+body.wam-ui .drawer-toggler.drawer-left-toggle {
+    display: none !important;
+}
+
+body.wam-ui:not(.wam-menu-push) #page.drawers.show-drawer-left {
+    margin-left: 0 !important;
+}
+
 /* Çekmeceler üst çubukla birlikte yukarı kayar; içerik zıplamaz (#page marjı sabit kalır). */
 @media (min-width: 992px) {
     body.wam-ui .drawer-left,
@@ -441,6 +458,10 @@ body.wam-ui.wam-header-hidden .navbar.wam-navbar {
 }
 
 body.wam-ui .navbar.wam-navbar .container-fluid {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-width: 0;
     gap: var(--wam-space-2);
     padding-left: var(--wam-space-4);
     padding-right: var(--wam-space-4);
@@ -505,10 +526,21 @@ body.wam-ui .navbar.wam-navbar .primary-navigation .navigation .nav-link[aria-cu
     box-shadow: inset 0 -3px 0 var(--wam-nav-active);
 }
 
-/* WAM bağlantıları */
-body.wam-ui .wam-top-nav {
-    gap: var(--wam-space-1);
-    margin-left: var(--wam-space-1);
+/* WAM bağlantıları (Eğitimler / Eğitimlerim / Takvim) — üstte her zaman (md+).
+   Görünürlük Bootstrap d-none d-md-flex ile; burada ezilmez. */
+
+/* Site yöneticisi olmayanlarda Moodle primary nav (Kontrol paneli) gizlenir */
+body.wam-ui.wam-hide-primary-nav .primary-navigation {
+    display: none !important;
+}
+
+/* Öğrenci görünümü: Yönetici anahtarı ve yönetim düğmeleri DOM'dan silinmese bile gizlenir. */
+body.wam-ui.wam-student-view .editmode-switch-form,
+body.wam-ui.wam-student-view .primary-navigation [data-key="siteadminnode"],
+body.wam-ui.wam-student-view .primary-navigation [data-key="home"],
+body.wam-ui.wam-student-view .primary-navigation [data-key="myhome"],
+body.wam-ui.wam-student-view .wam-gear__group[data-wam-group="management"] {
+    display: none !important;
 }
 
 body.wam-ui .wam-top-nav a {
@@ -548,15 +580,19 @@ body.wam-ui .navbar.wam-navbar input:focus-visible {
     box-shadow: none;
 }
 
-/* Eğitim arama alanı */
+/* Eğitim arama alanı — sabit 220px yok; dar alanda küçülür, sağ işlemleri itmez */
 body.wam-ui .wam-nav-search {
+    flex: 1 1 8rem;
+    min-width: 0;
+    max-width: 220px;
     margin-right: var(--wam-space-3);
 }
 
 body.wam-ui .wam-nav-search input {
     min-height: var(--wam-control-h);
-    width: 220px;
-    max-width: 28vw;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     padding: 0 var(--wam-space-3) 0 38px;
     border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: var(--wam-radius-sm);
@@ -587,8 +623,53 @@ body.wam-ui .wam-nav-search input:focus {
 
 /* Kullanıcı işlemleri: düzenleme modu, bildirim, mesaj, kullanıcı menüsü, çark */
 body.wam-ui .navbar.wam-navbar #usernavigation {
+    flex: 0 0 auto;
     align-items: center;
     gap: var(--wam-space-1);
+    min-width: 0;
+}
+
+/* İçerik sığmayınca JS body.wam-nav-compact ekler; linkler hamburger panelinde kalır (RF1 F-05). */
+body.wam-ui.wam-nav-compact .wam-top-nav {
+    display: none !important;
+}
+
+body.wam-ui.wam-nav-compact .wam-nav-search {
+    display: none !important;
+}
+
+body.wam-ui.wam-nav-compact .navbar.wam-navbar #usernavigation .divider {
+    display: none;
+}
+
+body.wam-ui.wam-nav-compact .navbar.wam-navbar #usernavigation {
+    gap: 0;
+}
+
+/* Dar admin: düzenleme anahtarı üst çubuktan düşer; kurs ekranında kalır. */
+body.wam-ui.wam-nav-compact .navbar.wam-navbar .editmode-switch-form {
+    display: none !important;
+}
+
+body.wam-ui.wam-nav-compact .navbar.wam-navbar .usermenu-container,
+body.wam-ui.wam-nav-compact .navbar.wam-navbar .usermenu .dropdown-toggle {
+    max-width: 44px;
+    min-width: 40px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body.wam-ui.wam-nav-compact .navbar.wam-navbar .navbar-brand:has(.wam-navbar-logo) {
+    max-width: 64px;
+}
+
+body.wam-ui.wam-nav-compact .navbar.wam-navbar .navbar-brand .wam-navbar-logo img {
+    height: 22px;
+}
+
+body.wam-ui .wam-top-nav {
+    flex: 0 1 auto;
+    min-width: 0;
 }
 
 body.wam-ui .navbar.wam-navbar .divider {
@@ -645,15 +726,72 @@ body.wam-ui .navbar.wam-navbar .usermenu .userinitials {
     margin-right: 0;
 }
 
-/* Üst çubuk açılır menüleri açık yüzeyde kalır. */
-body.wam-ui .navbar.wam-navbar .dropdown-menu,
+/* Üst çubuk açılır menüleri açık yüzeyde kalır; viewport dışına taşmaz (RF1 F-05). */
+body.wam-ui .navbar.wam-navbar .dropdown-menu {
+    color: var(--wam-ink);
+    right: 0;
+    left: auto;
+    max-width: min(360px, calc(100vw - 16px));
+    max-height: min(70vh, 480px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 body.wam-ui .navbar.wam-navbar .popover-region-container {
     color: var(--wam-ink);
+    max-width: min(360px, calc(100vw - 16px));
+    max-height: min(70vh, 480px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+body.wam-ui .wam-gear__menu {
+    right: 0;
+    left: auto;
+    max-width: min(300px, calc(100vw - 16px));
 }
 
 /* Bildirim/mesaj açılır panelinin simge üstündeki okunu kaldır; kart görünümü ver. */
 body.wam-ui .navbar.wam-navbar .popover-region-toggle::before,
 body.wam-ui .navbar.wam-navbar .popover-region-toggle::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Rol adı (ör. Kurs oluşturucu) üst çubukta görünmesin; yalnız avatar tıklansın. */
+body.wam-ui .navbar.wam-navbar .usermenu .usertext {
+    display: none !important;
+}
+
+/* Profil dairesindeki Bootstrap/FA dropdown okunu (kulakçık) kaldır. */
+body.wam-ui .navbar.wam-navbar .usermenu .dropdown-toggle::after,
+body.wam-ui .navbar.wam-navbar .usermenu .btn.dropdown-toggle::after,
+body.wam-ui.userswitchedrole .navbar.wam-navbar .usermenu .dropdown-toggle::after {
+    display: none !important;
+    content: none !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    border: 0 !important;
+    font-size: 0 !important;
+}
+
+/* Avatar tıklama alanı daireyle sınırlı kalsın. */
+body.wam-ui .navbar.wam-navbar .usermenu .dropdown-toggle {
+    padding: 0.25rem;
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Daha fazla içindeki aktif öğenin soldaki tik/kulakçığını kaldır. */
+body.wam-ui .navbar.wam-navbar .primary-navigation .dropdownmoremenu .dropdown-item.active::before,
+body.wam-ui .navbar.wam-navbar .primary-navigation .dropdownmoremenu .dropdown-item[aria-current="true"]::before,
+body.wam-ui .navbar.wam-navbar .primary-navigation .moremenu .dropdown-item.active::before,
+body.wam-ui .navbar.wam-navbar .primary-navigation .moremenu .dropdown-item[aria-current="true"]::before {
     display: none !important;
     content: none !important;
 }
@@ -768,9 +906,45 @@ body.wam-ui .wam-menu-overlay[hidden] {
     display: none;
 }
 
-/* Arka sayfa kaydırması kilitlenir; konum korunur. Panel kendi içinde kayar. */
-body.wam-ui.wam-menu-open {
+/* Arka sayfa kaydırması kilitlenir (yalnız overlay/mobil). Panel kendi içinde kayar. */
+body.wam-ui.wam-menu-open:not(.wam-menu-push) {
     overflow: hidden;
+}
+
+/* Masaüstü (≥1024px): overlay yok; #page ve sabit navbar paneli kadar sağa itilir.
+   styles.css path-local-wamakademi #page { margin-left:0 !important; width:100% !important }
+   kuralını geçmek için !important ve daraltılmış width gerekir. */
+@media (min-width: 1024px) {
+    body.wam-ui #page,
+    body.wam-ui .navbar.fixed-top {
+        transition: margin-left var(--wam-dur-panel) var(--wam-ease), width var(--wam-dur-panel) var(--wam-ease);
+    }
+
+    body.wam-ui.wam-menu-open.wam-menu-push #page {
+        margin-left: var(--wam-panel-w) !important;
+        width: calc(100% - var(--wam-panel-w)) !important;
+        max-width: none !important;
+    }
+
+    body.wam-ui.wam-menu-open.wam-menu-push .navbar.fixed-top {
+        margin-left: var(--wam-panel-w) !important;
+        width: calc(100% - var(--wam-panel-w)) !important;
+    }
+
+    body.wam-ui.wam-menu-open.wam-menu-push .wam-menu-overlay {
+        display: none !important;
+    }
+
+    body.wam-ui.wam-menu-open.wam-menu-push .wam-menu-panel {
+        width: var(--wam-panel-w);
+    }
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+    body.wam-ui #page,
+    body.wam-ui .navbar.fixed-top {
+        transition: none;
+    }
 }
 
 /* Başlık: logo solda, kapatma sağda; yatay boşluk 24px */
@@ -884,6 +1058,24 @@ body.wam-ui .wam-menu-panel__nav a:focus-visible {
     outline-offset: 2px;
 }
 
+body.wam-ui .wam-menu-panel__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wam-space-2);
+    margin-top: var(--wam-space-4);
+    padding-top: var(--wam-space-4);
+    border-top: 1px solid var(--wam-nav-line);
+}
+
+body.wam-ui .wam-menu-panel__section-label {
+    padding: 0 var(--wam-space-4);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
 @media (prefers-reduced-motion: reduce) {
     body.wam-ui .wam-menu-panel,
     body.wam-ui.wam-menu-open .wam-menu-panel,
@@ -937,20 +1129,7 @@ body.wam-ui .navbar.wam-navbar .wam-hamburger[aria-expanded="true"] {
 .wam-hamburger__bars span:nth-child(2) { top: 6px; }
 .wam-hamburger__bars span:nth-child(3) { top: 12px; }
 
-/* Açıkken üç çizgi çarpıya dönüşür. */
-.wam-hamburger[aria-expanded="true"] .wam-hamburger__bars span:nth-child(1) {
-    top: 6px;
-    transform: rotate(45deg);
-}
-
-.wam-hamburger[aria-expanded="true"] .wam-hamburger__bars span:nth-child(2) {
-    opacity: 0;
-}
-
-.wam-hamburger[aria-expanded="true"] .wam-hamburger__bars span:nth-child(3) {
-    top: 6px;
-    transform: rotate(-45deg);
-}
+/* Açıkken çizgiler çarpıya dönmez; kapatma yalnızca paneldeki çarpıdır. */
 
 /* Moodle'un kendi mobil çekmece düğmesi yerine hamburger kullanılır. */
 body.wam-hide-bootstrap-toggler-active .navbar .navbar-toggler[data-toggler="drawers"] {
@@ -1117,6 +1296,26 @@ body.wam-ui.path-local-wamakademi-index .wam-stat-card {
     border: 1px solid var(--wam-border);
     border-radius: var(--wam-radius);
     box-shadow: var(--wam-shadow);
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stat-card:hover {
+    border-color: #93C5FD;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stat-card:focus-visible {
+    outline: none;
+    box-shadow: var(--wam-focus);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-stat-card.is-active {
+    border-color: var(--wam-primary);
+    background: var(--wam-primary-soft);
 }
 
 body.wam-ui.path-local-wamakademi-index .wam-stat-card span {
@@ -1128,6 +1327,12 @@ body.wam-ui.path-local-wamakademi-index .wam-stat-card span {
 body.wam-ui.path-local-wamakademi-index .wam-stat-card strong {
     font-size: 22px;
     color: var(--wam-ink);
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-card[hidden],
+body.wam-ui.path-local-wamakademi-index [data-wam-dash-grid][hidden],
+body.wam-ui.path-local-wamakademi-index [data-wam-dash-empty][hidden] {
+    display: none !important;
 }
 
 body.wam-ui.path-local-wamakademi-index .wam-content-grid {
@@ -1158,7 +1363,7 @@ body.wam-ui.path-local-wamakademi-index .wam-section-header a {
 
 body.wam-ui.path-local-wamakademi-index .wam-course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
     gap: var(--wam-space-4);
 }
 
@@ -1191,6 +1396,7 @@ body.wam-ui.path-local-wamakademi-index .wam-course-fallback {
 }
 
 body.wam-ui.path-local-wamakademi-index .wam-course-info {
+    min-width: 0;
     padding: var(--wam-space-4);
 }
 
@@ -1199,10 +1405,28 @@ body.wam-ui.path-local-wamakademi-index .wam-course-category {
     color: var(--wam-muted);
 }
 
+body.wam-ui.path-local-wamakademi-index .wam-course-cover--link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+body.wam-ui.path-local-wamakademi-index .wam-course-title-link:hover,
+body.wam-ui.path-local-wamakademi-index .wam-course-title-link:focus-visible {
+    text-decoration: underline;
+}
+
 body.wam-ui.path-local-wamakademi-index .wam-course-info h3 {
     margin: var(--wam-space-2) 0 var(--wam-space-3);
     font-size: 16px;
     color: var(--wam-ink);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 body.wam-ui.path-local-wamakademi-index .wam-progress {
@@ -1297,4 +1521,98 @@ body.wam-ui#page-my-index .header-maxwidth {
     max-width: var(--wam-page-max) !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+/* Ana sayfa kahramanı: katalog banner’ı ile aynı düzen, inşaat sahası görseli. */
+body.wam-ui .wam-home-hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 248px;
+    margin: 0 0 var(--wam-space-5);
+    padding: 42px 64px;
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 12, 27, 0.97) 0%,
+            rgba(3, 12, 27, 0.90) 26%,
+            rgba(3, 12, 27, 0.58) 46%,
+            rgba(3, 12, 27, 0.18) 64%,
+            rgba(3, 12, 27, 0) 80%
+        ),
+        url("/local/wamakademi/pix/wam-home-hero.jpg") right 38% / cover no-repeat;
+}
+
+body.wam-ui .wam-home-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 34rem;
+}
+
+body.wam-ui .wam-home-hero__badge {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #405de6;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+body.wam-ui .wam-home-hero h1 {
+    margin: 16px 0 10px;
+    color: #fff;
+    font-size: clamp(1.75rem, 2.2vw, 2.35rem);
+    line-height: 1.12;
+    font-weight: 800;
+}
+
+body.wam-ui .wam-home-hero p {
+    margin: 0;
+    max-width: 36rem;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+    body.wam-ui .wam-home-hero {
+        min-height: 228px;
+        padding: 28px 22px;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3, 12, 27, 0.97) 0%,
+                rgba(3, 12, 27, 0.92) 46%,
+                rgba(3, 12, 27, 0.62) 70%,
+                rgba(3, 12, 27, 0.28) 100%
+            ),
+            url("/local/wamakademi/pix/wam-home-hero.jpg") 78% center / cover no-repeat;
+    }
+
+    body.wam-ui .wam-home-hero__content {
+        max-width: 16.5rem;
+    }
+}
+
+/* Kısa yatay telefon: hero dikey alanı yemesin (RF1 HOME). */
+@media (max-height: 500px) {
+    body.wam-ui .wam-home-hero {
+        min-height: 0;
+        padding: 16px 18px;
+    }
+
+    body.wam-ui .wam-home-hero h1 {
+        margin: 8px 0 6px;
+        font-size: 1.35rem;
+    }
+
+    body.wam-ui.path-local-wamakademi-index .wam-page-header {
+        margin-bottom: var(--wam-space-3);
+    }
 }

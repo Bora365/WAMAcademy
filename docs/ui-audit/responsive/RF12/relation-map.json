@@ -1,0 +1,521 @@
+{
+  "ADM-DEVELOPMENT": {
+    "title": "Geliştirme | Yönetim | WAM Yerel",
+    "h1": "Geliştirme",
+    "lead": "Bu seçeneği açık tutarsanız PHP'deki error_reporting metodu daha fazla uyarı mesajı gösterecektir. Bu, sadece geliştiriciler için kullanışlıdır.",
+    "mainLinks": [
+      {
+        "text": "Kategori: Deneysel",
+        "href": "http://localhost:8081/admin/category.php?category=experimental"
+      },
+      {
+        "text": "Hata ayıklama",
+        "href": "http://localhost:8081/admin/settings.php?section=debugging"
+      },
+      {
+        "text": "Moodle REST API Kullanıcı Arayüzü (SwaggerUI)",
+        "href": "http://localhost:8081/admin/swaggerui.php"
+      },
+      {
+        "text": "Web servisi test istemcisi",
+        "href": "http://localhost:8081/admin/webservice/testclient.php"
+      },
+      {
+        "text": "Önbelleği temizle",
+        "href": "http://localhost:8081/admin/purgecaches.php"
+      },
+      {
+        "text": "Üçüncü parti kütüphaneler",
+        "href": "http://localhost:8081/admin/thirdpartylibs.php"
+      },
+      {
+        "text": "Kancalara genel bakış",
+        "href": "http://localhost:8081/admin/hooks.php"
+      },
+      {
+        "text": "Test eğitimi ver",
+        "href": "http://localhost:8081/admin/tool/generator/maketestcourse.php"
+      },
+      {
+        "text": "JMeter test planını hazırla",
+        "href": "http://localhost:8081/admin/tool/generator/maketestplan.php"
+      },
+      {
+        "text": "Test senaryoları oluşturun",
+        "href": "http://localhost:8081/admin/tool/generator/runtestscenario.php"
+      },
+      {
+        "text": "Kabul testleri",
+        "href": "http://localhost:8081/admin/tool/behat/index.php"
+      },
+      {
+        "text": "PHPUnit testleri",
+        "href": "http://localhost:8081/admin/tool/phpunit/index.php"
+      },
+      {
+        "text": "Şablon kütüphanesi",
+        "href": "http://localhost:8081/admin/tool/templatelibrary/index.php"
+      },
+      {
+        "text": "XMLDB düzenleyicisi",
+        "href": "http://localhost:8081/admin/tool/xmldb/"
+      }
+    ],
+    "sec": [
+      {
+        "text": "Daha fazla",
+        "href": "http://localhost:8081/admin/category.php?category=development#"
+      },
+      {
+        "text": "Kontrol paneli",
+        "href": "http://localhost:8081/my/"
+      },
+      {
+        "text": "Site yönetimi",
+        "href": "http://localhost:8081/admin/search.php"
+      },
+      {
+        "text": "Genel",
+        "href": "http://localhost:8081/admin/search.php#linkroot"
+      },
+      {
+        "text": "Kullanıcılar",
+        "href": "http://localhost:8081/admin/search.php#linkusers"
+      },
+      {
+        "text": "Eğitimler",
+        "href": "http://localhost:8081/admin/search.php#linkcourses"
+      },
+      {
+        "text": "Notlar",
+        "href": "http://localhost:8081/admin/search.php#linkgrades"
+      },
+      {
+        "text": "Eklentiler",
+        "href": "http://localhost:8081/admin/search.php#linkmodules"
+      },
+      {
+        "text": "Görünüş",
+        "href": "http://localhost:8081/admin/search.php#linkappearance"
+      },
+      {
+        "text": "Sunucu",
+        "href": "http://localhost:8081/admin/search.php#linkserver"
+      },
+      {
+        "text": "Raporlar",
+        "href": "http://localhost:8081/admin/search.php#linkreports"
+      },
+      {
+        "text": "Geliştirme",
+        "href": "http://localhost:8081/admin/search.php#linkdevelopment"
+      }
+    ],
+    "fields": [
+      "Hata ayıklama mesajları debug",
+      "Hata ayıklama mesajlarını göster debugdisplay",
+      "Performans bilgisi perfdebug",
+      "Dil ifadelerinin yerini göster debugstringids",
+      "SQL çağrılarının kökenini göster debugsqltrace",
+      "Geçerlilik bağlantılarını göster debugvalidators",
+      "Sayfa bilgisini göster debugpageinfo",
+      "Şablon bilgilerini göster debugtemplateinfo"
+    ],
+    "body": [
+      "wam-ui",
+      "wam-admin",
+      "wam-admin-titled",
+      "wam-menu-ready",
+      "wam-hide-bootstrap-toggler-active",
+      "wam-usermenu-custom"
+    ],
+    "pageOv": 0,
+    "url": "/admin/category.php?category=development"
+  },
+  "ADM-COURSE-MGMT": {
+    "title": "Eğitim ve kategori yönetimi | WAM Yerel",
+    "h1": "Kategori 1",
+    "mainLinks": [
+      {
+        "text": "Yeni kategori oluştur",
+        "href": "http://localhost:8081/course/editcategory.php?parent=1"
+      },
+      {
+        "text": "Kategori 1",
+        "href": "http://localhost:8081/course/management.php?categoryid=1"
+      },
+      {
+        "text": "Görüntüle",
+        "href": "http://localhost:8081/course/index.php?categoryid=1"
+      },
+      {
+        "text": "Düzenle",
+        "href": "http://localhost:8081/course/editcategory.php?id=1"
+      },
+      {
+        "text": "Sil",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&sesskey=sZWAosdinc&action=deletecategory"
+      },
+      {
+        "text": "İzinler",
+        "href": "http://localhost:8081/admin/roles/permissions.php?contextid=3"
+      },
+      {
+        "text": "Topluluklar",
+        "href": "http://localhost:8081/cohort/index.php?contextid=3"
+      },
+      {
+        "text": "Filtreler",
+        "href": "http://localhost:8081/filter/manage.php?contextid=3&return=management"
+      },
+      {
+        "text": "Eğitimi geri yükle",
+        "href": "http://localhost:8081/backup/restorefile.php?contextid=3"
+      },
+      {
+        "text": "Geridönüşüm kutusu",
+        "href": "http://localhost:8081/admin/tool/recyclebin/index.php?contextid=3"
+      },
+      {
+        "text": "İçerik bankası",
+        "href": "http://localhost:8081/contentbank/index.php?contextid=3"
+      },
+      {
+        "text": "Yeni eğitim oluştur",
+        "href": "http://localhost:8081/course/edit.php?category=1&returnto=catmanage"
+      },
+      {
+        "text": "Eğitimin tam adı ölçütüne göre sırala - artan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=fullname"
+      },
+      {
+        "text": "Eğitimin tam adı ölçütüne göre sırala - azalan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=fullnamedesc"
+      },
+      {
+        "text": "Eğitim kısa adı ölçütüne göre sırala - artan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=shortname"
+      },
+      {
+        "text": "Eğitim kısa adı ölçütüne göre sırala - azalan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=shortnamedesc"
+      },
+      {
+        "text": "Eğitim kimlik numarası ölçütüne göre sırala - artan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=idnumber"
+      },
+      {
+        "text": "Eğitim kimlik numarası ölçütüne göre sırala - azalan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=idnumberdesc"
+      },
+      {
+        "text": "Eğitim süresi oluşturuldu ölçütüne göre sırala - artan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=timecreated"
+      },
+      {
+        "text": "Eğitim süresi oluşturuldu ölçütüne göre sırala - azalan",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&action=resortcourses&sesskey=sZWAosdinc&resort=timecreateddesc"
+      },
+      {
+        "text": "5",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&perpage=5"
+      },
+      {
+        "text": "10",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&perpage=10"
+      },
+      {
+        "text": "20",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&perpage=20"
+      },
+      {
+        "text": "50",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&perpage=50"
+      },
+      {
+        "text": "100",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&perpage=100"
+      },
+      {
+        "text": "Tüm",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&perpage=999"
+      },
+      {
+        "text": "WAM Accept Bos Kurs",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&courseid=7"
+      },
+      {
+        "text": "testttt",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&courseid=5"
+      },
+      {
+        "text": "WAM Test Egitimi Excel",
+        "href": "http://localhost:8081/course/management.php?categoryid=1&courseid=2"
+      }
+    ],
+    "sec": [
+      {
+        "text": "Daha fazla",
+        "href": "http://localhost:8081/course/management.php#"
+      },
+      {
+        "text": "Kontrol paneli",
+        "href": "http://localhost:8081/my/"
+      },
+      {
+        "text": "Site yönetimi",
+        "href": "http://localhost:8081/admin/search.php"
+      },
+      {
+        "text": "Kategori",
+        "href": "http://localhost:8081/course/index.php?categoryid=1"
+      },
+      {
+        "text": "Ayarlar",
+        "href": "http://localhost:8081/course/editcategory.php?id=1"
+      },
+      {
+        "text": "Geridönüşüm kutusu",
+        "href": "http://localhost:8081/admin/tool/recyclebin/index.php?contextid=3"
+      },
+      {
+        "text": "Eğitimi yükle",
+        "href": "http://localhost:8081/admin/tool/uploadcourse/index.php?categoryid=1"
+      },
+      {
+        "text": "İzinler",
+        "href": "http://localhost:8081/admin/roles/permissions.php?contextid=3"
+      },
+      {
+        "text": "Topluluklar",
+        "href": "http://localhost:8081/cohort/index.php?contextid=3"
+      },
+      {
+        "text": "Filtreler",
+        "href": "http://localhost:8081/filter/manage.php?contextid=3"
+      },
+      {
+        "text": "Eğitimi geri yükle",
+        "href": "http://localhost:8081/backup/restorefile.php?contextid=3"
+      },
+      {
+        "text": "Öğrenme planı şablonları",
+        "href": "http://localhost:8081/admin/tool/lp/learningplans.php?pagecontextid=3"
+      },
+      {
+        "text": "Yetkinlik çevrçeveleri",
+        "href": "http://localhost:8081/admin/tool/lp/competencyframeworks.php?pagecontextid=3"
+      },
+      {
+        "text": "İçerik bankası",
+        "href": "http://localhost:8081/contentbank/index.php?contextid=3"
+      }
+    ],
+    "fields": [],
+    "body": [
+      "wam-ui",
+      "wam-course",
+      "wam-coursecat",
+      "wam-menu-ready",
+      "wam-hide-bootstrap-toggler-active",
+      "wam-usermenu-custom"
+    ],
+    "pageOv": 0,
+    "url": "/course/management.php"
+  },
+  "ADM-COURSE-NEW": {
+    "title": "Yeni eğitim ekle | WAM Yerel",
+    "h1": "Kategori 1",
+    "lead": "Eğitim başlangıç tarihi",
+    "mainLinks": [
+      {
+        "text": "Build with",
+        "href": "https://www.tiny.cloud/powered-by-tiny?utm_campaign=poweredby&utm_source=tiny&utm_medium=referral&utm_content=v7"
+      },
+      {
+        "text": "Standart etiketleri yönet",
+        "href": "http://localhost:8081/tag/manage.php?tc=1"
+      }
+    ],
+    "sec": [
+      {
+        "text": "Daha fazla",
+        "href": "http://localhost:8081/course/edit.php?category=1#"
+      },
+      {
+        "text": "Kontrol paneli",
+        "href": "http://localhost:8081/my/"
+      },
+      {
+        "text": "Site yönetimi",
+        "href": "http://localhost:8081/admin/search.php"
+      },
+      {
+        "text": "Kategori",
+        "href": "http://localhost:8081/course/index.php?categoryid=1"
+      },
+      {
+        "text": "Ayarlar",
+        "href": "http://localhost:8081/course/editcategory.php?id=1"
+      },
+      {
+        "text": "Geridönüşüm kutusu",
+        "href": "http://localhost:8081/admin/tool/recyclebin/index.php?contextid=3"
+      },
+      {
+        "text": "Eğitimi yükle",
+        "href": "http://localhost:8081/admin/tool/uploadcourse/index.php?categoryid=1"
+      },
+      {
+        "text": "İzinler",
+        "href": "http://localhost:8081/admin/roles/permissions.php?contextid=3"
+      },
+      {
+        "text": "Topluluklar",
+        "href": "http://localhost:8081/cohort/index.php?contextid=3"
+      },
+      {
+        "text": "Filtreler",
+        "href": "http://localhost:8081/filter/manage.php?contextid=3"
+      },
+      {
+        "text": "Eğitimi geri yükle",
+        "href": "http://localhost:8081/backup/restorefile.php?contextid=3"
+      },
+      {
+        "text": "Öğrenme planı şablonları",
+        "href": "http://localhost:8081/admin/tool/lp/learningplans.php?pagecontextid=3"
+      },
+      {
+        "text": "Yetkinlik çevrçeveleri",
+        "href": "http://localhost:8081/admin/tool/lp/competencyframeworks.php?pagecontextid=3"
+      },
+      {
+        "text": "İçerik bankası",
+        "href": "http://localhost:8081/contentbank/index.php?contextid=3"
+      }
+    ],
+    "fields": [
+      "Eğitimin tam adı",
+      "Eğitim kısa adı",
+      "Eğitim kategorisi",
+      "Eğitim görünürlüğü",
+      "Gün",
+      "Ay",
+      "Yıl",
+      "Saat",
+      "Dakika",
+      "Etkinleştir",
+      "Eğitim kimlik numarası",
+      "Eğitim özeti",
+      "Biçim",
+      "Gizli bölümler",
+      "Eğitim düzeni",
+      "Dili zorunlu kıl",
+      "Duyuruların sayısı",
+      "Notları öğrencilere göster",
+      "Etkinlik raporlarını göster",
+      "Etkinlik tarihlerini göster",
+      "En fazla dosya yükleme boyutu",
+      "Tamamlama izlemeyi etkinleştir",
+      "Etkinlik tamamlama koşullarını göster",
+      "Grup modu",
+      "Grup modu zorunluluğu"
+    ],
+    "body": [
+      "wam-ui",
+      "wam-course",
+      "wam-coursecat",
+      "wam-course-settings",
+      "wam-menu-ready",
+      "wam-hide-bootstrap-toggler-active",
+      "wam-usermenu-custom"
+    ],
+    "pageOv": 0,
+    "url": "/course/edit.php?category=1"
+  },
+  "ADM-CATEGORY-EDIT": {
+    "title": "Kategori ayarlarını düzenle | WAM Yerel",
+    "h1": "Kategori 1",
+    "mainLinks": [
+      {
+        "text": "Build with",
+        "href": "https://www.tiny.cloud/powered-by-tiny?utm_campaign=poweredby&utm_source=tiny&utm_medium=referral&utm_content=v7"
+      }
+    ],
+    "sec": [
+      {
+        "text": "Daha fazla",
+        "href": "http://localhost:8081/course/editcategory.php?id=1#"
+      },
+      {
+        "text": "Kontrol paneli",
+        "href": "http://localhost:8081/my/"
+      },
+      {
+        "text": "Site yönetimi",
+        "href": "http://localhost:8081/admin/search.php"
+      },
+      {
+        "text": "Kategori",
+        "href": "http://localhost:8081/course/index.php?categoryid=1"
+      },
+      {
+        "text": "Ayarlar",
+        "href": "http://localhost:8081/course/editcategory.php?id=1"
+      },
+      {
+        "text": "Geridönüşüm kutusu",
+        "href": "http://localhost:8081/admin/tool/recyclebin/index.php?contextid=3"
+      },
+      {
+        "text": "Eğitimi yükle",
+        "href": "http://localhost:8081/admin/tool/uploadcourse/index.php?categoryid=1"
+      },
+      {
+        "text": "İzinler",
+        "href": "http://localhost:8081/admin/roles/permissions.php?contextid=3"
+      },
+      {
+        "text": "Topluluklar",
+        "href": "http://localhost:8081/cohort/index.php?contextid=3"
+      },
+      {
+        "text": "Filtreler",
+        "href": "http://localhost:8081/filter/manage.php?contextid=3"
+      },
+      {
+        "text": "Eğitimi geri yükle",
+        "href": "http://localhost:8081/backup/restorefile.php?contextid=3"
+      },
+      {
+        "text": "Öğrenme planı şablonları",
+        "href": "http://localhost:8081/admin/tool/lp/learningplans.php?pagecontextid=3"
+      },
+      {
+        "text": "Yetkinlik çevrçeveleri",
+        "href": "http://localhost:8081/admin/tool/lp/competencyframeworks.php?pagecontextid=3"
+      },
+      {
+        "text": "İçerik bankası",
+        "href": "http://localhost:8081/contentbank/index.php?contextid=3"
+      }
+    ],
+    "fields": [
+      "Ebeveyn kategori",
+      "Kategori adı",
+      "Kategori ID numarası",
+      "Açıklama"
+    ],
+    "body": [
+      "wam-ui",
+      "wam-course",
+      "wam-coursecat",
+      "wam-menu-ready",
+      "wam-hide-bootstrap-toggler-active",
+      "wam-usermenu-custom"
+    ],
+    "pageOv": 0,
+    "url": "/course/editcategory.php?id=1"
+  }
+}

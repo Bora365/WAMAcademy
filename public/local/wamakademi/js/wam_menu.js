@@ -104,6 +104,23 @@
             el.remove();
         });
         document.body.classList.add('wam-usermenu-custom');
+        tidyUserMenuToggle();
+    }
+
+    /**
+     * Üst çubuk profil tetikleyicisini sadeleştirir: rol metnini gizler, dropdown okunu kaldırır.
+     * Menü açılması data-bs-toggle="dropdown" ile sürer.
+     */
+    function tidyUserMenuToggle() {
+        var toggle = document.getElementById('user-menu-toggle');
+        if (!toggle) {
+            return;
+        }
+        toggle.classList.remove('dropdown-toggle');
+        toggle.querySelectorAll('.usertext').forEach(function (el) {
+            el.hidden = true;
+            el.setAttribute('aria-hidden', 'true');
+        });
     }
 
     function buildGearMenu(cfg, gearMenu) {
@@ -141,6 +158,9 @@
             wrap.className = 'wam-gear__group';
             wrap.setAttribute('role', 'group');
             wrap.setAttribute('aria-label', group.label || group.id);
+            if (group.id) {
+                wrap.setAttribute('data-wam-group', group.id);
+            }
 
             if (group.label) {
                 var title = document.createElement('div');
@@ -297,6 +317,79 @@
         });
     }
 
+    /**
+     * Site yönetimi her zaman "Daha fazla" altında kalsın; üst şeritte Kontrol paneli + WAM linkleri.
+     * moremenu.js init'ten sonra da çalışır; düğümü manuel taşır.
+     */
+    function keepSiteAdminInMoreMenu() {
+        function move() {
+            var menu = document.querySelector('.primary-navigation ul.more-nav');
+            if (!menu) {
+                return false;
+            }
+            var moreButton = menu.querySelector('[data-region="morebutton"]');
+            var moreDropdown = menu.querySelector('[data-region="moredropdown"]');
+            var item = menu.querySelector(':scope > [data-key="siteadminnode"]') ||
+                document.querySelector('.primary-navigation [data-key="siteadminnode"]');
+            if (!moreButton || !moreDropdown || !item) {
+                return false;
+            }
+            // Zaten Daha fazla içindeyse yalnızca kilidi koru.
+            if (item.parentNode === moreDropdown) {
+                item.dataset.forceintomoremenu = 'true';
+                moreButton.classList.remove('d-none');
+                return true;
+            }
+            item.dataset.forceintomoremenu = 'true';
+            var navLink = item.querySelector('a.nav-link, a');
+            var dropdownToggle = moreButton.querySelector('[data-bs-toggle="dropdown"]');
+            if (navLink) {
+                if (navLink.classList.contains('active') && dropdownToggle) {
+                    dropdownToggle.classList.add('active');
+                    dropdownToggle.setAttribute('tabindex', '0');
+                    navLink.setAttribute('tabindex', '-1');
+                    navLink.setAttribute('aria-current', 'true');
+                }
+                navLink.setAttribute('role', 'menuitem');
+                navLink.classList.remove('nav-link');
+                navLink.classList.add('dropdown-item');
+            }
+            moreDropdown.appendChild(item);
+            moreButton.classList.remove('d-none');
+            return true;
+        }
+
+        if (move()) {
+            return;
+        }
+        // moremenu henüz hazır değilse kısa süre yeniden dene.
+        var attempts = 0;
+        var timer = window.setInterval(function () {
+            attempts += 1;
+            if (move() || attempts > 20) {
+                window.clearInterval(timer);
+            }
+        }, 100);
+    }
+
+    /**
+     * Öğrenci görünümünde yönetim düğmelerini DOM'dan kaldırır.
+     */
+    function stripStudentInappropriateNav() {
+        var selectors = [
+            '.editmode-switch-form',
+            '.primary-navigation [data-key="siteadminnode"]',
+            '.primary-navigation [data-key="home"]',
+            '.primary-navigation [data-key="myhome"]',
+            '.primary-navigation [data-key="sitesettingsnode"]',
+        ];
+        selectors.forEach(function (sel) {
+            document.querySelectorAll(sel).forEach(function (el) {
+                el.remove();
+            });
+        });
+    }
+
     function init() {
         var brand = document.querySelector('.navbar .navbar-brand');
         var nav = document.querySelector('.navbar .container-fluid');
@@ -314,7 +407,25 @@
 
         var cfg = getConfig();
 
-        // Hamburger düğmesi: WAM logosunun solunda, yan menüyü açar. Logo ana sayfa bağlantısı olarak kalır.
+        // Logo her zaman WAM ana sayfasına gider (/my/ veya defaulthomepage değil).
+        if (cfg.homeurl) {
+            brand.setAttribute('href', cfg.homeurl);
+        }
+
+        if (cfg.studentView) {
+            document.body.classList.add('wam-student-view');
+            stripStudentInappropriateNav();
+        }
+
+        // Üst Moodle primary nav: site yönetimi yetkisi olanlarda kalsın (Kontrol paneli + Daha fazla).
+        // Öğrenci görünümünde veya yönetim bağlantısı yoksa gizlenir.
+        if (cfg.studentView || !(cfg.adminLinks && cfg.adminLinks.length)) {
+            document.body.classList.add('wam-hide-primary-nav');
+        } else {
+            keepSiteAdminInMoreMenu();
+        }
+
+        // Hamburger düğmesi: WAM logosunun solunda, yan menüyü açar.
         var toggle = document.createElement('button');
         toggle.type = 'button';
         toggle.className = 'wam-menu-toggle wam-hamburger aabtn';
@@ -344,26 +455,33 @@
         panel.setAttribute('aria-label', 'WAM menü');
         panel.hidden = true;
 
-        var linksHtml = (cfg.links || [])
-            .map(function (link) {
-                var current =
-                    cfg.active && link.id === cfg.active
-                        ? ' aria-current="page" class="is-active"'
-                        : '';
-                return (
-                    '<a href="' +
-                    escapeHtml(link.url) +
-                    '"' +
-                    current +
-                    '>' +
-                    escapeHtml(link.label) +
-                    '</a>'
-                );
-            })
-            .join('');
+        function linkMarkup(link) {
+            var current =
+                cfg.active && link.id === cfg.active
+                    ? ' aria-current="page" class="is-active"'
+                    : '';
+            return (
+                '<a href="' +
+                escapeHtml(link.url) +
+                '"' +
+                current +
+                '>' +
+                escapeHtml(link.label) +
+                '</a>'
+            );
+        }
 
-        // Panel bağlantıları yalnızca sunucudaki gezinme verisinden gelir (Site yönetimi ve "Daha fazla" burada yer almaz;
-        // yönetim erişimi Ayarlar menüsünde ve üst çubuk gezinmesinde kalır).
+        var linksHtml = (cfg.links || []).map(linkMarkup).join('');
+
+        var adminHtml = '';
+        if (cfg.adminLinks && cfg.adminLinks.length) {
+            adminHtml =
+                '<div class="wam-menu-panel__section" role="group" aria-label="Yönetim">' +
+                '<div class="wam-menu-panel__section-label">Yönetim</div>' +
+                cfg.adminLinks.map(linkMarkup).join('') +
+                '</div>';
+        }
+
         var sitename = cfg.sitename || 'WAM';
         var brandHtml = cfg.logourl
             ? '<img class="wam-menu-panel__logo" src="' + escapeHtml(cfg.logourl) +
@@ -380,6 +498,7 @@
             '</div>' +
             '<nav class="wam-menu-panel__nav" aria-label="Ana gezinme">' +
             linksHtml +
+            adminHtml +
             '</nav>';
 
         document.body.appendChild(overlay);
@@ -406,6 +525,7 @@
         }
 
         buildUserMenu(cfg);
+        tidyUserMenuToggle();
         protectMessageCountA11y(cfg);
 
         var gearBtn = gearWrap.querySelector('.wam-gear__btn');
@@ -427,10 +547,15 @@
         var isOpen = false;
         var hideTimer = null;
         var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        var pushMq = window.matchMedia('(min-width: 1024px)');
         var CLOSE_MS = 220;
         var inertedNodes = [];
 
-        // Panel açıkken arka içerik etkileşim dışı kalır (klavye, işaretçi ve ekran okuyucu).
+        function isPushMode() {
+            return pushMq.matches;
+        }
+
+        // Overlay (mobil): arka içerik inert. Push (masaüstü): içerik etkileşimli kalır.
         function setBackgroundInert(on) {
             if (on) {
                 Array.prototype.forEach.call(document.body.children, function (node) {
@@ -450,6 +575,20 @@
             }
         }
 
+        function applyOpenMode() {
+            var push = isPushMode();
+            document.body.classList.toggle('wam-menu-push', push);
+            overlay.hidden = push;
+            panel.setAttribute('aria-modal', push ? 'false' : 'true');
+            panel.setAttribute('role', push ? 'navigation' : 'dialog');
+            toggle.setAttribute('aria-haspopup', push ? 'true' : 'dialog');
+            if (push) {
+                setBackgroundInert(false);
+            } else {
+                setBackgroundInert(true);
+            }
+        }
+
         function openMenu() {
             if (isOpen) {
                 return;
@@ -458,12 +597,11 @@
             lastFocus = document.activeElement;
             window.clearTimeout(hideTimer);
             panel.hidden = false;
-            overlay.hidden = false;
             // Başlangıç konumu çizilsin, sonra animasyon sınıfı eklensin.
             void panel.offsetWidth;
             document.body.classList.add('wam-menu-open');
+            applyOpenMode();
             toggle.setAttribute('aria-expanded', 'true');
-            setBackgroundInert(true);
             closeBtn.focus({preventScroll: true});
         }
 
@@ -472,9 +610,12 @@
                 return;
             }
             isOpen = false;
-            document.body.classList.remove('wam-menu-open');
+            document.body.classList.remove('wam-menu-open', 'wam-menu-push');
             toggle.setAttribute('aria-expanded', 'false');
             setBackgroundInert(false);
+            panel.setAttribute('aria-modal', 'true');
+            panel.setAttribute('role', 'dialog');
+            toggle.setAttribute('aria-haspopup', 'dialog');
             // Animasyon bitince panel tamamen gizlenir (klavye/okuyucu erişimi dışı kalır).
             hideTimer = window.setTimeout(function () {
                 panel.hidden = true;
@@ -539,8 +680,8 @@
                 }
             }
 
-            // Yan menü odak kapanı.
-            if (event.key === 'Tab' && isOpen) {
+            // Yan menü odak kapanı yalnızca overlay (modal) modunda.
+            if (event.key === 'Tab' && isOpen && !isPushMode()) {
                 var focusable = getFocusable();
                 if (!focusable.length) {
                     return;
@@ -556,6 +697,111 @@
                 }
             }
         });
+
+        function onPushMqChange() {
+            // Genişlik değişince overlay / overflow / inert push veya modal moda göre güncellenir.
+            if (isOpen) {
+                applyOpenMode();
+                if (isPushMode()) {
+                    overlay.hidden = true;
+                }
+            } else {
+                document.body.classList.remove('wam-menu-push');
+                overlay.hidden = true;
+                setBackgroundInert(false);
+            }
+        }
+        if (typeof pushMq.addEventListener === 'function') {
+            pushMq.addEventListener('change', onPushMqChange);
+        } else if (typeof pushMq.addListener === 'function') {
+            pushMq.addListener(onPushMqChange);
+        }
+
+        // RF1 F-05: navbar içeriği sığmıyorsa üst WAM linklerini gizle (yan menüde kalır).
+        var navbarEl = document.querySelector('.navbar.wam-navbar');
+        var compactTimer = null;
+        var editSwitchHome = null; // {parent, next} — RF3: compact'ta kurs not/katılımcıda taşı
+        function ensureCourseEditHost() {
+            var host = document.getElementById('wam-course-edit-host');
+            if (host) {
+                return host;
+            }
+            host = document.createElement('div');
+            host.id = 'wam-course-edit-host';
+            host.className = 'wam-course-edit-host';
+            var anchor = document.querySelector('.tertiary-navigation') ||
+                document.querySelector('#page-header') ||
+                document.querySelector('#region-main');
+            if (!anchor) {
+                return null;
+            }
+            if (anchor.classList.contains('tertiary-navigation') || anchor.id === 'page-header') {
+                anchor.insertAdjacentElement('afterend', host);
+            } else {
+                anchor.insertAdjacentElement('afterbegin', host);
+            }
+            return host;
+        }
+        function syncCourseEditSwitch() {
+            var form = document.querySelector('.editmode-switch-form');
+            if (!form) {
+                return;
+            }
+            var onCourseTable = document.body.classList.contains('wam-course-grades') ||
+                document.body.classList.contains('wam-course-participants');
+            var compact = document.body.classList.contains('wam-nav-compact');
+            if (compact && onCourseTable) {
+                if (!editSwitchHome) {
+                    editSwitchHome = {parent: form.parentNode, next: form.nextSibling};
+                }
+                var host = ensureCourseEditHost();
+                if (host && form.parentNode !== host) {
+                    host.appendChild(form);
+                }
+            } else if (editSwitchHome && editSwitchHome.parent) {
+                if (editSwitchHome.next && editSwitchHome.next.parentNode === editSwitchHome.parent) {
+                    editSwitchHome.parent.insertBefore(form, editSwitchHome.next);
+                } else {
+                    editSwitchHome.parent.appendChild(form);
+                }
+            }
+        }
+        function updateNavCompact() {
+            if (!navbarEl) {
+                return;
+            }
+            var row = navbarEl.querySelector('.container-fluid') || navbarEl;
+            // Ölçüm öncesi anahtarı navbar'a geri al (compact taşınmış olabilir).
+            document.body.classList.remove('wam-nav-compact');
+            if (editSwitchHome && editSwitchHome.parent) {
+                var formBack = document.querySelector('.editmode-switch-form');
+                if (formBack && formBack.parentNode !== editSwitchHome.parent) {
+                    if (editSwitchHome.next && editSwitchHome.next.parentNode === editSwitchHome.parent) {
+                        editSwitchHome.parent.insertBefore(formBack, editSwitchHome.next);
+                    } else {
+                        editSwitchHome.parent.appendChild(formBack);
+                    }
+                }
+            }
+            // Ölçümü geniş (non-compact) halde al; sığmazsa compact uygula.
+            var overflow = row.scrollWidth - row.clientWidth > 2;
+            document.body.classList.toggle('wam-nav-compact', overflow);
+            syncCourseEditSwitch();
+        }
+        function scheduleNavCompact() {
+            window.clearTimeout(compactTimer);
+            compactTimer = window.setTimeout(updateNavCompact, 80);
+        }
+        updateNavCompact();
+        if (typeof ResizeObserver === 'function' && navbarEl) {
+            var navRo = new ResizeObserver(scheduleNavCompact);
+            navRo.observe(navbarEl);
+            var rowEl = navbarEl.querySelector('.container-fluid');
+            if (rowEl) {
+                navRo.observe(rowEl);
+            }
+        }
+        window.addEventListener('resize', scheduleNavCompact);
 
         gearBtn.addEventListener('click', function (event) {
             event.stopPropagation();

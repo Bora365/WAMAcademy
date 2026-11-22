@@ -1,0 +1,25 @@
+after ADM-PLUGINS phone320 status=ok pageOv=0
+after ADM-PLUGINS phone390 status=ok pageOv=0
+after ADM-PLUGINS phoneLand status=ok pageOv=0
+after ADM-PLUGINS ipadPort status=ok pageOv=0
+after ADM-PLUGINS ipadLand status=ok pageOv=0
+after ADM-PLUGINS desk1440 status=ok pageOv=0
+after ADM-SERVER phone320 status=ok pageOv=0
+after ADM-SERVER phone390 status=ok pageOv=0
+after ADM-SERVER phoneLand status=ok pageOv=0
+after ADM-SERVER ipadPort status=ok pageOv=0
+after ADM-SERVER ipadLand status=ok pageOv=0
+after ADM-SERVER desk1440 status=ok pageOv=0
+after ADM-REPORTS phone320 status=ok pageOv=0
+after ADM-REPORTS phone390 status=ok pageOv=0
+after ADM-REPORTS phoneLand status=ok pageOv=0
+after ADM-REPORTS ipadPort status=ok pageOv=0
+after ADM-REPORTS ipadLand status=ok pageOv=0
+after ADM-REPORTS desk1440 status=ok pageOv=0
+after ADM-SECURITY phone320 status=ok pageOv=0
+after ADM-SECURITY phone390 status=ok pageOv=0
+after ADM-SECURITY phoneLand status=ok pageOv=0
+after ADM-SECURITY ipadPort status=ok pageOv=0
+after ADM-SECURITY ipadLand status=ok pageOv=0
+after ADM-SECURITY desk1440 status=ok pageOv=0
+Wrote /Users/boravarol01gmail.com/Desktop/WAMAcademy/docs/ui-audit/responsive/RF11/measure-after-webkit.json (24)

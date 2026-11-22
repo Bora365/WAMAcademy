@@ -1,0 +1,222 @@
+/* =========================================================
+   WAM Akademi — site ana sayfası (ön yüz) sekmeleri
+   Kapsam: body.wam-ui.wam-sitefront (lib.php: course_page_kind === 'site').
+   Ortak kabuk kuralları wam-course.css'te; burada yalnız ön yüz istisnaları.
+   Token kaynağı: css/wam-base.css.
+   ========================================================= */
+
+/* limitedwidth / frontpage: Boost 830px yerine Katılımcılar hizası (1440). */
+body.wam-ui.wam-sitefront.limitedwidth #page.drawers .main-inner,
+body.wam-ui.wam-sitefront.limitedwidth #page.drawers .footer-popover,
+body.wam-ui.wam-sitefront .header-maxwidth,
+body.wam-ui.wam-sitefront.pagelayout-frontpage #page.drawers .main-inner,
+body.wam-ui.wam-sitefront.pagelayout-frontpage .header-maxwidth {
+    max-width: var(--wam-page-max);
+}
+
+/* Sayfa içi sekmeler: “Daha fazla” yerine yatay kaydırma (sitefront_nav.js taşır).
+   RF10: üst zincir min-width:0 — UL max-content sayfa scrollWidth’ini şişirmesin. */
+body.wam-ui.wam-sitefront #page.drawers .main-inner,
+body.wam-ui.wam-sitefront .secondary-navigation {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* WebKit: geniş UL sayfa scrollWidth'ine sızmasın (overflow:hidden; clip yetmez) */
+body.wam-ui.wam-sitefront .secondary-navigation {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    overflow-x: hidden;
+}
+
+body.wam-ui.wam-sitefront .secondary-navigation .navigation {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+body.wam-ui.wam-sitefront .secondary-navigation .navigation .nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    min-width: 0;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-sitefront .secondary-navigation .nav-tabs > .nav-item > .nav-link {
+    white-space: nowrap;
+}
+
+/* course.css overflow:visible kısayolu sitefront kaydırmasını ezmesin */
+body.wam-ui.wam-sitefront.wam-course .secondary-navigation .navigation {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* moremenu.js taşımadan sonra boş kalan “Daha fazla” gizlenir. */
+body.wam-ui.wam-sitefront .secondary-navigation .dropdownmoremenu:not(.wam-sf-more-visible) {
+    display: none;
+}
+
+/* Ön sayfa ayarları: yönetim formu kartı (wam-admin olmadan). */
+body.wam-ui.wam-sitefront #region-main .settingsform,
+body.wam-ui.wam-sitefront #adminsettings {
+    max-width: min(960px, 100%);
+    min-width: 0;
+    margin: 0 0 var(--wam-space-5);
+    padding: var(--wam-form-surface-pad, 20px 24px);
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-sitefront #adminsettings .form-item,
+body.wam-ui.wam-sitefront #adminsettings .form-setting,
+body.wam-ui.wam-sitefront #adminsettings .defaultsnext {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+body.wam-ui.wam-sitefront #adminsettings select,
+body.wam-ui.wam-sitefront #adminsettings .form-select,
+body.wam-ui.wam-sitefront #adminsettings textarea,
+body.wam-ui.wam-sitefront #adminsettings input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-sitefront #region-main .settingsform {
+    overflow-x: auto;
+}
+
+body.wam-ui.wam-sitefront #adminsettings .form-defaultinfo,
+body.wam-ui.wam-sitefront #adminsettings .form-description,
+body.wam-ui.wam-sitefront #adminsettings .form-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Ana sayfa / giriş sonrası öğe seçicileri: dikey yığın yerine yan yana ızgara */
+body.wam-ui.wam-sitefront #admin-frontpage .form-setting > .mb-3,
+body.wam-ui.wam-sitefront #admin-frontpageloggedin .form-setting > .mb-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(148px, 100%), 1fr));
+    gap: var(--wam-space-2);
+    align-items: start;
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-sitefront #admin-frontpage .form-setting > .mb-3 > br,
+body.wam-ui.wam-sitefront #admin-frontpageloggedin .form-setting > .mb-3 > br {
+    display: none;
+}
+
+body.wam-ui.wam-sitefront #admin-frontpage .form-setting > .mb-3 > .form-select,
+body.wam-ui.wam-sitefront #admin-frontpageloggedin .form-setting > .mb-3 > .form-select {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0 !important;
+}
+
+body.wam-ui.wam-sitefront #adminsettings > fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+body.wam-ui.wam-sitefront.path-admin-setting #region-main [role="main"] > h2,
+body.wam-ui.wam-sitefront #region-main .settingsform > h2 {
+    margin: 0 0 var(--wam-space-4);
+    font-size: var(--wam-subtitle);
+    line-height: var(--wam-subtitle-lh);
+    font-weight: 700;
+}
+
+/* Ayarlar: geliştirici kısa adlarını (frontpageloggedin vb.) gösterme */
+body.wam-ui.wam-sitefront .form-item .form-shortname {
+    display: none !important;
+}
+
+/* Raporlar / Kurs yeniden kullanımı: düz mavi link yerine satır listesi */
+body.wam-ui.wam-sitefront #region-main [role="main"] > h2 {
+    margin: 0 0 var(--wam-space-4);
+    font-size: var(--wam-subtitle);
+    line-height: var(--wam-subtitle-lh);
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled {
+    max-width: 720px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: var(--wam-surface);
+    border: 1px solid var(--wam-border);
+    border-radius: var(--wam-radius);
+    overflow: hidden;
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--wam-border);
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li:last-child {
+    border-bottom: 0;
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wam-space-3);
+    min-height: var(--wam-touch);
+    padding: 12px var(--wam-space-4);
+    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    font-weight: 600;
+    line-height: var(--wam-body-lh);
+    text-decoration: none;
+    transition: background-color var(--wam-dur-fast) var(--wam-ease), color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a::after {
+    content: "";
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    margin-left: var(--wam-space-2);
+    border-right: 2px solid var(--wam-muted);
+    border-top: 2px solid var(--wam-muted);
+    transform: rotate(45deg);
+    transition: border-color var(--wam-dur-fast) var(--wam-ease);
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a:hover,
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a:focus-visible {
+    background: var(--wam-primary-soft);
+    color: var(--wam-ink);
+    text-decoration: none;
+    outline: none;
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a:hover::after,
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a:focus-visible::after {
+    border-color: var(--wam-primary);
+}
+
+body.wam-ui.wam-sitefront #region-main .container-fluid > div > ul.list-unstyled > li > a:focus-visible {
+    box-shadow: inset 3px 0 0 var(--wam-primary);
+}

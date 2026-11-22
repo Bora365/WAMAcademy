@@ -1,0 +1,21 @@
+. after ADM-USER-NEW phone390 status=ok pageOv=0
+. after ADM-USER-NEW phoneLand status=ok pageOv=0
+. after ADM-USER-NEW ipadPort status=ok pageOv=0
+. after ADM-USER-NEW ipadLand status=ok pageOv=0
+. after ADM-USER-NEW desk1440 status=ok pageOv=0
+. after ADM-UPLOADUSER phone390 status=ok pageOv=0
+. after ADM-UPLOADUSER phoneLand status=ok pageOv=0
+. after ADM-UPLOADUSER ipadPort status=ok pageOv=0
+. after ADM-UPLOADUSER ipadLand status=ok pageOv=0
+. after ADM-UPLOADUSER desk1440 status=ok pageOv=0
+. after ADM-UPLOADCOURSE phone390 status=ok pageOv=0
+. after ADM-UPLOADCOURSE phoneLand status=ok pageOv=0
+. after ADM-UPLOADCOURSE ipadPort status=ok pageOv=0
+. after ADM-UPLOADCOURSE ipadLand status=ok pageOv=0
+. after ADM-UPLOADCOURSE desk1440 status=ok pageOv=0
+. after ADM-REPORTBUILDER phone390 status=ok pageOv=0
+. after ADM-REPORTBUILDER phoneLand status=ok pageOv=0
+. after ADM-REPORTBUILDER ipadPort status=ok pageOv=0
+. after ADM-REPORTBUILDER ipadLand status=ok pageOv=0
+. after ADM-REPORTBUILDER desk1440 status=ok pageOv=0
+Wrote /Users/boravarol01gmail.com/Desktop/WAMAcademy/docs/ui-audit/responsive/RF13/measure-after-webkit.json (20)

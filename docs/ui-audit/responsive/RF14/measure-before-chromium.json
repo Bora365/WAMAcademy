@@ -1,0 +1,3317 @@
+{
+  "phase": "before",
+  "engine": "chromium",
+  "count": 36,
+  "results": [
+    {
+      "id": "PPTX-VIEW",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 749,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 749,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_student_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_student_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 447,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 447,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_student_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_student_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_student_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_student_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1965,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 1965,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_teacher_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1796,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1796,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_teacher_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1420,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_teacher_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1420,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_teacher_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1420,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_teacher_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1420,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_teacher_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 749,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 749,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_teacher_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_teacher_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 447,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 447,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_teacher_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_teacher_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_teacher_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_teacher_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 2040,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 2040,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1847,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1847,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1420,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1420,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1420,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "COURSE-COMPLETION",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1420,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 1420,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "WAMTEST01 | WAM Yerel",
+        "hasMform": true,
+        "hasTable": false,
+        "hasCompletion": true
+      },
+      "screenshot": "COURSE-COMPLETION_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/course/completion.php?id=2"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 850,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 850,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 447,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 447,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "PPTX-VIEW",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "data-or-env-blocked",
+      "error": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": "error/PPTX dosyası bulunamadı.Bu hata hakkında daha fazla bilgi",
+        "title": "Hata | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "PPTX-VIEW_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/local/wamakademi/pptx_view.php?id=7"
+    },
+    {
+      "id": "ADM-UNSUPPORTED",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 788,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 330,
+            "w": 315,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 402,
+            "left": 248,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 256,
+            "right": 325,
+            "top": 12,
+            "cls": "btn"
+          },
+          {
+            "label": "Notlar",
+            "left": 308,
+            "right": 384,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Eklentiler",
+            "left": 388,
+            "right": 487,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Görünüş",
+            "left": 491,
+            "right": 584,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Sunucu",
+            "left": 588,
+            "right": 674,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Raporlar",
+            "left": 678,
+            "right": 771,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Geliştirme",
+            "left": 775,
+            "right": 880,
+            "top": 272,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "culprits": [],
+        "ih": 568,
+        "scrollH": 788,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "Desteklenmez | Yönetim | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "ADM-UNSUPPORTED_admin_phone320.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/admin/category.php?category=unsupported"
+    },
+    {
+      "id": "ADM-UNSUPPORTED",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eklentiler",
+            "left": 388,
+            "right": 487,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Görünüş",
+            "left": 491,
+            "right": 584,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Sunucu",
+            "left": 588,
+            "right": 674,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Raporlar",
+            "left": 678,
+            "right": 771,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Geliştirme",
+            "left": 775,
+            "right": 880,
+            "top": 272,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 844,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "Desteklenmez | Yönetim | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "ADM-UNSUPPORTED_admin_phone390.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/admin/category.php?category=unsupported"
+    },
+    {
+      "id": "ADM-UNSUPPORTED",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 413,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 224,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 413,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "Desteklenmez | Yönetim | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "ADM-UNSUPPORTED_admin_phoneLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/admin/category.php?category=unsupported"
+    },
+    {
+      "id": "ADM-UNSUPPORTED",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 224,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "Desteklenmez | Yönetim | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "ADM-UNSUPPORTED_admin_ipadPort.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/admin/category.php?category=unsupported"
+    },
+    {
+      "id": "ADM-UNSUPPORTED",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "Desteklenmez | Yönetim | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "ADM-UNSUPPORTED_admin_ipadLand.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/admin/category.php?category=unsupported"
+    },
+    {
+      "id": "ADM-UNSUPPORTED",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "contentTypeHint": "text/html",
+        "isPdf": false,
+        "errorText": null,
+        "title": "Desteklenmez | Yönetim | WAM Yerel",
+        "hasMform": false,
+        "hasTable": false,
+        "hasCompletion": false
+      },
+      "screenshot": "ADM-UNSUPPORTED_admin_desk1440.png",
+      "phase": "before",
+      "engine": "chromium",
+      "url": "http://localhost:8081/admin/category.php?category=unsupported"
+    }
+  ]
+}

@@ -1,5 +1,73 @@
 /* WAM Akademi — login page only (body#page-login-index). */
 
+/* Yerel hesap kısayolları (yalnızca localhost’ta yüklenir). */
+body#page-login-index .wam-dev-login {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 4px;
+}
+
+body#page-login-index .wam-dev-login__btn {
+    min-height: 40px;
+    padding: 0 8px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: #fff;
+    color: #1E293B;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body#page-login-index .wam-dev-login__btn:hover,
+body#page-login-index .wam-dev-login__btn:focus-visible {
+    border-color: #2563EB;
+    color: #1D4ED8;
+}
+
+body#page-login-index .wam-dev-login__student {
+    position: relative;
+}
+
+body#page-login-index .wam-dev-login__menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    z-index: 20;
+    display: grid;
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+body#page-login-index .wam-dev-login__menu[hidden] {
+    display: none;
+}
+
+body#page-login-index .wam-dev-login__option {
+    min-height: 36px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #1E293B;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+}
+
+body#page-login-index .wam-dev-login__option:hover,
+body#page-login-index .wam-dev-login__option:focus-visible {
+    background: #EFF6FF;
+    color: #1D4ED8;
+}
+
 body#page-login-index.pagelayout-login {
     background: linear-gradient(180deg, #4A7FC4 0%, #3A6BB0 50%, #2B5A9A 100%);
     background-attachment: fixed;

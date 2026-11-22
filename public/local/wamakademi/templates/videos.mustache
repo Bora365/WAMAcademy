@@ -1,0 +1,97 @@
+{{!
+    @template local_wamakademi/videos
+
+    Course video management list.
+}}
+<div class="wam-videos" data-region="wam-videos">
+    <header class="wam-videos__header">
+        <div class="wam-videos__heading">
+            <p class="wam-videos__eyebrow">
+                <a href="{{courseurl}}">{{coursename}}</a>
+            </p>
+            <h1 class="wam-videos__title">{{#str}} videostab, local_wamakademi {{/str}}</h1>
+        </div>
+        <div class="wam-videos__actions">
+            <a class="btn btn-primary" href="{{uploadurl}}">{{uploadlabel}}</a>
+        </div>
+    </header>
+
+    {{#hasvideos}}
+        {{#sections}}
+            <section class="wam-videos__section" aria-labelledby="wam-videos-sec-{{sectionnum}}">
+                <h2 id="wam-videos-sec-{{sectionnum}}" class="wam-videos__section-title">
+                    {{sectionname}}
+                </h2>
+                <ul class="wam-videos__list">
+                    {{#videos}}
+                        <li class="wam-videos__row">
+                            <div class="wam-videos__order" role="group" aria-label="{{strings.order}}">
+                                <form method="post" action="{{formaction}}" class="wam-videos__move-form">
+                                    <input type="hidden" name="sesskey" value="{{sesskey}}">
+                                    <input type="hidden" name="courseid" value="{{courseid}}">
+                                    <input type="hidden" name="cmid" value="{{cmid}}">
+                                    <input type="hidden" name="move" value="up">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-sm btn-outline-secondary"
+                                        {{^canmoveup}}disabled{{/canmoveup}}
+                                        title="{{strings.moveup}}"
+                                        aria-label="{{strings.moveup}}"
+                                    >↑</button>
+                                </form>
+                                <form method="post" action="{{formaction}}" class="wam-videos__move-form">
+                                    <input type="hidden" name="sesskey" value="{{sesskey}}">
+                                    <input type="hidden" name="courseid" value="{{courseid}}">
+                                    <input type="hidden" name="cmid" value="{{cmid}}">
+                                    <input type="hidden" name="move" value="down">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-sm btn-outline-secondary"
+                                        {{^canmovedown}}disabled{{/canmovedown}}
+                                        title="{{strings.movedown}}"
+                                        aria-label="{{strings.movedown}}"
+                                    >↓</button>
+                                </form>
+                                <span class="wam-videos__pos">{{position}}</span>
+                            </div>
+
+                            <div class="wam-videos__meta">
+                                <h3 class="wam-videos__name">{{name}}</h3>
+                                <span class="wam-videos__badge wam-videos__badge--{{statuscode}}">
+                                    {{statuslabel}}
+                                </span>
+                            </div>
+
+                            <div class="wam-videos__row-actions" role="group" aria-label="{{strings.actions}}">
+                                <a class="btn btn-sm btn-secondary" href="{{previewurl}}">{{strings.preview}}</a>
+                                {{#isdraft}}
+                                    <form method="post" action="{{publishurl}}" class="wam-videos__publish-form">
+                                        <input type="hidden" name="sesskey" value="{{sesskey}}">
+                                        <input type="hidden" name="cmid" value="{{cmid}}">
+                                        <input type="hidden" name="action" value="publish">
+                                        <button type="submit" class="btn btn-sm btn-primary">{{strings.publish}}</button>
+                                    </form>
+                                {{/isdraft}}
+                                {{#ispublished}}
+                                    <form method="post" action="{{publishurl}}" class="wam-videos__publish-form">
+                                        <input type="hidden" name="sesskey" value="{{sesskey}}">
+                                        <input type="hidden" name="cmid" value="{{cmid}}">
+                                        <input type="hidden" name="action" value="unpublish">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary">{{strings.unpublish}}</button>
+                                    </form>
+                                {{/ispublished}}
+                            </div>
+                        </li>
+                    {{/videos}}
+                </ul>
+            </section>
+        {{/sections}}
+    {{/hasvideos}}
+
+    {{^hasvideos}}
+        <div class="wam-videos__empty">
+            <p>{{emptytext}}</p>
+            <a class="btn btn-primary" href="{{uploadurl}}">{{uploadlabel}}</a>
+        </div>
+    {{/hasvideos}}
+</div>

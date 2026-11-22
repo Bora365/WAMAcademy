@@ -160,33 +160,21 @@ foreach ($courses as $course) {
         continue;
     }
 
-    $coursefullycompleted = true;
-    $completiontimestamps = [];
-
+    $publishedforuser = [];
     foreach ($lessoncmids as $lessoncmid) {
-        if (!isset($progressbycmid[$lessoncmid])) {
-            $coursefullycompleted = false;
-            break;
+        $cm = $modinfo->cms[$lessoncmid] ?? null;
+        if ($cm) {
+            $publishedforuser[] = $cm;
         }
-        $lessonprogress = $progressbycmid[$lessoncmid];
-        if ((int)$lessonprogress->progress < 100) {
-            $coursefullycompleted = false;
-            break;
-        }
-        if (empty($lessonprogress->timecompleted)) {
-            $coursefullycompleted = false;
-            break;
-        }
-        $completiontimestamps[] = (int)$lessonprogress->timecompleted;
     }
-
-    $realenddate = 0;
-    if (
-        $coursefullycompleted &&
-        count($completiontimestamps) === count($lessoncmids)
-    ) {
-        $realenddate = max($completiontimestamps);
-    }
+    $coursesummary = \local_wamakademi\progress::for_published_lessons(
+        (int)$USER->id,
+        $publishedforuser,
+        $progressbycmid
+    );
+    $realenddate = !empty($coursesummary['iscompleted'])
+        ? (int)$coursesummary['timecompleted']
+        : 0;
 
     $courseinlist = new core_course_list_element($course);
     $courseimage = null;

@@ -1,0 +1,1505 @@
+{
+  "phase": "after",
+  "engine": "webkit",
+  "count": 14,
+  "results": [
+    {
+      "id": "COURSE-VIEW",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/course/view.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 877,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 177,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-VIEW_student_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-VIEW",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/course/view.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-student-view",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 185,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-VIEW_student_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-VIEW",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/course/view.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1352,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 177,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-VIEW_teacher_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-VIEW",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/course/view.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 185,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-VIEW_teacher_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "UPLOAD-VIDEO",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/upload.php?courseid=2&sectionnum=0",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 2206,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-content",
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 0,
+        "statusRight": 357,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": true
+      },
+      "screenshot": "UPLOAD-VIDEO_teacher_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "UPLOAD-VIDEO",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/upload.php?courseid=2&sectionnum=0",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1564,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-content",
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 0,
+        "statusRight": 771,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": true
+      },
+      "screenshot": "UPLOAD-VIDEO_teacher_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-EDIT",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/course/edit.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 3444,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 7,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 764,
+            "left": 0,
+            "w": 390,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-settings",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 147,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": true,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-EDIT_teacher_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-EDIT",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/course/edit.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 2833,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 7,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 1100,
+            "left": 0,
+            "w": 820,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1052,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-settings",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 383,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": true,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-EDIT_teacher_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-VIEW",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/course/view.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1403,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 177,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-VIEW_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-VIEW",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/course/view.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 185,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-VIEW_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "UPLOAD-VIDEO",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/upload.php?courseid=2&sectionnum=0",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 2257,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-content",
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 0,
+        "statusRight": 357,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": true
+      },
+      "screenshot": "UPLOAD-VIDEO_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "UPLOAD-VIDEO",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/upload.php?courseid=2&sectionnum=0",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1564,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-content",
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 0,
+        "statusRight": 771,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": false,
+        "saveBtn": true
+      },
+      "screenshot": "UPLOAD-VIDEO_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-EDIT",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/course/edit.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 3495,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 7,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 764,
+            "left": 0,
+            "w": 390,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 844
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-settings",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 147,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": true,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-EDIT_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    },
+    {
+      "id": "COURSE-EDIT",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/course/edit.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 2833,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 7,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 1100,
+            "left": 0,
+            "w": 820,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1052,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-settings",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-menu-open"
+        ],
+        "culprits": [],
+        "editMode": false,
+        "draftRight": 383,
+        "statusRight": null,
+        "secNavOv": 0,
+        "secNavOvX": "visible",
+        "hasFileInput": false,
+        "hasEditor": true,
+        "saveBtn": false
+      },
+      "screenshot": "COURSE-EDIT_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit"
+    }
+  ]
+}

@@ -1,0 +1,714 @@
+[
+  {
+    "engine": "chromium",
+    "role": "student",
+    "viewport": "phone320",
+    "ov": 52,
+    "cal": {
+      "ov": 52,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 219,
+      "iw": 320
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "student",
+    "viewport": "phone360",
+    "ov": 12,
+    "cal": {
+      "ov": 12,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 259,
+      "iw": 360
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "student",
+    "viewport": "phone390",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 276,
+        "r": 349,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 289,
+      "iw": 390
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "student",
+    "viewport": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 682,
+        "r": 755,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 694,
+      "iw": 820
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "student",
+    "viewport": "desk1440",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 588,
+        "r": 661,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 1314,
+      "iw": 1440
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "teacher",
+    "viewport": "phone320",
+    "ov": 52,
+    "cal": {
+      "ov": 52,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 219,
+      "iw": 320
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "teacher",
+    "viewport": "phone360",
+    "ov": 12,
+    "cal": {
+      "ov": 12,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 259,
+      "iw": 360
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "teacher",
+    "viewport": "phone390",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 276,
+        "r": 349,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 289,
+      "iw": 390
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "teacher",
+    "viewport": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 682,
+        "r": 755,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 694,
+      "iw": 820
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "teacher",
+    "viewport": "desk1440",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 588,
+        "r": 661,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 1314,
+      "iw": 1440
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "admin",
+    "viewport": "phone320",
+    "ov": 52,
+    "cal": {
+      "ov": 52,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 43,
+      "compact": true,
+      "msgR": 262,
+      "iw": 320
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "admin",
+    "viewport": "phone360",
+    "ov": 12,
+    "cal": {
+      "ov": 12,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 3,
+      "compact": true,
+      "msgR": 262,
+      "iw": 360
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "admin",
+    "viewport": "phone390",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 276,
+        "r": 349,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 289,
+      "iw": 390
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "admin",
+    "viewport": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 682,
+        "r": 755,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 694,
+      "iw": 820
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "admin",
+    "viewport": "desk1440",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 588,
+        "r": 661,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 1314,
+      "iw": 1440
+    },
+    "ok": true
+  },
+  {
+    "engine": "chromium",
+    "role": "admin",
+    "viewport": "ipadPort",
+    "id": "HOME-header",
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "topNav": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "role": "student",
+    "viewport": "phone320",
+    "ov": 52,
+    "cal": {
+      "ov": 52,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 219,
+      "iw": 320
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "student",
+    "viewport": "phone360",
+    "ov": 12,
+    "cal": {
+      "ov": 12,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 259,
+      "iw": 360
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "student",
+    "viewport": "phone390",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 276,
+        "r": 349,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 289,
+      "iw": 390
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "student",
+    "viewport": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 682,
+        "r": 755,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 694,
+      "iw": 820
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "student",
+    "viewport": "desk1440",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 588,
+        "r": 661,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 1314,
+      "iw": 1440
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "teacher",
+    "viewport": "phone320",
+    "ov": 52,
+    "cal": {
+      "ov": 52,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 219,
+      "iw": 320
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "teacher",
+    "viewport": "phone360",
+    "ov": 12,
+    "cal": {
+      "ov": 12,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 259,
+      "iw": 360
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "teacher",
+    "viewport": "phone390",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 276,
+        "r": 349,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 289,
+      "iw": 390
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "teacher",
+    "viewport": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 682,
+        "r": 755,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 694,
+      "iw": 820
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "teacher",
+    "viewport": "desk1440",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 588,
+        "r": 661,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 1314,
+      "iw": 1440
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "admin",
+    "viewport": "phone320",
+    "ov": 52,
+    "cal": {
+      "ov": 52,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 43,
+      "compact": true,
+      "msgR": 262,
+      "iw": 320
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "admin",
+    "viewport": "phone360",
+    "ov": 12,
+    "cal": {
+      "ov": 12,
+      "today": {
+        "l": 41,
+        "r": 114,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 3,
+      "compact": true,
+      "msgR": 262,
+      "iw": 360
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "admin",
+    "viewport": "phone390",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 276,
+        "r": 349,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 289,
+      "iw": 390
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "admin",
+    "viewport": "ipadPort",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 682,
+        "r": 755,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 694,
+      "iw": 820
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "admin",
+    "viewport": "desk1440",
+    "ov": 0,
+    "cal": {
+      "ov": 0,
+      "today": {
+        "l": 588,
+        "r": 661,
+        "w": 73,
+        "clipped": false
+      },
+      "acc": false
+    },
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "msgR": 1314,
+      "iw": 1440
+    },
+    "ok": true
+  },
+  {
+    "engine": "webkit",
+    "role": "admin",
+    "viewport": "ipadPort",
+    "id": "HOME-header",
+    "hdr": {
+      "navOv": 0,
+      "compact": false,
+      "topNav": true
+    }
+  }
+]

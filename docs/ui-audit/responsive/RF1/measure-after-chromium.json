@@ -1,0 +1,7259 @@
+{
+  "phase": "after",
+  "engine": "chromium",
+  "count": 84,
+  "results": [
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 2273,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 2184,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1334,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 2109,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1390,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1177,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1208,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1211,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_student_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "student",
+      "viewport": "resize-menu-390to820",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1390,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "menuOpen": true,
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 2281,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 2087,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1300,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 2002,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1300,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1275,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1275,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1148,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_student_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1031,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 959,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 614,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 839,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 768,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_student_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 423,
+        "innerWidth": 320,
+        "scrollHeight": 1635,
+        "innerHeight": 568,
+        "overflowXPx": 103,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "→",
+            "left": 284,
+            "right": 326,
+            "top": 491,
+            "cls": "wam-calendar-arrow"
+          },
+          {
+            "label": "Bugün",
+            "left": 344,
+            "right": 423,
+            "top": 491,
+            "cls": "wam-calendar-today"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": {
+        "today": {
+          "left": 344,
+          "right": 423,
+          "w": 79
+        },
+        "nav": {
+          "left": 41,
+          "right": 423,
+          "w": 382
+        },
+        "strong": {
+          "left": 101,
+          "right": 266,
+          "w": 165
+        },
+        "todayClipped": true
+      },
+      "screenshot": "CALENDAR-WAM_student_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 423,
+        "innerWidth": 390,
+        "scrollHeight": 1524,
+        "innerHeight": 844,
+        "overflowXPx": 33,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Bugün",
+            "left": 344,
+            "right": 423,
+            "top": 428,
+            "cls": "wam-calendar-today"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": {
+        "today": {
+          "left": 344,
+          "right": 423,
+          "w": 79
+        },
+        "nav": {
+          "left": 41,
+          "right": 423,
+          "w": 382
+        },
+        "strong": {
+          "left": 101,
+          "right": 266,
+          "w": 165
+        },
+        "todayClipped": true
+      },
+      "screenshot": "CALENDAR-WAM_student_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1270,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": {
+        "today": {
+          "left": 368,
+          "right": 447,
+          "w": 79
+        },
+        "nav": {
+          "left": 65,
+          "right": 779,
+          "w": 714
+        },
+        "strong": {
+          "left": 125,
+          "right": 290,
+          "w": 165
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_student_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 1461,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": {
+        "today": {
+          "left": 344,
+          "right": 423,
+          "w": 79
+        },
+        "nav": {
+          "left": 41,
+          "right": 466,
+          "w": 425
+        },
+        "strong": {
+          "left": 101,
+          "right": 266,
+          "w": 165
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_student_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1270,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": {
+        "today": {
+          "left": 368,
+          "right": 447,
+          "w": 79
+        },
+        "nav": {
+          "left": 65,
+          "right": 755,
+          "w": 690
+        },
+        "strong": {
+          "left": 125,
+          "right": 290,
+          "w": 165
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_student_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1144,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": {
+        "today": {
+          "left": 376,
+          "right": 455,
+          "w": 79
+        },
+        "nav": {
+          "left": 73,
+          "right": 507,
+          "w": 434
+        },
+        "strong": {
+          "left": 133,
+          "right": 298,
+          "w": 165
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_student_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1270,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": {
+        "today": {
+          "left": 368,
+          "right": 447,
+          "w": 79
+        },
+        "nav": {
+          "left": 65,
+          "right": 959,
+          "w": 894
+        },
+        "strong": {
+          "left": 125,
+          "right": 290,
+          "w": 165
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_student_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "student",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1144,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": {
+        "today": {
+          "left": 376,
+          "right": 455,
+          "w": 79
+        },
+        "nav": {
+          "left": 73,
+          "right": 637,
+          "w": 564
+        },
+        "strong": {
+          "left": 133,
+          "right": 298,
+          "w": 165
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_student_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 2273,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 2184,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1334,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 2109,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1390,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 768,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_teacher_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "teacher",
+      "viewport": "resize-menu-390to820",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "menuOpen": false,
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 568,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 844,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 390,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 768,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 0,
+        "fixedSample": [],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": null,
+        "hasHamburger": false,
+        "hasGear": false,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": null,
+        "user": null,
+        "msg": null,
+        "search": null,
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1290,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1264,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/catalog.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1149,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "CATALOG_teacher_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1400,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1344,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1029,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 1315,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1022,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 995,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "MYCOURSES",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/mycourses.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1029,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "MYCOURSES_teacher_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 372,
+        "innerWidth": 320,
+        "scrollHeight": 1669,
+        "innerHeight": 568,
+        "overflowXPx": 52,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 219,
+          "right": 259,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 320
+      },
+      "calendar": {
+        "today": {
+          "left": 41,
+          "right": 114,
+          "w": 73
+        },
+        "nav": {
+          "left": 41,
+          "right": 279,
+          "w": 238
+        },
+        "strong": {
+          "left": 91,
+          "right": 229,
+          "w": 138
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1508,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": {
+        "today": {
+          "left": 276,
+          "right": 349,
+          "w": 73
+        },
+        "nav": {
+          "left": 41,
+          "right": 349,
+          "w": 308
+        },
+        "strong": {
+          "left": 91,
+          "right": 218,
+          "w": 127
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1254,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": {
+        "today": {
+          "left": 706,
+          "right": 779,
+          "w": 73
+        },
+        "nav": {
+          "left": 65,
+          "right": 779,
+          "w": 714
+        },
+        "strong": {
+          "left": 115,
+          "right": 648,
+          "w": 533
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 1445,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": {
+        "today": {
+          "left": 393,
+          "right": 466,
+          "w": 73
+        },
+        "nav": {
+          "left": 41,
+          "right": 466,
+          "w": 425
+        },
+        "strong": {
+          "left": 91,
+          "right": 335,
+          "w": 244
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1254,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": {
+        "today": {
+          "left": 682,
+          "right": 755,
+          "w": 73
+        },
+        "nav": {
+          "left": 65,
+          "right": 755,
+          "w": 690
+        },
+        "strong": {
+          "left": 115,
+          "right": 624,
+          "w": 509
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1144,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 788,
+          "right": 994,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": {
+        "today": {
+          "left": 458,
+          "right": 531,
+          "w": 73
+        },
+        "nav": {
+          "left": 73,
+          "right": 531,
+          "w": 458
+        },
+        "strong": {
+          "left": 123,
+          "right": 400,
+          "w": 277
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1254,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 632,
+          "right": 838,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": {
+        "today": {
+          "left": 886,
+          "right": 959,
+          "w": 73
+        },
+        "nav": {
+          "left": 65,
+          "right": 959,
+          "w": 894
+        },
+        "strong": {
+          "left": 115,
+          "right": 828,
+          "w": 713
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1144,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 1048,
+          "right": 1254,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": {
+        "today": {
+          "left": 588,
+          "right": 661,
+          "w": 73
+        },
+        "nav": {
+          "left": 73,
+          "right": 661,
+          "w": 588
+        },
+        "strong": {
+          "left": 123,
+          "right": 530,
+          "w": 407
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_teacher_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 2002,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 302,
+            "right": 363,
+            "top": 7,
+            "cls": "btn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 43,
+        "user": null,
+        "msg": {
+          "left": 262,
+          "right": 302,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": true,
+        "iw": 320
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1888,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1334,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 1813,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1390,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1177,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 668,
+          "right": 874,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1176,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 512,
+          "right": 718,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/index.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1177,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 928,
+          "right": 1134,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": null,
+      "screenshot": "HOME-WAM_admin_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "HOME-WAM",
+      "role": "admin",
+      "viewport": "resize-menu-390to820",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1390,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-menu-overlay",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 1180
+          },
+          {
+            "tag": "ASIDE",
+            "cls": "wam-menu-panel",
+            "top": 0,
+            "left": 0,
+            "w": 296,
+            "h": 1180
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": true
+      },
+      "menuOpen": true,
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 372,
+        "innerWidth": 320,
+        "scrollHeight": 1770,
+        "innerHeight": 568,
+        "overflowXPx": 52,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 302,
+            "right": 363,
+            "top": 7,
+            "cls": "btn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 43,
+        "user": null,
+        "msg": {
+          "left": 262,
+          "right": 302,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": true,
+        "iw": 320
+      },
+      "calendar": {
+        "today": {
+          "left": 41,
+          "right": 114,
+          "w": 73
+        },
+        "nav": {
+          "left": 41,
+          "right": 279,
+          "w": 238
+        },
+        "strong": {
+          "left": 91,
+          "right": 229,
+          "w": 138
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_phone320.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1584,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 289,
+          "right": 329,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 390
+      },
+      "calendar": {
+        "today": {
+          "left": 276,
+          "right": 349,
+          "w": 73
+        },
+        "nav": {
+          "left": 41,
+          "right": 349,
+          "w": 308
+        },
+        "strong": {
+          "left": 91,
+          "right": 218,
+          "w": 127
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_phone390.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1254,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 722,
+          "right": 766,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 844
+      },
+      "calendar": {
+        "today": {
+          "left": 706,
+          "right": 779,
+          "w": 73
+        },
+        "nav": {
+          "left": 65,
+          "right": 779,
+          "w": 714
+        },
+        "strong": {
+          "left": 115,
+          "right": 648,
+          "w": 533
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_phoneLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "split507",
+      "w": 507,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 507,
+        "innerWidth": 507,
+        "scrollHeight": 1521,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 3,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 507,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 768
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 507,
+            "w": 320,
+            "h": 768
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 406,
+          "right": 446,
+          "top": 24,
+          "w": 40,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": false,
+        "compact": false,
+        "iw": 507
+      },
+      "calendar": {
+        "today": {
+          "left": 393,
+          "right": 466,
+          "w": 73
+        },
+        "nav": {
+          "left": 41,
+          "right": 466,
+          "w": 425
+        },
+        "strong": {
+          "left": 91,
+          "right": 335,
+          "w": 244
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_split507.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1254,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 698,
+          "right": 742,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "w": 0,
+          "h": 0
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 820
+      },
+      "calendar": {
+        "today": {
+          "left": 682,
+          "right": 755,
+          "w": 73
+        },
+        "nav": {
+          "left": 65,
+          "right": 755,
+          "w": 690
+        },
+        "strong": {
+          "left": 115,
+          "right": 624,
+          "w": 509
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_ipadPort.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1144,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1058,
+          "right": 1102,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 668,
+          "right": 874,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1180
+      },
+      "calendar": {
+        "today": {
+          "left": 458,
+          "right": 531,
+          "w": 73
+        },
+        "nav": {
+          "left": 73,
+          "right": 531,
+          "w": 458
+        },
+        "strong": {
+          "left": 123,
+          "right": 400,
+          "w": 277
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_ipadLand.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "desk1024",
+      "w": 1024,
+      "h": 768,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1024,
+        "innerWidth": 1024,
+        "scrollHeight": 1254,
+        "innerHeight": 768,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1024,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 704
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 704,
+            "left": 960,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1024,
+            "w": 320,
+            "h": 704
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 902,
+          "right": 946,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 512,
+          "right": 718,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1024
+      },
+      "calendar": {
+        "today": {
+          "left": 886,
+          "right": 959,
+          "w": 73
+        },
+        "nav": {
+          "left": 65,
+          "right": 959,
+          "w": 894
+        },
+        "strong": {
+          "left": 115,
+          "right": 828,
+          "w": 713
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_desk1024.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CALENDAR-WAM",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/local/wamakademi/calendar.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1144,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "header": {
+        "navOverflow": 0,
+        "user": null,
+        "msg": {
+          "left": 1318,
+          "right": 1362,
+          "top": 24,
+          "w": 44,
+          "h": 16
+        },
+        "search": {
+          "left": 928,
+          "right": 1134,
+          "top": 12,
+          "w": 206,
+          "h": 40
+        },
+        "topNavVisible": true,
+        "compact": false,
+        "iw": 1440
+      },
+      "calendar": {
+        "today": {
+          "left": 588,
+          "right": 661,
+          "w": 73
+        },
+        "nav": {
+          "left": 73,
+          "right": 661,
+          "w": 588
+        },
+        "strong": {
+          "left": 123,
+          "right": 530,
+          "w": 407
+        },
+        "todayClipped": false
+      },
+      "screenshot": "CALENDAR-WAM_admin_desk1440.png",
+      "engine": "chromium",
+      "phase": "after"
+    },
+    {
+      "id": "CATALOG",
+      "role": "student",
+      "viewport": "phone390",
+      "state": "empty-search",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1209,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "phase": "after",
+      "engine": "chromium"
+    }
+  ]
+}

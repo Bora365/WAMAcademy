@@ -1,0 +1,18 @@
+{
+  "courseEdit": {
+    "status": "ok-restored",
+    "field": "summary_editor",
+    "marker": "RF2-AUDIT-TMP",
+    "restored": "summary_clean"
+  },
+  "upload": {
+    "status": "layout-verified-e2e-not-confirmed",
+    "sample": "public/local/wamakademi/tests_accept_sample.mp4",
+    "note": "filepicker dialog opened; full draft save not completed in headless"
+  },
+  "lesson": {
+    "cmid": 4,
+    "visible": 0,
+    "status": "open"
+  }
+}

@@ -1,0 +1,139 @@
+{{!
+    @template local_wamakademi/eval_report
+
+    Evaluation reports (table | chart) for quiz and assignment.
+}}
+<div class="wam-report wam-eval-report" data-region="wam-eval-report">
+    <header class="wam-report__header">
+        <div class="wam-report__heading">
+            <p class="wam-report__eyebrow">
+                <a href="{{courseurl}}">{{coursename}}</a>
+                · <a href="{{backurl}}">{{#str}} reportcoursetab, local_wamakademi {{/str}}</a>
+            </p>
+            <h1 class="wam-report__title">{{#str}} evalreportheading, local_wamakademi {{/str}}</h1>
+            <p class="wam-report__lead">{{#str}} evalreportscope, local_wamakademi {{/str}}</p>
+        </div>
+    </header>
+
+    {{^hasactivities}}
+    <p class="wam-report__empty">{{#str}} evalreportnoactivities, local_wamakademi {{/str}}</p>
+    {{/hasactivities}}
+
+    {{#hasactivities}}
+    <section class="wam-eval-report__picker" aria-label="{{#str}} evalreportpickactivity, local_wamakademi {{/str}}">
+        <h2 class="wam-eval-report__section-title">{{#str}} evalreportpickactivity, local_wamakademi {{/str}}</h2>
+        <ul class="wam-eval-report__activities">
+            {{#activities}}
+            <li>
+                <a class="wam-eval-report__activity{{#selected}} is-active{{/selected}}" href="{{url}}">
+                    <span class="wam-eval-report__activity-type">{{typelabel}}</span>
+                    <span class="wam-eval-report__activity-name">{{name}}</span>
+                </a>
+            </li>
+            {{/activities}}
+        </ul>
+    </section>
+    {{/hasactivities}}
+
+    {{#hasselection}}
+    <section class="wam-eval-report__selected">
+        <h2 class="wam-eval-report__section-title">{{activityname}}</h2>
+
+        {{#hasstatuses}}
+        <div class="wam-report__summary" aria-label="{{#str}} evalreportstatussummary, local_wamakademi {{/str}}">
+            <div class="wam-report__stat">
+                <span class="wam-report__stat-value">{{statuses.missing}}</span>
+                <span class="wam-report__stat-label">{{#str}} evalreportstatusmissing, local_wamakademi {{/str}}</span>
+            </div>
+            <div class="wam-report__stat">
+                <span class="wam-report__stat-value">{{statuses.pending}}</span>
+                <span class="wam-report__stat-label">{{#str}} evalreportstatuspending, local_wamakademi {{/str}}</span>
+            </div>
+            <div class="wam-report__stat">
+                <span class="wam-report__stat-value">{{statuses.graded}}</span>
+                <span class="wam-report__stat-label">{{#str}} evalreportstatusgraded, local_wamakademi {{/str}}</span>
+            </div>
+            {{#hassummary}}
+            <div class="wam-report__stat">
+                <span class="wam-report__stat-value">{{summary.participants}}</span>
+                <span class="wam-report__stat-label">{{#str}} reportenrolled, local_wamakademi {{/str}}</span>
+            </div>
+            <div class="wam-report__stat">
+                <span class="wam-report__stat-value">{{#summary.average}}{{summary.average}}{{/summary.average}}{{^summary.average}}—{{/summary.average}}</span>
+                <span class="wam-report__stat-label">{{#str}} evalreportaverage, local_wamakademi {{/str}}</span>
+            </div>
+            <div class="wam-report__stat wam-report__stat--wide">
+                <span class="wam-report__stat-value">{{summary.passlabel}}</span>
+                <span class="wam-report__stat-label">{{#str}} evalreportpass, local_wamakademi {{/str}}</span>
+            </div>
+            {{/hassummary}}
+        </div>
+        {{/hasstatuses}}
+
+        {{#hasreports}}
+        <nav class="wam-report__tabs" aria-label="{{#str}} evalreportheading, local_wamakademi {{/str}}">
+            {{#reports}}
+            <a class="wam-report__tab{{#active}} is-active{{/active}}" href="{{url}}">{{title}}</a>
+            {{/reports}}
+        </nav>
+
+        <div class="wam-eval-report__viewtoggle" role="group" aria-label="{{#str}} evalreportviewtoggle, local_wamakademi {{/str}}">
+            <a class="wam-eval-report__viewbtn{{#viewtable}} is-active{{/viewtable}}" href="{{tableurl}}">{{#str}} evalreporttable, local_wamakademi {{/str}}</a>
+            <a class="wam-eval-report__viewbtn{{#viewchart}} is-active{{/viewchart}}" href="{{charturl}}">{{#str}} evalreportchart, local_wamakademi {{/str}}</a>
+        </div>
+
+        {{#activereport}}
+        <div class="wam-eval-report__panel">
+            {{#empty}}
+            <p class="wam-report__empty">{{#str}} evalreportempty, local_wamakademi {{/str}}</p>
+            {{/empty}}
+
+            {{^empty}}
+            {{#viewtable}}
+            <div class="wam-report__table-wrap">
+                <table class="wam-report__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{#str}} evalreportlabel, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} evalreportvalue, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} evalreportdetail, local_wamakademi {{/str}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#rows}}
+                        <tr>
+                            <td>{{label}}</td>
+                            <td>{{valuelabel}}</td>
+                            <td>{{detail}}</td>
+                        </tr>
+                        {{/rows}}
+                    </tbody>
+                </table>
+            </div>
+            {{/viewtable}}
+
+            {{#viewchart}}
+            {{#haschart}}
+            <ul class="wam-eval-report__bars" aria-label="{{title}}">
+                {{#chart}}
+                <li class="wam-eval-report__bar-row">
+                    <span class="wam-eval-report__bar-label">{{label}}</span>
+                    <span class="wam-eval-report__bar-track">
+                        <span class="wam-eval-report__bar-fill" style="width: {{width}}%;"></span>
+                    </span>
+                    <span class="wam-eval-report__bar-value">{{valuelabel}}</span>
+                </li>
+                {{/chart}}
+            </ul>
+            {{/haschart}}
+            {{^haschart}}
+            <p class="wam-report__empty">{{#str}} evalreportempty, local_wamakademi {{/str}}</p>
+            {{/haschart}}
+            {{/viewchart}}
+            {{/empty}}
+        </div>
+        {{/activereport}}
+        {{/hasreports}}
+    </section>
+    {{/hasselection}}
+</div>

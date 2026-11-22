@@ -1,0 +1,14 @@
+{
+  "name": "wam-responsive-olcum",
+  "private": true,
+  "version": "1.0.0",
+  "description": "WAM Akademi Responsive Faz 1 ölçüm aracı — ürün koduna bağımlı değil",
+  "type": "module",
+  "scripts": {
+    "measure": "node measure.mjs",
+    "discover": "node discover.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.1"
+  }
+}

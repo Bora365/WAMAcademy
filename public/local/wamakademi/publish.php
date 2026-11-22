@@ -53,10 +53,8 @@ if (!\local_wamakademi\access::can_manage_videos((int)$USER->id, (int)$course->i
 $visible = ($action === 'publish') ? 1 : 0;
 set_coursemodule_visible($cmid, $visible, 1, true);
 
-$redirect = new moodle_url('/local/wamakademi/upload.php', [
+$redirect = new moodle_url('/local/wamakademi/videos.php', [
     'courseid' => (int)$course->id,
-    'sectionnum' => (int)$cm->sectionnum,
-    'previewcmid' => $cmid,
 ]);
 
 $message = $visible

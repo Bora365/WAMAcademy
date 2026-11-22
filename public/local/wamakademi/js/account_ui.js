@@ -199,14 +199,16 @@
         }
         form.classList.add('wam-acc-form');
 
-        qsa(form, 'fieldset').forEach(function (fs) {
+        qsa(form, ':scope > fieldset').forEach(function (fs) {
             if (fs.id === 'fgroup_id_buttonar' || fs.classList.contains('hidden')) {
                 return;
             }
             fs.classList.add('wam-acc-form-card', 'wam-acc-fieldset');
         });
 
-        var buttons = document.getElementById('fgroup_id_buttonar') || qs(form, '.fitem_actionbuttons, .form-group.fitem_actionbuttons');
+        var buttons = document.getElementById('fgroup_id_buttonar')
+            || qs(form, '.fitem_actionbuttons, .form-group.fitem_actionbuttons')
+            || qs(document, '#sticky-footer #fgroup_id_buttonar, #sticky-footer .fitem_actionbuttons');
         if (buttons) {
             buttons.classList.add('wam-acc-form-actions');
             qsa(buttons, 'button, input[type="submit"], .btn').forEach(function (btn, idx) {
@@ -216,6 +218,12 @@
                     btn.classList.add('wam-acc-btn', 'wam-acc-btn--ghost');
                 }
             });
+        }
+
+        var sticky = document.getElementById('sticky-footer');
+        if (sticky) {
+            sticky.classList.remove('bg-white');
+            sticky.classList.add('wam-acc-form-actions-bar');
         }
 
         openInvalidFieldsets(form);
@@ -295,7 +303,7 @@
                 var editBtn = document.createElement('a');
                 editBtn.className = 'wam-acc-btn wam-acc-btn--primary wam-acc-btn--edit';
                 editBtn.href = editLi.getAttribute('href');
-                editBtn.textContent = editLi.textContent.trim() || str('editprofile', 'Profili düzenle');
+                editBtn.textContent = str('editprofiletitle', 'Profili düzenle');
                 actions.appendChild(editBtn);
                 var li = editLi.closest('li');
                 if (li) {
@@ -331,6 +339,12 @@
                 msgBtn.style.display = 'none';
             }
         }
+
+        alignProfileActions(header);
+        splitEmailVisibility();
+        markCompactCategories();
+        layoutProfileColumns();
+        bindProfileColumns();
 
         // Erişim satırlarında göreli süreyi soluk göster.
         qsa(document, '.userprofile .profile_tree .contentnode dd').forEach(function (dd) {
@@ -542,38 +556,53 @@
 
         source.classList.add('wam-acc-prefs-source');
         source.classList.add('wam-acc-prefs-built');
+        source.hidden = true;
+        source.setAttribute('aria-hidden', 'true');
+        source.setAttribute('inert', '');
         source.parentNode.insertBefore(wrap, source);
     }
 
     /* ---------------- Profili düzenle (native Moodle fieldset) ---------------- */
 
-    function expandMoodleFieldset(fs) {
+    function isMoodleFieldsetOpen(fs) {
         if (!fs) {
-            return;
+            return false;
         }
-        fs.classList.remove('collapsed');
-        var container = qs(fs, '.fcontainer');
+        var container = qs(fs, '.fcontainer.collapseable, .fcontainer.collapse, [id$="container"].collapse');
         if (container) {
-            container.classList.add('show');
-            container.classList.remove('collapse');
-            container.style.height = '';
-            container.style.display = '';
-            container.setAttribute('aria-expanded', 'true');
+            if (container.classList.contains('show')) {
+                return true;
+            }
+            // aria/class senkronu bozulmuş olabilir; görünür yüksekliği esas al.
+            try {
+                if (container.getClientRects().length && container.getBoundingClientRect().height > 0) {
+                    return true;
+                }
+            } catch (e) {
+                /* ignore */
+            }
+            return false;
         }
         var toggler = qs(fs, 'a[data-bs-toggle="collapse"], a[data-toggle="collapse"], legend a.fheader, .ftoggler a');
         if (toggler) {
-            toggler.setAttribute('aria-expanded', 'true');
-            toggler.classList.remove('collapsed');
-            var target = toggler.getAttribute('href') || toggler.getAttribute('data-bs-target') || toggler.getAttribute('data-target');
-            if (target && target.charAt(0) === '#') {
-                var el = document.querySelector(target);
-                if (el) {
-                    el.classList.add('show');
-                    el.classList.remove('collapse');
-                    el.style.height = '';
-                }
+            if (toggler.classList.contains('collapsed')) {
+                return false;
             }
+            return toggler.getAttribute('aria-expanded') !== 'false';
         }
+        return true;
+    }
+
+    function revealMoodleFieldset(fs) {
+        if (!fs || isMoodleFieldsetOpen(fs)) {
+            return;
+        }
+        var toggler = qs(fs, 'a[data-bs-toggle="collapse"], a[data-toggle="collapse"], legend a.fheader, .ftoggler a');
+        if (!toggler) {
+            return;
+        }
+        // Moodle/Bootstrap collapse; ikinci bir durum makinesi kurma — yalnız gerçekten kapalıysa tıkla.
+        toggler.click();
     }
 
     function openInvalidFieldsets(form) {
@@ -587,7 +616,7 @@
                 return;
             }
             seen.push(fs);
-            expandMoodleFieldset(fs);
+            revealMoodleFieldset(fs);
             try {
                 el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             } catch (e) {
@@ -606,7 +635,7 @@
             return;
         }
         var fs = target.closest('fieldset');
-        expandMoodleFieldset(fs);
+        revealMoodleFieldset(fs);
         try {
             target.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         } catch (e) {
@@ -621,10 +650,22 @@
         if (page) {
             page.classList.add('wam-acc-ready');
         }
-        enhanceShell({
-            backHref: cfg().preferencesUrl || cfg().profileUrl || '',
-            backLabel: str('backtopreferences', 'Tercihlere dön'),
-        });
+        // Kırıntı gezinmeyi gösterir; ikinci geri bağlantısı eklenmez.
+        enhanceShell();
+
+        var contextHeader = qs(document, '.page-context-header');
+        if (contextHeader) {
+            contextHeader.classList.remove('d-flex');
+            contextHeader.hidden = true;
+            contextHeader.setAttribute('aria-hidden', 'true');
+        }
+
+        var region = document.getElementById('region-main');
+        var heading = region && qs(region, '[role="main"] > h2, :scope > h2');
+        if (heading) {
+            heading.textContent = str('editprofiletitle', 'Profili düzenle');
+            heading.classList.add('wam-acc-page-title');
+        }
 
         var form = qs(document, 'form.mform');
         if (!form) {
@@ -632,21 +673,24 @@
         }
         form.classList.add('wam-acc-form');
         if (form.dataset.wamEditReady === '1') {
+            placeEditFields(form);
             openInvalidFieldsets(form);
             openHashTarget(form);
             return;
         }
         form.dataset.wamEditReady = '1';
 
-        // Alan taşıma yok — Moodle fieldset'lerini kart + mevcut açılır mekanizma olarak stille.
-        qsa(form, 'fieldset').forEach(function (fs) {
+        // Yalnız üst düzey bölüm fieldset'leri kart alır; iç içe filemanager vb. kendi yüzeyini korur.
+        qsa(form, ':scope > fieldset').forEach(function (fs) {
             if (fs.id === 'fgroup_id_buttonar' || fs.classList.contains('hidden')) {
                 return;
             }
             fs.classList.add('wam-acc-form-card', 'wam-acc-fieldset');
         });
 
-        var buttons = document.getElementById('fgroup_id_buttonar') || qs(form, '.fitem_actionbuttons, .form-group.fitem_actionbuttons');
+        var buttons = document.getElementById('fgroup_id_buttonar')
+            || qs(form, '.fitem_actionbuttons, .form-group.fitem_actionbuttons')
+            || qs(document, '#sticky-footer #fgroup_id_buttonar, #sticky-footer .fitem_actionbuttons');
         if (buttons) {
             buttons.classList.add('wam-acc-form-actions');
             qsa(buttons, 'button, input[type="submit"], .btn').forEach(function (btn, idx) {
@@ -658,8 +702,231 @@
             });
         }
 
+        var sticky = document.getElementById('sticky-footer');
+        if (sticky) {
+            sticky.classList.remove('bg-white');
+            sticky.classList.add('wam-acc-form-actions-bar');
+        }
+
+        placeEditFields(form);
         openInvalidFieldsets(form);
         openHashTarget(form);
+    }
+
+    function alignProfileActions(header) {
+        if (!header) {
+            return;
+        }
+        var actions = qs(header, '.wam-acc-header-actions');
+        if (!actions) {
+            return;
+        }
+        var pageHeader = document.getElementById('page-header');
+        if (!pageHeader) {
+            return;
+        }
+        qsa(pageHeader, '.ms-auto .singlebutton, .ms-auto .header-button-group').forEach(function (el) {
+            if (el.closest('.wam-acc-header-actions, .navbar, .wam-gear')) {
+                return;
+            }
+            actions.appendChild(el);
+        });
+    }
+
+    function splitEmailVisibility() {
+        qsa(document, '.userprofile li.contentnode').forEach(function (li) {
+            var link = qs(li, 'a[href^="mailto:"]');
+            if (!link || link.dataset.wamMail === '1') {
+                return;
+            }
+            var parent = link.parentNode;
+            var note = document.createElement('span');
+            note.className = 'wam-acc-mailnote';
+            var node = link.nextSibling;
+            while (node) {
+                var next = node.nextSibling;
+                note.appendChild(node);
+                node = next;
+            }
+            var text = (note.textContent || '')
+                .replace(/^[\s·•\u00b7(]+/, '')
+                .replace(/[\s)]+$/, '')
+                .trim();
+            if (text) {
+                note.textContent = text;
+                parent.appendChild(note);
+            }
+            link.dataset.wamMail = '1';
+        });
+    }
+
+    function markCompactCategories() {
+        qsa(document, '.userprofile .node_category').forEach(function (cat) {
+            var items = qsa(cat, '.card-body > ul > li').filter(function (li) {
+                if (li.classList.contains('wam-acc-hidden')) {
+                    return false;
+                }
+                if (qs(li, '[data-wam-marker], [data-wam-department]')) {
+                    return false;
+                }
+                return true;
+            });
+            if (items.length <= 1) {
+                cat.classList.add('wam-acc-cat--compact');
+            }
+        });
+    }
+
+    function profileCategoryKey(cat) {
+        var marked = cat.getAttribute('data-wam-profile-cat');
+        if (marked) {
+            return marked;
+        }
+        var marker = qs(cat, '[data-wam-cat]');
+        var key = marker ? marker.getAttribute('data-wam-cat') : '';
+        if (!key) {
+            var privacy = qsa(cat, 'a[href]').some(function (a) {
+                var href = a.getAttribute('href') || '';
+                return href.indexOf('/admin/tool/dataprivacy/') !== -1 || href.indexOf('/admin/tool/policy/') !== -1;
+            });
+            if (privacy) {
+                key = 'privacyandpolicies';
+            }
+        }
+        if (key) {
+            cat.setAttribute('data-wam-profile-cat', key);
+        }
+        return key;
+    }
+
+    function layoutProfileColumns() {
+        var tree = qs(document, '.userprofile .profile_tree');
+        if (!tree) {
+            return;
+        }
+        var cats = qsa(tree, '.node_category');
+        if (!cats.length) {
+            return;
+        }
+        var mainOrder = ['contact', 'privacyandpolicies', 'reports', 'badges', 'administration'];
+        var sideOrder = ['coursedetails', 'miscellaneous', 'loginactivity'];
+        var mobileOrder = ['contact', 'coursedetails', 'privacyandpolicies', 'miscellaneous', 'reports', 'loginactivity', 'badges', 'administration'];
+        var byKey = {};
+        var extra = [];
+        cats.forEach(function (cat) {
+            var key = profileCategoryKey(cat);
+            if (key && !byKey[key]) {
+                byKey[key] = cat;
+            } else {
+                extra.push(cat);
+            }
+        });
+        function collect(keys) {
+            var list = [];
+            keys.forEach(function (key) {
+                if (byKey[key]) {
+                    list.push(byKey[key]);
+                    delete byKey[key];
+                }
+            });
+            return list;
+        }
+        var wide = window.matchMedia('(min-width: 769px)').matches;
+        if (wide) {
+            var main = qs(tree, ':scope > .wam-acc-col--main');
+            var side = qs(tree, ':scope > .wam-acc-col--side');
+            if (!main) {
+                main = document.createElement('div');
+                main.className = 'wam-acc-col wam-acc-col--main';
+                side = document.createElement('div');
+                side.className = 'wam-acc-col wam-acc-col--side';
+                tree.appendChild(main);
+                tree.appendChild(side);
+            }
+            var left = collect(mainOrder).concat(extra);
+            var right = collect(sideOrder);
+            Object.keys(byKey).forEach(function (key) {
+                left.push(byKey[key]);
+            });
+            left.forEach(function (cat) { main.appendChild(cat); });
+            right.forEach(function (cat) { side.appendChild(cat); });
+            main.hidden = main.children.length === 0;
+            side.hidden = side.children.length === 0;
+            tree.classList.toggle('wam-acc-cols-1', main.hidden || side.hidden);
+        } else {
+            var mobile = collect(mobileOrder).concat(extra);
+            Object.keys(byKey).forEach(function (key) {
+                mobile.push(byKey[key]);
+            });
+            mobile.forEach(function (cat) { tree.appendChild(cat); });
+            qsa(tree, ':scope > .wam-acc-col').forEach(function (col) {
+                if (!col.querySelector('.node_category')) {
+                    col.remove();
+                }
+            });
+            tree.classList.remove('wam-acc-cols-1');
+        }
+    }
+
+    function bindProfileColumns() {
+        if (document.documentElement.dataset.wamProfileCols === '1') {
+            return;
+        }
+        document.documentElement.dataset.wamProfileCols = '1';
+        var mq = window.matchMedia('(min-width: 769px)');
+        var onchange = function () { layoutProfileColumns(); };
+        if (mq.addEventListener) {
+            mq.addEventListener('change', onchange);
+        } else if (mq.addListener) {
+            mq.addListener(onchange);
+        }
+    }
+
+    function fieldItem(name) {
+        return document.getElementById('fitem_id_' + name);
+    }
+
+    function fieldVisible(el) {
+        if (!el || el.classList.contains('hidden') || el.classList.contains('d-none')) {
+            return false;
+        }
+        return true;
+    }
+
+    function placeEditFields(form) {
+        if (!form) {
+            return;
+        }
+        var general = document.getElementById('id_moodlecontainer');
+        if (general) {
+            [
+                ['firstname', 'lastname'],
+                ['email', 'maildisplay'],
+                ['city', 'country'],
+                ['username', 'auth'],
+                ['suspended', 'createpassword']
+            ].forEach(function (pair) {
+                var a = fieldItem(pair[0]);
+                var b = fieldItem(pair[1]);
+                if (!fieldVisible(a) || !fieldVisible(b) || a.parentElement !== general || b.parentElement !== general) {
+                    return;
+                }
+                a.classList.add('wam-acc-pair-a');
+                b.classList.add('wam-acc-pair-b');
+            });
+            qsa(general, ':scope > .fitem').forEach(function (item) {
+                if (item.classList.contains('wam-acc-pair-a') || item.classList.contains('wam-acc-pair-b')) {
+                    return;
+                }
+                item.classList.add('wam-acc-span');
+            });
+        }
+        var picture = document.getElementById('id_moodle_picturecontainer');
+        var imagefile = fieldItem('imagefile');
+        if (picture && fieldVisible(imagefile) && imagefile.parentElement === picture) {
+            picture.classList.add('wam-acc-picture-grid');
+            imagefile.classList.add('wam-acc-picture-file');
+        }
     }
 
     /* ---------------- Başarı notları ---------------- */

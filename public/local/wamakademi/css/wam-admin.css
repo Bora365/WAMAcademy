@@ -15,12 +15,18 @@ body.wam-admin {
 }
 
 /* ---------- 1. Sayfa iskeleti ---------- */
+/* Sol yönetim çekmecesi yok. Kategoriler WAM ana menüsündedir; sayfa onun itmesine bırakılır. */
+
+body.wam-admin .drawer.drawer-left,
+body.wam-admin .drawer-toggler.drawer-left-toggle {
+    display: none !important;
+}
+
+body.wam-admin:not(.wam-menu-push) #page.drawers.show-drawer-left {
+    margin-left: 0 !important;
+}
 
 @media (min-width: 992px) {
-    body.wam-admin #page.drawers.show-drawer-left {
-        margin-left: var(--wam-admin-nav-w);
-    }
-
     body.wam-admin #page.drawers.hasstickyfooter.show-drawer-left .sticky-footer,
     body.wam-admin .sticky-footer {
         left: 0;
@@ -655,12 +661,12 @@ body.wam-admin .settingsform > h2 {
 body.wam-admin .settingsform h3.main,
 body.wam-admin .adminsettings h3.main {
     margin: 0;
-    padding: var(--wam-space-5) var(--wam-space-5) var(--wam-space-2);
-    border-top: 1px solid var(--wam-line);
-    font-size: var(--wam-h3);
-    line-height: var(--wam-h3-lh);
-    font-weight: 700;
-    color: var(--wam-ink);
+    padding: var(--wam-space-4) var(--wam-space-5) var(--wam-space-2);
+    border-top: 0;
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    font-weight: 600;
+    color: var(--wam-muted);
 }
 
 body.wam-admin .formsettingheading {
@@ -676,8 +682,8 @@ body.wam-admin .formsettingheading {
 body.wam-admin .form-item.row {
     display: block;
     margin: 0;
-    padding: var(--wam-space-4) var(--wam-space-5);
-    border-top: 1px solid var(--wam-line);
+    padding: var(--wam-space-3) var(--wam-space-5);
+    border-top: 0;
 }
 
 body.wam-admin .form-item .form-label,
@@ -695,10 +701,10 @@ body.wam-admin .form-item .form-label {
 body.wam-admin .form-item .form-label label,
 body.wam-admin .form-item .form-label > p {
     margin: 0;
-    font-size: var(--wam-body);
-    line-height: var(--wam-body-lh);
-    font-weight: 600;
-    color: var(--wam-ink);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 500;
+    color: var(--wam-muted);
 }
 
 body.wam-admin .form-item .form-shortname {
@@ -714,10 +720,12 @@ body.wam-admin .form-item .form-shortname {
 body.wam-admin .form-item .form-text,
 body.wam-admin .form-item .form-defaultinfo,
 body.wam-admin .form-item .form-dependenton {
-    max-width: 68ch;
+    max-width: min(68ch, 100%);
     font-size: var(--wam-help);
     line-height: 22px;
     color: var(--wam-muted);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 body.wam-admin .form-item .form-text {
@@ -730,6 +738,13 @@ body.wam-admin .form-item .form-text p:last-child {
 
 body.wam-admin .form-item .form-defaultinfo {
     margin-top: var(--wam-space-1);
+}
+
+/* Uzun varsayılan CSV / teknik değerler (RF10 F-04: ADM-GRADES) */
+body.wam-admin .form-defaultinfo.text-ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+    overflow-wrap: anywhere;
 }
 
 body.wam-admin .form-item .form-setting .error {
@@ -877,8 +892,10 @@ body.wam-admin #region-main form.mform .fitem > .col-md-3 {
 
 body.wam-admin #region-main form.mform .fitem label {
     margin: 0;
-    font-weight: 600;
-    color: var(--wam-ink);
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 500;
+    color: var(--wam-muted);
 }
 
 body.wam-admin #region-main form.mform .form-text,
@@ -897,12 +914,12 @@ body.wam-admin #region-main form.mform .invalid-feedback {
 body.wam-admin #region-main form.mform legend.ftoggler,
 body.wam-admin #region-main form.mform .fheader {
     margin: 0 0 var(--wam-space-3);
-    padding: 0 0 var(--wam-space-2);
-    border-bottom: 1px solid var(--wam-line);
-    font-size: var(--wam-h3);
-    line-height: var(--wam-h3-lh);
-    font-weight: 700;
-    color: var(--wam-ink);
+    padding: 0;
+    border-bottom: 0;
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    font-weight: 600;
+    color: var(--wam-muted);
 }
 
 body.wam-admin #region-main form.mform .fitem.femptylabel > .col-md-3 {
@@ -928,6 +945,21 @@ body.wam-admin .form-check-input:focus-visible {
 }
 
 /* ---------- 9. Tablolar, filtre çubuğu, sayfalama ---------- */
+
+/* RF10 F-04: sarmalayıcısız admin tabloları yerel kaydırılsın
+   (#emoticonsetting .mb-3 içinde; calendar_weekend doğrudan .form-setting > table) */
+body.wam-admin .form-setting:has(> table),
+body.wam-admin .form-setting .mb-3:has(> table) {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.wam-admin .form-setting > table,
+body.wam-admin .form-setting .mb-3 > table {
+    max-width: none; /* genişlik içeriğe kalsın; taşmayı sarmalayıcı alır */
+}
 
 body.wam-admin .no-overflow,
 body.wam-admin .table-responsive,
@@ -1274,17 +1306,119 @@ body.wam-admin .form-setting {
 }
 
 /* Ayar alanları kapsayıcısından geniş olamaz (dar ekranda yatay taşmayı önler). */
-body.wam-admin #region-main .fitem {
+body.wam-admin #region-main .fitem,
+body.wam-admin #region-main .form-item,
+body.wam-admin #region-main .form-item .row {
     min-width: 0;
     max-width: 100%;
+}
+
+body.wam-admin #region-main .form-item,
+body.wam-admin #region-main .form-setting,
+body.wam-admin #region-main .defaultsnext,
+body.wam-admin #adminsettings,
+body.wam-admin fieldset.adminsettings {
+    overflow-x: auto;
 }
 
 body.wam-admin #region-main select,
 body.wam-admin .form-setting select,
 body.wam-admin .form-setting textarea,
 body.wam-admin .form-setting input:not([type="checkbox"]):not([type="radio"]),
-body.wam-admin .form-setting .defaultsnext {
+body.wam-admin .form-setting .defaultsnext,
+body.wam-admin .form-setting .form-select {
     max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Boost renk seçici / önizleme diyaloğu (ADM-THEME, Görünüm altındaki renkler) */
+body.wam-admin .admin_colourpicker,
+body.wam-admin .admin_colourpicker .colourdialogue,
+body.wam-admin img.colourdialogue {
+    max-width: 100%;
+    height: auto;
+}
+
+body.wam-admin .admin_colourpicker {
+    min-width: 0;
+}
+
+/* Admin secondary nav: yerel yatay kaydırma; WebKit sızıntısına karşı grid + hidden */
+body.wam-admin .secondary-navigation {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+body.wam-admin .secondary-navigation .navigation {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.wam-admin .secondary-navigation .navigation .nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+/* RF13: uploaduser / uploadcourse / reportbuilder — form ve tablo taşmasını yerelde tut */
+body.wam-admin.path-admin-tool-uploaduser #region-main form.mform,
+body.wam-admin.path-admin-tool-uploadcourse #region-main form.mform,
+body.wam-admin.path-admin-reportbuilder #region-main {
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-admin.path-admin-tool-uploaduser #region-main form.mform .fitem,
+body.wam-admin.path-admin-tool-uploaduser #region-main form.mform .felement,
+body.wam-admin.path-admin-tool-uploadcourse #region-main form.mform .fitem,
+body.wam-admin.path-admin-tool-uploadcourse #region-main form.mform .felement {
+    max-width: 100%;
+    min-width: 0;
+    /* WebKit: uzun <select> option metni scrollWidth’i belgeye sızdırır (RF10 deseni) */
+    overflow-x: auto;
+}
+
+body.wam-admin.path-admin-tool-uploaduser #region-main form.mform,
+body.wam-admin.path-admin-tool-uploadcourse #region-main form.mform {
+    overflow-x: auto;
+}
+
+body.wam-admin.path-admin-tool-uploaduser #region-main form.mform :is(select, .form-select),
+body.wam-admin.path-admin-tool-uploadcourse #region-main form.mform :is(select, .form-select) {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.wam-admin.path-admin-tool-uploaduser #region-main .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"],
+body.wam-admin.path-admin-tool-uploadcourse #region-main .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"],
+body.wam-admin.path-admin-tool-uploaduser #region-main .filepicker-filelist,
+body.wam-admin.path-admin-tool-uploadcourse #region-main .filepicker-filelist {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+body.wam-admin .reportbuilder-wrapper,
+body.wam-admin [data-region="reportbuilder"],
+body.wam-admin .reportbuilder-report,
+body.wam-admin.path-admin-reportbuilder #region-main .table-responsive,
+body.wam-admin.path-admin-reportbuilder #region-main .reportbuilder-table-container {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* ---------- 12. Ortak işaretçiler ---------- */

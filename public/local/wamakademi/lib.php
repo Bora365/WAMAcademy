@@ -13,7 +13,8 @@ function local_wamakademi_after_config() {
         return;
     }
 
-    if (is_siteadmin($USER)) {
+    // Rol önizlemesinde (öğrenci vb.) yönetici /my/ ayrıcalığı kalkar.
+    if (is_siteadmin($USER) && !local_wamakademi_switched_roleid()) {
         return;
     }
 
@@ -157,7 +158,7 @@ function local_wamakademi_menu_config(): array {
     // Kontrol paneli yalnızca /my/ sayfasına gerçekten ulaşabilen kullanıcılar için listelenir;
     // diğer roller local_wamakademi_after_config() ile Ana Sayfa'ya yönlendirildiğinden aynı hedefe
     // ikinci bir bağlantı eklenmez.
-    if (is_siteadmin($USER)) {
+    if (is_siteadmin($USER) && !local_wamakademi_switched_roleid()) {
         $links[] = [
             'id' => 'dashboard',
             'label' => get_string('myhome'),
@@ -230,6 +231,26 @@ function local_wamakademi_menu_config(): array {
         ],
     ];
 
+    if (\local_wamakademi\access::can_view_overview((int)$USER->id)) {
+        $learningitems[] = [
+            'id' => 'wamreports',
+            'label' => get_string('reportoverviewtitle', 'local_wamakademi'),
+            'url' => (new moodle_url('/local/wamakademi/report_overview.php'))->out(false),
+            'action' => false,
+        ];
+    }
+
+    if ($courseid > 1 && \local_wamakademi\access::can_view_reports((int)$USER->id, $courseid)) {
+        $learningitems[] = [
+            'id' => 'wamcoursereport',
+            'label' => get_string('reportcoursetab', 'local_wamakademi'),
+            'url' => (new moodle_url('/local/wamakademi/report_course.php', [
+                'courseid' => $courseid,
+            ]))->out(false),
+            'action' => false,
+        ];
+    }
+
     if (has_capability('moodle/reportbuilder:view', context_system::instance())
             || has_capability('moodle/reportbuilder:viewall', context_system::instance())) {
         $learningitems[] = [
@@ -291,66 +312,52 @@ function local_wamakademi_menu_config(): array {
         'languageLabel' => get_string('language'),
     ];
 
-    // Yönetim.
+    // Yönetim — öğrenci görünümünde hiç eklenmez.
     $adminitems = [];
-    if ($courseid > 1) {
-        $coursecontext = context_course::instance($courseid);
-        if (has_capability('moodle/course:update', $coursecontext)) {
+    $sidebaradmin = [];
+    $studentview = local_wamakademi_is_student_view();
+    if (!$studentview) {
+        if ($courseid > 1) {
+            $coursecontext = context_course::instance($courseid);
+            if (has_capability('moodle/course:update', $coursecontext)) {
+                $adminitems[] = [
+                    'id' => 'courseedit',
+                    'label' => get_string('menueditcourse', 'local_wamakademi'),
+                    'url' => (new moodle_url('/course/edit.php', ['id' => $courseid]))->out(false),
+                    'action' => false,
+                ];
+            }
+        }
+        // Kurs oluştur: moodle/course:create olan kullanıcılara, doğru kategori bağlamıyla.
+        $createurl = \local_wamakademi\access::course_create_url(
+            ($courseid > 1 && !empty($PAGE->course->category)) ? (int)$PAGE->course->category : 0
+        );
+        if ($createurl !== null) {
             $adminitems[] = [
-                'id' => 'courseedit',
-                'label' => 'Kurs ayarları',
-                'url' => (new moodle_url('/course/edit.php', ['id' => $courseid]))->out(false),
+                'id' => 'createcourse',
+                'label' => get_string('menucreatecourse', 'local_wamakademi'),
+                'url' => $createurl->out(false),
                 'action' => false,
             ];
         }
-        // Content Workflow R1: eğitim bağlamında video yükle (yetki backend'de de denetlenir).
-        if (\local_wamakademi\access::can_manage_videos((int)$USER->id, (int)$courseid)) {
+        // Site yönetimi: çarkta kısa yol + (yetkiliyse) yan panel Yönetim grubu.
+        // Koşul, Moodle birincil gezinmesindeki "Site yönetimi" düğümüyle aynıdır.
+        if (local_wamakademi_user_sees_siteadmin()) {
             $adminitems[] = [
-                'id' => 'uploadvideo',
-                'label' => get_string('menuuploadvideo', 'local_wamakademi'),
-                'url' => (new moodle_url('/local/wamakademi/upload.php', [
-                    'courseid' => (int)$courseid,
-                ]))->out(false),
+                'id' => 'admin',
+                'label' => 'Site yönetimi',
+                'url' => (new moodle_url('/admin/search.php'))->out(false),
                 'action' => false,
             ];
+            $sidebaradmin = local_wamakademi_sidebar_admin_links();
         }
-    }
-    // Kurs oluştur: moodle/course:create olan kullanıcılara, doğru kategori bağlamıyla.
-    $createurl = \local_wamakademi\access::course_create_url(
-        ($courseid > 1 && !empty($PAGE->course->category)) ? (int)$PAGE->course->category : 0
-    );
-    if ($createurl !== null) {
-        $adminitems[] = [
-            'id' => 'createcourse',
-            'label' => get_string('menucreatecourse', 'local_wamakademi'),
-            'url' => $createurl->out(false),
-            'action' => false,
-        ];
-    }
-    // Yan panelden kaldırılan "Site yönetimi" erişimi (özellikle üst çubuk gezinmesinin görünmediği dar ekranlarda)
-    // Ayarlar menüsünde kalır. Koşul, Moodle birincil gezinmesindeki "Site yönetimi" düğümüyle aynıdır.
-    $hassiteadmin = has_capability('moodle/site:config', context_system::instance());
-    if (!$hassiteadmin) {
-        try {
-            $hassiteadmin = (bool)$PAGE->settingsnav->find('siteadministration', \navigation_node::TYPE_SITE_ADMIN);
-        } catch (Throwable $e) {
-            $hassiteadmin = false;
+        if (!empty($adminitems)) {
+            $groups[] = [
+                'id' => 'management',
+                'label' => 'Yönetim',
+                'items' => $adminitems,
+            ];
         }
-    }
-    if ($hassiteadmin) {
-        $adminitems[] = [
-            'id' => 'admin',
-            'label' => 'Site yönetimi',
-            'url' => (new moodle_url('/admin/search.php'))->out(false),
-            'action' => false,
-        ];
-    }
-    if (!empty($adminitems)) {
-        $groups[] = [
-            'id' => 'management',
-            'label' => 'Yönetim',
-            'items' => $adminitems,
-        ];
     }
 
     // Oturum: tarayıcı oturumları + işlemler.
@@ -436,11 +443,12 @@ function local_wamakademi_menu_config(): array {
         ];
     }
 
+    // Rolüme dön / Çıkış yalnızca profil menüsünde (usermenu); çarkta tekrarlanmaz.
     $groups[] = [
         'id' => 'session',
         'label' => 'Oturum',
         'items' => $sessionitems,
-        'actions' => $actionitems,
+        'actions' => [],
     ];
 
     $banner = '';
@@ -492,6 +500,8 @@ function local_wamakademi_menu_config(): array {
         'profileurl' => $profileurl,
         'active' => $active,
         'links' => $links,
+        'adminLinks' => $sidebaradmin,
+        'studentView' => $studentview,
         'settings' => $settings,
         'groups' => $groups,
         'banner' => $banner,
@@ -500,15 +510,232 @@ function local_wamakademi_menu_config(): array {
 }
 
 /**
+ * Kurs içinde "şu role geç" aktifse o rolün kimliği.
+ *
+ * @return int 0 ise rol önizlemesi yok
+ */
+function local_wamakademi_switched_roleid(): int {
+    global $USER;
+
+    if (empty($USER->access['rsw']) || !is_array($USER->access['rsw'])) {
+        return 0;
+    }
+    $roleid = (int)end($USER->access['rsw']);
+    return $roleid > 0 ? $roleid : 0;
+}
+
+/**
+ * Rol önizlemesinde yalnızca seçilen rolün izni; aksi halde normal has_capability.
+ *
+ * @param string $capability
+ * @param context $context
+ * @return bool
+ */
+function local_wamakademi_switched_role_allows(string $capability, context $context): bool {
+    $roleid = local_wamakademi_switched_roleid();
+    if (!$roleid) {
+        return false;
+    }
+    $perms = role_context_capabilities($roleid, $context);
+    return isset($perms[$capability]) && (int)$perms[$capability] === CAP_ALLOW;
+}
+
+/**
+ * Öğrenci görünümü mü (gerçek öğrenci veya "şu role geç" ile öğrenci önizlemesi)?
+ * Yönetim düğmeleri (Site yönetimi, Kontrol paneli, Yönetici) bu durumda gizlenir.
+ *
+ * @return bool
+ */
+function local_wamakademi_is_student_view(): bool {
+    global $USER, $DB;
+
+    // Rol önizlemesi: site:config yoksa öğrenci chrome'u (Yönetici / Site yönetimi kapalı).
+    if (local_wamakademi_switched_roleid()) {
+        return !local_wamakademi_user_sees_siteadmin();
+    }
+
+    if (is_siteadmin($USER) || local_wamakademi_user_sees_siteadmin()) {
+        return false;
+    }
+    if (\local_wamakademi\access::can_create_course((int)$USER->id, 0)) {
+        return false;
+    }
+
+    // Öğretmen / yönetici / kurs oluşturucu arketipi varsa öğrenci görünümü değildir.
+    $staff = $DB->get_records_sql(
+        "SELECT r.id
+           FROM {role_assignments} ra
+           JOIN {role} r ON r.id = ra.roleid
+          WHERE ra.userid = :userid
+            AND r.archetype IN ('manager', 'coursecreator', 'editingteacher', 'teacher')",
+        ['userid' => (int)$USER->id],
+        0,
+        1
+    );
+    if (!empty($staff)) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Yan panel ve çark "Site yönetimi" bu kullanıcıya görünsün mü.
+ * Rol önizlemesinde site yöneticisi ayrıcalığı kullanılmaz.
+ *
+ * @return bool
+ */
+function local_wamakademi_user_sees_siteadmin(): bool {
+    global $PAGE;
+
+    $system = context_system::instance();
+    if ($roleid = local_wamakademi_switched_roleid()) {
+        return local_wamakademi_switched_role_allows('moodle/site:config', $system);
+    }
+    if (has_capability('moodle/site:config', $system)) {
+        return true;
+    }
+    try {
+        return (bool)$PAGE->settingsnav->find('siteadministration', \navigation_node::TYPE_SITE_ADMIN);
+    } catch (Throwable $e) {
+        return false;
+    }
+}
+
+/**
+ * Yetkili kullanıcılar için yan panel "Yönetim" bağlantıları.
+ * Site yönetimi kökü + kullanıcının erişebildiği üst düzey admin kategorileri.
+ *
+ * @return array
+ */
+function local_wamakademi_sidebar_admin_links(): array {
+    global $CFG, $PAGE;
+
+    $links = [[
+        'id' => 'admin',
+        'label' => 'Site yönetimi',
+        'url' => (new moodle_url('/admin/search.php'))->out(false),
+    ]];
+
+    // Tercihen admin ağacı (kategori URL'leri güvenilir); yoksa settingsnav çocukları.
+    try {
+        require_once($CFG->libdir . '/adminlib.php');
+        $adminroot = admin_get_root(false, false);
+        if ($adminroot && !empty($adminroot->children)) {
+            foreach ($adminroot->children as $child) {
+                if (!($child instanceof admin_category)) {
+                    continue;
+                }
+                if ($child->is_hidden() || !$child->check_access()) {
+                    continue;
+                }
+                $url = null;
+                if (method_exists($child, 'get_settings_page_url')) {
+                    $url = $child->get_settings_page_url();
+                }
+                if ($url instanceof moodle_url) {
+                    $url = $url->out(false);
+                } else {
+                    $url = (new moodle_url('/admin/category.php', ['category' => $child->name]))->out(false);
+                }
+                $label = trim(strip_tags((string)$child->visiblename));
+                if ($label === '') {
+                    continue;
+                }
+                $key = preg_replace('/[^a-z0-9_-]/i', '', (string)$child->name);
+                $links[] = [
+                    'id' => 'admin_' . ($key !== '' ? $key : substr(sha1($url), 0, 8)),
+                    'label' => $label,
+                    'url' => $url,
+                ];
+            }
+            return $links;
+        }
+    } catch (Throwable $e) {
+        // settingsnav yedeğine düş.
+    }
+
+    try {
+        $root = $PAGE->settingsnav->find('siteadministration', \navigation_node::TYPE_SITE_ADMIN);
+        if (!$root || empty($root->children)) {
+            return $links;
+        }
+        foreach ($root->children as $child) {
+            if (!$child instanceof \navigation_node) {
+                continue;
+            }
+            if (!$child->display || $child->hidden) {
+                continue;
+            }
+            $url = $child->action;
+            if ($url instanceof moodle_url) {
+                $url = $url->out(false);
+            } else if (is_object($url) && method_exists($url, 'out')) {
+                $url = $url->out(false);
+            } else {
+                $url = is_string($url) ? $url : '';
+            }
+            if ($url === '' && !empty($child->children)) {
+                foreach ($child->children as $sub) {
+                    if (!$sub->display || $sub->hidden) {
+                        continue;
+                    }
+                    $suburl = $sub->action;
+                    if ($suburl instanceof moodle_url) {
+                        $url = $suburl->out(false);
+                        break;
+                    }
+                    if (is_object($suburl) && method_exists($suburl, 'out')) {
+                        $url = $suburl->out(false);
+                        break;
+                    }
+                }
+            }
+            if ($url === '') {
+                continue;
+            }
+            $label = trim(strip_tags((string)$child->text));
+            if ($label === '') {
+                continue;
+            }
+            $key = preg_replace('/[^a-z0-9_-]/i', '', (string)($child->key ?? $label));
+            $links[] = [
+                'id' => 'admin_' . ($key !== '' ? $key : substr(sha1($url), 0, 8)),
+                'label' => $label,
+                'url' => $url,
+            ];
+        }
+    } catch (Throwable $e) {
+        // Yalnız Site yönetimi kökü yeter.
+    }
+
+    return $links;
+}
+
+/**
  * Hedef kullanıcı id'sini sayfa bağlamından çıkar (yoksa 0).
  *
  * @return int
  */
 function local_wamakademi_account_target_userid(): int {
-    global $PAGE, $USER;
+    global $PAGE, $SCRIPT, $USER;
 
     if (!empty($PAGE->context) && $PAGE->context->contextlevel === CONTEXT_USER) {
         return (int)$PAGE->context->instanceid;
+    }
+
+    // change_password.php: id = kurs (SITEID), kullanıcı değil — kendi hesabı.
+    $pagetype = (string)$PAGE->pagetype;
+    $path = '';
+    if ($PAGE->url instanceof moodle_url) {
+        $path = $PAGE->url->get_path();
+    }
+    if ($path === '' && !empty($SCRIPT)) {
+        $path = (string)$SCRIPT;
+    }
+    $path = str_replace('\\', '/', $path);
+    if ($pagetype === 'login-change_password' || preg_match('#(?:^|/)login/change_password\.php$#', $path)) {
+        return (int)$USER->id;
     }
 
     $idparam = optional_param('id', 0, PARAM_INT);
@@ -666,6 +893,8 @@ function local_wamakademi_account_config(): array {
         'preferencesUrl' => $preferencesurl,
         'strings' => [
             'editprofile' => get_string('editmyprofile'),
+            // Sayfa H1/H2: Moodle 'editmyprofile' = "Profil düzenle"; ürün metni "Profili düzenle".
+            'editprofiletitle' => 'Profili düzenle',
             'advanced' => 'Gelişmiş ayarlar',
             'account' => 'Kullanıcı hesabı',
             'notifications' => 'Bildirimler ve mesajlar',
@@ -774,6 +1003,11 @@ function local_wamakademi_is_admin_page(): bool {
     global $PAGE;
     static $cache = null;
 
+    // Site ön yüzü her zaman yönetim çekmecesinin dışında (önbellekten önce).
+    if (isloggedin() && !isguestuser() && local_wamakademi_is_sitefront_page()) {
+        return false;
+    }
+
     if ($cache !== null) {
         return $cache;
     }
@@ -783,6 +1017,7 @@ function local_wamakademi_is_admin_page(): bool {
     }
 
     // Bazı yönetim sayfaları (ör. Ön sayfa ayarları) bağlamı sistem değil site kursu olarak ayarlar.
+    // Not: frontpagesettings artık is_sitefront_page ile elenir; bu dal diğer /admin + site kursu yolları içindir.
     $issitecontext = (int)$PAGE->context->contextlevel === CONTEXT_COURSE
         && (int)$PAGE->context->instanceid === (int)SITEID
         && strpos($PAGE->url->get_path(), '/admin/') === 0;
@@ -791,6 +1026,93 @@ function local_wamakademi_is_admin_page(): bool {
         && !local_wamakademi_is_account_page();
 
     return $cache;
+}
+
+/**
+ * Site ana sayfası (ön yüz) bağlamındaki sekmeli ekran mı?
+ *
+ * Karar: CONTEXT_COURSE + site kursu (SITEID), veya bilinen ön yüz URL'leri
+ * (ör. frontpagesettings — Moodle bazen bağlamı sistemde bırakır).
+ * Etkinlik bağlamı (ör. mod/qbank), hesap sayfaları ve gerçek kurslar hariç.
+ * Yalnızca görünümü seçer; yetki vermez.
+ *
+ * @return bool
+ */
+function local_wamakademi_is_sitefront_page(): bool {
+    global $PAGE;
+
+    if (!isloggedin() || isguestuser() || !($PAGE->context instanceof context)) {
+        return false;
+    }
+    if (local_wamakademi_is_account_page()) {
+        return false;
+    }
+    if (local_wamakademi_is_sitefront_url()) {
+        return true;
+    }
+    if ((int)$PAGE->context->contextlevel !== CONTEXT_COURSE) {
+        return false;
+    }
+    if ((int)$PAGE->context->instanceid !== (int)SITEID) {
+        return false;
+    }
+    if (empty($PAGE->course->id) || (int)$PAGE->course->id !== (int)SITEID) {
+        return false;
+    }
+    return true;
+}
+
+/**
+ * Site ön yüzü sekmelerine ait bilinen URL'ler (bağlam henüz sistem olsa bile).
+ *
+ * @return bool
+ */
+function local_wamakademi_is_sitefront_url(): bool {
+    global $PAGE, $SCRIPT;
+
+    // En güvenilir işaret: settings.php pagetype (bağlam sistemde kalsa bile).
+    if ((string)$PAGE->pagetype === 'admin-setting-frontpagesettings') {
+        return true;
+    }
+
+    $path = '';
+    $section = '';
+    $contextid = 0;
+    if ($PAGE->url instanceof moodle_url) {
+        $path = $PAGE->url->get_path();
+        $section = (string)$PAGE->url->get_param('section');
+        $contextid = (int)$PAGE->url->get_param('contextid');
+    }
+    if ($section === '' && !defined('BEHAT_SITE_RUNNING')) {
+        // URL nesnesinde yoksa istek parametresine bak (erken kancalar).
+        $section = optional_param('section', '', PARAM_SAFEDIR);
+    }
+    if ($path === '' && !empty($SCRIPT)) {
+        $path = (string)$SCRIPT;
+    }
+    $path = str_replace('\\', '/', $path);
+
+    // Ön sayfa ayarları: admin_settingpage site kursu bağlamı taşır; sayfa bazen CONTEXT_SYSTEM kalır.
+    if ($section === 'frontpagesettings' && (
+            preg_match('#(?:^|/)admin/settings\.php$#', $path)
+            || strpos($path, 'admin/settings.php') !== false
+            || strpos((string)$PAGE->pagetype, 'admin-setting-frontpage') === 0
+        )) {
+        return true;
+    }
+
+    // Katılımcılar üçüncül rol ekranları: site kursu contextid.
+    if ($contextid <= 0) {
+        $contextid = optional_param('contextid', 0, PARAM_INT);
+    }
+    if ($contextid > 0 && preg_match('#(?:^|/)admin/roles/(?:permissions|assign|check)\.php$#', $path)) {
+        $ctx = context::instance_by_id($contextid, IGNORE_MISSING);
+        if ($ctx instanceof context_course && (int)$ctx->instanceid === (int)SITEID) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 /**
@@ -813,9 +1135,15 @@ function local_wamakademi_course_page_kind(): ?string {
     if (!isloggedin() || isguestuser() || !($PAGE->context instanceof context)) {
         return null;
     }
-    $layouts = ['course', 'incourse', 'report', 'admin', 'standard', 'base', 'coursecategory'];
+    // frontpage: site ana sayfası (/); diğerleri kurs/ön yüz sekmeleri.
+    $layouts = ['course', 'incourse', 'report', 'admin', 'standard', 'base', 'coursecategory', 'frontpage'];
     if (!in_array((string)$PAGE->pagelayout, $layouts, true)) {
         return null;
+    }
+    // Site ön yüzü sekmeleri (Katılımcılar, Ayarlar, raporlar vb.) ortak kabuk.
+    // frontpagesettings URL'si bağlam sistemde kalsa bile buraya girer.
+    if (local_wamakademi_is_sitefront_page()) {
+        return 'site';
     }
     $level = (int)$PAGE->context->contextlevel;
     if ($level === CONTEXT_COURSECAT) {
@@ -825,8 +1153,8 @@ function local_wamakademi_course_page_kind(): ?string {
         return null;
     }
     if ((int)$PAGE->course->id === (int)SITEID) {
-        // Site ana sayfası: yalnızca katılımcı listesi eğitim kabuğunu kullanır ('site'); diğer ön sayfa ekranları değişmez.
-        return ((string)$PAGE->pagetype === 'course-view-participants' && $level === CONTEXT_COURSE) ? 'site' : null;
+        // Site kursundaki etkinlik/blok bağlamı (ör. mod/qbank) ön yüz kabuğuna alınmaz.
+        return null;
     }
     if (!in_array($level, [CONTEXT_COURSE, CONTEXT_MODULE, CONTEXT_BLOCK], true)) {
         return null;
@@ -852,6 +1180,9 @@ function local_wamakademi_course_body_classes(): array {
     $pagetype = (string)$PAGE->pagetype;
     // .wam-course-category katalog kartı rozetinde kullanılıyor (styles.css); kategori kabuğu ayrı ad alır.
     $classes = ['wam-course', $kind === 'category' ? 'wam-coursecat' : 'wam-course-' . $kind];
+    if ($kind === 'site') {
+        $classes[] = 'wam-sitefront';
+    }
     if ($pagetype === 'course-view-participants') {
         $classes[] = 'wam-course-participants';
         if ($kind === 'site') {
@@ -888,21 +1219,108 @@ function local_wamakademi_forms_head_html(): string {
  * @return array
  */
 function local_wamakademi_course_config(): array {
-    global $USER, $PAGE;
+    global $USER, $PAGE, $DB, $CFG;
 
-    $keys = ['courseaddparticipants', 'coursesearchlabel', 'coursesearchplaceholder', 'coursesearchsubmit',
-        'coursesearchclear', 'courseadvancedfilters', 'courseinitials', 'courseindexshort', 'menuuploadvideo'];
+    require_once($CFG->dirroot . '/course/lib.php');
+
+    $keys = [
+        'courseaddparticipants', 'coursesearchlabel', 'coursesearchplaceholder', 'coursesearchsubmit',
+        'coursesearchclear', 'courseadvancedfilters', 'courseinitials', 'courseindexshort', 'menuuploadvideo',
+        'menueditcourse', 'menuaddcontent', 'menuaddassign', 'menuaddquiz', 'menuaddsectionprompt',
+        'menuaddsectionback', 'participantsedit', 'participantssave', 'participantsediting',
+    ];
     $strings = [];
     foreach ($keys as $key) {
         $strings[$key] = get_string($key, 'local_wamakademi');
     }
-    $config = ['strings' => $strings, 'uploadurl' => ''];
+    $config = [
+        'strings' => $strings,
+        'uploadurl' => '',
+        'editurl' => '',
+        'courseid' => 0,
+        'sections' => [],
+        'addactions' => [],
+    ];
     $courseid = !empty($PAGE->course->id) ? (int)$PAGE->course->id : 0;
-    if ($courseid > 1 && \local_wamakademi\access::can_manage_videos((int)$USER->id, $courseid)) {
-        $config['uploadurl'] = (new moodle_url('/local/wamakademi/upload.php', [
+    if ($courseid <= 1) {
+        return $config;
+    }
+
+    $course = $DB->get_record('course', ['id' => $courseid], '*', IGNORE_MISSING);
+    if (!$course) {
+        return $config;
+    }
+
+    $config['courseid'] = $courseid;
+    $coursecontext = context_course::instance($courseid);
+
+    if (has_capability('moodle/course:update', $coursecontext)) {
+        $config['editurl'] = (new moodle_url('/course/edit.php', [
+            'id' => $courseid,
+        ]))->out(false);
+    }
+
+    // Videolar sekmesi kendi yükleme düğmesini kullanır; burada yalnızca liste URL'si.
+    if (\local_wamakademi\access::can_manage_videos((int)$USER->id, $courseid)) {
+        $config['uploadurl'] = (new moodle_url('/local/wamakademi/videos.php', [
             'courseid' => $courseid,
         ]))->out(false);
     }
+
+    $modinfo = get_fast_modinfo($course);
+    $sections = [];
+    foreach ($modinfo->get_section_info_all() as $sectioninfo) {
+        if (!empty($sectioninfo->component)) {
+            // Delege edilmiş (ör. alt etkinlik) bölümleri atla.
+            continue;
+        }
+        $sectionnum = (int)$sectioninfo->section;
+        $sections[] = [
+            'num' => $sectionnum,
+            'name' => get_section_name($course, $sectioninfo),
+        ];
+    }
+    $config['sections'] = $sections;
+
+    $addactions = [];
+    if (\local_wamakademi\access::can_manage_videos((int)$USER->id, $courseid)) {
+        $addactions[] = [
+            'id' => 'video',
+            'label' => get_string('menuuploadvideo', 'local_wamakademi'),
+            'url' => (new moodle_url('/local/wamakademi/upload.php', [
+                'courseid' => $courseid,
+            ]))->out(false),
+            'sectionparam' => 'sectionnum',
+        ];
+    }
+    if (has_capability('moodle/course:manageactivities', $coursecontext)
+            && course_allowed_module($course, 'assign')) {
+        $addactions[] = [
+            'id' => 'assign',
+            'label' => get_string('menuaddassign', 'local_wamakademi'),
+            'url' => (new moodle_url('/course/modedit.php', [
+                'add' => 'assign',
+                'course' => $courseid,
+                'return' => 0,
+            ]))->out(false),
+            'sectionparam' => 'section',
+        ];
+    }
+    if (has_capability('moodle/course:manageactivities', $coursecontext)
+            && course_allowed_module($course, 'quiz')) {
+        $addactions[] = [
+            'id' => 'quiz',
+            'label' => get_string('menuaddquiz', 'local_wamakademi'),
+            'url' => (new moodle_url('/course/modedit.php', [
+                'add' => 'quiz',
+                'course' => $courseid,
+                'return' => 0,
+            ]))->out(false),
+            'sectionparam' => 'section',
+        ];
+    }
+    $config['addactions'] = $addactions;
+
     return $config;
 }
 
@@ -1101,6 +1519,51 @@ function local_wamakademi_admin_nav_context(): ?array {
 }
 
 /**
+ * Ön sayfa ayarları sayfasında site kursu bağlamını ve ikincil sekmeleri zorunlu kıl.
+ *
+ * Moodle bazen admin_settingpage bağlamını uygulamadan CONTEXT_SYSTEM'de bırakır;
+ * o durumda ikincil menü site yönetimi kategorilerine döner. Çekirdeğe dokunmadan düzeltir.
+ */
+function local_wamakademi_ensure_sitefront_settings_context(): void {
+    global $PAGE;
+
+    if ((string)$PAGE->pagetype !== 'admin-setting-frontpagesettings') {
+        return;
+    }
+    $coursectx = context_course::instance(SITEID);
+    if ((int)$PAGE->context->id === (int)$coursectx->id) {
+        return;
+    }
+
+    // set_course tema kurulduktan sonra yasak; yalnız bağlamı değiştir (site kursu zaten $PAGE->course).
+    $PAGE->set_context($coursectx);
+    // Yanlış (sistem) ikincil menü oluştuysa site ön yüzü sekmeleriyle yeniden kur.
+    $secondary = new \core\navigation\views\secondary($PAGE);
+    $secondary->initialise();
+    $PAGE->set_secondarynav($secondary);
+    $PAGE->set_secondary_active_tab('editsettings');
+}
+
+/**
+ * Kurs içi profil (/user/view.php) kurs sayfasının kopyasıdır. Tek profil sayfasına gider.
+ */
+function local_wamakademi_redirect_duplicate_course_profile(): void {
+    global $PAGE, $USER;
+
+    if (!($PAGE->url instanceof moodle_url)) {
+        return;
+    }
+    if (!$PAGE->url->compare(new moodle_url('/user/view.php'), URL_MATCH_BASE)) {
+        return;
+    }
+    $id = (int)$PAGE->url->param('id');
+    if ($id <= 0) {
+        $id = (int)$USER->id;
+    }
+    redirect(new moodle_url('/user/profile.php', ['id' => $id]));
+}
+
+/**
  * Body sınıfını HTML çıktısı başlamadan ekle.
  */
 function local_wamakademi_before_http_headers() {
@@ -1110,7 +1573,17 @@ function local_wamakademi_before_http_headers() {
         return;
     }
 
+    // /user/view.php kurs kabuğunu (başlık + sekmeler) ikinci bir sayfa gibi yeniden çizer
+    // ve "Tam profil" ile aynı kişiyi tekrar açar. Tek profil sayfası kalır.
+    local_wamakademi_redirect_duplicate_course_profile();
+
+    local_wamakademi_ensure_sitefront_settings_context();
+
     $PAGE->add_body_class('wam-ui');
+
+    if (local_wamakademi_is_student_view()) {
+        $PAGE->add_body_class('wam-student-view');
+    }
 
     if (local_wamakademi_is_admin_page()) {
         $PAGE->add_body_class('wam-admin');
@@ -1164,7 +1637,7 @@ function local_wamakademi_before_http_headers() {
  * WAM Akademi ortak head kancası.
  */
 function local_wamakademi_before_standard_html_head() {
-    global $PAGE, $USER;
+    global $CFG, $PAGE, $USER;
 
     $pagetype = (string)$PAGE->pagetype;
     $headhtml = '';
@@ -1180,6 +1653,14 @@ function local_wamakademi_before_standard_html_head() {
         $PAGE->requires->css(new moodle_url($csspath, [
             'v' => filemtime($logincss),
         ]));
+        // Yerel kısayollar: yalnızca localhost. Canlıya taşınmaz.
+        $host = parse_url($CFG->wwwroot, PHP_URL_HOST);
+        $devlogin = __DIR__ . '/js/login_dev.js';
+        if (is_readable($devlogin) && in_array($host, ['localhost', '127.0.0.1'], true)) {
+            $PAGE->requires->js(new moodle_url('/local/wamakademi/js/login_dev.js', [
+                'v' => filemtime($devlogin),
+            ]));
+        }
     }
 
     if (isloggedin() && !isguestuser()) {
@@ -1218,6 +1699,11 @@ function local_wamakademi_before_standard_html_head() {
             local_wamakademi_asset_url('/local/wamakademi/js/wam_menu.js')
         );
 
+        // Sekme/seçici gibi görünen alanlarda Moodle-safe yumuşak geçiş (tüm giriş yapmış sayfalar).
+        $PAGE->requires->js(
+            local_wamakademi_asset_url('/local/wamakademi/js/course_nav.js')
+        );
+
         if (local_wamakademi_is_account_page()) {
             $PAGE->requires->data_for_js('wamAccountConfig', local_wamakademi_account_config(), true);
             $PAGE->requires->js(
@@ -1226,7 +1712,8 @@ function local_wamakademi_before_standard_html_head() {
         }
 
         // Eğitim detay ve yönetim ekranları (kurs/etkinlik bağlamı).
-        if (local_wamakademi_course_page_kind() !== null) {
+        $coursekind = local_wamakademi_course_page_kind();
+        if ($coursekind !== null) {
             $PAGE->requires->css(
                 local_wamakademi_asset_url('/local/wamakademi/css/wam-course.css')
             );
@@ -1238,6 +1725,15 @@ function local_wamakademi_before_standard_html_head() {
             if ($pagetype === 'course-view-participants') {
                 $PAGE->requires->js(
                     local_wamakademi_asset_url('/local/wamakademi/js/participants_table.js')
+                );
+            }
+            // Site ana sayfası sekmeleri: genişlik + yatay kaydırmalı sekme şeridi.
+            if ($coursekind === 'site') {
+                $PAGE->requires->css(
+                    local_wamakademi_asset_url('/local/wamakademi/css/wam-sitefront.css')
+                );
+                $PAGE->requires->js(
+                    local_wamakademi_asset_url('/local/wamakademi/js/sitefront_nav.js')
                 );
             }
         }

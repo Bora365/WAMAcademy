@@ -1,16 +1,9 @@
 /**
- * WAM katılımcılar tablosu: satır sonundaki tek "İşlemler" menüsü.
+ * WAM katılımcılar tablosu: satır "İşlemler" menüsü + master Düzenle/Kaydet.
  *
- * Menü içeriği sunucuda üretilir (user/classes/table/participants.php, templates/participants_actions.mustache),
- * yani öğeler mevcut yetkilere göre gelir. Bu betik yalnızca açma/kapama, klavye ve konumlandırmayı yönetir.
- *
- *  - Düğme: Enter/Space/ArrowDown menüyü açar, ilk öğeye odaklanır; ArrowUp son öğeye gider.
- *  - Menü: ArrowUp/ArrowDown/Home/End dolaşır, Escape kapatıp odağı düğmeye döndürür, Tab menüyü kapatır.
- *  - Konum: position:fixed; düğmenin sağ kenarına hizalanır, taşarsa yukarı açılır ve görünüm alanına sıkıştırılır.
- *    Tablonun yatay kaydırma alanı tarafından kırpılmaz.
- *  - Moodle'un kayıt işlemleri (bilgi, düzenle, kaldır + onay) core_user/status_field ile çalışmaya devam eder:
- *    menü öğeleri aynı data-action özniteliklerini ve data-* kapsayıcısını taşır.
- *  - Rol/grup düzenleme, satırdaki Moodle satır içi düzenleyicisini tetikler (core/inplace_editable).
+ * Menü içeriği sunucuda üretilir (kayıt bilgisi / kaydı düzenle / kaydı kaldır).
+ * Rol ve grup, üstteki master Düzenle ile satır içi (core/inplace_editable) açılır; Kaydet modu kapatır
+ * (her alan değişikliği Moodle AJAX ile zaten kaydedilir).
  */
 (function () {
     'use strict';
@@ -20,6 +13,7 @@
 
     var openState = null; // {trigger, menu}
     var ignoreScrollUntil = 0;
+    var editing = false;
 
     function items(menu) {
         return Array.prototype.slice.call(menu.querySelectorAll('[role="menuitem"]'));
@@ -87,6 +81,10 @@
     }
 
     function runWamAction(item, trigger) {
+        // Eski rol/grup menü öğeleri (önbellekli HTML): master düzenleme açıkken satırı tetikle.
+        if (!editing) {
+            return;
+        }
         var row = trigger.closest('tr');
         if (!row) {
             return;
@@ -100,7 +98,82 @@
         }
     }
 
+    function syncEditBar() {
+        var bar = document.querySelector('[data-region="wam-cp-editbar"]');
+        if (!bar) {
+            return;
+        }
+        var editBtn = bar.querySelector('.wam-cp-editbar__btn--edit');
+        var saveBtn = bar.querySelector('.wam-cp-editbar__btn--save');
+        if (editBtn) {
+            editBtn.setAttribute('aria-pressed', editing ? 'true' : 'false');
+            editBtn.classList.toggle('is-active', editing);
+            editBtn.disabled = !!editing;
+        }
+        if (saveBtn) {
+            if (editing) {
+                saveBtn.removeAttribute('disabled');
+            } else {
+                saveBtn.setAttribute('disabled', 'disabled');
+            }
+        }
+        bar.classList.toggle('is-editing', editing);
+        var live = bar.querySelector('.wam-cp-editbar__status');
+        var label = bar.getAttribute('data-editing-label') || '';
+        if (editing && label) {
+            if (!live) {
+                live = document.createElement('span');
+                live.className = 'wam-cp-editbar__status';
+                live.setAttribute('role', 'status');
+                live.setAttribute('aria-live', 'polite');
+                bar.appendChild(live);
+            }
+            live.textContent = label;
+        } else if (live) {
+            live.textContent = '';
+        }
+    }
+
+    function setEditing(on) {
+        editing = !!on;
+        document.body.classList.toggle('wam-cp-editing', editing);
+        var table = document.getElementById('participants');
+        if (table) {
+            table.classList.toggle('wam-cp-table-editing', editing);
+        }
+        normalizeInplaceLinks(document);
+        if (!editing) {
+            // Açık satır içi editörleri kapat (iptal).
+            document.querySelectorAll('#participants .inplaceeditable.inplaceeditingon').forEach(function (cell) {
+                var cancel = cell.querySelector('[data-action="cancel"], .quickeditlinkcancel, a[data-inplaceeditablecancel]');
+                if (cancel) {
+                    cancel.click();
+                    return;
+                }
+                var form = cell.querySelector('form');
+                if (form && typeof form.reset === 'function') {
+                    // Formu kaldırmak yerine dışarı tıklama benzeri: Escape.
+                    cell.dispatchEvent(new KeyboardEvent('keydown', {key: 'Escape', bubbles: true}));
+                }
+            });
+        }
+        syncEditBar();
+    }
+
     document.addEventListener('click', function (event) {
+        var editBtn = event.target && event.target.closest && event.target.closest('.wam-cp-editbar__btn--edit');
+        if (editBtn) {
+            event.preventDefault();
+            setEditing(true);
+            return;
+        }
+        var saveBtn = event.target && event.target.closest && event.target.closest('.wam-cp-editbar__btn--save');
+        if (saveBtn) {
+            event.preventDefault();
+            setEditing(false);
+            return;
+        }
+
         var target = event.target;
         if (!target || !target.closest) {
             return;
@@ -224,14 +297,21 @@
         }
     });
 
-    // Satır içi düzenleme bağlantıları yalnızca menüden tetiklenir: sekme sırasından ve erişilebilirlik ağacından çıkar.
+    // Görünüm modunda satır içi bağlantılar pasif; düzenleme modunda tıklanabilir.
     function normalizeInplaceLinks(root) {
         (root || document).querySelectorAll('#participants [data-inplaceeditablelink]').forEach(function (link) {
-            if (link.getAttribute('tabindex') !== '-1') {
-                link.setAttribute('tabindex', '-1');
-            }
-            if (link.getAttribute('role') !== 'presentation') {
-                link.setAttribute('role', 'presentation');
+            if (editing) {
+                link.removeAttribute('tabindex');
+                if (link.getAttribute('role') === 'presentation') {
+                    link.removeAttribute('role');
+                }
+            } else {
+                if (link.getAttribute('tabindex') !== '-1') {
+                    link.setAttribute('tabindex', '-1');
+                }
+                if (link.getAttribute('role') !== 'presentation') {
+                    link.setAttribute('role', 'presentation');
+                }
             }
         });
     }
@@ -245,6 +325,7 @@
         window.requestAnimationFrame(function () {
             scheduled = false;
             normalizeInplaceLinks(document);
+            syncEditBar();
             // Tablo yeniden çizildiyse açık menü artık belgede değildir.
             if (openState && !document.contains(openState.menu)) {
                 openState = null;
@@ -254,6 +335,7 @@
 
     function start() {
         normalizeInplaceLinks(document);
+        syncEditBar();
         if (typeof MutationObserver !== 'undefined') {
             new MutationObserver(schedule).observe(document.body, {childList: true, subtree: true});
         }

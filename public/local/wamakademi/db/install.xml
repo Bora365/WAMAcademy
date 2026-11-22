@@ -110,6 +110,28 @@
 
         </TABLE>
 
+        <TABLE NAME="local_wamakademi_coursenumber"
+               COMMENT="Issued course id numbers. Rows are never deleted, so a number cannot be reused.">
+
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="code" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="timedeleted" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+            </FIELDS>
+
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+
+            <INDEXES>
+                <INDEX NAME="code_uix" UNIQUE="true" FIELDS="code"/>
+                <INDEX NAME="courseid_ix" UNIQUE="false" FIELDS="courseid"/>
+            </INDEXES>
+
+        </TABLE>
+
     </TABLES>
 
 </XMLDB>

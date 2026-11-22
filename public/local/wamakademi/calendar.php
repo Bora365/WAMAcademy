@@ -207,51 +207,24 @@ foreach ($courses as $course) {
      * -----------------------------------------------------
      * GERÇEK BİTİŞ TARİHİ
      *
-     * Kurstaki TÜM dersler %100 olduğunda eğitim tamamlanır.
+     * Tüm yayımlı derslerde completed = 1 (video eşiği %95).
      * -----------------------------------------------------
      */
-
-    $coursefullycompleted = true;
-    $completiontimestamps = [];
-
+    $publishedforuser = [];
     foreach ($lessoncmids as $lessoncmid) {
-
-        if (!isset($progressbycmid[$lessoncmid])) {
-            $coursefullycompleted = false;
-            break;
+        $cm = $modinfo->cms[$lessoncmid] ?? null;
+        if ($cm) {
+            $publishedforuser[] = $cm;
         }
-
-        $lessonprogress = $progressbycmid[$lessoncmid];
-
-        /*
-         * Bitiş tarihi için gerçekten %100 istiyoruz.
-         */
-        if ((int)$lessonprogress->progress < 100) {
-            $coursefullycompleted = false;
-            break;
-        }
-
-        if (empty($lessonprogress->timecompleted)) {
-            $coursefullycompleted = false;
-            break;
-        }
-
-        $completiontimestamps[] =
-            (int)$lessonprogress->timecompleted;
     }
-
-    $realenddate = 0;
-
-    if (
-        $coursefullycompleted &&
-        count($completiontimestamps) === count($lessoncmids)
-    ) {
-        /*
-         * Son tamamlanan dersin tarihi =
-         * eğitimin tamamlanma tarihi.
-         */
-        $realenddate = max($completiontimestamps);
-    }
+    $coursesummary = \local_wamakademi\progress::for_published_lessons(
+        (int)$USER->id,
+        $publishedforuser,
+        $progressbycmid
+    );
+    $realenddate = !empty($coursesummary['iscompleted'])
+        ? (int)$coursesummary['timecompleted']
+        : 0;
 
     /*
      * -----------------------------------------------------

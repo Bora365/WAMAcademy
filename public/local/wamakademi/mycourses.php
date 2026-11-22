@@ -73,122 +73,39 @@ foreach ($courses as $course) {
         continue;
     }
 
-    $modinfo = get_fast_modinfo($course->id, $USER->id);
-    $resources = [];
+    $published = \local_wamakademi\course_videos::published_resources_for_user($course, (int)$USER->id);
+    $summary = \local_wamakademi\progress::for_published_lessons((int)$USER->id, $published);
 
-    foreach ($modinfo->get_cms() as $coursecm) {
-        if ($coursecm->modname !== 'resource') {
-            continue;
-        }
-        if (!empty($coursecm->deletioninprogress)) {
-            continue;
-        }
-        if (!$coursecm->uservisible) {
-            continue;
-        }
-        if (!has_capability('mod/resource:view', context_module::instance($coursecm->id))) {
-            continue;
-        }
-        $resources[] = $coursecm;
-    }
+    $lessoncount = (int)$summary['lessoncount'];
+    $courseprogress = (int)$summary['courseprogress'];
+    $completedlessons = (int)$summary['completedlessons'];
+    $latestactivity = (int)$summary['latestactivity'];
+    $hasstarted = !empty($summary['hasstarted']);
+    $iscompleted = !empty($summary['iscompleted']);
+    $status = (string)$summary['status'];
 
-    // No authorised lessons → do not list (same boundary as before).
-    if (empty($resources)) {
-        continue;
-    }
-
-    $hasstarted = false;
-    $totalprogress = 0;
-    $completedlessons = 0;
-    $continuecmid = null;
-    $continuecurrenttime = 0;
-    $continuelessonname = '';
-    $continuelessonindex = 0;
-    $latestactivity = 0;
-
-    $lessonindex = 0;
-    foreach ($resources as $resource) {
-        $lessonindex++;
-
-        $record = $DB->get_record(
-            'local_wamakademi_progress',
-            [
-                'userid' => $USER->id,
-                'cmid' => $resource->id,
-            ]
-        );
-
-        // Progress formula unchanged: average of every lesson's progress (missing = 0).
-        $lessonprogress = 0;
-
-        if ($record) {
-            $lessonprogress = (float)$record->progress;
-
-            if (
-                (float)$record->watchedseconds > 0 ||
-                (float)$record->progress > 0 ||
-                (float)$record->currenttime > 0
-            ) {
-                $hasstarted = true;
-            }
-
-            if (!empty($record->completed)) {
-                $completedlessons++;
-            }
-
-            if (!empty($record->timemodified) && (int)$record->timemodified > $latestactivity) {
-                $latestactivity = (int)$record->timemodified;
-            }
-        }
-
-        $totalprogress += $lessonprogress;
-
-        if ($continuecmid === null) {
-            if (!$record || empty($record->completed)) {
-                $continuecmid = $resource->id;
-                $continuelessonname = format_string($resource->name);
-                $continuelessonindex = $lessonindex;
-                if ($record) {
-                    $continuecurrenttime = (float)$record->currenttime;
-                }
-            }
-        }
-    }
-
-    $lessoncount = count($resources);
-
-    // Progress formula unchanged.
-    $courseprogress = $lessoncount > 0
-        ? round($totalprogress / $lessoncount)
-        : 0;
-
-    if ($continuecmid === null && !empty($resources)) {
-        $lastresource = end($resources);
-        $continuecmid = $lastresource->id;
-        $continuelessonname = format_string($lastresource->name);
-        $continuelessonindex = $lessoncount;
-    }
-
-    $continueurl = new moodle_url(
-        '/mod/resource/view.php',
-        ['id' => $continuecmid]
+    $continue = \local_wamakademi\course_cards::continue_target((int)$USER->id, $published);
+    $nav = \local_wamakademi\course_cards::navigation(
+        (int)$USER->id,
+        $course,
+        $published,
+        $continue['cmid']
     );
 
-    $iscompleted = ($completedlessons === $lessoncount && $lessoncount > 0);
-
-    if ($iscompleted) {
-        $status = 'completed';
-        $statuslabel = 'Tamamlandı';
+    $statuslabel = \local_wamakademi\progress::status_label($status);
+    if ($nav['canmanage']) {
+        $actionlabel = $nav['actionlabel'];
+    } else if ($iscompleted) {
         $actionlabel = 'Eğitimi incele';
     } else if ($hasstarted) {
-        $status = 'active';
-        $statuslabel = 'Devam ediyor';
-        $actionlabel = 'Devam et';
-    } else {
-        $status = 'assigned';
-        $statuslabel = 'Atandı';
+        $actionlabel = $nav['actionlabel'];
+    } else if ($nav['haspublishedlesson']) {
         $actionlabel = 'Eğitime başla';
+    } else {
+        $actionlabel = $nav['actionlabel'];
     }
+
+    $actionurl = $nav['actionurl'];
 
     $courseimage = null;
     $courseinlist = new core_course_list_element($course);
@@ -230,9 +147,10 @@ foreach ($courses as $course) {
         'progress' => (int)$courseprogress,
         'completedlessons' => $completedlessons,
         'lessoncount' => $lessoncount,
-        'continuelessonindex' => $continuelessonindex,
-        'continuelessonname' => $continuelessonname,
-        'continueurl' => $continueurl->out(false),
+        'continuelessonindex' => $continue['lessonindex'],
+        'continuelessonname' => $continue['lessonname'],
+        'continueurl' => $actionurl,
+        'courseurl' => $nav['courseurl'],
         'courseimage' => $courseimage,
         'hascourseimage' => !empty($courseimage),
         'initials' => local_wamakademi_mycourses_initials($fullname),

@@ -1,0 +1,4909 @@
+{
+  "phase": "before",
+  "engine": "chromium",
+  "count": 24,
+  "results": [
+    {
+      "id": "ADM-APPEARANCE",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 797,
+        "innerWidth": 390,
+        "scrollHeight": 26514,
+        "innerHeight": 844,
+        "overflowXPx": 407,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 12882,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 12882,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 12882,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 12959,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 12959,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 12959,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 13036,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 13036,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 13036,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 13113,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 13113,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 13113,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 13190,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 13190,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 13190,
+            "cls": "form-text form-control text-ltr"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 407,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "TABLE",
+            "cls": "",
+            "right": 437,
+            "w": 396,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "THEAD",
+            "cls": "",
+            "right": 437,
+            "w": 395,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TR",
+            "cls": "",
+            "right": 437,
+            "w": 395,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "right": 437,
+            "w": 73,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "",
+            "right": 435,
+            "w": 70,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TBODY",
+            "cls": "",
+            "right": 437,
+            "w": 395,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TR",
+            "cls": "",
+            "right": 437,
+            "w": 395,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "right": 437,
+            "w": 73,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "DIV",
+            "cls": "form-defaultinfo text-muted text-ltr",
+            "right": 548,
+            "w": 507,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TABLE",
+            "cls": "admintable table generaltable",
+            "right": 797,
+            "w": 756,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-APPEARANCE_admin_phone390.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-APPEARANCE",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 21672,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-APPEARANCE_admin_ipadPort.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-APPEARANCE",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 21672,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 235,
+          "cw": 235,
+          "ovX": "visible",
+          "right": 452
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 1115
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-APPEARANCE_admin_desk1440.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-APPEARANCE",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 797,
+        "innerWidth": 320,
+        "scrollHeight": 28841,
+        "innerHeight": 568,
+        "overflowXPx": 477,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 330,
+            "w": 315,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 402,
+            "left": 248,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 256,
+            "right": 325,
+            "top": 12,
+            "cls": "btn"
+          },
+          {
+            "label": "id_s__calendar_weekend5",
+            "left": 322,
+            "right": 335,
+            "top": 7110,
+            "cls": "form-checkbox"
+          },
+          {
+            "label": "id_s__calendar_weekend6",
+            "left": 365,
+            "right": 378,
+            "top": 7110,
+            "cls": "form-checkbox"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 13916,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 13916,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 13916,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 13993,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 13993,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 13993,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 14070,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 14070,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 14070,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 301,
+            "right": 421,
+            "top": 14147,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 453,
+            "right": 573,
+            "top": 14147,
+            "cls": "form-text form-control text-ltr"
+          },
+          {
+            "label": "",
+            "left": 605,
+            "right": 725,
+            "top": 14147,
+            "cls": "form-text form-control text-ltr"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 477,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 324,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 324,
+            "right": 303
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-APPEARANCE_admin_phone320.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-APPEARANCE",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 21672,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-APPEARANCE_admin_phoneLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-APPEARANCE",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 21672,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 855
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-APPEARANCE_admin_ipadLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-SETTINGS",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 477,
+        "innerWidth": 390,
+        "scrollHeight": 3075,
+        "innerHeight": 844,
+        "overflowXPx": 87,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Soru bankaları",
+            "left": 375,
+            "right": 478,
+            "top": 160,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "İçerik bankası",
+            "left": 502,
+            "right": 601,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Filtreler",
+            "left": 625,
+            "right": 680,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 704,
+            "right": 878,
+            "top": 160,
+            "cls": "nav-link"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 87,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-course.css",
+          "wam-sitefront.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "UL",
+            "cls": "nav more-nav nav-tabs",
+            "right": 878,
+            "w": 862,
+            "minW": "100%",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 478,
+            "w": 103,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link  ",
+            "right": 478,
+            "w": 103,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 601,
+            "w": 99,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 601,
+            "w": 99,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 680,
+            "w": 55,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 680,
+            "w": 55,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 878,
+            "w": 173,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 878,
+            "w": 173,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "DIV",
+            "cls": "defaultsnext",
+            "right": 477,
+            "w": 427,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 314,
+            "sw": 314,
+            "right": 352
+          },
+          {
+            "cls": "form-item row",
+            "w": 314,
+            "sw": 314,
+            "right": 352
+          },
+          {
+            "cls": "form-item row",
+            "w": 314,
+            "sw": 314,
+            "right": 352
+          },
+          {
+            "cls": "form-item row",
+            "w": 314,
+            "sw": 314,
+            "right": 352
+          },
+          {
+            "cls": "form-item row",
+            "w": 314,
+            "sw": 314,
+            "right": 352
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Anasayfa ayarları | Ana sayfa | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-SETTINGS_admin_phone390.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-SETTINGS",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1964,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 712,
+            "right": 886,
+            "top": 180,
+            "cls": "nav-link"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-course.css",
+          "wam-sitefront.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "UL",
+            "cls": "nav more-nav nav-tabs",
+            "right": 886,
+            "w": 862,
+            "minW": "100%",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 886,
+            "w": 173,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 886,
+            "w": 173,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 696,
+            "sw": 696,
+            "right": 758
+          },
+          {
+            "cls": "form-item row",
+            "w": 696,
+            "sw": 696,
+            "right": 758
+          },
+          {
+            "cls": "form-item row",
+            "w": 696,
+            "sw": 696,
+            "right": 758
+          },
+          {
+            "cls": "form-item row",
+            "w": 696,
+            "sw": 696,
+            "right": 758
+          },
+          {
+            "cls": "form-item row",
+            "w": 696,
+            "sw": 696,
+            "right": 758
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Anasayfa ayarları | Ana sayfa | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-SETTINGS_admin_ipadPort.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-SETTINGS",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1897,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-course.css",
+          "wam-sitefront.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 235,
+          "cw": 235,
+          "ovX": "visible",
+          "right": 452
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 1118
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Anasayfa ayarları | Ana sayfa | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-SETTINGS_admin_desk1440.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-SETTINGS",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 477,
+        "innerWidth": 320,
+        "scrollHeight": 3327,
+        "innerHeight": 568,
+        "overflowXPx": 157,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 330,
+            "w": 315,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 402,
+            "left": 248,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Raporlar",
+            "left": 290,
+            "right": 351,
+            "top": 160,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Soru bankaları",
+            "left": 375,
+            "right": 478,
+            "top": 160,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "İçerik bankası",
+            "left": 502,
+            "right": 601,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Filtreler",
+            "left": 625,
+            "right": 680,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 704,
+            "right": 878,
+            "top": 160,
+            "cls": "nav-link"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 157,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-course.css",
+          "wam-sitefront.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "UL",
+            "cls": "nav more-nav nav-tabs",
+            "right": 878,
+            "w": 862,
+            "minW": "100%",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 351,
+            "w": 61,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link  ",
+            "right": 351,
+            "w": 61,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 478,
+            "w": 103,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link  ",
+            "right": 478,
+            "w": 103,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 601,
+            "w": 99,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 601,
+            "w": 99,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 680,
+            "w": 55,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 680,
+            "w": 55,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 878,
+            "w": 173,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 244,
+            "sw": 285,
+            "right": 282
+          },
+          {
+            "cls": "form-item row",
+            "w": 244,
+            "sw": 285,
+            "right": 282
+          },
+          {
+            "cls": "form-item row",
+            "w": 244,
+            "sw": 244,
+            "right": 282
+          },
+          {
+            "cls": "form-item row",
+            "w": 244,
+            "sw": 244,
+            "right": 282
+          },
+          {
+            "cls": "form-item row",
+            "w": 244,
+            "sw": 244,
+            "right": 282
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Anasayfa ayarları | Ana sayfa | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-SETTINGS_admin_phone320.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-SETTINGS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1964,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 712,
+            "right": 886,
+            "top": 180,
+            "cls": "nav-link"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-course.css",
+          "wam-sitefront.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "UL",
+            "cls": "nav more-nav nav-tabs",
+            "right": 886,
+            "w": 862,
+            "minW": "100%",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "LI",
+            "cls": "nav-item",
+            "right": 886,
+            "w": 173,
+            "minW": "auto",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "A",
+            "cls": "nav-link",
+            "right": 886,
+            "w": 173,
+            "minW": "44px",
+            "whiteSpace": "nowrap"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 720,
+            "sw": 720,
+            "right": 782
+          },
+          {
+            "cls": "form-item row",
+            "w": 720,
+            "sw": 720,
+            "right": 782
+          },
+          {
+            "cls": "form-item row",
+            "w": 720,
+            "sw": 720,
+            "right": 782
+          },
+          {
+            "cls": "form-item row",
+            "w": 720,
+            "sw": 720,
+            "right": 782
+          },
+          {
+            "cls": "form-item row",
+            "w": 720,
+            "sw": 720,
+            "right": 782
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Anasayfa ayarları | Ana sayfa | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-SETTINGS_admin_phoneLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-SETTINGS",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1897,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-course.css",
+          "wam-sitefront.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 858
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          },
+          {
+            "cls": "form-item row",
+            "w": 884,
+            "sw": 884,
+            "right": 954
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Anasayfa ayarları | Ana sayfa | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-SETTINGS_admin_ipadLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-THEME",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 3074,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [
+          "row"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 308
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Boost | Özel tema ayarları | Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-THEME_admin_phone390.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-THEME",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 2424,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [
+          "row"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 722
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Boost | Özel tema ayarları | Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-THEME_admin_ipadPort.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-THEME",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 2424,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [
+          "row"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 235,
+          "cw": 235,
+          "ovX": "visible",
+          "right": 452
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 1115
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Boost | Özel tema ayarları | Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-THEME_admin_desk1440.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-THEME",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 341,
+        "innerWidth": 320,
+        "scrollHeight": 3258,
+        "innerHeight": 568,
+        "overflowXPx": 21,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 330,
+            "w": 315,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 402,
+            "left": 248,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [
+          "row"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 256,
+            "right": 325,
+            "top": 12,
+            "cls": "btn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 21,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "IMG",
+            "cls": "colourdialogue",
+            "right": 341,
+            "w": 300,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 238
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Boost | Özel tema ayarları | Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-THEME_admin_phone320.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-THEME",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 2424,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [
+          "row"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 746
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Boost | Özel tema ayarları | Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-THEME_admin_phoneLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-THEME",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 2424,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [
+          "row"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 855
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "fp-navbar bg-faded card mb-0",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "filemanager-container card",
+            "w": 750
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          }
+        ],
+        "title": "Boost | Özel tema ayarları | Görünüş | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-THEME_admin_ipadLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-GRADES",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 414,
+        "innerWidth": 390,
+        "scrollHeight": 9248,
+        "innerHeight": 844,
+        "overflowXPx": 24,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 24,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "DIV",
+            "cls": "form-defaultinfo text-muted text-ltr",
+            "right": 414,
+            "w": 373,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          },
+          {
+            "cls": "form-item row",
+            "w": 356,
+            "sw": 356,
+            "right": 373
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Notlar | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-GRADES_admin_phone390.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-GRADES",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 7533,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          },
+          {
+            "cls": "form-item row",
+            "w": 770,
+            "sw": 770,
+            "right": 795
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Notlar | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-GRADES_admin_ipadPort.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-GRADES",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 7507,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 235,
+          "cw": 235,
+          "ovX": "visible",
+          "right": 452
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 1115
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Notlar | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-GRADES_admin_desk1440.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-GRADES",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 414,
+        "innerWidth": 320,
+        "scrollHeight": 10402,
+        "innerHeight": 568,
+        "overflowXPx": 94,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 330,
+            "w": 315,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 402,
+            "left": 248,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 256,
+            "right": 325,
+            "top": 12,
+            "cls": "btn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 94,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 0,
+          "cw": 0,
+          "ovX": "visible",
+          "right": 0
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [
+          {
+            "tag": "DIV",
+            "cls": "form-defaultinfo text-muted text-ltr",
+            "right": 414,
+            "w": 373,
+            "minW": "0px",
+            "whiteSpace": "normal"
+          }
+        ],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          },
+          {
+            "cls": "form-item row",
+            "w": 286,
+            "sw": 286,
+            "right": 303
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Notlar | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-GRADES_admin_phone320.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-GRADES",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 7507,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 0,
+          "cw": 0,
+          "right": 0
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          },
+          {
+            "cls": "form-item row",
+            "w": 794,
+            "sw": 794,
+            "right": 819
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Notlar | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-GRADES_admin_phoneLand.png",
+      "phase": "before"
+    },
+    {
+      "id": "ADM-GRADES",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 7507,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [
+          "form-buttons"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "links": [
+          "wam-base.css",
+          "wam-admin.css",
+          "wam-forms.css",
+          "wam-controls.css"
+        ],
+        "secInfo": {
+          "tag": "NAV",
+          "cls": "moremenu navigation observed",
+          "sw": 112,
+          "cw": 112,
+          "ovX": "visible",
+          "right": 329
+        },
+        "formInfo": {
+          "sw": 206,
+          "cw": 206,
+          "right": 855
+        },
+        "culprits": [],
+        "rows": [
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          },
+          {
+            "cls": "form-item row",
+            "w": 798,
+            "sw": 798,
+            "right": 831
+          }
+        ],
+        "cats": [
+          {
+            "tag": "SECTION",
+            "cls": " block_admin_bookmarks block  card mb-3",
+            "w": 302
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "section border-0 card rounded-0",
+            "w": 320
+          },
+          {
+            "tag": "DIV",
+            "cls": "card shadow emoji-picker",
+            "w": 0
+          }
+        ],
+        "title": "Notlar | Yönetim | WAM Yerel"
+      },
+      "screenshot": "ADM-GRADES_admin_ipadLand.png",
+      "phase": "before"
+    }
+  ]
+}

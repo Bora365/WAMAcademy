@@ -30,18 +30,20 @@ body.wam-ui:not(.wam-account) #region-main form.mform > fieldset.collapsible {
 }
 
 body.wam-ui:not(.wam-account) #region-main form.mform > fieldset.collapsible ~ fieldset.collapsible {
-    margin-top: var(--wam-space-4);
-    padding-top: var(--wam-space-4);
-    border-top: 1px solid var(--wam-line);
+    margin-top: var(--wam-space-3);
+    padding-top: var(--wam-space-3);
+    border-top: 0;
 }
 
-/* Bölüm başlığı + açma/kapama oku tek satırda */
-body.wam-ui .mform .ftoggler h3 {
+/* Bölüm başlığı + açma/kapama oku — alan gibi sade
+   (kurs #region-main h3 kuralından daha özgül olmalı) */
+body.wam-ui .mform .ftoggler h3,
+body.wam-ui.wam-course #region-main [role="main"] .mform .ftoggler h3 {
     margin: 0;
-    font-size: var(--wam-h3);
-    line-height: var(--wam-h3-lh);
-    font-weight: 700;
-    color: var(--wam-ink);
+    font-size: var(--wam-body);
+    line-height: var(--wam-body-lh);
+    font-weight: 600;
+    color: var(--wam-muted);
 }
 
 body.wam-ui.wam-admin #region-main form.mform legend.ftoggler,
@@ -52,8 +54,8 @@ body.wam-ui.wam-admin #region-main form.mform .fheader {
 }
 
 body.wam-ui .mform .ftoggler .btn-icon.icons-collapse-expand {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     margin-right: var(--wam-space-2);
     border-radius: var(--wam-field-radius);
     background: transparent;
@@ -121,14 +123,59 @@ body.wam-ui .mform .fitem > .col-form-label {
     align-items: baseline;
     column-gap: var(--wam-space-2);
     row-gap: 2px;
+    padding-top: 10px;
 }
 
 body.wam-ui .mform .fitem > .col-form-label > :is(label, p, .d-inline) {
     margin: 0;
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 500;
+    color: var(--wam-muted);
+}
+
+body.wam-ui .mform .fitem.row {
+    margin-bottom: var(--wam-space-3);
+}
+
+/* Select / autocomplete: üst boşluk başlık gibi durmasın */
+body.wam-ui .mform .felement :is(
+    select.form-select,
+    select.custom-select,
+    .form-autocomplete-selection,
+    .form-autocomplete-input
+) {
+    margin-top: 0;
+}
+
+/* Site yönetimi ayar formu (wam-admin olmayan path-admin-setting / sitefront dahil) */
+body.wam-ui .settingsform h3.main,
+body.wam-ui .adminsettings h3.main {
+    border-top: 0;
     font-size: var(--wam-body);
-    line-height: 22px;
+    line-height: var(--wam-body-lh);
     font-weight: 600;
-    color: var(--wam-ink);
+    color: var(--wam-muted);
+}
+
+body.wam-ui .form-item.row {
+    border-top: 0;
+}
+
+body.wam-ui .form-item .form-label label,
+body.wam-ui .form-item .form-label > p {
+    font-size: var(--wam-help);
+    line-height: var(--wam-help-lh);
+    font-weight: 500;
+    color: var(--wam-muted);
+}
+
+body.wam-ui .form-item .form-setting :is(
+    select.form-select,
+    select.custom-select,
+    .form-select
+) {
+    margin-top: 0;
 }
 
 /* Ek alan (Zorunlu + yardım) etiketin hemen ardından gelir; sütunun öbür ucuna itilmez. */
@@ -360,6 +407,48 @@ body.wam-ui .mform .dndupload-arrow > .fa {
 }
 
 /* ---------- 10. Metin editörü (TinyMCE) ---------- */
+
+/* RF2 COURSE-EDIT: dar ekranda etiket/alan ve editör taşmasın */
+body.wam-ui.wam-course #region-main form.mform,
+body.wam-ui.wam-course #region-main form.mform .fitem,
+body.wam-ui.wam-course #region-main form.mform .fitem.row,
+body.wam-ui.wam-course #region-main form.mform .fitem > [class*="col-"],
+body.wam-ui.wam-course #region-main form.mform .felement {
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-course #region-main form.mform :is(
+    input.form-control,
+    select.form-select,
+    select.custom-select,
+    textarea.form-control,
+    .form-autocomplete-selection,
+    .filepicker-filelist,
+    .filemanager
+) {
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-course #region-main form.mform .felement[data-fieldtype="filepicker"] [id^="filepicker-wrapper-"],
+body.wam-ui.wam-course #region-main form.mform .felement[data-fieldtype="filemanager"] .filemanager,
+body.wam-ui.wam-course #region-main form.mform .tox.tox-tinymce:not(.tox-tinymce-inline) {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Açık yardım / dropdown kırpılmasın (üst taşma sarmalayıcıya sıkışmasın) */
+body.wam-ui.wam-course #region-main form.mform .fitem {
+    overflow: visible;
+}
+
+body.wam-ui.wam-course #region-main form.mform .popover,
+body.wam-ui.wam-course #region-main form.mform .dropdown-menu {
+    max-width: min(320px, calc(100vw - 2 * var(--wam-gutter, 16px)));
+}
 
 body.wam-ui .tox.tox-tinymce:not(.tox-tinymce-inline) {
     border: 1px solid var(--wam-control-border);

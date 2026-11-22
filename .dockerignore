@@ -18,3 +18,10 @@ config.php.*
 *.swp
 *~
 .DS_Store
+
+*.bak
+*.bak-*
+*.faz2
+*.save
+public/**/*.sh
+_backups/

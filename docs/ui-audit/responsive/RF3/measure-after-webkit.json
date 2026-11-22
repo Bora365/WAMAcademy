@@ -1,0 +1,541 @@
+{
+  "phase": "after",
+  "engine": "webkit",
+  "count": 4,
+  "results": [
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "phone390",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1298,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 764,
+            "left": 0,
+            "w": 390,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1089,
+            "right": 1121,
+            "top": 482,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 550,
+            "right": 582,
+            "top": 539,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 902,
+            "right": 1029,
+            "top": 539,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 539,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1245,
+            "right": 1277,
+            "top": 539,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 612,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 669,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 399,
+            "right": 431,
+            "top": 728,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 726,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapOv": 912,
+        "wrapOvX": "auto"
+      },
+      "menu": null,
+      "engine": "webkit",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_phone390_webkit.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 1100,
+            "left": 0,
+            "w": 820,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1052,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1097,
+            "right": 1129,
+            "top": 346,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 910,
+            "right": 1037,
+            "top": 403,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 403,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1253,
+            "right": 1285,
+            "top": 403,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 476,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 533,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 590,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapOv": 594,
+        "wrapOvX": "auto"
+      },
+      "menu": null,
+      "engine": "webkit",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_ipadPort_webkit.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "phone390",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1593,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 797,
+            "right": 915,
+            "top": 764,
+            "cls": ""
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 822,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1029,
+            "right": 1120,
+            "top": 809,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 894,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1029,
+            "right": 1120,
+            "top": 881,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 966,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1029,
+            "right": 1120,
+            "top": 953,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1044,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1029,
+            "right": 1120,
+            "top": 1031,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapOv": 759,
+        "wrapOvX": "auto"
+      },
+      "menu": {
+        "open": true,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "left": 141,
+        "right": 361
+      },
+      "engine": "webkit",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_phone390_webkit.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 805,
+            "right": 923,
+            "top": 592,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1037,
+            "right": 1128,
+            "top": 637,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1037,
+            "right": 1128,
+            "top": 709,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1037,
+            "right": 1128,
+            "top": 781,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1037,
+            "right": 1128,
+            "top": 859,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapOv": 345,
+        "wrapOvX": "auto"
+      },
+      "menu": {
+        "open": true,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "left": 563,
+        "right": 783
+      },
+      "engine": "webkit",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_ipadPort_webkit.png"
+    }
+  ]
+}

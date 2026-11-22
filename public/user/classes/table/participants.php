@@ -468,8 +468,9 @@ class participants extends \table_sql implements dynamic_table {
         global $OUTPUT;
 
         $state = $this->wamrowstate[$data->id] ?? [];
-        $caneditroles = !empty($state['roles']);
-        $caneditgroups = !empty($state['groups']);
+        // Rol/grup düzenleme üstteki master Düzenle/Kaydet ile yapılır; satır menüsünde yalnız kayıt işlemleri kalır.
+        $caneditroles = false;
+        $caneditgroups = false;
 
         $enrolments = [];
         foreach (($state['enrolments'] ?? []) as $field) {

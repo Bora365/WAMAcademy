@@ -190,6 +190,17 @@ body.wam-ui .wam-gear__menu a.is-active {
     color: var(--wam-ink);
     font-weight: 600;
     box-shadow: inset 3px 0 0 var(--wam-primary);
+    /* Sol seçim şeridi yazıya değmesin. */
+    padding-left: var(--wam-space-4);
+}
+
+/* Moodle seçili öğeye absolute tik koyar; WAM padding’inde yazının üstüne biner.
+   Seçim zaten sol şerit + arka planla belli; tik’i kaldır. */
+body.wam-ui .dropdown-menu .dropdown-item.active::before,
+body.wam-ui .dropdown-menu .dropdown-item[aria-current="true"]::before,
+body.wam-ui .dropdown-menu .dropdown-item[aria-selected="true"]::before {
+    display: none !important;
+    content: none !important;
 }
 
 body.wam-ui .dropdown-menu .dropdown-item.disabled,

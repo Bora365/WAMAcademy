@@ -1,0 +1,7282 @@
+{
+  "phase": "after",
+  "engine": "chromium",
+  "count": 39,
+  "results": [
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1424,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 488,
+            "left": 0,
+            "w": 320,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1089,
+            "right": 1121,
+            "top": 536,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 550,
+            "right": 582,
+            "top": 600,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 902,
+            "right": 1029,
+            "top": 600,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 600,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1245,
+            "right": 1277,
+            "top": 600,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 666,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 723,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 399,
+            "right": 431,
+            "top": 782,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 780,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 288,
+        "wrapScrollW": 1270,
+        "wrapOv": 982,
+        "tableW": 1270,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1270
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 886,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1286,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1081,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_phone320.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1258,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 764,
+            "left": 0,
+            "w": 390,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1089,
+            "right": 1121,
+            "top": 442,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 550,
+            "right": 582,
+            "top": 506,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 902,
+            "right": 1029,
+            "top": 506,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 506,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1245,
+            "right": 1277,
+            "top": 506,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 572,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 629,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 399,
+            "right": 431,
+            "top": 688,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 686,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 358,
+        "wrapScrollW": 1270,
+        "wrapOv": 912,
+        "tableW": 1270,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1270
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 886,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1286,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1081,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_phone390.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 886,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 310,
+            "left": 0,
+            "w": 844,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 262,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1097,
+            "right": 1129,
+            "top": 346,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 910,
+            "right": 1037,
+            "top": 410,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1253,
+            "right": 1285,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 476,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 533,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 590,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 796,
+        "wrapScrollW": 1366,
+        "wrapOv": 570,
+        "tableW": 1366,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1390,
+            "minW": "0px",
+            "w": 1366
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 894,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1294,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1089,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_phoneLand.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 1100,
+            "left": 0,
+            "w": 820,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1052,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1097,
+            "right": 1129,
+            "top": 346,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 910,
+            "right": 1037,
+            "top": 410,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1253,
+            "right": 1285,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 476,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 533,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 590,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 772,
+        "wrapScrollW": 1366,
+        "wrapOv": 594,
+        "tableW": 1366,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1390,
+            "minW": "0px",
+            "w": 1366
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 894,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1294,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1089,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_ipadPort.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 886,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 740,
+            "left": 0,
+            "w": 1180,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 692,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1261,
+            "right": 1293,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 1116,
+        "wrapScrollW": 1366,
+        "wrapOv": 250,
+        "tableW": 1366,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1398,
+            "minW": "0px",
+            "w": 1366
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1302,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1302,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1302,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1285,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1285,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "d-flex flex-grow-1 align-items-end",
+            "tag": "DIV",
+            "right": 1285,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "heading",
+            "tag": "TR",
+            "right": 1302,
+            "minW": "0px",
+            "w": 1269
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_ipadLand.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 820,
+            "left": 0,
+            "w": 1440,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 772,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow",
+          "header range cell c0"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 1376,
+        "wrapScrollW": 1376,
+        "wrapOv": 0,
+        "tableW": 1376,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1752,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1724,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_teacher_desk1440.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1723,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "E-posta ölçütüne göre sırala - artan",
+            "left": 297,
+            "right": 348,
+            "top": 843,
+            "cls": ""
+          },
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 797,
+            "right": 915,
+            "top": 843,
+            "cls": ""
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 901,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1029,
+            "right": 1120,
+            "top": 888,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 974,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1029,
+            "right": 1120,
+            "top": 961,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1047,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1029,
+            "right": 1120,
+            "top": 1034,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1126,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1029,
+            "right": 1120,
+            "top": 1113,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 286,
+        "wrapScrollW": 1115,
+        "wrapOv": 829,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-nav-compact"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c2 wam-pc-email",
+            "tag": "TH",
+            "right": 535,
+            "minW": "250px",
+            "w": 250
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 348,
+            "minW": "0px",
+            "w": 51
+          },
+          {
+            "cls": "header c3 wam-pc-role",
+            "tag": "TH",
+            "right": 645,
+            "minW": "110px",
+            "w": 110
+          },
+          {
+            "cls": "header c4 wam-pc-group",
+            "tag": "TH",
+            "right": 785,
+            "minW": "140px",
+            "w": 140
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 927,
+            "minW": "120px",
+            "w": 143
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 71,
+        "right": 291,
+        "top": 310,
+        "bottom": 368,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_phone320.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1597,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 797,
+            "right": 915,
+            "top": 765,
+            "cls": ""
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 823,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1029,
+            "right": 1120,
+            "top": 810,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 896,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1029,
+            "right": 1120,
+            "top": 883,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 969,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1029,
+            "right": 1120,
+            "top": 956,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1048,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1029,
+            "right": 1120,
+            "top": 1035,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 356,
+        "wrapScrollW": 1115,
+        "wrapOv": 759,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c2 wam-pc-email",
+            "tag": "TH",
+            "right": 535,
+            "minW": "250px",
+            "w": 250
+          },
+          {
+            "cls": "header c3 wam-pc-role",
+            "tag": "TH",
+            "right": 645,
+            "minW": "110px",
+            "w": 110
+          },
+          {
+            "cls": "header c4 wam-pc-group",
+            "tag": "TH",
+            "right": 785,
+            "minW": "140px",
+            "w": 140
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 927,
+            "minW": "120px",
+            "w": 143
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 915,
+            "minW": "0px",
+            "w": 119
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 141,
+        "right": 361,
+        "top": 448,
+        "bottom": 506,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_phone390.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1141,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 805,
+            "right": 923,
+            "top": 593,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1037,
+            "right": 1128,
+            "top": 638,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1037,
+            "right": 1128,
+            "top": 711,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1037,
+            "right": 1128,
+            "top": 784,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1037,
+            "right": 1128,
+            "top": 863,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 794,
+        "wrapScrollW": 1115,
+        "wrapOv": 321,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 935,
+            "minW": "120px",
+            "w": 143
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 923,
+            "minW": "0px",
+            "w": 119
+          },
+          {
+            "cls": "header c6 wam-pc-status",
+            "tag": "TH",
+            "right": 1025,
+            "minW": "90px",
+            "w": 90
+          },
+          {
+            "cls": "header c7 wam-pc-actions",
+            "tag": "TH",
+            "right": 1140,
+            "minW": "0px",
+            "w": 114
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_phoneLand.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 805,
+            "right": 923,
+            "top": 593,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1037,
+            "right": 1128,
+            "top": 638,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1037,
+            "right": 1128,
+            "top": 711,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1037,
+            "right": 1128,
+            "top": 784,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1037,
+            "right": 1128,
+            "top": 863,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 770,
+        "wrapScrollW": 1115,
+        "wrapOv": 345,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 935,
+            "minW": "120px",
+            "w": 143
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 923,
+            "minW": "0px",
+            "w": 119
+          },
+          {
+            "cls": "header c6 wam-pc-status",
+            "tag": "TH",
+            "right": 1025,
+            "minW": "90px",
+            "w": 90
+          },
+          {
+            "cls": "header c7 wam-pc-actions",
+            "tag": "TH",
+            "right": 1140,
+            "minW": "0px",
+            "w": 114
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 563,
+        "right": 783,
+        "top": 911,
+        "bottom": 969,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_ipadPort.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1085,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 1114,
+        "wrapScrollW": 1115,
+        "wrapOv": 1,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1492,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1492,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1492,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1464,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_ipadLand.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "teacher",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1073,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 1374,
+        "wrapScrollW": 1374,
+        "wrapOv": 0,
+        "tableW": 1374,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-primary-nav",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1752,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1724,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_teacher_desk1440.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1499,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 488,
+            "left": 0,
+            "w": 320,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1089,
+            "right": 1121,
+            "top": 536,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 550,
+            "right": 582,
+            "top": 600,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 902,
+            "right": 1029,
+            "top": 600,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 600,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1245,
+            "right": 1277,
+            "top": 600,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 666,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 723,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 399,
+            "right": 431,
+            "top": 782,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 780,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 288,
+        "wrapScrollW": 1270,
+        "wrapOv": 982,
+        "tableW": 1270,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1270
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 886,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1286,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1081,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_admin_phone320.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1309,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 764,
+            "left": 0,
+            "w": 390,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1089,
+            "right": 1121,
+            "top": 442,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 550,
+            "right": 582,
+            "top": 506,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 902,
+            "right": 1029,
+            "top": 506,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 506,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1245,
+            "right": 1277,
+            "top": 506,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 572,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 629,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 399,
+            "right": 431,
+            "top": 688,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1045,
+            "right": 1077,
+            "top": 686,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 358,
+        "wrapScrollW": 1270,
+        "wrapOv": 912,
+        "tableW": 1270,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1270
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1286,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 886,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1286,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1269,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1081,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_admin_phone390.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 886,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 310,
+            "left": 0,
+            "w": 844,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 262,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1097,
+            "right": 1129,
+            "top": 346,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 910,
+            "right": 1037,
+            "top": 410,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1253,
+            "right": 1285,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 476,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 533,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 590,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 796,
+        "wrapScrollW": 1366,
+        "wrapOv": 570,
+        "tableW": 1366,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1390,
+            "minW": "0px",
+            "w": 1366
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 894,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1294,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1089,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_admin_phoneLand.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 1100,
+            "left": 0,
+            "w": 820,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1052,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow pinned",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1097,
+            "right": 1129,
+            "top": 346,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "WAM Test Ödevi",
+            "left": 910,
+            "right": 1037,
+            "top": 410,
+            "cls": "gradeitemheader "
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1253,
+            "right": 1285,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 476,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 533,
+            "cls": "btn btn-icon cellmenubtn"
+          },
+          {
+            "label": "Hücre eylemleri",
+            "left": 1053,
+            "right": 1085,
+            "top": 590,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 772,
+        "wrapScrollW": 1366,
+        "wrapOv": 594,
+        "tableW": 1366,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1390,
+            "minW": "0px",
+            "w": 1366
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1294,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "cell topleft cell c0",
+            "tag": "TH",
+            "right": 894,
+            "minW": "0px",
+            "w": 869
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1294,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1277,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "header",
+            "tag": "DIV",
+            "right": 1089,
+            "minW": "auto",
+            "w": 179
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_admin_ipadPort.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 886,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 740,
+            "left": 0,
+            "w": 1180,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 692,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow",
+          "header range cell c0"
+        ],
+        "offscreenActions": [
+          {
+            "label": "Hücre eylemleri",
+            "left": 1261,
+            "right": 1293,
+            "top": 410,
+            "cls": "btn btn-icon cellmenubtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 1116,
+        "wrapScrollW": 1366,
+        "wrapOv": 250,
+        "tableW": 1366,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "table gradereport-grader-table",
+            "tag": "TABLE",
+            "right": 1398,
+            "minW": "0px",
+            "w": 1366
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1302,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1302,
+            "minW": "0px",
+            "w": 1269
+          },
+          {
+            "cls": "category catlevel1 statusicons cell c1 lastcol",
+            "tag": "TH",
+            "right": 1302,
+            "minW": "0px",
+            "w": 400
+          },
+          {
+            "cls": "d-flex flex-column h-100",
+            "tag": "DIV",
+            "right": 1285,
+            "minW": "0px",
+            "w": 367
+          },
+          {
+            "cls": "d-flex",
+            "tag": "DIV",
+            "right": 1285,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "d-flex flex-grow-1 align-items-end",
+            "tag": "DIV",
+            "right": 1285,
+            "minW": "auto",
+            "w": 367
+          },
+          {
+            "cls": "heading",
+            "tag": "TR",
+            "right": 1302,
+            "minW": "0px",
+            "w": 1269
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_admin_ipadLand.png"
+    },
+    {
+      "id": "COURSE-GRADES",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/grade/report/grader/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 820,
+            "left": 0,
+            "w": 1440,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 772,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [
+          "heading",
+          "header ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "header user even ps-3 cell c0",
+          "header user odd ps-3 cell c0",
+          "avg r0 lastrow",
+          "header range cell c0"
+        ],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.gradeparent",
+        "wrapClientW": 1376,
+        "wrapScrollW": 1376,
+        "wrapOv": 0,
+        "tableW": 1376,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-grades",
+          "wam-course-wide",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1752,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1724,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": true
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-GRADES_admin_desk1440.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1898,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "E-posta ölçütüne göre sırala - artan",
+            "left": 297,
+            "right": 348,
+            "top": 899,
+            "cls": ""
+          },
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 797,
+            "right": 915,
+            "top": 899,
+            "cls": ""
+          },
+          {
+            "label": "Öğretmen",
+            "left": 547,
+            "right": 612,
+            "top": 957,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 957,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1029,
+            "right": 1120,
+            "top": 944,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Öğrenci",
+            "left": 547,
+            "right": 598,
+            "top": 1030,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 1030,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1029,
+            "right": 1120,
+            "top": 1017,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Öğrenci",
+            "left": 547,
+            "right": 598,
+            "top": 1103,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1103,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1029,
+            "right": 1120,
+            "top": 1090,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Öğrenci",
+            "left": 547,
+            "right": 598,
+            "top": 1182,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1182,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1029,
+            "right": 1120,
+            "top": 1169,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 286,
+        "wrapScrollW": 1115,
+        "wrapOv": 829,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-nav-compact"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c2 wam-pc-email",
+            "tag": "TH",
+            "right": 535,
+            "minW": "250px",
+            "w": 250
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 348,
+            "minW": "0px",
+            "w": 51
+          },
+          {
+            "cls": "header c3 wam-pc-role",
+            "tag": "TH",
+            "right": 645,
+            "minW": "110px",
+            "w": 110
+          },
+          {
+            "cls": "header c4 wam-pc-group",
+            "tag": "TH",
+            "right": 785,
+            "minW": "140px",
+            "w": 140
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 927,
+            "minW": "120px",
+            "w": 143
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 71,
+        "right": 291,
+        "top": 310,
+        "bottom": 456,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_admin_phone320.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1696,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 797,
+            "right": 915,
+            "top": 769,
+            "cls": ""
+          },
+          {
+            "label": "Öğretmen",
+            "left": 547,
+            "right": 612,
+            "top": 827,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 827,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1029,
+            "right": 1120,
+            "top": 814,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Öğrenci",
+            "left": 547,
+            "right": 598,
+            "top": 900,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Grup yok",
+            "left": 657,
+            "right": 715,
+            "top": 900,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1029,
+            "right": 1120,
+            "top": 887,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Öğrenci",
+            "left": 547,
+            "right": 598,
+            "top": 973,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 973,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1029,
+            "right": 1120,
+            "top": 960,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "Öğrenci",
+            "left": 547,
+            "right": 598,
+            "top": 1052,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "WAM Test Grubu",
+            "left": 657,
+            "right": 766,
+            "top": 1052,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1029,
+            "right": 1120,
+            "top": 1039,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 356,
+        "wrapScrollW": 1115,
+        "wrapOv": 759,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1132,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c2 wam-pc-email",
+            "tag": "TH",
+            "right": 535,
+            "minW": "250px",
+            "w": 250
+          },
+          {
+            "cls": "header c3 wam-pc-role",
+            "tag": "TH",
+            "right": 645,
+            "minW": "110px",
+            "w": 110
+          },
+          {
+            "cls": "header c4 wam-pc-group",
+            "tag": "TH",
+            "right": 785,
+            "minW": "140px",
+            "w": 140
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 927,
+            "minW": "120px",
+            "w": 143
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 915,
+            "minW": "0px",
+            "w": 119
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 141,
+        "right": 361,
+        "top": 448,
+        "bottom": 594,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_admin_phone390.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1189,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 805,
+            "right": 923,
+            "top": 597,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1037,
+            "right": 1128,
+            "top": 642,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1037,
+            "right": 1128,
+            "top": 715,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1037,
+            "right": 1128,
+            "top": 788,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1037,
+            "right": 1128,
+            "top": 867,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 794,
+        "wrapScrollW": 1115,
+        "wrapOv": 321,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 935,
+            "minW": "120px",
+            "w": 143
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 923,
+            "minW": "0px",
+            "w": 119
+          },
+          {
+            "cls": "header c6 wam-pc-status",
+            "tag": "TH",
+            "right": 1025,
+            "minW": "90px",
+            "w": 90
+          },
+          {
+            "cls": "header c7 wam-pc-actions",
+            "tag": "TH",
+            "right": 1140,
+            "minW": "0px",
+            "w": 114
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_admin_phoneLand.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1189,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitime son erişim ölçütüne göre sırala - artan",
+            "left": 805,
+            "right": 923,
+            "top": 597,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 1037,
+            "right": 1128,
+            "top": 642,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 1037,
+            "right": 1128,
+            "top": 715,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 1037,
+            "right": 1128,
+            "top": 788,
+            "cls": "wam-row-actions__trigger"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 1037,
+            "right": 1128,
+            "top": 867,
+            "cls": "wam-row-actions__trigger"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 770,
+        "wrapScrollW": 1115,
+        "wrapOv": 345,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 935,
+            "minW": "120px",
+            "w": 143
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 923,
+            "minW": "0px",
+            "w": 119
+          },
+          {
+            "cls": "header c6 wam-pc-status",
+            "tag": "TH",
+            "right": 1025,
+            "minW": "90px",
+            "w": 90
+          },
+          {
+            "cls": "header c7 wam-pc-actions",
+            "tag": "TH",
+            "right": 1140,
+            "minW": "0px",
+            "w": 114
+          },
+          {
+            "cls": "",
+            "tag": "TBODY",
+            "right": 1140,
+            "minW": "0px",
+            "w": 1115
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 563,
+        "right": 783,
+        "top": 915,
+        "bottom": 1061,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_admin_ipadPort.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1133,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 1114,
+        "wrapScrollW": 1115,
+        "wrapOv": 1,
+        "tableW": 1115,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1492,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1492,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1492,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1464,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_admin_ipadLand.png"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=2",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1121,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 1374,
+        "wrapScrollW": 1374,
+        "wrapOv": 0,
+        "tableW": 1374,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-course",
+          "wam-course-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1752,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1724,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "COURSE-PARTICIPANTS_admin_desk1440.png"
+    },
+    {
+      "id": "SITE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=1",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1944,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Raporlar",
+            "left": 291,
+            "right": 352,
+            "top": 192,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Soru bankaları",
+            "left": 376,
+            "right": 479,
+            "top": 192,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "İçerik bankası",
+            "left": 503,
+            "right": 602,
+            "top": 192,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Filtreler",
+            "left": 626,
+            "right": 681,
+            "top": 192,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 705,
+            "right": 878,
+            "top": 192,
+            "cls": "nav-link"
+          },
+          {
+            "label": "E-posta ölçütüne göre sırala - artan",
+            "left": 297,
+            "right": 348,
+            "top": 843,
+            "cls": ""
+          },
+          {
+            "label": "Siteye son erişim ölçütüne göre sırala - artan",
+            "left": 803,
+            "right": 913,
+            "top": 843,
+            "cls": ""
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 901,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 974,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Öğretmen",
+            "left": 547,
+            "right": 612,
+            "top": 1047,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 1120,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 1199,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 1278,
+            "cls": "quickeditlink aalink"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 286,
+        "wrapScrollW": 984,
+        "wrapOv": 698,
+        "tableW": 984,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-course-participants",
+          "wam-site-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view",
+          "wam-nav-compact"
+        ],
+        "overflowEls": [
+          {
+            "cls": "nav more-nav nav-tabs",
+            "tag": "UL",
+            "right": 878,
+            "minW": "100%",
+            "w": 862
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 352,
+            "minW": "auto",
+            "w": 61
+          },
+          {
+            "cls": "nav-link  ",
+            "tag": "A",
+            "right": 352,
+            "minW": "44px",
+            "w": 61
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 479,
+            "minW": "auto",
+            "w": 103
+          },
+          {
+            "cls": "nav-link  ",
+            "tag": "A",
+            "right": 479,
+            "minW": "44px",
+            "w": 103
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 602,
+            "minW": "auto",
+            "w": 99
+          },
+          {
+            "cls": "nav-link",
+            "tag": "A",
+            "right": 602,
+            "minW": "44px",
+            "w": 99
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 681,
+            "minW": "auto",
+            "w": 55
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": false,
+        "reason": "no-trigger"
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "SITE-PARTICIPANTS_admin_phone320.png"
+    },
+    {
+      "id": "SITE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=1",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1762,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Soru bankaları",
+            "left": 376,
+            "right": 479,
+            "top": 160,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "İçerik bankası",
+            "left": 503,
+            "right": 602,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Filtreler",
+            "left": 626,
+            "right": 681,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 705,
+            "right": 878,
+            "top": 160,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Siteye son erişim ölçütüne göre sırala - artan",
+            "left": 803,
+            "right": 913,
+            "top": 733,
+            "cls": ""
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 791,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 864,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Öğretmen",
+            "left": 547,
+            "right": 612,
+            "top": 937,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 1010,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 1089,
+            "cls": "quickeditlink aalink"
+          },
+          {
+            "label": "Rol yok",
+            "left": 547,
+            "right": 594,
+            "top": 1168,
+            "cls": "quickeditlink aalink"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 356,
+        "wrapScrollW": 984,
+        "wrapOv": 628,
+        "tableW": 984,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-course-participants",
+          "wam-site-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "nav more-nav nav-tabs",
+            "tag": "UL",
+            "right": 878,
+            "minW": "100%",
+            "w": 862
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 479,
+            "minW": "auto",
+            "w": 103
+          },
+          {
+            "cls": "nav-link  ",
+            "tag": "A",
+            "right": 479,
+            "minW": "44px",
+            "w": 103
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 602,
+            "minW": "auto",
+            "w": 99
+          },
+          {
+            "cls": "nav-link",
+            "tag": "A",
+            "right": 602,
+            "minW": "44px",
+            "w": 99
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 681,
+            "minW": "auto",
+            "w": 55
+          },
+          {
+            "cls": "nav-link",
+            "tag": "A",
+            "right": 681,
+            "minW": "44px",
+            "w": 55
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 878,
+            "minW": "auto",
+            "w": 173
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": false,
+        "reason": "no-trigger"
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "SITE-PARTICIPANTS_admin_phone390.png"
+    },
+    {
+      "id": "SITE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=1",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1287,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 713,
+            "right": 886,
+            "top": 180,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Siteye son erişim ölçütüne göre sırala - artan",
+            "left": 811,
+            "right": 921,
+            "top": 593,
+            "cls": ""
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 794,
+        "wrapScrollW": 984,
+        "wrapOv": 190,
+        "tableW": 984,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-course-participants",
+          "wam-site-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "nav more-nav nav-tabs",
+            "tag": "UL",
+            "right": 886,
+            "minW": "100%",
+            "w": 862
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 886,
+            "minW": "auto",
+            "w": 173
+          },
+          {
+            "cls": "nav-link",
+            "tag": "A",
+            "right": 886,
+            "minW": "44px",
+            "w": 173
+          },
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1009,
+            "minW": "0px",
+            "w": 984
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1009,
+            "minW": "0px",
+            "w": 984
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1009,
+            "minW": "0px",
+            "w": 984
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 933,
+            "minW": "120px",
+            "w": 134
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 921,
+            "minW": "0px",
+            "w": 110
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "SITE-PARTICIPANTS_admin_phoneLand.png"
+    },
+    {
+      "id": "SITE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=1",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1287,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 1180
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1116,
+            "left": 756,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eğitim yeniden kullanımı",
+            "left": 713,
+            "right": 886,
+            "top": 180,
+            "cls": "nav-link"
+          },
+          {
+            "label": "Siteye son erişim ölçütüne göre sırala - artan",
+            "left": 811,
+            "right": 921,
+            "top": 593,
+            "cls": ""
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 770,
+        "wrapScrollW": 984,
+        "wrapOv": 214,
+        "tableW": 984,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-course-participants",
+          "wam-site-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "nav more-nav nav-tabs",
+            "tag": "UL",
+            "right": 886,
+            "minW": "100%",
+            "w": 862
+          },
+          {
+            "cls": "nav-item",
+            "tag": "LI",
+            "right": 886,
+            "minW": "auto",
+            "w": 173
+          },
+          {
+            "cls": "nav-link",
+            "tag": "A",
+            "right": 886,
+            "minW": "44px",
+            "w": 173
+          },
+          {
+            "cls": "flexible table table-striped table-hover table generaltable",
+            "tag": "TABLE",
+            "right": 1009,
+            "minW": "0px",
+            "w": 984
+          },
+          {
+            "cls": "",
+            "tag": "THEAD",
+            "right": 1009,
+            "minW": "0px",
+            "w": 984
+          },
+          {
+            "cls": "",
+            "tag": "TR",
+            "right": 1009,
+            "minW": "0px",
+            "w": 984
+          },
+          {
+            "cls": "header c5 wam-pc-lastaccess",
+            "tag": "TH",
+            "right": 933,
+            "minW": "120px",
+            "w": 134
+          },
+          {
+            "cls": "",
+            "tag": "A",
+            "right": 921,
+            "minW": "0px",
+            "w": 110
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": false,
+        "reason": "no-trigger"
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "SITE-PARTICIPANTS_admin_ipadPort.png"
+    },
+    {
+      "id": "SITE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=1",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1219,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 756
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 756,
+            "left": 1116,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 1114,
+        "wrapScrollW": 1114,
+        "wrapOv": 0,
+        "tableW": 1114,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-course-participants",
+          "wam-site-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1492,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1492,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1500,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1492,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1464,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "SITE-PARTICIPANTS_admin_ipadLand.png"
+    },
+    {
+      "id": "SITE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/user/index.php?id=1",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1219,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 4,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 64,
+            "left": -295,
+            "w": 285,
+            "h": 836
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 836,
+            "left": 1376,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "DIV.table-responsive",
+        "wrapClientW": 1374,
+        "wrapScrollW": 1374,
+        "wrapOv": 0,
+        "tableW": 1374,
+        "bodyCls": [
+          "wam-ui",
+          "wam-course",
+          "wam-course-site",
+          "wam-sitefront",
+          "wam-course-participants",
+          "wam-site-participants",
+          "wam-users",
+          "wam-users-participants",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-course-view"
+        ],
+        "overflowEls": [
+          {
+            "cls": "message-app",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "closewidget text-end pe-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "text-dark btn-link",
+            "tag": "A",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "icon fa fa-xmark fa-fw ",
+            "tag": "I",
+            "right": 1752,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "header-container position-relative",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "auto",
+            "w": 320
+          },
+          {
+            "cls": "border-bottom p-1 px-sm-2",
+            "tag": "DIV",
+            "right": 1760,
+            "minW": "0px",
+            "w": 320
+          },
+          {
+            "cls": "d-flex align-items-center",
+            "tag": "DIV",
+            "right": 1752,
+            "minW": "0px",
+            "w": 304
+          },
+          {
+            "cls": "input-group simplesearchform",
+            "tag": "DIV",
+            "right": 1724,
+            "minW": "auto",
+            "w": 276
+          }
+        ],
+        "hasActionTrigger": false,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "SITE-PARTICIPANTS_admin_desk1440.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "phone320",
+      "w": 320,
+      "h": 568,
+      "status": "ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "metrics": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "scrollHeight": 1694,
+        "innerHeight": 568,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 320,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 304,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 330,
+            "w": 315,
+            "h": 568
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 402,
+            "left": 248,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 320,
+            "w": 320,
+            "h": 568
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Kullanıcı menüsü",
+            "left": 256,
+            "right": 325,
+            "top": 12,
+            "cls": "btn"
+          },
+          {
+            "label": "E-posta adresi ölçütüne göre sırala - artan",
+            "left": 346,
+            "right": 446,
+            "top": 551,
+            "cls": ""
+          },
+          {
+            "label": "En son erişim ölçütüne göre sırala - artan",
+            "left": 606,
+            "right": 698,
+            "top": 551,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: Admin Yerel",
+            "left": 746,
+            "right": 836,
+            "top": 608,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 746,
+            "right": 836,
+            "top": 680,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 746,
+            "right": 836,
+            "top": 765,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Akademi",
+            "left": 746,
+            "right": 836,
+            "top": 848,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 746,
+            "right": 836,
+            "top": 918,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 746,
+            "right": 836,
+            "top": 988,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "TABLE.flexible table table-striped table-hover",
+        "wrapClientW": 836,
+        "wrapScrollW": 834,
+        "wrapOv": 0,
+        "tableW": 836,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-list",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom",
+          "wam-nav-compact"
+        ],
+        "overflowEls": [
+          {
+            "cls": "usermenu",
+            "tag": "DIV",
+            "right": 325,
+            "minW": "auto",
+            "w": 69
+          },
+          {
+            "cls": "dropdown show",
+            "tag": "DIV",
+            "right": 325,
+            "minW": "auto",
+            "w": 69
+          },
+          {
+            "cls": "btn",
+            "tag": "A",
+            "right": 325,
+            "minW": "auto",
+            "w": 69
+          },
+          {
+            "cls": "drawerheader",
+            "tag": "DIV",
+            "right": 645,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "draweractions",
+            "tag": "DIV",
+            "right": 645,
+            "minW": "auto",
+            "w": 46
+          },
+          {
+            "cls": "btn btn-icon icon-size-3 drawertoggle",
+            "tag": "BUTTON",
+            "right": 637,
+            "minW": "auto",
+            "w": 34
+          },
+          {
+            "cls": "dir-rtl-hide",
+            "tag": "SPAN",
+            "right": 630,
+            "minW": "auto",
+            "w": 20
+          },
+          {
+            "cls": "icon ",
+            "tag": "IMG",
+            "right": 630,
+            "minW": "0px",
+            "w": 20
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 40,
+        "right": 286,
+        "top": 309,
+        "bottom": 455,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "ADM-SYSUSERS_admin_phone320.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1646,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "E-posta adresi ölçütüne göre sırala - artan",
+            "left": 346,
+            "right": 446,
+            "top": 551,
+            "cls": ""
+          },
+          {
+            "label": "En son erişim ölçütüne göre sırala - artan",
+            "left": 606,
+            "right": 698,
+            "top": 551,
+            "cls": ""
+          },
+          {
+            "label": "İşlemler: Admin Yerel",
+            "left": 746,
+            "right": 836,
+            "top": 608,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 746,
+            "right": 836,
+            "top": 680,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 746,
+            "right": 836,
+            "top": 765,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Akademi",
+            "left": 746,
+            "right": 836,
+            "top": 848,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 746,
+            "right": 836,
+            "top": 918,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 746,
+            "right": 836,
+            "top": 988,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "TABLE.flexible table table-striped table-hover",
+        "wrapClientW": 836,
+        "wrapScrollW": 834,
+        "wrapOv": 0,
+        "tableW": 836,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-list",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "drawerheader",
+            "tag": "DIV",
+            "right": 715,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "draweractions",
+            "tag": "DIV",
+            "right": 715,
+            "minW": "auto",
+            "w": 46
+          },
+          {
+            "cls": "btn btn-icon icon-size-3 drawertoggle",
+            "tag": "BUTTON",
+            "right": 707,
+            "minW": "auto",
+            "w": 34
+          },
+          {
+            "cls": "dir-rtl-hide",
+            "tag": "SPAN",
+            "right": 700,
+            "minW": "auto",
+            "w": 20
+          },
+          {
+            "cls": "icon ",
+            "tag": "IMG",
+            "right": 700,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "drawercontent drag-container",
+            "tag": "DIV",
+            "right": 715,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "d-print-none",
+            "tag": "DIV",
+            "right": 709,
+            "minW": "auto",
+            "w": 302
+          },
+          {
+            "cls": "block-region",
+            "tag": "ASIDE",
+            "right": 709,
+            "minW": "0px",
+            "w": 302
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 110,
+        "right": 356,
+        "top": 447,
+        "bottom": 593,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "ADM-SYSUSERS_admin_phone390.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1167,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "TABLE.flexible table table-striped table-hover",
+        "wrapClientW": 836,
+        "wrapScrollW": 834,
+        "wrapOv": 0,
+        "tableW": 836,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-list",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "drawerheader",
+            "tag": "DIV",
+            "right": 1169,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "draweractions",
+            "tag": "DIV",
+            "right": 1169,
+            "minW": "auto",
+            "w": 46
+          },
+          {
+            "cls": "btn btn-icon icon-size-3 drawertoggle",
+            "tag": "BUTTON",
+            "right": 1161,
+            "minW": "auto",
+            "w": 34
+          },
+          {
+            "cls": "dir-rtl-hide",
+            "tag": "SPAN",
+            "right": 1154,
+            "minW": "auto",
+            "w": 20
+          },
+          {
+            "cls": "icon ",
+            "tag": "IMG",
+            "right": 1154,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "drawercontent drag-container",
+            "tag": "DIV",
+            "right": 1169,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "d-print-none",
+            "tag": "DIV",
+            "right": 1163,
+            "minW": "auto",
+            "w": 302
+          },
+          {
+            "cls": "block-region",
+            "tag": "ASIDE",
+            "right": 1163,
+            "minW": "0px",
+            "w": 302
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "ADM-SYSUSERS_admin_phoneLand.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1191,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "İşlemler: Admin Yerel",
+            "left": 754,
+            "right": 844,
+            "top": 526,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 754,
+            "right": 844,
+            "top": 597,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 754,
+            "right": 844,
+            "top": 682,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Akademi",
+            "left": 754,
+            "right": 844,
+            "top": 766,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 754,
+            "right": 844,
+            "top": 836,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 754,
+            "right": 844,
+            "top": 906,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "TABLE.flexible table table-striped table-hover",
+        "wrapClientW": 836,
+        "wrapScrollW": 834,
+        "wrapOv": 0,
+        "tableW": 836,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-list",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "drawerheader",
+            "tag": "DIV",
+            "right": 1145,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "draweractions",
+            "tag": "DIV",
+            "right": 1145,
+            "minW": "auto",
+            "w": 46
+          },
+          {
+            "cls": "btn btn-icon icon-size-3 drawertoggle",
+            "tag": "BUTTON",
+            "right": 1137,
+            "minW": "auto",
+            "w": 34
+          },
+          {
+            "cls": "dir-rtl-hide",
+            "tag": "SPAN",
+            "right": 1130,
+            "minW": "auto",
+            "w": 20
+          },
+          {
+            "cls": "icon ",
+            "tag": "IMG",
+            "right": 1130,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "drawercontent drag-container",
+            "tag": "DIV",
+            "right": 1145,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "d-print-none",
+            "tag": "DIV",
+            "right": 1139,
+            "minW": "auto",
+            "w": 302
+          },
+          {
+            "cls": "block-region",
+            "tag": "ASIDE",
+            "right": 1139,
+            "minW": "0px",
+            "w": 302
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": {
+        "open": true,
+        "left": 532,
+        "right": 778,
+        "top": 952,
+        "bottom": 1098,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "ADM-SYSUSERS_admin_ipadPort.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1140,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "TABLE.flexible table table-striped table-hover",
+        "wrapClientW": 1114,
+        "wrapScrollW": 1112,
+        "wrapOv": 0,
+        "tableW": 1114,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-list",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "drawerheader",
+            "tag": "DIV",
+            "right": 1505,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "draweractions",
+            "tag": "DIV",
+            "right": 1505,
+            "minW": "auto",
+            "w": 46
+          },
+          {
+            "cls": "btn btn-icon icon-size-3 drawertoggle",
+            "tag": "BUTTON",
+            "right": 1497,
+            "minW": "auto",
+            "w": 34
+          },
+          {
+            "cls": "dir-rtl-hide",
+            "tag": "SPAN",
+            "right": 1490,
+            "minW": "auto",
+            "w": 20
+          },
+          {
+            "cls": "icon ",
+            "tag": "IMG",
+            "right": 1490,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "drawercontent drag-container",
+            "tag": "DIV",
+            "right": 1505,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "d-print-none",
+            "tag": "DIV",
+            "right": 1499,
+            "minW": "auto",
+            "w": 302
+          },
+          {
+            "cls": "block-region",
+            "tag": "ASIDE",
+            "right": 1499,
+            "minW": "0px",
+            "w": 302
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "ADM-SYSUSERS_admin_ipadLand.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1137,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "wrapFound": true,
+        "wrapTag": "TABLE.flexible table table-striped table-hover",
+        "wrapClientW": 1374,
+        "wrapScrollW": 1372,
+        "wrapOv": 0,
+        "tableW": 1374,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-list",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "overflowEls": [
+          {
+            "cls": "drawerheader",
+            "tag": "DIV",
+            "right": 1765,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "draweractions",
+            "tag": "DIV",
+            "right": 1765,
+            "minW": "auto",
+            "w": 46
+          },
+          {
+            "cls": "btn btn-icon icon-size-3 drawertoggle",
+            "tag": "BUTTON",
+            "right": 1757,
+            "minW": "auto",
+            "w": 34
+          },
+          {
+            "cls": "dir-rtl-hide",
+            "tag": "SPAN",
+            "right": 1750,
+            "minW": "auto",
+            "w": 20
+          },
+          {
+            "cls": "icon ",
+            "tag": "IMG",
+            "right": 1750,
+            "minW": "0px",
+            "w": 20
+          },
+          {
+            "cls": "drawercontent drag-container",
+            "tag": "DIV",
+            "right": 1765,
+            "minW": "0px",
+            "w": 315
+          },
+          {
+            "cls": "d-print-none",
+            "tag": "DIV",
+            "right": 1759,
+            "minW": "auto",
+            "w": 302
+          },
+          {
+            "cls": "block-region",
+            "tag": "ASIDE",
+            "right": 1759,
+            "minW": "0px",
+            "w": 302
+          }
+        ],
+        "hasActionTrigger": true,
+        "hasTertiaryOrEdit": true,
+        "gradeparent": false
+      },
+      "menu": null,
+      "engine": "chromium",
+      "phase": "after",
+      "screenshot": "ADM-SYSUSERS_admin_desk1440.png"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "student",
+      "viewport": "phone390",
+      "status": "denied-ok",
+      "url": "http://localhost:8081/admin/user.php",
+      "phase": "after",
+      "engine": "chromium"
+    },
+    {
+      "id": "ADM-SYSUSERS",
+      "role": "admin",
+      "viewport": "resize-filter-390to820",
+      "status": "ok",
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1191,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "İşlemler: Admin Yerel",
+            "left": 754,
+            "right": 844,
+            "top": 526,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: İpek Güneş",
+            "left": 754,
+            "right": 844,
+            "top": 597,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: Şükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": 754,
+            "right": 844,
+            "top": 682,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Akademi",
+            "left": 754,
+            "right": 844,
+            "top": 766,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Egitmen",
+            "left": 754,
+            "right": 844,
+            "top": 836,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          },
+          {
+            "label": "İşlemler: WAM Ogrenci",
+            "left": 754,
+            "right": 844,
+            "top": 906,
+            "cls": "btn btn-icon d-flex no-caret  dropdown-toggle icon-no-margin"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "phase": "after",
+      "engine": "chromium"
+    },
+    {
+      "id": "COURSE-PARTICIPANTS",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "state": "scrolled-last-menu",
+      "status": "ok",
+      "menu": {
+        "open": true,
+        "left": 587,
+        "right": 807,
+        "top": 221,
+        "bottom": 367,
+        "clippedRight": false,
+        "clippedBottom": false,
+        "clippedLeft": false
+      },
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1189,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-left drawer-primary d-print-none",
+            "top": 0,
+            "left": -295,
+            "w": 285,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "wam-row-actions__menu",
+            "top": 221,
+            "left": 587,
+            "w": 220,
+            "h": 146
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 326,
+            "left": 780,
+            "w": 32,
+            "h": 32
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "select-all-participants",
+            "left": -280,
+            "right": -240,
+            "top": -123,
+            "cls": "m-1"
+          },
+          {
+            "label": "Ad ölçütüne göre sırala - artan",
+            "left": -220,
+            "right": -203,
+            "top": -97,
+            "cls": ""
+          },
+          {
+            "label": "Soyad ölçütüne göre sırala - artan",
+            "left": -199,
+            "right": -159,
+            "top": -97,
+            "cls": ""
+          },
+          {
+            "label": "user4",
+            "left": -280,
+            "right": -240,
+            "top": -50,
+            "cls": "usercheckbox m-1"
+          },
+          {
+            "label": "WEWAM Egitmen",
+            "left": -220,
+            "right": -40,
+            "top": -47,
+            "cls": "d-inline-block aabtn"
+          },
+          {
+            "label": "user6",
+            "left": -280,
+            "right": -240,
+            "top": 23,
+            "cls": "usercheckbox m-1"
+          },
+          {
+            "label": "İGİpek Güneş",
+            "left": -220,
+            "right": -40,
+            "top": 26,
+            "cls": "d-inline-block aabtn"
+          },
+          {
+            "label": "user3",
+            "left": -280,
+            "right": -240,
+            "top": 96,
+            "cls": "usercheckbox m-1"
+          },
+          {
+            "label": "WOWAM Ogrenci",
+            "left": -220,
+            "right": -40,
+            "top": 99,
+            "cls": "d-inline-block aabtn"
+          },
+          {
+            "label": "user5",
+            "left": -280,
+            "right": -240,
+            "top": 175,
+            "cls": "usercheckbox m-1"
+          },
+          {
+            "label": "ŞÖŞükrü Çağlar Öztürk-Ağaoğlu Uzunsoyadlıoğulları",
+            "left": -220,
+            "right": -40,
+            "top": 165,
+            "cls": "d-inline-block aabtn"
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "phase": "after",
+      "engine": "chromium"
+    }
+  ]
+}

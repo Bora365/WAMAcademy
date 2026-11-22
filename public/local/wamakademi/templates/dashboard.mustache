@@ -1,9 +1,17 @@
 <div class="wam-dashboard">
 
+    <section class="wam-home-hero" aria-label="WAM Akademi">
+        <div class="wam-home-hero__content">
+            <span class="wam-home-hero__badge">WAM Akademi</span>
+            <h1>Geleceği Birlikte İnşa Ediyoruz</h1>
+            <p>Saha ekiplerinden ofise, herkesin birlikte geliştiği eğitimler.</p>
+        </div>
+    </section>
+
     <header class="wam-page-header">
         <div class="wam-page-header__text">
             <p class="wam-page-header__eyebrow">WAM Akademi</p>
-            <h1 class="wam-page-header__title">Merhaba, {{firstname}}</h1>
+            <h2 class="wam-page-header__title">Merhaba, {{firstname}}</h2>
             <p class="wam-page-header__desc">
                 Öğrenme yoluna kaldığın yerden devam et veya yeni eğitimlere göz at.
             </p>
@@ -18,26 +26,36 @@
         </div>
     </header>
 
-    <section class="wam-stats" aria-label="Özet">
-        <div class="wam-stat-card">
+    <section class="wam-stats" aria-label="Özet" role="group">
+        <button
+            type="button"
+            class="wam-stat-card"
+            data-wam-dash-filter="ongoing"
+            aria-pressed="false"
+        >
             <div class="wam-stat-icon" aria-hidden="true">▶</div>
             <div>
                 <span>Devam eden</span>
                 <strong>{{ongoingcount}}</strong>
             </div>
-        </div>
-        <div class="wam-stat-card">
+        </button>
+        <button
+            type="button"
+            class="wam-stat-card"
+            data-wam-dash-filter="completed"
+            aria-pressed="false"
+        >
             <div class="wam-stat-icon" aria-hidden="true">✓</div>
             <div>
                 <span>Tamamlanan</span>
                 <strong>{{completedcount}}</strong>
             </div>
-        </div>
+        </button>
     </section>
 
     <div class="wam-content-grid">
         <main class="wam-main-content">
-            <section class="wam-section">
+            <section class="wam-section" data-wam-dash-courses>
                 <div class="wam-section-header">
                     <h2>Eğitimlerim</h2>
                     <a href="{{config.wwwroot}}/local/wamakademi/mycourses.php">
@@ -45,14 +63,14 @@
                     </a>
                 </div>
 
-                <div class="wam-course-grid">
+                <div class="wam-course-grid" data-wam-dash-grid>
                     {{#hascourses}}
                         {{#courses}}
-                            <article class="wam-course-card">
-                                <div class="wam-course-cover">
+                            <article class="wam-course-card" data-status="{{status}}">
+                                <a href="{{courseurl}}" class="wam-course-cover wam-course-cover--link">
                                     {{#hascourseimage}}
                                         <img src="{{courseimage}}"
-                                             alt="{{fullname}}"
+                                             alt=""
                                              class="wam-course-image">
                                     {{/hascourseimage}}
                                     {{^hascourseimage}}
@@ -60,10 +78,12 @@
                                             {{shortname}}
                                         </div>
                                     {{/hascourseimage}}
-                                </div>
+                                </a>
                                 <div class="wam-course-info">
                                     <span class="wam-course-category">{{category}}</span>
-                                    <h3>{{fullname}}</h3>
+                                    <h3>
+                                        <a href="{{courseurl}}" class="wam-course-title-link">{{fullname}}</a>
+                                    </h3>
                                     <div class="wam-progress-header">
                                         <span>İlerleme</span>
                                         <strong>{{progress}}%</strong>
@@ -72,14 +92,14 @@
                                         <div class="wam-progress-value"
                                              style="width: {{progress}}%;"></div>
                                     </div>
-                                    {{#iscompleted}}
-                                        <span class="wam-course-button">Tamamlandı</span>
-                                    {{/iscompleted}}
-                                    {{^iscompleted}}
+                                    {{#hasactionlink}}
                                         <a href="{{continueurl}}" class="wam-course-button">
-                                            Devam et
+                                            {{actionlabel}}
                                         </a>
-                                    {{/iscompleted}}
+                                    {{/hasactionlink}}
+                                    {{^hasactionlink}}
+                                        <span class="wam-course-button">{{actionlabel}}</span>
+                                    {{/hasactionlink}}
                                 </div>
                             </article>
                         {{/courses}}
@@ -95,6 +115,12 @@
                         </div>
                     {{/hascourses}}
                 </div>
+
+                {{#hascourses}}
+                    <div class="wam-empty-state" data-wam-dash-empty hidden>
+                        <p>Bu durumda gösterilecek eğitim yok.</p>
+                    </div>
+                {{/hascourses}}
             </section>
         </main>
 

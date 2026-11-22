@@ -1,0 +1,590 @@
+{
+  "chromium": {
+    "engine": "chromium",
+    "flows": [
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "scrollH": 1796,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "scrollH": 1420,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "scrollH": 1420,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "scrollH": 1420,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "scrollH": 844,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "scrollH": 1180,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "scrollH": 820,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "scrollH": 900,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      }
+    ],
+    "pptx": {
+      "status": "data-or-env-blocked",
+      "contentType": "text/html; charset=utf-8",
+      "body": "Ana içeriğe git Yönetici AY WAM Akademi (Yerel) error/PPTX dosyası bulunamadı. Bu hata hakkında daha fazla bilgi Devam Bu sayfaya ilişkin belgeler Hizmetle",
+      "pageOv": 0,
+      "note": "No .pptx on course resources; LibreOffice not installed"
+    },
+    "regression": [
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "ADM-UPLOADCOURSE",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "ADM-UPLOADCOURSE",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      }
+    ]
+  },
+  "webkit": {
+    "engine": "webkit",
+    "flows": [
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "scrollH": 1796,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "scrollH": 1420,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "scrollH": 1420,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "COURSE-COMPLETION",
+        "role": "teacher",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "scrollH": 1420,
+          "headerClipped": false,
+          "mainText": "Eğitim tamamlama üçüncül navigasyon\nEğitim tamamlama ayarları\nTümünü genişlet\nGenel\nGenel\nGenel\nTamamlama Gereklilikleri"
+        },
+        "focus": {
+          "ok": true,
+          "id": "id_overall_aggregation",
+          "inView": true,
+          "clipped": false
+        },
+        "expand": {
+          "clicked": true,
+          "pageOv": 0
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "phone390",
+        "w": 390,
+        "h": 844,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 844,
+          "scrollH": 844,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "ipadPort",
+        "w": 820,
+        "h": 1180,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 1180,
+          "scrollH": 1180,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "ipadLand",
+        "w": 1180,
+        "h": 820,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 820,
+          "scrollH": 820,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      },
+      {
+        "id": "ADM-UNSUPPORTED",
+        "role": "admin",
+        "vp": "desk1440",
+        "w": 1440,
+        "h": 900,
+        "status": "ok",
+        "overflowXPx": 0,
+        "table": {
+          "pageOv": 0,
+          "ih": 900,
+          "scrollH": 900,
+          "headerClipped": false,
+          "mainText": ""
+        },
+        "focus": {
+          "ok": true,
+          "label": "Genel"
+        },
+        "nav": {
+          "clicked": true,
+          "text": "Kullanıcılar",
+          "pageOv": 0,
+          "url": "http://localhost:8081/admin/search.php#linkusers"
+        }
+      }
+    ],
+    "pptx": {
+      "status": "data-or-env-blocked",
+      "contentType": "text/html; charset=utf-8",
+      "body": "Ana içeriğe git Yönetici AY WAM Akademi (Yerel) error/PPTX dosyası bulunamadı. Bu hata hakkında daha fazla bilgi Devam Bu sayfaya ilişkin belgeler Hizm",
+      "pageOv": 0,
+      "note": "No .pptx on course resources; LibreOffice not installed"
+    },
+    "regression": [
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "ADM-APPEARANCE",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "ADM-UPLOADCOURSE",
+        "role": "admin",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "ADM-UPLOADCOURSE",
+        "role": "admin",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-EDIT",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "phone390",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      },
+      {
+        "id": "COURSE-PARTICIPANTS",
+        "role": "teacher",
+        "vp": "ipadPort",
+        "status": "ok",
+        "overflowXPx": 0,
+        "pageOv": 0,
+        "headerClipped": false
+      }
+    ]
+  }
+}

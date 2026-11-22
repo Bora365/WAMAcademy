@@ -25,6 +25,47 @@ body.wam-ui .wam-scope a {
 
 /* ---------- 2. Sistem kullanıcıları listesi ---------- */
 
+/* RF3: tablo min-width'leri .table-responsive içinde kalsın; sayfa taşmasın */
+body.wam-ui.wam-users-list #page.drawers .main-inner,
+body.wam-ui.wam-users-list #region-main,
+body.wam-ui.wam-users-list #region-main-box,
+body.wam-ui.wam-users-list #page-content,
+body.wam-ui.wam-users-list .reportbuilder-report,
+body.wam-ui.wam-users-list .reportbuilder-wrapper,
+body.wam-ui.wam-users-list .table-dynamic {
+    min-width: 0;
+    max-width: 100%;
+}
+
+body.wam-ui.wam-users-list .table-responsive {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* RF10: dokunma hedefi sarmalayıcıda; native işaret boyutu korunur */
+body.wam-ui.wam-users-list .reportbuilder-table .c0 {
+    min-width: var(--wam-touch);
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .c0 .form-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--wam-touch);
+    min-height: var(--wam-touch);
+    margin: 0;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-table .c0 input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+}
+
 /* Ad sütunu: avatar sabit, ad metni kendi başlangıç hizasında kalır (uzun ad avatarın altına inmez) */
 body.wam-ui.wam-users-list .reportbuilder-table td.c1 > a {
     display: flex;
@@ -174,17 +215,25 @@ body.wam-ui.wam-users-list .reportbuilder-table .action-menu .dropdown-item[data
 /* Filtre paneli: geniş, her filtre için etiket üstte, işleç ve değer alt alta/satır içinde */
 body.wam-ui.wam-users-list .filters-dropdown {
     width: min(400px, calc(100vw - 32px));
-    max-width: none;
+    max-width: min(400px, calc(100vw - 32px));
     padding: 0;
     border: 1px solid var(--wam-border);
     border-radius: var(--wam-radius);
     box-shadow: 0 12px 28px rgba(15, 39, 71, 0.18);
+    box-sizing: border-box;
+}
+
+body.wam-ui.wam-users-list .reportbuilder-filters-sidebar,
+body.wam-ui.wam-users-list .reportbuilder-filters-sidebar .reportbuilder-filters-wrapper {
+    max-width: 100%;
+    min-width: 0;
 }
 
 body.wam-ui.wam-users-list .reportbuilder-filters-sidebar .filter {
     margin-bottom: var(--wam-space-3);
     padding-bottom: var(--wam-space-3);
     border-bottom: 1px solid var(--wam-line);
+    max-width: 100%;
 }
 
 body.wam-ui.wam-users-list .reportbuilder-filters-sidebar .filter-name {
@@ -193,6 +242,8 @@ body.wam-ui.wam-users-list .reportbuilder-filters-sidebar .filter-name {
     font-size: var(--wam-label);
     line-height: var(--wam-label-lh);
     font-weight: 700;
+    overflow-wrap: anywhere;
+    max-width: 100%;
 }
 
 /* Etiket sütunu boş (başlık .filter-name'de): alan tam genişlik. Yalnızca .filter blokları; alttaki "Uygula" çubuğu (Moodle'ın mutlak konumlu satırı) etkilenmez.
@@ -263,19 +314,28 @@ body.wam-ui.wam-users-form .form-label-addon .text-danger {
     font-weight: 600;
 }
 
-/* Şifre: düzenleme adımı betikle açılır; alan düz metin kutusu gibi görünür */
+/* Şifre: düzenleme adımı betikle açılır; alan düz metin kutusu gibi görünür.
+   RF13: 320’de sabit 280px + göz ikonu sayfayı +50 taşırıyordu → %100 + wrap. */
+body.wam-ui.wam-users-form [data-passwordunmask="wrapper"],
 body.wam-ui.wam-users-form [data-passwordunmask="wrapper"] .d-flex {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: var(--wam-space-2);
+    max-width: 100%;
+    min-width: 0;
 }
 
 body.wam-ui.wam-users-form [data-passwordunmask="editor"] {
-    flex: 1 1 auto;
-    max-width: 360px;
+    flex: 1 1 12rem;
+    max-width: 100%;
+    min-width: 0;
 }
 
-body.wam-ui.wam-users-form [data-passwordunmask="editor"] input {
+body.wam-ui.wam-users-form [data-passwordunmask="editor"] input,
+body.wam-ui.wam-users-form [data-passwordunmask="editor"] a.form-control {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 /* Düzenleme öncesi yer tutucu: tam alan yüksekliğinde, kalem simgesi sağda (tıklayınca gerçek alan açılır) */
@@ -284,15 +344,33 @@ body.wam-ui.wam-users-form [data-passwordunmask="edit"] {
     align-items: center;
     justify-content: space-between;
     gap: var(--wam-space-3);
-    width: 280px;
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     color: var(--wam-muted);
     text-decoration: none;
 }
 
+/* RF13: form sütunları / editör / dosya yöneticisi dar ekranda taşmasın */
+body.wam-ui.wam-users-form #region-main form.mform,
+body.wam-ui.wam-users-form #region-main form.mform .fitem,
+body.wam-ui.wam-users-form #region-main form.mform .fitem > [class*="col-"],
+body.wam-ui.wam-users-form #region-main form.mform .felement {
+    max-width: 100%;
+    min-width: 0;
+}
+
+body.wam-ui.wam-users-form #region-main form.mform .tox.tox-tinymce:not(.tox-tinymce-inline) {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* Kullanıcı resmi: kompakt yükleme alanı */
 body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] {
-    max-width: 560px;
+    max-width: min(560px, 100%);
+    min-width: 0;
 }
 
 body.wam-ui.wam-users-form .felement[data-fieldtype="filemanager"] .fp-restrictions {

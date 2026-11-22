@@ -1,0 +1,2190 @@
+{
+  "phase": "after",
+  "engine": "webkit",
+  "count": 20,
+  "results": [
+    {
+      "id": "ADM-USER-NEW",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 3560,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 764,
+            "left": 0,
+            "w": 390,
+            "h": 80
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eklentiler",
+            "left": 388,
+            "right": 487,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Görünüş",
+            "left": 491,
+            "right": 584,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Sunucu",
+            "left": 588,
+            "right": 674,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Raporlar",
+            "left": 678,
+            "right": 771,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Geliştirme",
+            "left": 775,
+            "right": 880,
+            "top": 303,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-new",
+          "wam-users-form",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 3560,
+        "secOv": 514,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": true,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-USER-NEW_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/user/editadvanced.php?id=-1"
+    },
+    {
+      "id": "ADM-USER-NEW",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 2726,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 310,
+            "left": 0,
+            "w": 844,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 254,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 244,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-new",
+          "wam-users-form",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 2726,
+        "secOv": 91,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": true,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-USER-NEW_admin_phoneLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/user/editadvanced.php?id=-1"
+    },
+    {
+      "id": "ADM-USER-NEW",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 2726,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 1100,
+            "left": 0,
+            "w": 820,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1044,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 244,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-new",
+          "wam-users-form",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 2726,
+        "secOv": 115,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": true,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-USER-NEW_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/user/editadvanced.php?id=-1"
+    },
+    {
+      "id": "ADM-USER-NEW",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 2701,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 740,
+            "left": 0,
+            "w": 1180,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 684,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-new",
+          "wam-users-form",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 2701,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": true,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-USER-NEW_admin_ipadLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/user/editadvanced.php?id=-1"
+    },
+    {
+      "id": "ADM-USER-NEW",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 2677,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 6,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": "stickyfooter bg-white border-top",
+            "top": 820,
+            "left": 0,
+            "w": 1440,
+            "h": 80
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 764,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-users",
+          "wam-users-new",
+          "wam-users-form",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 2677,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": true,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-USER-NEW_admin_desk1440_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/user/editadvanced.php?id=-1"
+    },
+    {
+      "id": "ADM-UPLOADUSER",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1504,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eklentiler",
+            "left": 388,
+            "right": 487,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Görünüş",
+            "left": 491,
+            "right": 584,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Sunucu",
+            "left": 588,
+            "right": 674,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Raporlar",
+            "left": 678,
+            "right": 771,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Geliştirme",
+            "left": 775,
+            "right": 880,
+            "top": 303,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1504,
+        "secOv": 514,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADUSER_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploaduser/index.php"
+    },
+    {
+      "id": "ADM-UPLOADUSER",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 998,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 244,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 998,
+        "secOv": 91,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADUSER_admin_phoneLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploaduser/index.php"
+    },
+    {
+      "id": "ADM-UPLOADUSER",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 244,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "secOv": 115,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADUSER_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploaduser/index.php"
+    },
+    {
+      "id": "ADM-UPLOADUSER",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 998,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 998,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADUSER_admin_ipadLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploaduser/index.php"
+    },
+    {
+      "id": "ADM-UPLOADUSER",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 998,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 998,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADUSER_admin_desk1440_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploaduser/index.php"
+    },
+    {
+      "id": "ADM-UPLOADCOURSE",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 1640,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eklentiler",
+            "left": 388,
+            "right": 487,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Görünüş",
+            "left": 491,
+            "right": 584,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Sunucu",
+            "left": 588,
+            "right": 674,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Raporlar",
+            "left": 678,
+            "right": 771,
+            "top": 272,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Geliştirme",
+            "left": 775,
+            "right": 880,
+            "top": 272,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 1640,
+        "secOv": 514,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADCOURSE_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploadcourse/index.php"
+    },
+    {
+      "id": "ADM-UPLOADCOURSE",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 1129,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 224,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 1129,
+        "secOv": 91,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADCOURSE_admin_phoneLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploadcourse/index.php"
+    },
+    {
+      "id": "ADM-UPLOADCOURSE",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 224,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "secOv": 115,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADCOURSE_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploadcourse/index.php"
+    },
+    {
+      "id": "ADM-UPLOADCOURSE",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 1129,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 1129,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADCOURSE_admin_ipadLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploadcourse/index.php"
+    },
+    {
+      "id": "ADM-UPLOADCOURSE",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 1129,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 1129,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": true,
+        "hasEditor": false,
+        "hasReportBuilder": false,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-UPLOADCOURSE_admin_desk1440_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/admin/tool/uploadcourse/index.php"
+    },
+    {
+      "id": "ADM-REPORTBUILDER",
+      "role": "admin",
+      "viewport": "phone390",
+      "w": 390,
+      "h": 844,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "scrollHeight": 899,
+        "innerHeight": 844,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 390,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "popover-region-container",
+            "top": 52,
+            "left": 0,
+            "w": 360,
+            "h": 2
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 400,
+            "w": 315,
+            "h": 844
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 676,
+            "left": 318,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 0,
+            "left": 390,
+            "w": 320,
+            "h": 844
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Eklentiler",
+            "left": 388,
+            "right": 487,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Görünüş",
+            "left": 491,
+            "right": 584,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Sunucu",
+            "left": 588,
+            "right": 674,
+            "top": 303,
+            "cls": "nav-link  "
+          },
+          {
+            "label": "Raporlar",
+            "left": 678,
+            "right": 771,
+            "top": 303,
+            "cls": "nav-link active active_tree_node "
+          },
+          {
+            "label": "Geliştirme",
+            "left": 775,
+            "right": 880,
+            "top": 303,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 844,
+        "scrollH": 899,
+        "secOv": 514,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": false,
+        "hasReportBuilder": true,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-REPORTBUILDER_admin_phone390_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/reportbuilder/index.php"
+    },
+    {
+      "id": "ADM-REPORTBUILDER",
+      "role": "admin",
+      "viewport": "phoneLand",
+      "w": 844,
+      "h": 390,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 844,
+        "innerWidth": 844,
+        "scrollHeight": 562,
+        "innerHeight": 390,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 844,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 854,
+            "w": 315,
+            "h": 390
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 772,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 318,
+            "left": 778,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 844,
+            "w": 320,
+            "h": 326
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 244,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 390,
+        "scrollH": 562,
+        "secOv": 91,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": false,
+        "hasReportBuilder": true,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-REPORTBUILDER_admin_phoneLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/reportbuilder/index.php"
+    },
+    {
+      "id": "ADM-REPORTBUILDER",
+      "role": "admin",
+      "viewport": "ipadPort",
+      "w": 820,
+      "h": 1180,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 820,
+        "innerWidth": 820,
+        "scrollHeight": 1180,
+        "innerHeight": 1180,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 820,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 0,
+            "left": 830,
+            "w": 315,
+            "h": 1180
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 748,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 1108,
+            "left": 754,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 820,
+            "w": 320,
+            "h": 1116
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [
+          {
+            "label": "Geliştirme",
+            "left": 798,
+            "right": 903,
+            "top": 244,
+            "cls": "nav-link  "
+          }
+        ],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": false,
+          "top": 0,
+          "bottom": 0
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 1180,
+        "scrollH": 1180,
+        "secOv": 115,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": false,
+        "hasReportBuilder": true,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-REPORTBUILDER_admin_ipadPort_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/reportbuilder/index.php"
+    },
+    {
+      "id": "ADM-REPORTBUILDER",
+      "role": "admin",
+      "viewport": "ipadLand",
+      "w": 1180,
+      "h": 820,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1180,
+        "innerWidth": 1180,
+        "scrollHeight": 820,
+        "innerHeight": 820,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1180,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1190,
+            "w": 315,
+            "h": 756
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1108,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 748,
+            "left": 1114,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1180,
+            "w": 320,
+            "h": 756
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 820,
+        "scrollH": 820,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": false,
+        "hasReportBuilder": true,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-REPORTBUILDER_admin_ipadLand_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/reportbuilder/index.php"
+    },
+    {
+      "id": "ADM-REPORTBUILDER",
+      "role": "admin",
+      "viewport": "desk1440",
+      "w": 1440,
+      "h": 900,
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "scrollHeight": 900,
+        "innerHeight": 900,
+        "overflowXPx": 0,
+        "fixedCount": 5,
+        "fixedSample": [
+          {
+            "tag": "NAV",
+            "cls": "navbar fixed-top navbar-expand wam-navbar",
+            "top": 0,
+            "left": 0,
+            "w": 1440,
+            "h": 64
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer drawer-right d-print-none",
+            "top": 64,
+            "left": 1450,
+            "w": 315,
+            "h": 836
+          },
+          {
+            "tag": "DIV",
+            "cls": "drawer-toggler drawer-right-toggle ms-auto d-print-none",
+            "top": 80,
+            "left": 1368,
+            "w": 72,
+            "h": 40
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-icon rounded-circle bg-secondary btn-footer-popover",
+            "top": 828,
+            "left": 1374,
+            "w": 34,
+            "h": 40
+          },
+          {
+            "tag": "DIV",
+            "cls": " drawer bg-white hidden",
+            "top": 64,
+            "left": 1440,
+            "w": 320,
+            "h": 836
+          }
+        ],
+        "stickySample": [],
+        "offscreenActions": [],
+        "focusOk": {
+          "tag": "INPUT",
+          "id": "wam-course-search",
+          "visibleInViewport": true,
+          "top": 12,
+          "bottom": 52
+        },
+        "hasHamburger": true,
+        "hasGear": true,
+        "menuOpen": false
+      },
+      "table": {
+        "pageOv": 0,
+        "bodyCls": [
+          "wam-ui",
+          "wam-admin",
+          "wam-admin-titled",
+          "wam-menu-ready",
+          "wam-hide-bootstrap-toggler-active",
+          "wam-usermenu-custom"
+        ],
+        "culprits": [],
+        "ih": 900,
+        "scrollH": 900,
+        "secOv": 0,
+        "hasMform": true,
+        "hasTable": false,
+        "hasFilepicker": false,
+        "hasEditor": false,
+        "hasReportBuilder": true,
+        "saveBtn": true
+      },
+      "screenshot": "ADM-REPORTBUILDER_admin_desk1440_webkit.png",
+      "phase": "after",
+      "engine": "webkit",
+      "url": "http://localhost:8081/reportbuilder/index.php"
+    }
+  ]
+}

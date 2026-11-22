@@ -1,0 +1,30 @@
+{
+  "chromium": {
+    "pageOv": 0,
+    "url": "http://localhost:8081/admin/search.php?query=plugin",
+    "ih": 844,
+    "scrollH": 9885,
+    "links": [
+      "Aramayı temizle",
+      "Eklenti gizlilik kaydı",
+      "Desteklenen etkinkileri yönetin",
+      "Eklentilere genel bakış",
+      "Belge dönüştürücüleri yönetin"
+    ],
+    "q": "plugin"
+  },
+  "webkit": {
+    "pageOv": 0,
+    "url": "http://localhost:8081/admin/search.php?query=plugin",
+    "ih": 844,
+    "scrollH": 9885,
+    "links": [
+      "Aramayı temizle",
+      "Eklenti gizlilik kaydı",
+      "Desteklenen etkinkileri yönetin",
+      "Eklentilere genel bakış",
+      "Belge dönüştürücüleri yönetin"
+    ],
+    "q": "plugin"
+  }
+}
