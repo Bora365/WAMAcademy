@@ -112,6 +112,8 @@ function local_wamakademi_menu_active_id(): string {
         'catalog' => ['/local/wamakademi/catalog.php'],
         'mycourses' => ['/local/wamakademi/mycourses.php'],
         'calendar' => ['/local/wamakademi/calendar.php', '/local/wamakademi/js/calendar_view.php'],
+        'assignments' => ['/local/wamakademi/assignments.php'],
+        'quizzes' => ['/local/wamakademi/quizzes.php'],
         'dashboard' => ['/my/', '/my/index.php'],
     ];
     foreach ($routes as $id => $paths) {
@@ -153,6 +155,16 @@ function local_wamakademi_menu_config(): array {
             'id' => 'calendar',
             'label' => 'Takvim',
             'url' => (new moodle_url('/local/wamakademi/calendar.php'))->out(false),
+        ],
+        [
+            'id' => 'assignments',
+            'label' => get_string('navassignments', 'local_wamakademi'),
+            'url' => (new moodle_url('/local/wamakademi/assignments.php'))->out(false),
+        ],
+        [
+            'id' => 'quizzes',
+            'label' => get_string('navquizzes', 'local_wamakademi'),
+            'url' => (new moodle_url('/local/wamakademi/quizzes.php'))->out(false),
         ],
     ];
     // Kontrol paneli yalnızca /my/ sayfasına gerçekten ulaşabilen kullanıcılar için listelenir;
@@ -916,6 +928,90 @@ function local_wamakademi_account_config(): array {
             'cancel' => get_string('cancel'),
         ],
     ];
+}
+
+/**
+ * Ödev / sınav ayarlar menüsünde «Gelişmiş puanlama»yı WAM not hub'ına yönlendir.
+ *
+ * Modül secondary menüsü settingsnav'dan kopyalanır; core secondary_extend
+ * yalnızca kurs bağlamında tetiklenir — bu yüzden rewire burada yapılır.
+ *
+ * @param settings_navigation $settingsnav
+ * @param context $context
+ */
+function local_wamakademi_extend_settings_navigation($settingsnav, $context) {
+    global $USER, $PAGE;
+
+    if ((int)$context->contextlevel !== CONTEXT_MODULE) {
+        return;
+    }
+
+    $cm = $PAGE->cm ?? null;
+    if (!$cm || empty($cm->id) || empty($cm->modname)) {
+        return;
+    }
+    if (!in_array($cm->modname, ['assign', 'quiz'], true)) {
+        return;
+    }
+
+    $modcontext = context_module::instance((int)$cm->id);
+    $can = false;
+    if ($cm->modname === 'assign') {
+        $can = has_capability('mod/assign:grade', $modcontext)
+            || has_capability('mod/assign:managegrades', $modcontext)
+            || has_capability('moodle/grade:managegradingforms', $modcontext)
+            || has_capability('mod/assign:manageoverrides', $modcontext);
+    } else {
+        $can = has_capability('mod/quiz:grade', $modcontext)
+            || has_capability('mod/quiz:viewreports', $modcontext)
+            || has_capability('mod/quiz:manageoverrides', $modcontext);
+    }
+    $courseid = (int)($PAGE->course->id ?? 0);
+    if (!$can && $courseid > 1 && !\local_wamakademi\access::can_view_reports((int)$USER->id, $courseid)) {
+        return;
+    }
+
+    $modulenode = $settingsnav->find('modulesettings', navigation_node::TYPE_SETTING);
+    if (!$modulenode) {
+        return;
+    }
+
+    $huburl = new moodle_url('/local/wamakademi/grading_hub.php', ['id' => (int)$cm->id]);
+    $label = get_string('gradinghubheading', 'local_wamakademi');
+
+    $adv = $modulenode->get('advgrading');
+    if ($adv) {
+        $adv->action = $huburl;
+        $adv->text = $label;
+        return;
+    }
+    if ($modulenode->get('wamgradinghub')) {
+        $existing = $modulenode->get('wamgradinghub');
+        $existing->action = $huburl;
+        $existing->text = $label;
+        return;
+    }
+
+    // Sınavda / basit puanlamalı ödevde Moodle düğümü yoksa ekle (anahtar: advgrading → secondary sırası).
+    $before = null;
+    $prefer = $cm->modname === 'quiz'
+        ? ['quiz_report', 'mod_quiz_useroverrides', 'roleoverride']
+        : ['mod_assign_submissions', 'mod_assign_useroverrides', 'roleoverride'];
+    foreach ($modulenode->get_children_key_list() as $key) {
+        if (in_array($key, $prefer, true)) {
+            $before = $key;
+            break;
+        }
+    }
+
+    $node = navigation_node::create(
+        $label,
+        $huburl,
+        navigation_node::TYPE_CUSTOM,
+        null,
+        'advgrading'
+    );
+    $modulenode->add_node($node, $before);
 }
 
 /**

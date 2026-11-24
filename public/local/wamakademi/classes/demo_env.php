@@ -33,6 +33,26 @@ final class demo_env {
     public const TOPIC_ANALYSIS = 'Veri analizi';
     public const TOPIC_CHARTS = 'Grafik yorumlama';
 
+    public const ACADEMY_USERNAME = 'wamtest_akademi';
+
+    public const WORD_SHORTNAME = 'WAMWORD01';
+    public const WORD_FULLNAME = 'Word ile Kurumsal Yazışma';
+    public const WORD_SUMMARY = 'Kurumsal yazışma şablonları, resmi mektup ve e-posta düzeni.';
+
+    public const EXCEL_ADV_SHORTNAME = 'WAMEXCEL02';
+    public const EXCEL_ADV_FULLNAME = 'Excel İleri Düzey — Pivot ve Raporlama';
+    public const EXCEL_ADV_SUMMARY = 'Pivot tablolar, özet raporlama ve gelişmiş veri analizi.';
+
+    public const CONTENT_SECTION = 'Ders içerikleri';
+
+    /** Rapor mock kullanıcıları (giriş düğmesine eklenmez). */
+    public const REPORT_STAFF = [
+        ['username' => 'mock_ayse', 'firstname' => 'Ayşe', 'lastname' => 'Yılmaz'],
+        ['username' => 'mock_kerem', 'firstname' => 'Kerem', 'lastname' => 'Demir'],
+        ['username' => 'mock_selin', 'firstname' => 'Selin', 'lastname' => 'Kara'],
+    ];
+
+
     /**
      * @return true|string true veya hata metni
      */

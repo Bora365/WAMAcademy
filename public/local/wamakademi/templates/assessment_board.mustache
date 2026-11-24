@@ -1,0 +1,119 @@
+{{!
+    @template local_wamakademi/assessment_board
+
+    Site-wide assignments / quizzes board.
+}}
+<div class="wam-assess" data-region="wam-assess-board" data-type="{{pagetype}}">
+    <header class="wam-assess__header">
+        <div class="wam-assess__heading">
+            <p class="wam-assess__eyebrow">WAM Akademi</p>
+            <h1 class="wam-assess__title">{{title}}</h1>
+            <p class="wam-assess__lead">{{lead}}</p>
+        </div>
+        <nav class="wam-assess__tabs" aria-label="{{title}}">
+            <a class="wam-assess__tab{{#isassignments}} is-active{{/isassignments}}" href="{{assignmentsurl}}">
+                {{#str}} navassignments, local_wamakademi {{/str}}
+            </a>
+            <a class="wam-assess__tab{{#isquizzes}} is-active{{/isquizzes}}" href="{{quizzesurl}}">
+                {{#str}} navquizzes, local_wamakademi {{/str}}
+            </a>
+        </nav>
+    </header>
+
+    {{#hassummary}}
+    <section class="wam-assess__summary" aria-label="{{#str}} assessboardsummary, local_wamakademi {{/str}}">
+        <div class="wam-assess__stat">
+            <strong class="wam-assess__stat-value">{{summary.total}}</strong>
+            <span class="wam-assess__stat-label">{{#str}} assessboardstattotal, local_wamakademi {{/str}}</span>
+        </div>
+        <div class="wam-assess__stat">
+            <strong class="wam-assess__stat-value">{{summary.pending}}</strong>
+            <span class="wam-assess__stat-label">{{#str}} assessboardstatpending, local_wamakademi {{/str}}</span>
+        </div>
+        <div class="wam-assess__stat">
+            <strong class="wam-assess__stat-value">{{summary.submitted}}</strong>
+            <span class="wam-assess__stat-label">{{#str}} assessboardstatsubmitted, local_wamakademi {{/str}}</span>
+        </div>
+        <div class="wam-assess__stat">
+            <strong class="wam-assess__stat-value">{{summary.graded}}</strong>
+            <span class="wam-assess__stat-label">{{#str}} assessboardstatgraded, local_wamakademi {{/str}}</span>
+        </div>
+    </section>
+    {{/hassummary}}
+
+    <form class="wam-assess__filters" method="get" action="{{filteraction}}">
+        <div class="wam-assess__field">
+            <label for="wam-assess-q">{{#str}} assessboardsearch, local_wamakademi {{/str}}</label>
+            <input id="wam-assess-q" type="search" name="q" value="{{q}}" placeholder="{{#str}} assessboardsearchph, local_wamakademi {{/str}}">
+        </div>
+        {{#hascoursefilter}}
+        <div class="wam-assess__field">
+            <label for="wam-assess-course">{{#str}} reportcourse, local_wamakademi {{/str}}</label>
+            <select id="wam-assess-course" name="courseid">
+                <option value="0">{{#str}} assessboardallcourses, local_wamakademi {{/str}}</option>
+                {{#courses}}
+                <option value="{{id}}" {{#selected}}selected{{/selected}}>{{name}}</option>
+                {{/courses}}
+            </select>
+        </div>
+        {{/hascoursefilter}}
+        <div class="wam-assess__filter-actions">
+            <button type="submit" class="btn btn-primary btn-sm">{{#str}} reportapplyfilters, local_wamakademi {{/str}}</button>
+            <a class="btn btn-link btn-sm" href="{{clearurl}}">{{#str}} reportclearfilters, local_wamakademi {{/str}}</a>
+        </div>
+    </form>
+
+    {{#hasrows}}
+    <div class="wam-assess__table-wrap">
+        <table class="wam-assess__table">
+            <thead>
+                <tr>
+                    <th scope="col">{{#str}} assessboardactivity, local_wamakademi {{/str}}</th>
+                    <th scope="col">{{#str}} reportcourse, local_wamakademi {{/str}}</th>
+                    <th scope="col">{{#str}} reportdue, local_wamakademi {{/str}}</th>
+                    <th scope="col">{{#str}} reportstatus, local_wamakademi {{/str}}</th>
+                    <th scope="col">{{#str}} assessboardmetric, local_wamakademi {{/str}}</th>
+                    <th scope="col">{{#str}} reportactions, local_wamakademi {{/str}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#rows}}
+                <tr class="wam-assess__row{{#isteacher}} is-teacher{{/isteacher}}">
+                    <td data-label="{{#str}} assessboardactivity, local_wamakademi {{/str}}">
+                        <a class="wam-assess__name" href="{{openurl}}">{{name}}</a>
+                        {{#isteacher}}
+                        <span class="wam-assess__role">{{#str}} assessboardteacher, local_wamakademi {{/str}}</span>
+                        {{/isteacher}}
+                    </td>
+                    <td data-label="{{#str}} reportcourse, local_wamakademi {{/str}}">
+                        <a href="{{courseurl}}">{{coursename}}</a>
+                    </td>
+                    <td data-label="{{#str}} reportdue, local_wamakademi {{/str}}">{{duedatefmt}}</td>
+                    <td data-label="{{#str}} reportstatus, local_wamakademi {{/str}}">
+                        <span class="wam-assess__badge wam-assess__badge--{{state}}">{{statelabel}}</span>
+                    </td>
+                    <td data-label="{{#str}} assessboardmetric, local_wamakademi {{/str}}">{{metric}}</td>
+                    <td data-label="{{#str}} reportactions, local_wamakademi {{/str}}">
+                        <div class="wam-assess__actions">
+                            {{#hashub}}
+                            <a class="btn btn-primary btn-sm" href="{{huburl}}">{{#str}} assessboardgrade, local_wamakademi {{/str}}</a>
+                            {{/hashub}}
+                            {{#hasreport}}
+                            <a class="btn btn-outline-secondary btn-sm" href="{{reporturl}}">{{#str}} assessboardreport, local_wamakademi {{/str}}</a>
+                            {{/hasreport}}
+                            {{^hashub}}
+                            <a class="btn btn-outline-primary btn-sm" href="{{openurl}}">{{#str}} assessboardopen, local_wamakademi {{/str}}</a>
+                            {{/hashub}}
+                        </div>
+                    </td>
+                </tr>
+                {{/rows}}
+            </tbody>
+        </table>
+    </div>
+    {{/hasrows}}
+
+    {{^hasrows}}
+    <p class="wam-assess__empty">{{emptytext}}</p>
+    {{/hasrows}}
+</div>

@@ -1,0 +1,295 @@
+/* WAM — Ödevler / Sınavlar panosu */
+
+.wam-assess {
+    --wam-assess-ink: #0f2747;
+    --wam-assess-muted: #64748b;
+    --wam-assess-border: #e2e8f0;
+    --wam-assess-primary: #2563eb;
+    --wam-assess-space-2: 0.5rem;
+    --wam-assess-space-3: 0.75rem;
+    --wam-assess-space-4: 1rem;
+    --wam-assess-space-5: 1.5rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: var(--wam-assess-space-5) var(--wam-assess-space-4) 3rem;
+    color: var(--wam-assess-ink);
+}
+
+.wam-assess__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--wam-assess-space-4);
+    margin-bottom: var(--wam-assess-space-5);
+}
+
+.wam-assess__eyebrow {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--wam-assess-muted);
+}
+
+.wam-assess__title {
+    margin: 0 0 0.35rem;
+    font-size: 1.75rem;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+}
+
+.wam-assess__lead {
+    margin: 0;
+    max-width: 40rem;
+    color: var(--wam-assess-muted);
+    line-height: 1.5;
+}
+
+.wam-assess__tabs {
+    display: inline-flex;
+    align-self: flex-start;
+    border: 1px solid var(--wam-assess-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.wam-assess__tab {
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 650;
+    color: var(--wam-assess-muted);
+    text-decoration: none;
+    border-right: 1px solid var(--wam-assess-border);
+}
+
+.wam-assess__tab:last-child {
+    border-right: 0;
+}
+
+.wam-assess__tab.is-active {
+    background: var(--wam-assess-primary);
+    color: #fff;
+}
+
+.wam-assess__tab:hover:not(.is-active) {
+    background: #f8fafc;
+    color: var(--wam-assess-ink);
+}
+
+.wam-assess__summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--wam-assess-space-3);
+    margin-bottom: var(--wam-assess-space-5);
+}
+
+.wam-assess__stat {
+    padding: var(--wam-assess-space-4);
+    border: 1px solid var(--wam-assess-border);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 39, 71, 0.04);
+}
+
+.wam-assess__stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+.wam-assess__stat-label {
+    font-size: 0.85rem;
+    color: var(--wam-assess-muted);
+}
+
+.wam-assess__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wam-assess-space-3);
+    align-items: flex-end;
+    margin-bottom: var(--wam-assess-space-5);
+    padding: var(--wam-assess-space-4);
+    border: 1px solid var(--wam-assess-border);
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.wam-assess__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 12rem;
+    flex: 1 1 14rem;
+}
+
+.wam-assess__field label {
+    font-size: 0.8rem;
+    font-weight: 650;
+    color: var(--wam-assess-muted);
+}
+
+.wam-assess__field input,
+.wam-assess__field select {
+    min-height: 2.4rem;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--wam-assess-border);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.wam-assess__filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.wam-assess__table-wrap {
+    border: 1px solid var(--wam-assess-border);
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.wam-assess__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.wam-assess__table th,
+.wam-assess__table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--wam-assess-border);
+}
+
+.wam-assess__table th {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--wam-assess-muted);
+    background: #f8fafc;
+}
+
+.wam-assess__table tr:last-child td {
+    border-bottom: 0;
+}
+
+.wam-assess__name {
+    font-weight: 650;
+    color: var(--wam-assess-ink);
+    text-decoration: none;
+}
+
+.wam-assess__name:hover {
+    color: var(--wam-assess-primary);
+}
+
+.wam-assess__role {
+    display: inline-block;
+    margin-left: 0.45rem;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    vertical-align: middle;
+}
+
+.wam-assess__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 650;
+    background: #f1f5f9;
+    color: var(--wam-assess-muted);
+}
+
+.wam-assess__badge--submitted,
+.wam-assess__badge--inprogress,
+.wam-assess__badge--attempted {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.wam-assess__badge--graded,
+.wam-assess__badge--completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.wam-assess__badge--late {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+.wam-assess__badge--missing,
+.wam-assess__badge--draft,
+.wam-assess__badge--pending,
+.wam-assess__badge--assigned {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.wam-assess__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.wam-assess__empty {
+    margin: 0;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: var(--wam-assess-muted);
+    border: 1px dashed var(--wam-assess-border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .wam-assess__table thead {
+        display: none;
+    }
+
+    .wam-assess__table,
+    .wam-assess__table tbody,
+    .wam-assess__table tr,
+    .wam-assess__table td {
+        display: block;
+        width: 100%;
+    }
+
+    .wam-assess__table tr {
+        padding: 1rem;
+        border-bottom: 1px solid var(--wam-assess-border);
+    }
+
+    .wam-assess__table tr:last-child {
+        border-bottom: 0;
+    }
+
+    .wam-assess__table td {
+        padding: 0.35rem 0;
+        border: 0;
+    }
+
+    .wam-assess__table td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 0.15rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--wam-assess-muted);
+    }
+}

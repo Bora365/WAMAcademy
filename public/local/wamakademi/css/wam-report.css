@@ -261,6 +261,58 @@
     text-align: center;
 }
 
+/* Gelişmiş puanlama hub */
+.wam-grading-hub__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--wam-space-4);
+}
+
+.wam-grading-hub__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wam-space-2);
+    padding: var(--wam-space-4) var(--wam-space-5);
+    border: 1px solid var(--wam-border);
+    border-radius: 12px;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    min-height: 7.5rem;
+    box-shadow: 0 1px 2px rgba(15, 39, 71, 0.04);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wam-grading-hub__card:hover,
+.wam-grading-hub__card:focus-visible {
+    border-color: var(--wam-primary);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12);
+    outline: none;
+}
+
+.wam-grading-hub__card.is-primary {
+    border-color: #bfdbfe;
+    background: linear-gradient(180deg, #eff6ff 0%, #fff 55%);
+}
+
+.wam-grading-hub__card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--wam-ink);
+}
+
+.wam-grading-hub__card-desc {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--wam-muted);
+}
+
+@media (max-width: 767.98px) {
+    .wam-grading-hub__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .wam-report__stat--wide .wam-report__stat-value {
     font-size: 0.95rem;
     font-weight: 600;
@@ -312,6 +364,172 @@
 
 .wam-eval-report__activity-name {
     font-weight: 600;
+}
+
+.wam-report__viz {
+    margin-bottom: var(--wam-space-5);
+}
+
+.wam-report__viz-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wam-space-3);
+    margin: 0 0 var(--wam-space-3);
+}
+
+.wam-report__viz-seg {
+    display: inline-flex;
+    border: 1px solid var(--wam-border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.wam-report__viz-btn {
+    min-width: 0;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 0;
+    border-right: 1px solid var(--wam-border);
+    background: transparent;
+    color: var(--wam-muted);
+    cursor: pointer;
+}
+
+.wam-report__viz-btn:last-child {
+    border-right: 0;
+}
+
+.wam-report__viz-btn.is-active,
+.wam-report__viz-btn[aria-pressed="true"] {
+    background: var(--wam-primary);
+    color: #fff;
+}
+
+.wam-report__viz-btn:hover:not(.is-active) {
+    background: #f8fafc;
+    color: var(--wam-ink);
+}
+
+.wam-report__viz-series {
+    min-width: 6.5rem;
+}
+
+.wam-report__chart-panel {
+    padding: var(--wam-space-4);
+    border: 1px solid var(--wam-border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.wam-report__chart-canvas-wrap {
+    width: 100%;
+}
+
+.wam-report__chart-canvas-wrap--pie canvas {
+    display: block;
+    width: 100%;
+    height: 300px;
+    min-width: 0;
+}
+
+.wam-report__chart-canvas-wrap--advanced {
+    max-height: 28rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wam-report__chart-canvas-wrap--advanced canvas {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+}
+
+.wam-report__pie-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: var(--wam-space-5);
+    align-items: start;
+}
+
+.wam-report__pie-list-title {
+    margin: 0 0 var(--wam-space-3);
+    font-size: 0.95rem;
+    font-weight: 650;
+    color: var(--wam-ink);
+}
+
+.wam-report__pie-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--wam-space-3);
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.wam-report__pie-list-item {
+    display: grid;
+    gap: 4px;
+}
+
+.wam-report__pie-list-top {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--wam-space-2);
+    align-items: baseline;
+}
+
+.wam-report__pie-list-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--wam-ink);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wam-report__pie-list-pct {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    font-weight: 650;
+    color: var(--wam-muted);
+}
+
+.wam-report__pie-list-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.wam-report__pie-list-bar > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.wam-report__pie-list-detail {
+    font-size: 0.8rem;
+    color: var(--wam-muted);
+}
+
+@media (max-width: 767.98px) {
+    .wam-report__pie-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .wam-report__viz-seg {
+        width: 100%;
+    }
+
+    .wam-report__viz-btn {
+        flex: 1;
+    }
 }
 
 .wam-eval-report__viewtoggle {

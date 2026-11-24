@@ -116,86 +116,153 @@
     </section>
     {{/hasdetail}}
 
-    {{#isparticipants}}
-    <div class="wam-report__table-wrap">
-        {{#hasrows}}
-        <table class="wam-report__table">
-            <thead>
-                <tr>
-                    <th scope="col">{{#str}} reportparticipant, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportprogress, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportlessonsdone, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportstatus, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportlastactivity, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportactions, local_wamakademi {{/str}}</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#rows}}
-                    <tr>
-                        <td>
-                            <div class="wam-report__person">
-                                <strong>{{fullname}}</strong>
-                                <span>{{email}}</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="wam-report__bar" aria-hidden="true">
-                                <span style="width: {{progress}}%"></span>
-                            </div>
-                            <span>{{progress}}%</span>
-                        </td>
-                        <td>{{completedlessons}} / {{lessoncount}}</td>
-                        <td><span class="wam-report__badge wam-report__badge--{{status}}">{{statuslabel}}</span></td>
-                        <td>{{latestactivityfmt}}</td>
-                        <td><a href="{{detailurl}}">{{#str}} reportviewvideos, local_wamakademi {{/str}}</a></td>
-                    </tr>
-                {{/rows}}
-            </tbody>
-        </table>
-        {{/hasrows}}
-        {{^hasrows}}
-            <p class="wam-report__empty">{{#str}} reportempty, local_wamakademi {{/str}}</p>
-        {{/hasrows}}
-    </div>
-    {{/isparticipants}}
+    {{#hasrows}}
+    <div
+        class="wam-report__viz"
+        data-region="wam-report-charts"
+        {{#hascharts}}data-chart="{{chartdatajson}}"{{/hascharts}}
+    >
+        {{#hascharts}}
+        <div class="wam-report__viz-toolbar" role="toolbar" aria-label="{{#str}} reportviewtoggle, local_wamakademi {{/str}}">
+            <div class="wam-report__viz-seg" role="group">
+                <button
+                    type="button"
+                    class="wam-report__viz-btn is-active"
+                    data-action="set-view"
+                    data-view="table"
+                    aria-pressed="true"
+                >{{#str}} reportviewtable, local_wamakademi {{/str}}</button>
+                <button
+                    type="button"
+                    class="wam-report__viz-btn"
+                    data-action="set-view"
+                    data-view="pie"
+                    aria-pressed="false"
+                >{{#str}} reportchartpie, local_wamakademi {{/str}}</button>
+                <button
+                    type="button"
+                    class="wam-report__viz-btn"
+                    data-action="set-view"
+                    data-view="advanced"
+                    aria-pressed="false"
+                >{{#str}} reportchartadvanced, local_wamakademi {{/str}}</button>
+            </div>
+            <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm wam-report__viz-series"
+                data-action="cycle-series"
+                hidden
+                data-label-bars="{{#str}} reportchartseriesbars, local_wamakademi {{/str}}"
+                data-label-line="{{#str}} reportchartseriesline, local_wamakademi {{/str}}"
+                data-label-both="{{#str}} reportchartseriesboth, local_wamakademi {{/str}}"
+                data-next-bars="{{#str}} reportchartseriesnextbars, local_wamakademi {{/str}}"
+                data-next-line="{{#str}} reportchartseriesnextline, local_wamakademi {{/str}}"
+                data-next-both="{{#str}} reportchartseriesnextboth, local_wamakademi {{/str}}"
+            >{{#str}} reportchartseriesnextline, local_wamakademi {{/str}}</button>
+        </div>
+        {{/hascharts}}
 
-    {{#isassignments}}
-    <div class="wam-report__table-wrap">
-        {{#hasrows}}
-        <table class="wam-report__table">
-            <thead>
-                <tr>
-                    <th scope="col">{{#str}} reportparticipant, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportassignment, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportstatus, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportdue, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportsubmitted, local_wamakademi {{/str}}</th>
-                    <th scope="col">{{#str}} reportgrade, local_wamakademi {{/str}}</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#rows}}
-                    <tr>
-                        <td>
-                            <div class="wam-report__person">
-                                <strong>{{fullname}}</strong>
-                                <span>{{email}}</span>
-                            </div>
-                        </td>
-                        <td>{{assignmentname}}</td>
-                        <td><span class="wam-report__badge wam-report__badge--{{state}}">{{statelabel}}</span></td>
-                        <td>{{duedatefmt}}</td>
-                        <td>{{submittedatfmt}}</td>
-                        <td>{{grade}}</td>
-                    </tr>
-                {{/rows}}
-            </tbody>
-        </table>
-        {{/hasrows}}
-        {{^hasrows}}
-            <p class="wam-report__empty">{{#str}} reportemptyassign, local_wamakademi {{/str}}</p>
-        {{/hasrows}}
+        <div data-panel="table">
+            {{#isparticipants}}
+            <div class="wam-report__table-wrap">
+                <table class="wam-report__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{#str}} reportparticipant, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportprogress, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportlessonsdone, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportstatus, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportlastactivity, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportactions, local_wamakademi {{/str}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#rows}}
+                            <tr>
+                                <td>
+                                    <div class="wam-report__person">
+                                        <strong>{{fullname}}</strong>
+                                        <span>{{email}}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="wam-report__bar" aria-hidden="true">
+                                        <span style="width: {{progress}}%"></span>
+                                    </div>
+                                    <span>{{progress}}%</span>
+                                </td>
+                                <td>{{completedlessons}} / {{lessoncount}}</td>
+                                <td><span class="wam-report__badge wam-report__badge--{{status}}">{{statuslabel}}</span></td>
+                                <td>{{latestactivityfmt}}</td>
+                                <td><a href="{{detailurl}}">{{#str}} reportviewvideos, local_wamakademi {{/str}}</a></td>
+                            </tr>
+                        {{/rows}}
+                    </tbody>
+                </table>
+            </div>
+            {{/isparticipants}}
+
+            {{#isassignments}}
+            <div class="wam-report__table-wrap">
+                <table class="wam-report__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{#str}} reportparticipant, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportassignment, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportstatus, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportdue, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportsubmitted, local_wamakademi {{/str}}</th>
+                            <th scope="col">{{#str}} reportgrade, local_wamakademi {{/str}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#rows}}
+                            <tr>
+                                <td>
+                                    <div class="wam-report__person">
+                                        <strong>{{fullname}}</strong>
+                                        <span>{{email}}</span>
+                                    </div>
+                                </td>
+                                <td>{{assignmentname}}</td>
+                                <td><span class="wam-report__badge wam-report__badge--{{state}}">{{statelabel}}</span></td>
+                                <td>{{duedatefmt}}</td>
+                                <td>{{submittedatfmt}}</td>
+                                <td>{{grade}}</td>
+                            </tr>
+                        {{/rows}}
+                    </tbody>
+                </table>
+            </div>
+            {{/isassignments}}
+        </div>
+
+        {{#hascharts}}
+        <div class="wam-report__chart-panel" data-panel="chart" hidden>
+            <h2 class="wam-report__section-title" data-chart-title>{{#str}} reportchartpie, local_wamakademi {{/str}}</h2>
+            <div class="wam-report__pie-layout" data-pie-layout hidden>
+                <div class="wam-report__chart-canvas-wrap wam-report__chart-canvas-wrap--pie">
+                    <canvas data-chart-canvas-pie width="480" height="320" role="img" aria-label="{{#str}} reportchartpie, local_wamakademi {{/str}}"></canvas>
+                </div>
+                <div class="wam-report__pie-list-wrap">
+                    <h3 class="wam-report__pie-list-title" data-pie-list-title>{{#str}} reportchartstudentlist, local_wamakademi {{/str}}</h3>
+                    <ul class="wam-report__pie-list" data-pie-list></ul>
+                </div>
+            </div>
+            <div class="wam-report__chart-canvas-wrap wam-report__chart-canvas-wrap--advanced" data-advanced-wrap hidden>
+                <canvas data-chart-canvas-advanced width="720" height="400" role="img" aria-label="{{#str}} reportchartadvanced, local_wamakademi {{/str}}"></canvas>
+            </div>
+        </div>
+        {{/hascharts}}
     </div>
-    {{/isassignments}}
+    {{/hasrows}}
+
+    {{^hasrows}}
+        {{#isparticipants}}
+            <p class="wam-report__empty">{{#str}} reportempty, local_wamakademi {{/str}}</p>
+        {{/isparticipants}}
+        {{#isassignments}}
+            <p class="wam-report__empty">{{#str}} reportemptyassign, local_wamakademi {{/str}}</p>
+        {{/isassignments}}
+    {{/hasrows}}
 </div>

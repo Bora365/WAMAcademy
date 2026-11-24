@@ -42,6 +42,16 @@
                     label: 'Takvim',
                     url: root + '/local/wamakademi/calendar.php',
                 },
+                {
+                    id: 'assignments',
+                    label: 'Ödevler',
+                    url: root + '/local/wamakademi/assignments.php',
+                },
+                {
+                    id: 'quizzes',
+                    label: 'Sınavlar',
+                    url: root + '/local/wamakademi/quizzes.php',
+                },
             ],
             groups: [
                 {

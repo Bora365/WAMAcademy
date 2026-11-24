@@ -2876,7 +2876,9 @@ body.path-local-wamakademi .wam-calendar-event.end::before {
 
 body.wam-catalog-body .wam-top-nav .wam-nav-catalog,
 body.wam-my-courses-body .wam-top-nav .wam-nav-mycourses,
-body.wam-calendar-body .wam-top-nav .wam-nav-calendar {
+body.wam-calendar-body .wam-top-nav .wam-nav-calendar,
+body.wam-assignments-body .wam-top-nav .wam-nav-assignments,
+body.wam-quizzes-body .wam-top-nav .wam-nav-quizzes {
     color: #315cf4 !important;
     font-weight: 700 !important;
     position: relative;
@@ -2884,7 +2886,9 @@ body.wam-calendar-body .wam-top-nav .wam-nav-calendar {
 
 body.wam-catalog-body .wam-top-nav .wam-nav-catalog::after,
 body.wam-my-courses-body .wam-top-nav .wam-nav-mycourses::after,
-body.wam-calendar-body .wam-top-nav .wam-nav-calendar::after {
+body.wam-calendar-body .wam-top-nav .wam-nav-calendar::after,
+body.wam-assignments-body .wam-top-nav .wam-nav-assignments::after,
+body.wam-quizzes-body .wam-top-nav .wam-nav-quizzes::after {
     content: "";
     position: absolute;
     left: 0;

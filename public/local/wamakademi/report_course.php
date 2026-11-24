@@ -169,6 +169,140 @@ if ($tab === 'assignments') {
     }
 }
 
+$statuscolors = [
+    'assigned' => '#94a3b8',
+    'active' => '#2563eb',
+    'completed' => '#15803d',
+    'missing' => '#94a3b8',
+    'draft' => '#64748b',
+    'submitted' => '#2563eb',
+    'late' => '#c2410c',
+    'graded' => '#15803d',
+];
+
+$chartdata = null;
+if ($tab === 'participants' && !empty($data['rows'])) {
+    $summary = $data['summary'] ?? [];
+    $pie = [];
+    foreach (['assigned', 'active', 'completed'] as $st) {
+        $count = (int)($summary[$st] ?? 0);
+        if ($count <= 0) {
+            continue;
+        }
+        $pie[] = [
+            'label' => \local_wamakademi\progress::status_label($st),
+            'value' => $count,
+            'color' => $statuscolors[$st],
+        ];
+    }
+    $chartrows = $data['rows'];
+    usort($chartrows, static function (array $a, array $b): int {
+        return ((int)$b['progress'] <=> (int)$a['progress'])
+            ?: strcasecmp($a['fullname'], $b['fullname']);
+    });
+    $categories = [];
+    $barA = [];
+    $barB = [];
+    $lineA = [];
+    $list = [];
+    foreach ($chartrows as $row) {
+        $categories[] = $row['fullname'];
+        $done = (int)$row['completedlessons'];
+        $total = max(1, (int)$row['lessoncount']);
+        $remaining = max(0, $total - $done);
+        $progress = (int)$row['progress'];
+        $barA[] = $done;
+        $barB[] = $remaining;
+        $lineA[] = $progress;
+        $list[] = [
+            'name' => $row['fullname'],
+            'progress' => $progress,
+            'detail' => $done . ' / ' . $total,
+            'status' => (string)($row['statuslabel'] ?? ''),
+            'color' => $statuscolors[(string)($row['status'] ?? 'assigned')] ?? '#94a3b8',
+        ];
+    }
+    $chartdata = [
+        'pie' => $pie,
+        'list' => $list,
+        'listtitle' => get_string('reportchartstudentlist', 'local_wamakademi'),
+        'combo' => [
+            'categories' => $categories,
+            'barA' => $barA,
+            'barB' => $barB,
+            'lineA' => $lineA,
+            'lineB' => [],
+            'legend' => [
+                ['type' => 'bar', 'color' => '#2563eb', 'label' => get_string('reportchartbarcompleted', 'local_wamakademi')],
+                ['type' => 'bar', 'color' => '#f97316', 'label' => get_string('reportchartbarremaining', 'local_wamakademi')],
+                ['type' => 'line', 'color' => '#16a34a', 'label' => get_string('reportprogress', 'local_wamakademi') . ' %'],
+            ],
+        ],
+    ];
+} else if ($tab === 'assignments' && !empty($data['rows'])) {
+    $statecounts = [];
+    foreach ($data['rows'] as $row) {
+        $st = (string)($row['state'] ?? 'missing');
+        $statecounts[$st] = ($statecounts[$st] ?? 0) + 1;
+    }
+    $pie = [];
+    foreach (['missing', 'draft', 'submitted', 'late', 'graded'] as $st) {
+        if (empty($statecounts[$st])) {
+            continue;
+        }
+        $pie[] = [
+            'label' => get_string('reportassign' . $st, 'local_wamakademi'),
+            'value' => (int)$statecounts[$st],
+            'color' => $statuscolors[$st],
+        ];
+    }
+    // İleri grafik: durum kategorileri — çubuk=adet, çizgi=oran.
+    $categories = [];
+    $barA = [];
+    $barB = [];
+    $lineA = [];
+    $totalrows = max(1, count($data['rows']));
+    foreach ($pie as $slice) {
+        $categories[] = $slice['label'];
+        $barA[] = $slice['value'];
+        $barB[] = 0;
+        $lineA[] = (int)round(($slice['value'] / $totalrows) * 100);
+    }
+    $list = [];
+    foreach ($data['rows'] as $row) {
+        $st = (string)($row['state'] ?? 'missing');
+        $list[] = [
+            'name' => $row['fullname'],
+            'progress' => null,
+            'detail' => trim(($row['assignmentname'] ?? '') . ' · ' . ($row['statelabel'] ?? '')),
+            'status' => (string)($row['statelabel'] ?? ''),
+            'color' => $statuscolors[$st] ?? '#94a3b8',
+        ];
+    }
+    $chartdata = [
+        'pie' => $pie,
+        'list' => $list,
+        'listtitle' => get_string('reportchartassignlist', 'local_wamakademi'),
+        'combo' => [
+            'categories' => $categories,
+            'barA' => $barA,
+            'barB' => $barB,
+            'lineA' => $lineA,
+            'lineB' => [],
+            'legend' => [
+                ['type' => 'bar', 'color' => '#2563eb', 'label' => get_string('reportchartbarcount', 'local_wamakademi')],
+                ['type' => 'line', 'color' => '#16a34a', 'label' => get_string('reportchartlineratio', 'local_wamakademi')],
+            ],
+        ],
+    ];
+}
+
+if ($chartdata) {
+    $PAGE->requires->js(new moodle_url('/local/wamakademi/js/report_charts.js', [
+        'v' => filemtime($CFG->dirroot . '/local/wamakademi/js/report_charts.js'),
+    ]));
+}
+
 $templatecontext = [
     'coursename' => format_string($course->fullname),
     'courseurl' => (new moodle_url('/course/view.php', ['id' => $course->id]))->out(false),
@@ -198,6 +332,9 @@ $templatecontext = [
     'exporturl' => $exporturl->out(false),
     'rows' => $data['rows'],
     'hasrows' => !empty($data['rows']),
+    'hascharts' => $chartdata !== null,
+    // Mustache attribute escape; JS getAttribute ile geri çözülür.
+    'chartdatajson' => $chartdata ? json_encode($chartdata, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) : '',
     'summary' => $data['summary'] ?? null,
     'hassummary' => $tab === 'participants',
     'lessoncount' => $data['lessoncount'] ?? 0,

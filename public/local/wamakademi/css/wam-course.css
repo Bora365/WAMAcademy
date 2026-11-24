@@ -48,17 +48,16 @@ body.wam-ui.wam-course .wam-add-content {
 }
 
 body.wam-ui.wam-course .wam-add-content__panel {
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
-    z-index: 40;
-    min-width: min(280px, 80vw);
-    max-width: 90vw;
-    padding: var(--wam-space-2);
-    background: var(--wam-surface);
-    border: 1px solid var(--wam-border);
-    border-radius: var(--wam-radius-sm);
-    box-shadow: var(--wam-shadow);
+    position: fixed;
+    z-index: 2000;
+    box-sizing: border-box;
+    min-width: 220px;
+    max-width: min(320px, calc(100vw - 16px));
+    padding: 6px;
+    background: #fff;
+    border: 1px solid #d7dee8;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
 }
 
 body.wam-ui.wam-course .wam-add-content__panel[hidden],
@@ -74,13 +73,16 @@ body.wam-ui.wam-course .wam-add-content__prompt {
 }
 
 body.wam-ui.wam-course .wam-add-content__item {
-    display: block;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
     width: 100%;
+    min-height: 44px;
     margin: 0;
     padding: 10px 12px;
     border: 0;
-    border-radius: 6px;
-    background: transparent;
+    border-radius: 8px;
+    background: #fff;
     color: var(--wam-ink);
     text-align: left;
     font: inherit;
@@ -96,13 +98,6 @@ body.wam-ui.wam-course .wam-add-content__item:focus-visible {
 body.wam-ui.wam-course .wam-add-content__item--back {
     color: var(--wam-muted);
     font-weight: 600;
-}
-
-@media (max-width: 575.98px) {
-    body.wam-ui.wam-course .wam-add-content__panel {
-        right: auto;
-        left: 0;
-    }
 }
 
 body.wam-ui.wam-course #page-header .page-header-headings h1 {

@@ -1,0 +1,32 @@
+{{!
+    @template local_wamakademi/grading_hub
+
+    Assignment / quiz grading management hub.
+}}
+<div class="wam-report wam-grading-hub" data-region="wam-grading-hub">
+    <header class="wam-report__header">
+        <div class="wam-report__heading">
+            <p class="wam-report__eyebrow">
+                <a href="{{courseurl}}">{{coursename}}</a>
+                · <a href="{{activityurl}}">{{activityname}}</a>
+                · {{modlabel}}
+            </p>
+            <h1 class="wam-report__title">{{#str}} gradinghubheading, local_wamakademi {{/str}}</h1>
+            <p class="wam-report__lead">{{lead}}</p>
+        </div>
+    </header>
+
+    {{#hasactions}}
+    <div class="wam-grading-hub__grid">
+        {{#actions}}
+        <a class="wam-grading-hub__card{{#primary}} is-primary{{/primary}}" href="{{url}}">
+            <strong class="wam-grading-hub__card-title">{{title}}</strong>
+            <span class="wam-grading-hub__card-desc">{{desc}}</span>
+        </a>
+        {{/actions}}
+    </div>
+    {{/hasactions}}
+    {{^hasactions}}
+    <p class="wam-report__empty">{{#str}} gradinghubempty, local_wamakademi {{/str}}</p>
+    {{/hasactions}}
+</div>

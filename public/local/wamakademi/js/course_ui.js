@@ -483,11 +483,29 @@
 
         var pendingAction = null;
 
+        function placePanel() {
+            var rect = toggle.getBoundingClientRect();
+            var width = Math.max(panel.offsetWidth || 220, 220);
+            var height = panel.offsetHeight || 160;
+            var left = rect.right - width;
+            left = Math.max(8, Math.min(left, window.innerWidth - width - 8));
+            var top = rect.bottom + 8;
+            if (top + height > window.innerHeight - 8 && rect.top > height + 16) {
+                top = rect.top - height - 8;
+            }
+            panel.style.position = 'fixed';
+            panel.style.top = top + 'px';
+            panel.style.left = left + 'px';
+            panel.style.right = 'auto';
+            panel.style.zIndex = '2000';
+        }
+
         function setOpen(open) {
             toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
             root.classList.toggle('is-open', open);
             if (open) {
                 panel.removeAttribute('hidden');
+                placePanel();
             } else {
                 panel.setAttribute('hidden', 'hidden');
                 showActionsView();
@@ -504,6 +522,7 @@
             pendingAction = action;
             actionsView.setAttribute('hidden', 'hidden');
             sectionsView.removeAttribute('hidden');
+            placePanel();
             var first = sectionsView.querySelector('[role="menuitem"]');
             if (first) {
                 first.focus();
@@ -575,7 +594,7 @@
         panel.appendChild(actionsView);
         panel.appendChild(sectionsView);
         root.appendChild(toggle);
-        root.appendChild(panel);
+        document.body.appendChild(panel);
 
         toggle.addEventListener('click', function(event) {
             event.preventDefault();
@@ -584,12 +603,23 @@
         });
 
         document.addEventListener('click', function(event) {
-            if (!root.contains(event.target)) {
+            if (!root.contains(event.target) && !panel.contains(event.target)) {
                 setOpen(false);
             }
         });
 
-        root.addEventListener('keydown', function(event) {
+        window.addEventListener('resize', function() {
+            if (toggle.getAttribute('aria-expanded') === 'true') {
+                placePanel();
+            }
+        });
+        window.addEventListener('scroll', function() {
+            if (toggle.getAttribute('aria-expanded') === 'true') {
+                placePanel();
+            }
+        }, true);
+
+        function onMenuKey(event) {
             var activeView = sectionsView.hasAttribute('hidden') ? actionsView : sectionsView;
             var items = Array.prototype.slice.call(
                 activeView.querySelectorAll('[role="menuitem"]')
@@ -643,7 +673,10 @@
                     items[items.length - 1].focus();
                 }
             }
-        });
+        }
+
+        root.addEventListener('keydown', onMenuKey);
+        panel.addEventListener('keydown', onMenuKey);
 
         return root;
     }
